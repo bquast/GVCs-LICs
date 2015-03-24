@@ -1,0 +1,47 @@
+---
+title: "OECD TiVa LMIC GVCs"
+author: "Victor Kummritz and Bastiaan Quast"
+date: "March 24, 2015"
+output: ioslides_presentation
+---
+
+## Motivation
+
+ - Global Value Chains relevance
+ - GVCs in developement (capacity building)
+ - General GVC picture overemphasises north-north because of higher monetary value
+
+## This paper
+
+## Data
+
+ICIOs from TiVa (not WIOD)
+
+TiVa data
+ - 57 countries
+ - 34 sectors
+ - LMICs
+
+## New Toolbox and Indicators
+
+ - source / using countries specific indicators
+ - decompor and gvc functions
+
+## General Stylised Facts
+
+ - section 3.1 of wwz
+ - growth of GVC trade
+ - length of GVC
+ - determinants of an industry's participation
+ - determinants of a country's participation
+ - trade balanses in VA terms differ substantially from those in gross terms
+
+## GVCs of LMICs
+
+ - stylised facts for LMICs
+ - source / using countries specific indicators for LMICs
+ - nrca and trca of LMIC
+ - fvafin vs. fvaint for LMICs (WWZ 3.3)
+ - dvix decomposition (WWZ 3.4)
+
+## Conclusion
