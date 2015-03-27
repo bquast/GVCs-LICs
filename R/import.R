@@ -3,7 +3,7 @@
 # bquast@gmail.com
 
 # load the readxl library
-# for excell files (.xls / .xlsx ) 
+# for excell files (.xls / .xlsx )
 library(readxl)
 
 # read the final demand sheets
@@ -87,3 +87,15 @@ wid2008 <- wid2008[ 1:GN , -c(1:2) ]
 
 # save the workspace
 save.image(file = "data/TiVa.RData" )
+
+# import the trca
+trca <- read.csv("~/OECD-TiVA-LMIC-GVCs/data/trca.csv")
+
+# save the trca
+save(trca, file = "data/trca.RData")
+
+# import the gvc indicators
+gvc_indicators <- read.csv("~/OECD-TiVA-LMIC-GVCs/data/gvc_indicators.csv")
+
+# save the gvc indicators
+save(gvc_indicators, file = "data/gvc_indicators.RData")
