@@ -57,22 +57,22 @@ wfd2005 <- wfd2005[ , -length(wfd2005) ]
 wfd2008 <- wfd2008[ , -length(wfd2008) ]
 
 # read the ICIOs
-wid1995 <- read.table("~/OECD-ICIO-Export-Decomposition/data/Wicio34_1995_test.csv",
+wid1995 <- read.table("data/Wicio34_1995_test.csv",
                       sep=";",
                       quote="\"",
                       stringsAsFactors=FALSE,
                       skip = 2 )
-wid2000 <- read.table("~/OECD-ICIO-Export-Decomposition/data/Wicio34_2000_test.csv",
+wid2000 <- read.table("data/Wicio34_2000_test.csv",
                       sep=";",
                       quote="\"",
                       stringsAsFactors=FALSE,
                       skip = 2 )
-wid2005 <- read.table("~/OECD-ICIO-Export-Decomposition/data/Wicio34_2005_test.csv",
+wid2005 <- read.table("data/Wicio34_2005_test.csv",
                       sep=";",
                       quote="\"",
                       stringsAsFactors=FALSE,
                       skip = 2 )
-wid2008 <- read.table("~/OECD-ICIO-Export-Decomposition/data/Wicio34_2008_test.csv",
+wid2008 <- read.table("data/Wicio34_2008_test.csv",
                       sep=";",
                       quote="\"",
                       stringsAsFactors=FALSE,
@@ -85,17 +85,32 @@ wid2000 <- wid2000[ 1:GN , -c(1:2) ]
 wid2005 <- wid2005[ 1:GN , -c(1:2) ]
 wid2008 <- wid2008[ 1:GN , -c(1:2) ]
 
+# as.matrices
+wid1995 <- as.matrix(wid1995)
+wid2000 <- as.matrix(wid2000)
+wid2005 <- as.matrix(wid2005)
+wid2008 <- as.matrix(wid2008)
+wfd1995 <- as.matrix(wfd1995)
+wfd2000 <- as.matrix(wfd2000)
+wfd2005 <- as.matrix(wfd2005)
+wfd2008 <- as.matrix(wfd2008)
+
+# remove excess objects
+rm(G)
+rm(N)
+rm(GN)
+
 # save the workspace
 save.image(file = "data/TiVa.RData" )
 
 # import the trca
-trca <- read.csv("~/OECD-TiVA-LMIC-GVCs/data/trca.csv")
+trca <- read.csv("data/trca.csv")
 
 # save the trca
 save(trca, file = "data/trca.RData")
 
 # import the gvc indicators
-gvc_indicators <- read.csv("~/OECD-TiVA-LMIC-GVCs/data/gvc_indicators.csv")
+gvc_indicators <- read.csv("data/gvc_indicators.csv")
 
 # save the gvc indicators
 save(gvc_indicators, file = "data/gvc_indicators.RData")
