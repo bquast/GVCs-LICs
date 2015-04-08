@@ -15,4 +15,7 @@ w2005 <- cbind(year = 2005, w2005)
 w2008 <- cbind(year = 2008, w2008)
 
 # stack the data sets
-w1995-2008 <- rbind(w1995, w2000, w2005, w2008)
+w1995_2008 <- rbind(w1995, w2000, w2005, w2008)
+
+# save the data
+save(w1995_2008, file = "data/w1995_2008.RData" )
