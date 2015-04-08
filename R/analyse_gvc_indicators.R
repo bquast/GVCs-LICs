@@ -4,6 +4,8 @@
 
 # load the data
 load("data/gvc_indicators.RData")
+load("data/nrca_df.RData")
+load("data/w1995_2008.RData")
 
 # load required libraries
 library(dplyr)
@@ -30,3 +32,22 @@ gvc_indicators %>%
 
 # add PVC
 # add intermediate imports (?)
+
+# plot nrca
+nrca %>%
+  group_by() %>%
+  ggvis(~year, ~nrca) %>%
+  layer_lines()
+
+# plot wwz
+w1995_2008 %>%
+  group_by(year) %>%
+  summarise( RDV = sum(RDV_INT) + sum(RDV_FIN) + sum(RDV_FIN2) ) %>%
+  ggvis(~year, ~RDV) %>%
+  layer_lines()
+
+w1995_2008 %>%
+  group_by(year) %>%
+  summarise( PDC = sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) %>%
+  ggvis(~year, ~PDC) %>%
+  layer_lines()
