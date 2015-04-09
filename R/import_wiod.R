@@ -19,10 +19,10 @@ wiod04 <- read_excel("data/wiot04_row_apr12.xlsx", sheet = 1, col_names = FALSE,
 wiod05 <- read_excel("data/wiot05_row_apr12.xlsx", sheet = 1, col_names = FALSE, skip = 6)
 wiod06 <- read_excel("data/wiot06_row_apr12.xlsx", sheet = 1, col_names = FALSE, skip = 6)
 wiod07 <- read_excel("data/wiot07_row_apr12.xlsx", sheet = 1, col_names = FALSE, skip = 6)
-wiod08 <- read_excel("data/wiot08_row_apr12.xlsx", sheet = 1, col_names = FALSE, skip = 6)
-wiod09 <- read_excel("data/wiot09_row_apr12.xlsx", sheet = 1, col_names = FALSE, skip = 6)
-wiod10 <- read_excel("data/wiot10_row_apr12.xlsx", sheet = 1, col_names = FALSE, skip = 6)
-wiod11 <- read_excel("data/wiot11_row_apr12.xlsx", sheet = 1, col_names = FALSE, skip = 6)
+wiod08 <- read_excel("data/wiot08_row_sep12.xlsx", sheet = 1, col_names = FALSE, skip = 6)
+wiod09 <- read_excel("data/wiot09_row_sep12.xlsx", sheet = 1, col_names = FALSE, skip = 6)
+wiod10 <- read_excel("data/wiot10_row_sep12.xlsx", sheet = 1, col_names = FALSE, skip = 6)
+wiod11 <- read_excel("data/wiot11_row_sep12.xlsx", sheet = 1, col_names = FALSE, skip = 6)
 
 # cut off the first columns
 wiod95 <- wiod95[,-c(1:2)]
@@ -44,8 +44,8 @@ wiod10 <- wiod10[,-c(1:2)]
 wiod11 <- wiod11[,-c(1:2)]
 
 # separate out country and sector names
-countries <- wiod95[ , 1]
-sectors   <- wiod95[ , 2]
+countries <- wiod98[ , 1]
+sectors   <- wiod97[ , 2]
 
 # filter out doubles
 countries <- unique(countries)
@@ -56,9 +56,11 @@ print(countries)
 print(sectors)
 
 # remove invalid parts by subsetting only valid parts
-countries <- countries[1:41]
-sectors   <- sectors[1:35]
+countries <- countries[1:41,1]
+sectors   <- sectors[1:35,1]
 
+countries <- as.vector(unlist(countries))
+sectors <- as.vector(unlist(sectors))
 # verify again
 print(countries)
 print(sectors)
@@ -144,6 +146,30 @@ out09 <- wiod09[ , length(wiod09) ]
 out10 <- wiod10[ , length(wiod10) ]
 out11 <- wiod11[ , length(wiod11) ]
 
+# encode as vectors
+out95 <- as.vector(unlist(out95))
+out96 <- as.vector(unlist(out96))
+out97 <- as.vector(unlist(out97))
+out98 <- as.vector(unlist(out98))
+out99 <- as.vector(unlist(out99))
+out00 <- as.vector(unlist(out00))
+out01 <- as.vector(unlist(out01))
+out02 <- as.vector(unlist(out02))
+out03 <- as.vector(unlist(out03))
+out04 <- as.vector(unlist(out04))
+out05 <- as.vector(unlist(out05))
+out06 <- as.vector(unlist(out06))
+out07 <- as.vector(unlist(out07))
+out08 <- as.vector(unlist(out08))
+out09 <- as.vector(unlist(out09))
+out10 <- as.vector(unlist(out10))
+out11 <- as.vector(unlist(out11))
+
+library(decompr)
+
+# remove redundant objects
+rm(wiod95)
+rm(wiod96)
 
 # leontief decompose
 l95 <- decomp(wid95,wfd95,countries,sectors,out95)
