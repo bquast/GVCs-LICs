@@ -56,8 +56,11 @@ names(nrca2000) <- c("country", "industry", "industry_description", "year", "nrc
 names(nrca2005) <- c("country", "industry", "industry_description", "year", "nrca")
 names(nrca2008) <- c("country", "industry", "industry_description", "year", "nrca")
 
+# combining the data.frames
+nrca <- rbind(nrca1995, nrca2000, nrca2005, nrca2008)
+
 # save again
-save(nrca1995, nrca2000, nrca2005, nrca2008, file = "data/nrca_df.RData")
+save(nrca, file = "data/nrca_df.RData")
 
 # remove redundancies
 rm(names_nrca1995)
@@ -70,8 +73,6 @@ rm(countries_industries2005)
 rm(countries_industries2008)
 rm(temp)
 
-# combining the data.frames
-nrca <- rbind(nrca1995, nrca2000, nrca2005, nrca2008)
 
 # rename trca variables
 names(trca) <- c("country", "industry", "year", "trca")

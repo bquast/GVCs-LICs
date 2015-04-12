@@ -92,17 +92,32 @@ wid2008 <- wid2008[ 1:GN , -c(1:2) ]
 output1995[1877] <- mltc23
 rm(mltc23)
 
+# as.matrices
+wid1995 <- as.matrix(wid1995)
+wid2000 <- as.matrix(wid2000)
+wid2005 <- as.matrix(wid2005)
+wid2008 <- as.matrix(wid2008)
+wfd1995 <- as.matrix(wfd1995)
+wfd2000 <- as.matrix(wfd2000)
+wfd2005 <- as.matrix(wfd2005)
+wfd2008 <- as.matrix(wfd2008)
+
+# remove excess objects
+rm(G)
+rm(N)
+rm(GN)
+
 # save the workspace
 save.image(file = "data/TiVa.RData" )
 
 # import the trca
-trca <- read.csv("~/OECD-TiVA-LMIC-GVCs/data/trca.csv")
+trca <- read.csv("data/trca.csv")
 
 # save the trca
 save(trca, file = "data/trca.RData")
 
 # import the gvc indicators
-gvc_indicators <- read.csv("~/OECD-TiVA-LMIC-GVCs/data/gvc_indicators.csv")
+gvc_indicators <- read.csv("data/gvc_indicators.csv")
 
 # save the gvc indicators
 save(gvc_indicators, file = "data/gvc_indicators.RData")
