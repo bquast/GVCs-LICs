@@ -57,26 +57,29 @@ wfd2005 <- wfd2005[ , -length(wfd2005) ]
 wfd2008 <- wfd2008[ , -length(wfd2008) ]
 
 # read the ICIOs
-wid1995 <- read.table("~/OECD-ICIO-Export-Decomposition/data/Wicio34_1995_test.csv",
+wid1995 <- read.table("data/Wicio34_1995_test.csv",
                       sep=";",
                       quote="\"",
                       stringsAsFactors=FALSE,
                       skip = 2 )
-wid2000 <- read.table("~/OECD-ICIO-Export-Decomposition/data/Wicio34_2000_test.csv",
+wid2000 <- read.table("data/Wicio34_2000_test.csv",
                       sep=";",
                       quote="\"",
                       stringsAsFactors=FALSE,
                       skip = 2 )
-wid2005 <- read.table("~/OECD-ICIO-Export-Decomposition/data/Wicio34_2005_test.csv",
+wid2005 <- read.table("data/Wicio34_2005_test.csv",
                       sep=";",
                       quote="\"",
                       stringsAsFactors=FALSE,
                       skip = 2 )
-wid2008 <- read.table("~/OECD-ICIO-Export-Decomposition/data/Wicio34_2008_test.csv",
+wid2008 <- read.table("data/Wicio34_2008_test.csv",
                       sep=";",
                       quote="\"",
                       stringsAsFactors=FALSE,
                       skip = 2 )
+
+# find output MLT C23
+mltc23 <- wid1995[1982,1879]
 
 # remove first two rows with countries and sectors
 # and extra information at the bottom
@@ -84,6 +87,10 @@ wid1995 <- wid1995[ 1:GN , -c(1:2) ]
 wid2000 <- wid2000[ 1:GN , -c(1:2) ]
 wid2005 <- wid2005[ 1:GN , -c(1:2) ]
 wid2008 <- wid2008[ 1:GN , -c(1:2) ]
+
+# impute missing value
+output1995[1877] <- mltc23
+rm(mltc23)
 
 # save the workspace
 save.image(file = "data/TiVa.RData" )
