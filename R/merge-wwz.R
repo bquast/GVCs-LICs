@@ -3,10 +3,7 @@
 # bquast@gmail.com
 
 # load the data
-load("data/w1995.RData")
-load("data/w2000.RData")
-load("data/w2005.RData")
-load("data/w2008.RData")
+load("data/TiVa-WWZ.RData")
 
 # add year variable to each data set
 w1995 <- cbind(year = 1995, w1995)
