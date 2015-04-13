@@ -78,12 +78,19 @@ wid2008 <- read.table("data/Wicio34_2008_test.csv",
                       stringsAsFactors=FALSE,
                       skip = 2 )
 
+# find output MLT C23
+mltc23 <- wid1995[1982,1879]
+
 # remove first two rows with countries and sectors
 # and extra information at the bottom
 wid1995 <- wid1995[ 1:GN , -c(1:2) ]
 wid2000 <- wid2000[ 1:GN , -c(1:2) ]
 wid2005 <- wid2005[ 1:GN , -c(1:2) ]
 wid2008 <- wid2008[ 1:GN , -c(1:2) ]
+
+# impute missing value
+output1995[1877] <- mltc23
+rm(mltc23)
 
 # as.matrices
 wid1995 <- as.matrix(wid1995)
