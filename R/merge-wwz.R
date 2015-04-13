@@ -16,7 +16,7 @@ w1995_2008 <- rbind(w1995, w2000, w2005, w2008)
 
 # to lower case
 w1995_2008["Exporting_Country"]  <- tolower( w1995_2008["Exporting_Country"] )
-w1995_2008["Exporting_Indsutry"] <- tolower( w1995_2008["Exporting_Industry"] )
+w1995_2008["Exporting_Industry"] <- tolower( w1995_2008["Exporting_Industry"] )
 w1995_2008["Importing_Country"]  <- tolower( w1995_2008["Importing_Country"] )
 
 # save the data
