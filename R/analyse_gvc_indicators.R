@@ -30,6 +30,14 @@ gvc_indicators %>%
   ggvis(~year, ~e2r ) %>%
   layer_lines()
 
+# both
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(e2r = sum(dvar_ik) / sum(exports_ik), i2e = sum(fvax_ik) / sum(exports_ik) ) %>%
+  ggvis(~year, ~e2r ) %>%
+  layer_lines(stroke="e2r") %>%
+  layer_lines(~year, ~i2e, stroke="i2e")
+
 # add PVC
 # add intermediate imports (?)
 
