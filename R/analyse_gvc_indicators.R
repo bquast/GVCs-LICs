@@ -48,7 +48,7 @@ nrca %>%
 # add PVC
 # add intermediate imports (?)
 
-# plot wwz
+# plot gvc_length
 # RDV
 w1995_2008 %>%
   group_by(year) %>%
@@ -71,3 +71,5 @@ w1995_2008 %>%
   ggvis(~year, ~RDV, stroke="RDV") %>%
   layer_lines() %>%
   layer_lines(~year, ~PDC, stroke="PDC")
+
+#
