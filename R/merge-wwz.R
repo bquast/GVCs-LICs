@@ -17,7 +17,10 @@ w2008 <- cbind(year = 2008, w2008)
 # stack the data sets
 w1995_2008 <- rbind(w1995, w2000, w2005, w2008)
 
-# to lower case
-w1995_2008["Exporting_Country"]  <- tolower( w1995_2008["Exporting_Country"] )
-w1995_2008["Exporting_Industry"] <- tolower( w1995_2008["Exporting_Industry"] )
-w1995_2008["Importing_Country"]  <- tolower( w1995_2008["Importing_Country"] )
+# # to lower case
+# w1995_2008["Exporting_Country"]  <- tolower( w1995_2008["Exporting_Country"] )
+# w1995_2008["Exporting_Industry"] <- tolower( w1995_2008["Exporting_Industry"] )
+# w1995_2008["Importing_Country"]  <- tolower( w1995_2008["Importing_Country"] )
+
+# save
+save(w1995_2008, file = "data/w1995_2008.RData")
