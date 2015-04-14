@@ -73,3 +73,5 @@ w1995_2008 %>%
   layer_lines(~year, ~PDC, stroke="PDC")
 
 #
+w1995_2008 %>%
+  group_by(Exporting_Industry)
