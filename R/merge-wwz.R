@@ -18,9 +18,12 @@ w2008 <- cbind(year = 2008, w2008)
 w1995_2008 <- rbind(w1995, w2000, w2005, w2008)
 
 # # to lower case
-# w1995_2008["Exporting_Country"]  <- tolower( w1995_2008["Exporting_Country"] )
-# w1995_2008["Exporting_Industry"] <- tolower( w1995_2008["Exporting_Industry"] )
-# w1995_2008["Importing_Country"]  <- tolower( w1995_2008["Importing_Country"] )
+levels(w1995_2008$Exporting_Country) <- tolower(levels(w1995_2008$Exporting_Country))
+levels(w1995_2008$Exporting_Industry) <- tolower(levels(w1995_2008$Exporting_Industry))
+levels(w1995_2008$Importing_Country) <- tolower(levels(w1995_2008$Importing_Country))
+
+# merge
+coun_var <- read.csv("data/Country_variables.csv")
 
 # save
 save(w1995_2008, file = "data/w1995_2008.RData")
