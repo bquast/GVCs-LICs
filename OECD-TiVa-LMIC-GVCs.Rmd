@@ -26,6 +26,16 @@ TiVa data
 
  - source / using countries specific indicators
  - decompor and gvc functions
+ 
+ ```{r}
+ library(decompr)
+ ls.str("package:decompr")
+ ```
+ 
+ ```{r}
+ library(gvc)
+ ls.str("package:gvc")
+ ```
 
 ## General Stylised Facts
 
@@ -35,6 +45,7 @@ TiVa data
  - determinants of an industry's participation
  - determinants of a country's participation
  - trade balanses in VA terms differ substantially from those in gross terms
+
 
 ## GVCs of LMICs
 
