@@ -22,8 +22,11 @@ levels(w1995_2008$Exporting_Country) <- tolower(levels(w1995_2008$Exporting_Coun
 levels(w1995_2008$Exporting_Industry) <- tolower(levels(w1995_2008$Exporting_Industry))
 levels(w1995_2008$Importing_Country) <- tolower(levels(w1995_2008$Importing_Country))
 
-# merge
-coun_var <- read.csv("data/Country_variables.csv")
+# remove ROW (Rest of World)
+w1995_2008 <- subset(w1995_2008, Exporting_Country != "row")
 
 # save
-save(w1995_2008, file = "data/w1995_2008.RData")
+saveRDS(w1995_2008, file = "data/w1995_2008.rds", compress = "xz")
+
+# merge
+coun_var <- read.csv("data/Country_variables.csv")
