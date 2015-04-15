@@ -74,4 +74,6 @@ w1995_2008 %>%
 
 #
 w1995_2008 %>%
-  group_by(Exporting_Industry)
+  # group_by(year, Exporting_Industry) %>%
+  ggvis(~year, ~DVA_FIN) %>%
+  layer_lines()
