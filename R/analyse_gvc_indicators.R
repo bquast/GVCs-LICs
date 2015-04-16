@@ -132,8 +132,8 @@ w1995_2008 %>%
 # GVC growth
 gvc_indicators %>%
   group_by(year) %>%
-  summarise(e2r = sum(dvar_lomidinc_ik) / sum(exports_ik),
-            i2e = sum(fvax_lomidinc_ams_ik) / sum(exports_ik) ) %>%
-  ggvis(~year, ~e2r ) %>%
-  layer_lines(stroke="e2r") %>%
-  layer_lines(~year, ~i2e, stroke="i2e")
+  summarise(i2e_lomid = sum(fvax_lomidinc_ams_ik) / sum(exports_ik),
+            i2e_hi    = sum(fvax_hiinc_ams_ik)    / sum(exports_ik) ) %>%
+  ggvis(~year, ~i2e_lomid ) %>%
+  layer_lines(stroke="i2e_lomid") %>%
+  layer_lines(~year, ~i2e_hi, stroke="i2e_hi")
