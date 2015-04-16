@@ -43,9 +43,10 @@ gvc_indicators %>%
 gvc_indicators %>%
   group_by(ind_name) %>%
   summarise(i2e = sum(fvax_ams_ik) * 100 / sum(exports_ik) ) %>%
-  top_n(10) %>%
-  ggvis(y = ~i2e) %>%
-  layer_bars()
+  top_n(10 %>%
+  ggvis(~factor(ind_name), ~i2e) %>%
+  layer_bars() %>%
+  add_axis("x", title = "industry name")
 
 # plot nrca
 nrca %>%
