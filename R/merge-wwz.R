@@ -27,6 +27,3 @@ w1995_2008 <- subset(w1995_2008, Exporting_Country != "row")
 
 # save
 saveRDS(w1995_2008, file = "data/w1995_2008.rds", compress = "xz")
-
-# merge
-coun_var <- read.csv("data/Country_variables.csv")
