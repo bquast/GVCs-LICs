@@ -5,11 +5,25 @@
 # load the data
 load("data/gvc_indicators.RData")
 load("data/nrca_df.RData")
+load("data/country_vars.RData")
 w1995_2008 <- readRDS("data/w1995_2008.rds")
 
 # load required libraries
 library(dplyr)
 library(ggvis)
+
+# merge wwz and country vars
+w1995_2008 <- merge(w1995_2008,
+                    country_vars,
+                    by.x = c("year", "Exporting_Country"),
+                    by.y = c("year", "ctry")              )
+
+# merge gvc indicators and country vars
+gvc_indicators <- merge(gvc_indicators, country_vars, by = c("ctry", "year"))
+
+# calculate gdp (total)
+gvc_indicators$gdp <- gvc_indicators$avg_gdppc * gvc_indicators$pop
+gvc_indicators$avg_gdp <- gvc_indicators$avg_gdppc * gvc_indicators$avg_pop
 
 # basic exploratory analysis
 summary(gvc_indicators)
@@ -39,14 +53,46 @@ gvc_indicators %>%
   layer_lines(stroke="e2r") %>%
   layer_lines(~year, ~i2e, stroke="i2e")
 
+# i2e against GDP
+gvc_indicators %>%
+  group_by(ctry) %>%
+  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik), avg_gdp = mean(avg_gdp) ) %>%
+  ggvis(~avg_gdp, ~i2e ) %>%
+  layer_points() %>%
+  layer_model_predictions(model = "lm")
+
+# i2e against natural resources
+gvc_indicators %>%
+  group_by(ctry) %>%
+  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik), nat_res_exp_sha_t_3 = mean(nat_res_exp_sha_t_3) ) %>%
+  ggvis(~nat_res_exp_sha_t_3, ~i2e ) %>%
+  layer_points() %>%
+  layer_model_predictions(model = "lm")
+
+# e2r against natural resources
+gvc_indicators %>%
+  group_by(ctry) %>%
+  summarise(e2r = sum(dvar_ik) / sum(exports_ik), nat_res_exp_sha_t_3 = mean(nat_res_exp_sha_t_3) ) %>%
+  ggvis(~nat_res_exp_sha_t_3, ~e2r ) %>%
+  layer_points() %>%
+  layer_model_predictions(model = "lm")
+
+# by country
+gvc_indicators %>%
+  group_by(ctry) %>%
+  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
+  top_n(10, i2e) %>%
+  ggvis(~factor(ctry), ~i2e ) %>%
+  layer_bars()
+
 # by industry
 gvc_indicators %>%
   group_by(ind_name) %>%
   summarise(i2e = sum(fvax_ams_ik) * 100 / sum(exports_ik) ) %>%
-  top_n(10 %>%
-  ggvis(~factor(ind_name), ~i2e) %>%
-  layer_bars() %>%
-  add_axis("x", title = "industry name")
+  top_n(10) %>%
+          ggvis(~factor(ind_name), ~i2e) %>%
+          layer_bars() %>%
+          add_axis("x", title = "industry name")
 
 # plot nrca
 nrca %>%
@@ -80,5 +126,3 @@ w1995_2008 %>%
   ggvis(~year, ~RDV, stroke="RDV") %>%
   layer_lines() %>%
   layer_lines(~year, ~PDC, stroke="PDC")
-
-
