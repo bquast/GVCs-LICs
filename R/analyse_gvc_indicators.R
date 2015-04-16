@@ -5,7 +5,7 @@
 # load the data
 load("data/gvc_indicators.RData")
 load("data/nrca_df.RData")
-load("data/w1995_2008.RData")
+w1995_2008 <- readRDS("data/w1995_2008.rds")
 
 # load required libraries
 library(dplyr)
