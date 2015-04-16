@@ -33,7 +33,7 @@ summary(gvc_indicators)
 # i2e
 gvc_indicators %>%
   group_by(year) %>%
-  summarise(i2e = sum(fvax_ik) / sum(exports_ik) ) %>%
+  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
   ggvis(~year, ~i2e ) %>%
   layer_lines()
 
@@ -44,11 +44,11 @@ gvc_indicators %>%
   ggvis(~year, ~e2r ) %>%
   layer_lines()
 
-# both
+# GVC growth
 gvc_indicators %>%
   group_by(year) %>%
   summarise(e2r = sum(dvar_ik) / sum(exports_ik),
-            i2e = sum(fvax_ik) / sum(exports_ik) ) %>%
+            i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
   ggvis(~year, ~e2r ) %>%
   layer_lines(stroke="e2r") %>%
   layer_lines(~year, ~i2e, stroke="i2e")
@@ -126,3 +126,14 @@ w1995_2008 %>%
   ggvis(~year, ~RDV, stroke="RDV") %>%
   layer_lines() %>%
   layer_lines(~year, ~PDC, stroke="PDC")
+
+### LMICs
+
+# GVC growth
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(e2r = sum(dvar_lomidinc_ik) / sum(exports_ik),
+            i2e = sum(fvax_lomidinc_ams_ik) / sum(exports_ik) ) %>%
+  ggvis(~year, ~e2r ) %>%
+  layer_lines(stroke="e2r") %>%
+  layer_lines(~year, ~i2e, stroke="i2e")
