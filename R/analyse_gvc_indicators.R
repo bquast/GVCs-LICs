@@ -74,6 +74,7 @@ w1995_2008 %>%
 
 #
 w1995_2008 %>%
-  # group_by(year, Exporting_Industry) %>%
-  ggvis(~year, ~DVA_FIN) %>%
+  group_by(year, Exporting_Industry) %>%
+  summarise(DVA_FIN = sum(DVA_FIN)) %>%
+  ggvis(~year, ~DVA_FIN, stroke = ~Exporting_Industry) %>%
   layer_lines()
