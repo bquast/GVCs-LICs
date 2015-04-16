@@ -39,6 +39,14 @@ gvc_indicators %>%
   layer_lines(stroke="e2r") %>%
   layer_lines(~year, ~i2e, stroke="i2e")
 
+# by industry
+gvc_indicators %>%
+  group_by(ind_name) %>%
+  summarise(i2e = sum(fvax_ams_ik) * 100 / sum(exports_ik) ) %>%
+  top_n(10) %>%
+  ggvis(y = ~i2e) %>%
+  layer_bars()
+
 # plot nrca
 nrca %>%
   group_by() %>%
@@ -72,9 +80,4 @@ w1995_2008 %>%
   layer_lines() %>%
   layer_lines(~year, ~PDC, stroke="PDC")
 
-#
-w1995_2008 %>%
-  group_by(year, Exporting_Industry) %>%
-  summarise(DVA_FIN = sum(DVA_FIN)) %>%
-  ggvis(~year, ~DVA_FIN, stroke = ~Exporting_Industry) %>%
-  layer_lines()
+
