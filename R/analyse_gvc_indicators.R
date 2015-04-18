@@ -19,7 +19,10 @@ w1995_2008 <- merge(w1995_2008,
                     by.y = c("year", "ctry")              )
 
 # merge gvc indicators and country vars
-gvc_indicators <- merge(gvc_indicators, country_vars, by = c("ctry", "year"))
+gvc_indicators <- merge(gvc_indicators, country_vars, by = c("ctry", "year") )
+
+# merge gvc indicators and nrca
+gvc_indicators <- merge(gvc_indicators, nrca, by.x = c("ctry", "isic"), by.y = c("country", "industry") )
 
 # calculate gdp (total)
 gvc_indicators$gdp <- gvc_indicators$avg_gdppc * gvc_indicators$pop
@@ -28,12 +31,16 @@ gvc_indicators$avg_gdp <- gvc_indicators$avg_gdppc * gvc_indicators$avg_pop
 # basic exploratory analysis
 summary(gvc_indicators)
 
-# TODO: create binary gdp
+# create mean of gdp across years
+# i.e. avg_pop*avg_gdppc
 
+# create logical gdp var
 gvc_indicators$lic  <- gvc_indicators$avg_gdppc <=  6000
 gvc_indicators$lmic <- gvc_indicators$avg_gdppc <= 12000
 gvc_indicators$hic  <- gvc_indicators$avg_gdppc >= 12000
 
+# create factor gdp var
+gvc_indicators$ic   <- ifelse(gvc_indicators$avg_gdppc <= 6000, "lic", ifelse(gvc_indicators$avg_gdppc > 12000, "hic", "mic")  )
 
 ## create basic summaries
 
@@ -103,9 +110,9 @@ gvc_indicators %>%
 
 # plot nrca
 nrca %>%
-  group_by() %>%
+  group_by(country) %>%
   ggvis(~year, ~nrca) %>%
-  layer_lines()
+  layer_lines(stroke=~country)
 
 # add PVC
 # add intermediate imports (?)
@@ -158,7 +165,7 @@ gvc_indicators %>%
 
 # LMIC definition II
 
-# GVC growth
+# i2e hi lo
 gvc_indicators %>%
   group_by(year) %>%
   summarise(i2e_lomid = sum(fvax_lomidinc1_ams_ik) / sum(exports_ik),
@@ -175,3 +182,33 @@ gvc_indicators %>%
   ggvis(~year, ~e2r_lomid ) %>%
   layer_lines(stroke="e2r_lomid") %>%
   layer_lines(~year, ~e2r_hi, stroke="e2r_hi")
+
+# LMIC defition III
+# i2e hi lo
+gvc_indicators %>%
+  group_by(year, ic) %>%
+  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
+  ggvis(~year, ~i2e, stroke = ~ic ) %>%
+  layer_lines()
+
+# e2r hi lo
+gvc_indicators %>%
+  group_by(year, ic) %>%
+  summarise(e2r = sum(dvar_ik) / sum(exports_ik) ) %>%
+  ggvis(~year, ~e2r, stroke = ~ic ) %>%
+  layer_lines()
+
+# i2e against GDP
+gvc_indicators %>%
+  group_by(ctry, ic) %>%
+  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik), avg_gdp = mean(avg_gdp) ) %>%
+  ggvis(~avg_gdp, ~i2e ) %>%
+  layer_points(fill = ~ic) %>%
+  layer_model_predictions(model = "lm")
+
+# i2e against natural resources
+gvc_indicators %>%
+  group_by(ctry, ic) %>%
+  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik), nat_res_exp_sha_t_3 = mean(nat_res_exp_sha_t_3) ) %>%
+  ggvis(~nat_res_exp_sha_t_3, ~i2e ) %>%
+  layer_points(fill = ~ic)
