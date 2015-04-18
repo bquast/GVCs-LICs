@@ -28,6 +28,13 @@ gvc_indicators$avg_gdp <- gvc_indicators$avg_gdppc * gvc_indicators$avg_pop
 # basic exploratory analysis
 summary(gvc_indicators)
 
+# TODO: create binary gdp
+
+gvc_indicators$lic  <- gvc_indicators$avg_gdppc <=  6000
+gvc_indicators$lmic <- gvc_indicators$avg_gdppc <= 12000
+gvc_indicators$hic  <- gvc_indicators$avg_gdppc >= 12000
+
+
 ## create basic summaries
 
 # i2e
@@ -128,8 +135,9 @@ w1995_2008 %>%
   layer_lines(~year, ~PDC, stroke="PDC")
 
 ### LMICs
+# LMIC definition I
 
-# GVC growth
+# i2e hi lo
 gvc_indicators %>%
   group_by(year) %>%
   summarise(i2e_lomid = sum(fvax_lomidinc_ams_ik) / sum(exports_ik),
@@ -137,3 +145,33 @@ gvc_indicators %>%
   ggvis(~year, ~i2e_lomid ) %>%
   layer_lines(stroke="i2e_lomid") %>%
   layer_lines(~year, ~i2e_hi, stroke="i2e_hi")
+
+# e2r hi lo
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(e2r_lomid = sum(dvar_lomidinc_ik) / sum(exports_ik),
+            e2r_hi    = sum(dvar_hiinc_ik)    / sum(exports_ik) ) %>%
+  ggvis(~year, ~e2r_lomid ) %>%
+  layer_lines(stroke="e2r_lomid") %>%
+  layer_lines(~year, ~e2r_hi, stroke="e2r_hi")
+
+
+# LMIC definition II
+
+# GVC growth
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(i2e_lomid = sum(fvax_lomidinc1_ams_ik) / sum(exports_ik),
+            i2e_hi    = sum(fvax_hiinc1_ams_ik)    / sum(exports_ik) ) %>%
+  ggvis(~year, ~i2e_lomid ) %>%
+  layer_lines(stroke="i2e_lomid") %>%
+  layer_lines(~year, ~i2e_hi, stroke="i2e_hi")
+
+# e2r hi lo
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(e2r_lomid = sum(dvar_lomidinc1_ik) / sum(exports_ik),
+            e2r_hi    = sum(dvar_hiinc1_ik)    / sum(exports_ik) ) %>%
+  ggvis(~year, ~e2r_lomid ) %>%
+  layer_lines(stroke="e2r_lomid") %>%
+  layer_lines(~year, ~e2r_hi, stroke="e2r_hi")
