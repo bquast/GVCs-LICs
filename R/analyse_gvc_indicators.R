@@ -184,19 +184,28 @@ gvc_indicators %>%
   layer_lines(~year, ~e2r_hi, stroke="e2r_hi")
 
 # LMIC defition III
-# i2e hi lo
+# i2e by year, ic
 gvc_indicators %>%
   group_by(year, ic) %>%
   summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
   ggvis(~year, ~i2e, stroke = ~ic ) %>%
   layer_lines()
 
-# e2r hi lo
+# i2e by country, ic
 gvc_indicators %>%
-  group_by(year, ic) %>%
-  summarise(e2r = sum(dvar_ik) / sum(exports_ik) ) %>%
-  ggvis(~year, ~e2r, stroke = ~ic ) %>%
-  layer_lines()
+  group_by(ctry, ic) %>%
+  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
+  ggvis(~factor(ctry), ~i2e, fill = ~ic ) %>%
+  layer_bars() %>%
+  add_axis("x", properties = axis_props(label=list(angle=45, align="left")) )
+
+# i2e by industry, ic
+gvc_indicators %>%
+  group_by(ind_name, ic) %>%
+  summarise(i2e = sum(fvax_ams_ik) * 100 / sum(exports_ik) ) %>%
+  ggvis(~ind_name, ~i2e, fill = ~ic ) %>%
+  layer_bars() %>%
+  add_axis("x", properties = axis_props(label=list(angle=45, align="left")) )
 
 # i2e against GDP
 gvc_indicators %>%
@@ -210,5 +219,60 @@ gvc_indicators %>%
 gvc_indicators %>%
   group_by(ctry, ic) %>%
   summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik), nat_res_exp_sha_t_3 = mean(nat_res_exp_sha_t_3) ) %>%
-  ggvis(~nat_res_exp_sha_t_3, ~i2e ) %>%
+  ggvis(~nat_res_exp_sha_t_3, ~i2e) %>%
   layer_points(fill = ~ic)
+
+# e2r by year, ic
+gvc_indicators %>%
+  group_by(year, ic) %>%
+  summarise(e2r = sum(dvar_ik) / sum(exports_ik) ) %>%
+  ggvis(~year, ~e2r, stroke = ~ic ) %>%
+  layer_lines()
+
+# e2r by country, ic
+gvc_indicators %>%
+  group_by(ctry, ic) %>%
+  summarise(e2r = sum(dvar_ik) / sum(exports_ik) ) %>%
+  ggvis(~factor(ctry), ~e2r, fill = ~ic ) %>%
+  layer_bars() %>%
+  add_axis("x", properties = axis_props(label=list(angle=45, align="left")) )
+
+# e2r by country, ic
+gvc_indicators %>%
+  group_by(ind_name, ic) %>%
+  summarise(e2r = sum(dvar_ik) / sum(exports_ik) ) %>%
+  ggvis(~ind_name, ~e2r, fill = ~ic ) %>%
+  layer_bars() %>%
+  add_axis("x", properties = axis_props(label=list(angle=45, align="left")) )
+
+# e2r by country, ic
+gvc_indicators %>%
+  group_by(ctry, ic) %>%
+  summarise(e2r = sum(dvar_ik) / sum(exports_ik), avg_gdp = mean(avg_gdp)  ) %>%
+  ggvis(~avg_gdp, ~e2r, fill = ~ic ) %>%
+  layer_bars() %>%
+  add_axis("x", properties = axis_props(label=list(angle=45, align="left")) )
+
+# e2r by country, ic
+gvc_indicators %>%
+  group_by(ctry, ic) %>%
+  summarise(e2r = sum(dvar_ik) / sum(exports_ik), nat_res_exp_sha_t_3 = mean(nat_res_exp_sha_t_3) ) %>%
+  ggvis(~nat_res_exp_sha_t_3, ~e2r, fill = ~ic ) %>%
+  layer_points()
+
+#
+
+# plot gvc_length
+# RDV
+w1995_2008 %>%
+  group_by(year, ic) %>%
+  summarise( RDV = sum(RDV_INT) + sum(RDV_FIN) + sum(RDV_FIN2) ) %>%
+  ggvis(~year, ~RDV, stroke = ~ic) %>%
+  layer_lines()
+
+# PDC
+w1995_2008 %>%
+  group_by(year) %>%
+  summarise( PDC = sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) %>%
+  ggvis(~year, ~PDC) %>%
+  layer_lines()
