@@ -288,25 +288,95 @@ w1995_2008 %>%
   ggvis(~year, ~DVA_FIN, stroke = ~ic) %>%
   layer_lines()
 
-# DVA FIN for LIC
-w1995_2008 %>%
-  filter(ic == "lic") %>%
-  group_by(year, Exporting_Country) %>%
-  summarise( DVA_FIN = mean(DVA_FIN) ) %>%
-  ggvis(~year, ~DVA_FIN, stroke = ~factor(Exporting_Country) ) %>%
-  layer_lines()
+# # DVA FIN for LIC
+# w1995_2008 %>%
+#   filter(ic == "lic") %>%
+#   group_by(year, Exporting_Country) %>%
+#   summarise( DVA_FIN = mean(DVA_FIN) ) %>%
+#   ggvis(~year, ~DVA_FIN, stroke = ~factor(Exporting_Country) ) %>%
+#   layer_lines()
+#
+# # DVA INT by LIC
+# w1995_2008 %>%
+#   group_by(year, ic) %>%
+#   summarise( DVA_INT = mean(DVA_INT) ) %>%
+#   ggvis(~year, ~DVA_INT, stroke = ~ic) %>%
+#   layer_lines()
+#
+# # DVA INT for LIC
+# w1995_2008 %>%
+#   filter(ic == "lic") %>%
+#   group_by(year, Exporting_Country) %>%
+#   summarise( DVA_INT = mean(DVA_INT) ) %>%
+#   ggvis(~year, ~DVA_INT, stroke = ~factor(Exporting_Country) ) %>%
+#   layer_lines()
 
-# DVA INT by LIC
+# back to sums
+# FVA FIN by year, IC
 w1995_2008 %>%
   group_by(year, ic) %>%
-  summarise( DVA_INT = mean(DVA_INT) ) %>%
-  ggvis(~year, ~DVA_INT, stroke = ~ic) %>%
+  summarise( FVA_FIN = sum(OVA_FIN) + sum(MVA_FIN) ) %>%
+  ggvis(~year, ~FVA_FIN, stroke = ~ic) %>%
   layer_lines()
 
-# DVA INT for LIC
+# FVA INT by year, IC
+w1995_2008 %>%
+  group_by(year, ic) %>%
+  summarise( FVA_INT = sum(OVA_INT) + sum(MVA_INT) ) %>%
+  ggvis(~year, ~FVA_INT, stroke = ~ic) %>%
+  layer_lines()
+
+# FVA FIN by year, Exporting Country, for LIC
 w1995_2008 %>%
   filter(ic == "lic") %>%
   group_by(year, Exporting_Country) %>%
-  summarise( DVA_INT = mean(DVA_INT) ) %>%
-  ggvis(~year, ~DVA_INT, stroke = ~factor(Exporting_Country) ) %>%
+  summarise( FVA_FIN = sum(OVA_FIN) + sum(MVA_FIN) ) %>%
+  ggvis(~year, ~FVA_FIN, stroke = ~factor(Exporting_Country) ) %>%
+  layer_lines()
+
+# FVA INT by year, Exporting Country, for LIC
+w1995_2008 %>%
+  filter(ic == "lic") %>%
+  group_by(year, Exporting_Country) %>%
+  summarise( FVA_INT = sum(OVA_INT) + sum(MVA_INT) ) %>%
+  ggvis(~year, ~FVA_INT, stroke = ~factor(Exporting_Country) ) %>%
+  layer_lines()
+
+# FVA FIN by year, Exporting Country, for MIC
+w1995_2008 %>%
+  filter(ic == "mic") %>%
+  group_by(year, Exporting_Country) %>%
+  summarise( FVA_FIN = sum(OVA_FIN) + sum(MVA_FIN) ) %>%
+  ggvis(~year, ~FVA_FIN, stroke = ~factor(Exporting_Country) ) %>%
+  layer_lines()
+
+# FVA INT by year, Exporting Country, for MIC
+w1995_2008 %>%
+  filter(ic == "mic") %>%
+  group_by(year, Exporting_Country) %>%
+  summarise( FVA_INT = sum(OVA_INT) + sum(MVA_INT) ) %>%
+  ggvis(~year, ~FVA_INT, stroke = ~factor(Exporting_Country) ) %>%
+  layer_lines()
+
+# FVA FIN by year, Exporting Country, for HIC
+w1995_2008 %>%
+  filter(ic == "hic") %>%
+  group_by(year, Exporting_Country) %>%
+  summarise( FVA_FIN = sum(OVA_FIN) + sum(MVA_FIN) ) %>%
+  ggvis(~year, ~FVA_FIN, stroke = ~factor(Exporting_Country) ) %>%
+  layer_lines()
+
+# FVA INT by year, Exporting Country, for HIC
+w1995_2008 %>%
+  filter(ic == "hic") %>%
+  group_by(year, Exporting_Country) %>%
+  summarise( FVA_INT = sum(OVA_INT) + sum(MVA_INT) ) %>%
+  ggvis(~year, ~FVA_INT, stroke = ~factor(Exporting_Country) ) %>%
+  layer_lines()
+
+# FVA INT by year, IC
+w1995_2008 %>%
+  group_by(year, ic) %>%
+  summarise( FVA_INT = sum(OVA_INT) + sum(MVA_INT) ) %>%
+  ggvis(~year, ~FVA_INT, stroke = ~ic) %>%
   layer_lines()
