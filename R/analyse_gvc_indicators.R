@@ -12,6 +12,12 @@ w1995_2008 <- readRDS("data/w1995_2008.rds")
 library(dplyr)
 library(ggvis)
 
+# contruct avg_pop in country vars
+country_vars %<>%
+  group_by(ctry) %>%
+  summarise(avg_pop = mean(pop)) %>%
+  merge(country_vars, . , by = "ctry")
+
 # create factor gdp var
 country_vars$ic   <- ifelse(country_vars$avg_gdppc <= 6000, "lic", ifelse(country_vars$avg_gdppc > 12000, "hic", "mic")  )
 
