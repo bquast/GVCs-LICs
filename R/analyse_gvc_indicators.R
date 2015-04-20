@@ -12,6 +12,16 @@ w1995_2008 <- readRDS("data/w1995_2008.rds")
 library(dplyr)
 library(ggvis)
 
+# create factor gdp var
+country_vars$ic   <- ifelse(country_vars$avg_gdppc <= 6000, "lic", ifelse(country_vars$avg_gdppc > 12000, "hic", "mic")  )
+
+# redo in country vars
+# calculate gdp (total)
+gvc_indicators$gdp <- gvc_indicators$avg_gdppc * gvc_indicators$pop
+gvc_indicators$avg_gdp <- gvc_indicators$avg_gdppc * gvc_indicators$avg_pop
+# create mean of gdp across years
+# i.e. avg_pop*avg_gdppc
+
 # merge wwz and country vars
 w1995_2008 <- merge(w1995_2008,
                     country_vars,
@@ -21,26 +31,11 @@ w1995_2008 <- merge(w1995_2008,
 # merge gvc indicators and country vars
 gvc_indicators <- merge(gvc_indicators, country_vars, by = c("ctry", "year") )
 
-# merge gvc indicators and nrca
-gvc_indicators <- merge(gvc_indicators, nrca, by.x = c("ctry", "isic"), by.y = c("country", "industry") )
-
-# calculate gdp (total)
-gvc_indicators$gdp <- gvc_indicators$avg_gdppc * gvc_indicators$pop
-gvc_indicators$avg_gdp <- gvc_indicators$avg_gdppc * gvc_indicators$avg_pop
-
-# basic exploratory analysis
-summary(gvc_indicators)
-
-# create mean of gdp across years
-# i.e. avg_pop*avg_gdppc
-
 # create logical gdp var
 gvc_indicators$lic  <- gvc_indicators$avg_gdppc <=  6000
 gvc_indicators$lmic <- gvc_indicators$avg_gdppc <= 12000
 gvc_indicators$hic  <- gvc_indicators$avg_gdppc >= 12000
 
-# create factor gdp var
-gvc_indicators$ic   <- ifelse(gvc_indicators$avg_gdppc <= 6000, "lic", ifelse(gvc_indicators$avg_gdppc > 12000, "hic", "mic")  )
 
 ## create basic summaries
 
@@ -104,12 +99,18 @@ gvc_indicators %>%
   group_by(ind_name) %>%
   summarise(i2e = sum(fvax_ams_ik) * 100 / sum(exports_ik) ) %>%
   top_n(10) %>%
-          ggvis(~factor(ind_name), ~i2e) %>%
-          layer_bars() %>%
-          add_axis("x", title = "industry name")
+  ggvis(~factor(ind_name), ~i2e) %>%
+  layer_bars() %>%
+  add_axis("x", title = "industry name")
 
 # plot nrca
 nrca %>%
+  group_by(country) %>%
+  ggvis(~year, ~nrca) %>%
+  layer_lines(stroke=~country)
+
+nrca %>%
+  filter(ic != "hic")
   group_by(country) %>%
   ggvis(~year, ~nrca) %>%
   layer_lines(stroke=~country)
@@ -140,6 +141,7 @@ w1995_2008 %>%
   ggvis(~year, ~RDV, stroke="RDV") %>%
   layer_lines() %>%
   layer_lines(~year, ~PDC, stroke="PDC")
+
 
 ### LMICs
 # LMIC definition I
@@ -260,9 +262,10 @@ gvc_indicators %>%
   ggvis(~nat_res_exp_sha_t_3, ~e2r, fill = ~ic ) %>%
   layer_points()
 
-#
 
-# plot gvc_length
+# WWZ by IC
+
+# use mean in stead of sum?
 # RDV
 w1995_2008 %>%
   group_by(year, ic) %>%
@@ -272,7 +275,38 @@ w1995_2008 %>%
 
 # PDC
 w1995_2008 %>%
-  group_by(year) %>%
+  group_by(year, ic) %>%
   summarise( PDC = sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) %>%
-  ggvis(~year, ~PDC) %>%
+  ggvis(~year, ~PDC, stroke = ~ic) %>%
+  layer_lines()
+
+# using mean here
+# DVA FIN by IC
+w1995_2008 %>%
+  group_by(year, ic) %>%
+  summarise( DVA_FIN = mean(DVA_FIN) ) %>%
+  ggvis(~year, ~DVA_FIN, stroke = ~ic) %>%
+  layer_lines()
+
+# DVA FIN for LIC
+w1995_2008 %>%
+  filter(ic == "lic") %>%
+  group_by(year, Exporting_Country) %>%
+  summarise( DVA_FIN = mean(DVA_FIN) ) %>%
+  ggvis(~year, ~DVA_FIN, stroke = ~factor(Exporting_Country) ) %>%
+  layer_lines()
+
+# DVA INT by LIC
+w1995_2008 %>%
+  group_by(year, ic) %>%
+  summarise( DVA_INT = mean(DVA_INT) ) %>%
+  ggvis(~year, ~DVA_INT, stroke = ~ic) %>%
+  layer_lines()
+
+# DVA INT for LIC
+w1995_2008 %>%
+  filter(ic == "lic") %>%
+  group_by(year, Exporting_Country) %>%
+  summarise( DVA_INT = mean(DVA_INT) ) %>%
+  ggvis(~year, ~DVA_INT, stroke = ~factor(Exporting_Country) ) %>%
   layer_lines()
