@@ -12,21 +12,15 @@ w1995_2008 <- readRDS("data/w1995_2008.rds")
 library(dplyr)
 library(ggvis)
 
-# contruct avg_pop in country vars
+# contruct avg_pop and gdp
 country_vars %<>%
   group_by(ctry) %>%
   summarise(avg_pop = mean(pop)) %>%
   merge(country_vars, . , by = "ctry")
+country_vars$avg_gdp <- with(country_vars, avg_pop * avg_gdppc)
 
 # create factor gdp var
 country_vars$ic   <- ifelse(country_vars$avg_gdppc <= 6000, "lic", ifelse(country_vars$avg_gdppc > 12000, "hic", "mic")  )
-
-# redo in country vars
-# calculate gdp (total)
-gvc_indicators$gdp <- gvc_indicators$avg_gdppc * gvc_indicators$pop
-gvc_indicators$avg_gdp <- gvc_indicators$avg_gdppc * gvc_indicators$avg_pop
-# create mean of gdp across years
-# i.e. avg_pop*avg_gdppc
 
 # merge wwz and country vars
 w1995_2008 <- merge(w1995_2008,
