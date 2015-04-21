@@ -150,193 +150,193 @@
 <li>trade balanses in VA terms differ substantially from those in gross terms</li>
 </ul>
 
-<p><code>r  gvc_indicators %&gt;%   group_by(year, ic) %&gt;%   summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %&gt;%   ggvis(~year, ~i2e, stroke = ~ic ) %&gt;%   layer_lines()</code></p>
+</article></slide><slide class=''><hgroup><h2>I2E</h2></hgroup><article  id="i2e">
 
-<p><div id="plot_id857833514-container" class="ggvis-output-container">
- <div id="plot_id857833514" class="ggvis-output"></div>
- <div class="plot-gear-icon">
- <nav class="ggvis-control">
- <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
- <ul class="ggvis-dropdown">
- <li>
- Renderer: 
- <a id="plot_id857833514_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id857833514" data-renderer="svg">SVG</a>
-  | 
- <a id="plot_id857833514_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id857833514" data-renderer="canvas">Canvas</a>
- </li>
- <li>
- <a id="plot_id857833514_download" class="ggvis-download" data-plot-id="plot_id857833514">Download</a>
- </li>
- </ul>
- </nav>
- </div>
- </div>
- <script type="text/javascript">
- var plot_id857833514_spec = {
-   "data": [
-     {
-       "name": ".0/group_by1/arrange2_flat",
-       "format": {
-         "type": "csv",
-         "parse": {
-           "year": "number",
-           "i2e": "number"
-         }
-       },
-       "values": "\"ic\",\"year\",\"i2e\"\n\"hic\",1995,0.181317990055524\n\"hic\",2000,0.206090872297488\n\"hic\",2005,0.213778962591894\n\"hic\",2008,0.209846779192038\n\"lic\",1995,0.166163448451932\n\"lic\",2000,0.208836708772378\n\"lic\",2005,0.213763458694054\n\"lic\",2008,0.185559846818342\n\"mic\",1995,0.198645572741999\n\"mic\",2000,0.281738847445014\n\"mic\",2005,0.285056291990823\n\"mic\",2008,0.28471659591445"
-     },
-     {
-       "name": ".0/group_by1/arrange2",
-       "source": ".0/group_by1/arrange2_flat",
-       "transform": [
-         {
-           "type": "treefacet",
-           "keys": [
-             "data.ic"
-           ]
-         }
-       ]
-     },
-     {
-       "name": "scale/stroke",
-       "format": {
-         "type": "csv",
-         "parse": {}
-       },
-       "values": "\"domain\"\n\"hic\"\n\"lic\"\n\"mic\""
-     },
-     {
-       "name": "scale/x",
-       "format": {
-         "type": "csv",
-         "parse": {
-           "domain": "number"
-         }
-       },
-       "values": "\"domain\"\n1994.35\n2008.65"
-     },
-     {
-       "name": "scale/y",
-       "format": {
-         "type": "csv",
-         "parse": {
-           "domain": "number"
-         }
-       },
-       "values": "\"domain\"\n0.160218806274987\n0.291000934167768"
-     }
-   ],
-   "scales": [
-     {
-       "name": "stroke",
-       "type": "ordinal",
-       "domain": {
-         "data": "scale/stroke",
-         "field": "data.domain"
-       },
-       "points": true,
-       "sort": false,
-       "range": "category10"
-     },
-     {
-       "name": "x",
-       "domain": {
-         "data": "scale/x",
-         "field": "data.domain"
-       },
-       "zero": false,
-       "nice": false,
-       "clamp": false,
-       "range": "width"
-     },
-     {
-       "name": "y",
-       "domain": {
-         "data": "scale/y",
-         "field": "data.domain"
-       },
-       "zero": false,
-       "nice": false,
-       "clamp": false,
-       "range": "height"
-     }
-   ],
-   "marks": [
-     {
-       "type": "group",
-       "from": {
-         "data": ".0/group_by1/arrange2"
-       },
-       "marks": [
-         {
-           "type": "line",
-           "properties": {
-             "update": {
-               "stroke": {
-                 "scale": "stroke",
-                 "field": "data.ic"
-               },
-               "x": {
-                 "scale": "x",
-                 "field": "data.year"
-               },
-               "y": {
-                 "scale": "y",
-                 "field": "data.i2e"
-               }
-             },
-             "ggvis": {
-               "data": {
-                 "value": ".0/group_by1/arrange2"
-               }
-             }
-           }
-         }
-       ]
-     }
-   ],
-   "width": 720,
-   "height": 432,
-   "legends": [
-     {
-       "orient": "right",
-       "stroke": "stroke",
-       "title": "ic"
-     }
-   ],
-   "axes": [
-     {
-       "type": "x",
-       "scale": "x",
-       "orient": "bottom",
-       "layer": "back",
-       "grid": true,
-       "title": "year"
-     },
-     {
-       "type": "y",
-       "scale": "y",
-       "orient": "left",
-       "layer": "back",
-       "grid": true,
-       "title": "i2e"
-     }
-   ],
-   "padding": null,
-   "ggvis_opts": {
-     "keep_aspect": false,
-     "resizable": true,
-     "padding": {},
-     "duration": 250,
-     "renderer": "svg",
-     "hover_duration": 0,
-     "width": 720,
-     "height": 432
-   },
-   "handlers": null
- };
- ggvis.getPlot("plot_id857833514").parseSpec(plot_id857833514_spec);
- </script></p>
+<p><div id="plot_id468686528-container" class="ggvis-output-container">
+  <div id="plot_id468686528" class="ggvis-output"></div>
+  <div class="plot-gear-icon">
+  <nav class="ggvis-control">
+  <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+  <ul class="ggvis-dropdown">
+  <li>
+  Renderer: 
+  <a id="plot_id468686528_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id468686528" data-renderer="svg">SVG</a>
+   | 
+  <a id="plot_id468686528_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id468686528" data-renderer="canvas">Canvas</a>
+  </li>
+  <li>
+  <a id="plot_id468686528_download" class="ggvis-download" data-plot-id="plot_id468686528">Download</a>
+  </li>
+  </ul>
+  </nav>
+  </div>
+  </div>
+  <script type="text/javascript">
+  var plot_id468686528_spec = {
+    "data": [
+      {
+        "name": ".0/group_by1/arrange2_flat",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "i2e": "number"
+          }
+        },
+        "values": "\"ic\",\"year\",\"i2e\"\n\"hic\",1995,0.181317990055524\n\"hic\",2000,0.206090872297488\n\"hic\",2005,0.213778962591894\n\"hic\",2008,0.209846779192038\n\"lic\",1995,0.166163448451932\n\"lic\",2000,0.208836708772378\n\"lic\",2005,0.213763458694054\n\"lic\",2008,0.185559846818342\n\"mic\",1995,0.198645572741999\n\"mic\",2000,0.281738847445014\n\"mic\",2005,0.285056291990823\n\"mic\",2008,0.28471659591445"
+      },
+      {
+        "name": ".0/group_by1/arrange2",
+        "source": ".0/group_by1/arrange2_flat",
+        "transform": [
+          {
+            "type": "treefacet",
+            "keys": [
+              "data.ic"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "scale/stroke",
+        "format": {
+          "type": "csv",
+          "parse": {}
+        },
+        "values": "\"domain\"\n\"hic\"\n\"lic\"\n\"mic\""
+      },
+      {
+        "name": "scale/x",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "domain": "number"
+          }
+        },
+        "values": "\"domain\"\n1994.35\n2008.65"
+      },
+      {
+        "name": "scale/y",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "domain": "number"
+          }
+        },
+        "values": "\"domain\"\n0.160218806274987\n0.291000934167768"
+      }
+    ],
+    "scales": [
+      {
+        "name": "stroke",
+        "type": "ordinal",
+        "domain": {
+          "data": "scale/stroke",
+          "field": "data.domain"
+        },
+        "points": true,
+        "sort": false,
+        "range": "category10"
+      },
+      {
+        "name": "x",
+        "domain": {
+          "data": "scale/x",
+          "field": "data.domain"
+        },
+        "zero": false,
+        "nice": false,
+        "clamp": false,
+        "range": "width"
+      },
+      {
+        "name": "y",
+        "domain": {
+          "data": "scale/y",
+          "field": "data.domain"
+        },
+        "zero": false,
+        "nice": false,
+        "clamp": false,
+        "range": "height"
+      }
+    ],
+    "marks": [
+      {
+        "type": "group",
+        "from": {
+          "data": ".0/group_by1/arrange2"
+        },
+        "marks": [
+          {
+            "type": "line",
+            "properties": {
+              "update": {
+                "stroke": {
+                  "scale": "stroke",
+                  "field": "data.ic"
+                },
+                "x": {
+                  "scale": "x",
+                  "field": "data.year"
+                },
+                "y": {
+                  "scale": "y",
+                  "field": "data.i2e"
+                }
+              },
+              "ggvis": {
+                "data": {
+                  "value": ".0/group_by1/arrange2"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "width": 720,
+    "height": 432,
+    "legends": [
+      {
+        "orient": "right",
+        "stroke": "stroke",
+        "title": "ic"
+      }
+    ],
+    "axes": [
+      {
+        "type": "x",
+        "scale": "x",
+        "orient": "bottom",
+        "layer": "back",
+        "grid": true,
+        "title": "year"
+      },
+      {
+        "type": "y",
+        "scale": "y",
+        "orient": "left",
+        "layer": "back",
+        "grid": true,
+        "title": "i2e"
+      }
+    ],
+    "padding": null,
+    "ggvis_opts": {
+      "keep_aspect": false,
+      "resizable": true,
+      "padding": {},
+      "duration": 250,
+      "renderer": "svg",
+      "hover_duration": 0,
+      "width": 720,
+      "height": 432
+    },
+    "handlers": null
+  };
+  ggvis.getPlot("plot_id468686528").parseSpec(plot_id468686528_spec);
+  </script></p>
 
 </article></slide><slide class=''><hgroup><h2>GVCs of LMICs</h2></hgroup><article  id="gvcs-of-lmics">
 

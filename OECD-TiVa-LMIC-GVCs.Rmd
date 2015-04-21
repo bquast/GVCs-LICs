@@ -84,7 +84,10 @@ gvc_indicators %<>% merge(nrca, by.x = c("ctry", "isic", "year"), by.y = c("coun
  - determinants of a country's participation
  - trade balanses in VA terms differ substantially from those in gross terms
  
- ```{r}
+ 
+## I2E
+ 
+  ```{r, echo=FALSE}
  gvc_indicators %>%
   group_by(year, ic) %>%
   summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
