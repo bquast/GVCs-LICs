@@ -11,6 +11,11 @@ w1995_2008 <- readRDS("data/w1995_2008.rds")
 # load required libraries
 library(dplyr)
 library(ggvis)
+library(magrittr)
+
+# remove unneeded columns
+w1995_2008 %<>%
+  select(-(24:29))
 
 # contruct avg_pop and gdp
 country_vars %<>%
