@@ -11,25 +11,27 @@ load("data/w1995_2008.RData")
 # load required libraries
 library(dplyr)
 library(ggvis)
+library(magrittr)
 
 # contruct avg_pop and gdp
 country_vars %<>%
   group_by(ctry) %>%
   summarise(avg_pop = mean(pop)) %>%
   merge(country_vars, . , by = "ctry")
+
 country_vars$avg_gdp <- with(country_vars, avg_pop * avg_gdppc)
 
 # create factor gdp var
-country_vars$ic   <- ifelse(country_vars$avg_gdppc <= 6000, "lic", ifelse(country_vars$avg_gdppc > 12000, "hic", "mic")  )
+country_vars$ic      <- with(country_vars, ifelse(avg_gdppc <= 6000, "lic",
+                                                  ifelse(avg_gdppc > 12000, "hic", "mic") ) )
 
 # merge wwz and country vars
-w1995_2008 <- merge(w1995_2008,
-                    country_vars,
-                    by.x = c("year", "Exporting_Country"),
-                    by.y = c("year", "ctry")              )
+w1995_2008 %<>% merge(country_vars,
+                      by.x = c("year", "Exporting_Country"),
+                      by.y = c("year", "ctry")              )
 
 # merge gvc indicators and country vars
-gvc_indicators <- merge(gvc_indicators, country_vars, by = c("ctry", "year") )
+gvc_indicators %<>% merge(country_vars, by = c("ctry", "year") )
 
 # create logical gdp var
 gvc_indicators$lic  <- gvc_indicators$avg_gdppc <=  6000
