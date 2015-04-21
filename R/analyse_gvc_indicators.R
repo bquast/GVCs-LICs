@@ -22,7 +22,7 @@ country_vars %<>%
 country_vars$avg_gdp <- with(country_vars, avg_pop * avg_gdppc)
 
 # create factor gdp var
-country_vars$ic      <- with( ifelse(avg_gdppc <= 6000, "lic",
+country_vars$ic      <- with(country_vars, ifelse(avg_gdppc <= 6000, "lic",
                                                   ifelse(avg_gdppc > 12000, "hic", "mic") ) )
 
 # merge wwz and country vars

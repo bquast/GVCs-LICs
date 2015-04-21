@@ -36,6 +36,44 @@ TiVa data
  library(gvc)
  ls.str("package:gvc")
  ```
+ 
+ ```{r, echo=FALSE}
+ # load the data
+load("data/gvc_indicators.RData")
+load("data/nrca_df.RData")
+load("data/country_vars.RData")
+load("data/w1995_2008.RData")
+ 
+ # load required libraries
+library(dplyr)
+library(ggvis)
+library(magrittr)
+
+# contruct avg_pop and gdp
+country_vars %<>%
+  group_by(ctry) %>%
+  summarise(avg_pop = mean(pop)) %>%
+  merge(country_vars, . , by = "ctry")
+
+country_vars$avg_gdp <- with(country_vars, avg_pop * avg_gdppc)
+
+# create factor gdp var
+country_vars$ic      <- with(country_vars, ifelse(avg_gdppc <= 6000, "lic",
+                                                  ifelse(avg_gdppc > 12000, "hic", "mic") ) )
+
+# merge wwz and country vars
+w1995_2008 %<>% merge(country_vars,
+                      by.x = c("year", "Exporting_Country"),
+                      by.y = c("year", "ctry")              )
+
+# merge gvc indicators and country vars
+gvc_indicators %<>% merge(country_vars, by = c("ctry", "year") )
+
+# merge gvc indicators and nrca
+gvc_indicators %<>% merge(nrca, by.x = c("ctry", "isic", "year"), by.y = c("country", "industry", "year") )
+```
+
+
 
 ## General Stylised Facts
 
@@ -45,6 +83,14 @@ TiVa data
  - determinants of an industry's participation
  - determinants of a country's participation
  - trade balanses in VA terms differ substantially from those in gross terms
+ 
+ ```{r}
+ gvc_indicators %>%
+  group_by(year, ic) %>%
+  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
+  ggvis(~year, ~i2e, stroke = ~ic ) %>%
+  layer_lines()
+ ```
 
 
 ## GVCs of LMICs
