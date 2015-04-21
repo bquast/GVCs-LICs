@@ -13,10 +13,6 @@ library(dplyr)
 library(ggvis)
 library(magrittr)
 
-# remove unneeded columns
-w1995_2008 %<>%
-  select(-(24:29))
-
 # contruct avg_pop and gdp
 country_vars %<>%
   group_by(ctry) %>%

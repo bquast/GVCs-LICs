@@ -25,5 +25,9 @@ levels(w1995_2008$Importing_Country) <- tolower(levels(w1995_2008$Importing_Coun
 # remove ROW (Rest of World)
 w1995_2008 <- subset(w1995_2008, Exporting_Country != "row")
 
+# remove unneeded columns
+w1995_2008 %<>%
+  select(-(24:29))
+
 # save
-saveRDS(w1995_2008, file = "data/w1995_2008.rds", compress = "xz")
+save(w1995_2008, file = "data/w1995_2008.RData")
