@@ -33,10 +33,13 @@ w1995_2008 %<>% merge(country_vars,
 # merge gvc indicators and country vars
 gvc_indicators %<>% merge(country_vars, by = c("ctry", "year") )
 
-# create logical gdp var
-gvc_indicators$lic  <- gvc_indicators$avg_gdppc <=  6000
-gvc_indicators$lmic <- gvc_indicators$avg_gdppc <= 12000
-gvc_indicators$hic  <- gvc_indicators$avg_gdppc >= 12000
+# merge gvc indicators and nrca
+gvc_indicators %<>% merge(nrca, by.x = c("ctry", "isic", "year"), by.y = c("country", "industry", "year") )
+
+# # create logical gdp var
+# gvc_indicators$lic  <- gvc_indicators$avg_gdppc <=  6000
+# gvc_indicators$lmic <- gvc_indicators$avg_gdppc <= 12000
+# gvc_indicators$hic  <- gvc_indicators$avg_gdppc >= 12000
 
 
 ## create basic summaries
@@ -105,17 +108,25 @@ gvc_indicators %>%
   layer_bars() %>%
   add_axis("x", title = "industry name")
 
-# plot nrca
-nrca %>%
-  group_by(country) %>%
-  ggvis(~year, ~nrca) %>%
-  layer_lines(stroke=~country)
+## plot nrca
 
-nrca %>%
-  filter(ic != "hic")
-  group_by(country) %>%
-  ggvis(~year, ~nrca) %>%
-  layer_lines(stroke=~country)
+# aggregate NRCA of LICs
+gvc_indicators %>%
+  filter(ic == "lic") %>%
+  group_by(ctry, year) %>%
+  summarise( nrca = sum(nrca) ) %>%
+  ggvis(~year, ~nrca, stroke=~factor(ctry) ) %>%
+  layer_lines()
+
+# NRCA china by industry
+gvc_indicators %>%
+  filter(ctry == "chn") %>%
+  group_by(year, ind_name) %>%
+  summarise( nrca = sum(nrca) ) %>%
+  ggvis(~year, ~nrca, stroke=~ind_name ) %>%
+  layer_lines()
+
+
 
 # add PVC
 # add intermediate imports (?)
