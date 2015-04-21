@@ -26,11 +26,10 @@ levels(w1995_2008$Exporting_Industry) <- tolower(levels(w1995_2008$Exporting_Ind
 levels(w1995_2008$Importing_Country) <- tolower(levels(w1995_2008$Importing_Country))
 
 # remove ROW (Rest of World)
-w1995_2008 <- subset(w1995_2008, Exporting_Country != "row")
+w1995_2008 %<>% subset(Exporting_Country != "row")
 
 # remove unneeded columns
-w1995_2008 %<>%
-  select(-(24:29))
+w1995_2008 %<>% select(-(24:29))
 
 # save
 save(w1995_2008, file = "data/w1995_2008.RData")
