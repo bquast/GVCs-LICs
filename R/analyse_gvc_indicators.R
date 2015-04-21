@@ -118,7 +118,7 @@ gvc_indicators %>%
   filter(ctry == "chn") %>%
   filter(ind_name == "elq") %>%
   group_by(year) %>%
-  summarise( trca = sum(rca.x), nrca = sum(nrca) ) %>%
+  summarise( trca = sum(rca), nrca = sum(nrca) ) %>%
   ggvis(~year, ~trca, stroke = "trca") %>%
   layer_lines() %>%
   layer_lines(~year, ~nrca, stroke="nrca")
@@ -128,7 +128,7 @@ gvc_indicators %>%
   filter(ctry == "chn") %>%
   filter(ind_name == "ceq") %>%
   group_by(year) %>%
-  summarise( trca = sum(rca.x), nrca = sum(nrca) ) %>%
+  summarise( trca = sum(rca), nrca = sum(nrca) ) %>%
   ggvis(~year, ~trca, stroke = "trca") %>%
   layer_lines() %>%
   layer_lines(~year, ~nrca, stroke="nrca")
