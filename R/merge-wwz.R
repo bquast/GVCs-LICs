@@ -2,6 +2,9 @@
 # Bastiaan Quast
 # bquast@gmail.com
 
+# load libraries
+library(magrittr)
+
 # load the data
 load("data/w1995.RData")
 load("data/w2000.RData")

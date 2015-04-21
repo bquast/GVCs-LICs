@@ -11,7 +11,6 @@ load("data/w1995_2008.RData")
 # load required libraries
 library(dplyr)
 library(ggvis)
-library(magrittr)
 
 # contruct avg_pop and gdp
 country_vars %<>%
