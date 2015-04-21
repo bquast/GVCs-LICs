@@ -91,7 +91,7 @@ gvc_indicators %>%
   layer_points() %>%
   layer_model_predictions(model = "lm")
 
-# by country
+# i2e by country
 gvc_indicators %>%
   group_by(ctry) %>%
   summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
@@ -99,7 +99,7 @@ gvc_indicators %>%
   ggvis(~factor(ctry), ~i2e ) %>%
   layer_bars()
 
-# by industry
+# i2e by industry
 gvc_indicators %>%
   group_by(ind_name) %>%
   summarise(i2e = sum(fvax_ams_ik) * 100 / sum(exports_ik) ) %>%
@@ -108,7 +108,8 @@ gvc_indicators %>%
   layer_bars() %>%
   add_axis("x", title = "industry name")
 
-## plot nrca
+
+## NRCA
 
 # aggregate NRCA of LICs
 gvc_indicators %>%
@@ -278,7 +279,6 @@ gvc_indicators %>%
 
 # WWZ by IC
 
-# use mean in stead of sum?
 # RDV
 w1995_2008 %>%
   group_by(year, ic) %>%
@@ -293,36 +293,8 @@ w1995_2008 %>%
   ggvis(~year, ~PDC, stroke = ~ic) %>%
   layer_lines()
 
-# # using mean here
-# # DVA FIN by IC
-# w1995_2008 %>%
-#   group_by(year, ic) %>%
-#   summarise( DVA_FIN = mean(DVA_FIN) ) %>%
-#   ggvis(~year, ~DVA_FIN, stroke = ~ic) %>%
-#   layer_lines()
-#
-# # DVA FIN for LIC
-# w1995_2008 %>%
-#   filter(ic == "lic") %>%
-#   group_by(year, Exporting_Country) %>%
-#   summarise( DVA_FIN = mean(DVA_FIN) ) %>%
-#   ggvis(~year, ~DVA_FIN, stroke = ~factor(Exporting_Country) ) %>%
-#   layer_lines()
-#
-# # DVA INT by LIC
-# w1995_2008 %>%
-#   group_by(year, ic) %>%
-#   summarise( DVA_INT = mean(DVA_INT) ) %>%
-#   ggvis(~year, ~DVA_INT, stroke = ~ic) %>%
-#   layer_lines()
-#
-# # DVA INT for LIC
-# w1995_2008 %>%
-#   filter(ic == "lic") %>%
-#   group_by(year, Exporting_Country) %>%
-#   summarise( DVA_INT = mean(DVA_INT) ) %>%
-#   ggvis(~year, ~DVA_INT, stroke = ~factor(Exporting_Country) ) %>%
-#   layer_lines()
+
+## FVA FIN INT
 
 # FVA FIN by year, IC
 w1995_2008 %>%
@@ -384,6 +356,24 @@ w1995_2008 %>%
   group_by(year, Exporting_Country) %>%
   summarise( FVA_INT = ( sum(OVA_INT) + sum(MVA_INT) ) / sum(texp) ) %>%
   ggvis(~year, ~FVA_INT, stroke = ~factor(Exporting_Country) ) %>%
+  layer_lines()
+
+
+## DViX
+
+# DVix by year, Exporting Country, for LICs
+w1995_2008 %>%
+  filter(ic == "lic") %>%
+  group_by(year, Exporting_Country) %>%
+  summarise( DViX_Fsr = sum(DViX_Fsr) / sum(texp) ) %>%
+  ggvis(~year, ~DViX_Fsr, stroke = ~factor(Exporting_Country) ) %>%
+  layer_lines()
+
+w1995_2008 %>%
+  filter(Exporting_Country == "chn") %>%
+  group_by(Exporting_Industry, year) %>%
+  summarise( DViX_Fsr = sum(DViX_Fsr) / sum(texp) ) %>%
+  ggvis(~year, ~DViX_Fsr, stroke = ~Exporting_Industry ) %>%
   layer_lines()
 
 # DYNAMIC!!!
