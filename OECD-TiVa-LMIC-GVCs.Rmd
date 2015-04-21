@@ -13,6 +13,8 @@ output: ioslides_presentation
 
 ## This paper
 
+$$E_x$$
+
 ## Data
 
 ICIOs from TiVa (not WIOD)
