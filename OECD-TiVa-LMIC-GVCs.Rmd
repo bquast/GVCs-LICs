@@ -43,6 +43,7 @@ load("data/gvc_indicators.RData")
 load("data/nrca_df.RData")
 load("data/country_vars.RData")
 load("data/w1995_2008.RData")
+load("data/trca.RData")
  
  # load required libraries
 library(dplyr)

@@ -7,6 +7,7 @@ load("data/gvc_indicators.RData")
 load("data/nrca_df.RData")
 load("data/country_vars.RData")
 load("data/w1995_2008.RData")
+load("data/trca.RData")
 
 # load required libraries
 library(dplyr)
@@ -35,6 +36,7 @@ gvc_indicators %<>% merge(country_vars, by = c("ctry", "year") )
 
 # merge gvc indicators and nrca
 gvc_indicators %<>% merge(nrca, by.x = c("ctry", "isic", "year"), by.y = c("country", "industry", "year") )
+gvc_indicators %<>% merge(trca, by = c("ctry", "isic", "year") )
 
 # # create logical gdp var
 # gvc_indicators$lic  <- gvc_indicators$avg_gdppc <=  6000
@@ -109,7 +111,37 @@ gvc_indicators %>%
   add_axis("x", title = "industry name")
 
 
-## NRCA
+## TRCA NRCA
+
+# TRCA vs NRCA for China, ELQ
+gvc_indicators %>%
+  filter(ctry == "chn") %>%
+  filter(ind_name == "elq") %>%
+  group_by(year) %>%
+  summarise( trca = sum(rca.x), nrca = sum(nrca) ) %>%
+  ggvis(~year, ~trca, stroke = "trca") %>%
+  layer_lines() %>%
+  layer_lines(~year, ~nrca, stroke="nrca")
+
+# TRCA vs NRCA for China: CEQ
+gvc_indicators %>%
+  filter(ctry == "chn") %>%
+  filter(ind_name == "ceq") %>%
+  group_by(year) %>%
+  summarise( trca = sum(rca.x), nrca = sum(nrca) ) %>%
+  ggvis(~year, ~trca, stroke = "trca") %>%
+  layer_lines() %>%
+  layer_lines(~year, ~nrca, stroke="nrca")
+
+# TRCA vs NRCA for China: CEQ
+gvc_indicators %>%
+  filter(ctry == "chn") %>%
+  filter(ind_name == "ceq") %>%
+  group_by(year) %>%
+  summarise( trca = sum(rca.x), nrca = sum(nrca) ) %>%
+  ggvis(~year, ~trca, stroke = "trca") %>%
+  layer_lines() %>%
+  layer_lines(~year, ~nrca, stroke="nrca")
 
 # aggregate NRCA of LICs
 gvc_indicators %>%
