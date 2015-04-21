@@ -22,7 +22,7 @@ country_vars %<>%
 country_vars$avg_gdp <- with(country_vars, avg_pop * avg_gdppc)
 
 # create factor gdp var
-country_vars$ic      <- with(country_vars, ifelse(avg_gdppc <= 6000, "lic",
+country_vars$ic      <- with( ifelse(avg_gdppc <= 6000, "lic",
                                                   ifelse(avg_gdppc > 12000, "hic", "mic") ) )
 
 # merge wwz and country vars
@@ -271,25 +271,25 @@ gvc_indicators %>%
 # RDV
 w1995_2008 %>%
   group_by(year, ic) %>%
-  summarise( RDV = sum(RDV_INT) + sum(RDV_FIN) + sum(RDV_FIN2) ) %>%
+  summarise( RDV = ( sum(RDV_INT) + sum(RDV_FIN) + sum(RDV_FIN2) ) / sum(texp) ) %>%
   ggvis(~year, ~RDV, stroke = ~ic) %>%
   layer_lines()
 
 # PDC
 w1995_2008 %>%
   group_by(year, ic) %>%
-  summarise( PDC = sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) %>%
+  summarise( PDC = ( sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) / sum(texp) ) %>%
   ggvis(~year, ~PDC, stroke = ~ic) %>%
   layer_lines()
 
-# using mean here
-# DVA FIN by IC
-w1995_2008 %>%
-  group_by(year, ic) %>%
-  summarise( DVA_FIN = mean(DVA_FIN) ) %>%
-  ggvis(~year, ~DVA_FIN, stroke = ~ic) %>%
-  layer_lines()
-
+# # using mean here
+# # DVA FIN by IC
+# w1995_2008 %>%
+#   group_by(year, ic) %>%
+#   summarise( DVA_FIN = mean(DVA_FIN) ) %>%
+#   ggvis(~year, ~DVA_FIN, stroke = ~ic) %>%
+#   layer_lines()
+#
 # # DVA FIN for LIC
 # w1995_2008 %>%
 #   filter(ic == "lic") %>%
