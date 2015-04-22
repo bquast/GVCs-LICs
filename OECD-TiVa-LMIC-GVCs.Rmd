@@ -367,11 +367,13 @@ w1995_2008 %>%
   - new data
   - focus on LMICs
 
-
-
   - new indicators suited for non-traditional trade patterns
   - non-trivial linear algebra involved
   - simplified application of mew algorithms
   - many more indicators and tools available in the packages
     - decompr: decomposition
     - gvc: analysis
+    
+  - http://qua.st/decompr
+
+# Thank You!
