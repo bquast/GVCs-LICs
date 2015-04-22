@@ -124,7 +124,7 @@ OECD ICIOs:
     
 ## package: decompr
 
- ```{r}
+ ```{r, tidy=FALSE}
  library(decompr)
  ls.str("package:decompr")
  ```
@@ -132,7 +132,7 @@ OECD ICIOs:
  
 ## package: gvc
  
- ```{r}
+ ```{r, tidy=FALSE}
  library(gvc)
  ls.str("package:gvc")
  ```
@@ -157,7 +157,7 @@ gvc_indicators %>%
 
 Increasing amounts of double counting indicate elongation of GVCs.
 
-```{r, echo=FALSE}
+```{r echo=FALSE}
 w1995_2008 %>%
   group_by(year) %>%
   summarise( PDC = ( sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) / sum(texp) ) %>%
@@ -170,7 +170,7 @@ w1995_2008 %>%
 
 Distance to final demand predicts an industry's GVC participation.
 
-```{r, echo=FALSE}
+```{r echo=FALSE, warning=FALSE, message=FALSE}
 # i2e by industry
 gvc_indicators %>%
   group_by(ind_name) %>%
@@ -184,7 +184,7 @@ gvc_indicators %>%
 
 ## E2R by industry
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 # e2r by industry
 gvc_indicators %>%
   group_by(ind_name) %>%
@@ -224,14 +224,14 @@ gvc_indicators %>%
 
 ## Natural Resources and E2R
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 gvc_indicators %>%
   group_by(ctry) %>%
   summarise(e2r = sum(dvar_ik) / sum(exports_ik), nat_res_exports = mean(nat_res_exp_sha_t_3) ) %>%
   ggvis(~nat_res_exports, ~e2r ) %>%
   layer_points() %>%
   layer_model_predictions(model = "lm")
-```
+``` 
 
 
 # GVC indicators for LMICs
