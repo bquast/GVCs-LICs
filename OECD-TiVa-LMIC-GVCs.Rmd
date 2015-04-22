@@ -9,6 +9,45 @@ output:
     fig_width: 5
 ---
 
+ 
+ ```{r, echo=FALSE, warnings=FALSE}
+ # load the data
+load("data/gvc_indicators.RData")
+load("data/nrca_df.RData")
+load("data/country_vars.RData")
+load("data/w1995_2008.RData")
+load("data/trca.RData")
+ 
+ # load required libraries
+library(dplyr)
+library(ggvis)
+library(magrittr)
+
+# contruct avg_pop and gdp
+country_vars %<>%
+  group_by(ctry) %>%
+  summarise(avg_pop = mean(pop)) %>%
+  merge(country_vars, . , by = "ctry")
+
+country_vars$avg_gdp <- with(country_vars, avg_pop * avg_gdppc)
+
+# create factor gdp var
+country_vars$ic      <- with(country_vars, ifelse(avg_gdppc <= 6000, "lic",
+                                                  ifelse(avg_gdppc > 12000, "hic", "mic") ) )
+
+# merge wwz and country vars
+w1995_2008 %<>% merge(country_vars,
+                      by.x = c("year", "Exporting_Country"),
+                      by.y = c("year", "ctry")              )
+
+# merge gvc indicators and country vars
+gvc_indicators %<>% merge(country_vars, by = c("ctry", "year") )
+
+# merge gvc indicators and nrca
+gvc_indicators %<>% merge(nrca, by.x = c("ctry", "isic", "year"), by.y = c("country", "industry", "year") )
+gvc_indicators %<>% merge(trca, by = c("ctry", "isic", "year") )
+```
+
 ## Motivation: The rise of GVCs
 
 * "[O]ne of the most important factors shaping contemporary international trade [is] the rise of global value chains."  
@@ -97,60 +136,11 @@ OECD ICIOs:
  library(gvc)
  ls.str("package:gvc")
  ```
- 
- 
- ```{r, echo=FALSE}
- # load the data
-load("data/gvc_indicators.RData")
-load("data/nrca_df.RData")
-load("data/country_vars.RData")
-load("data/w1995_2008.RData")
-load("data/trca.RData")
- 
- # load required libraries
-library(dplyr)
-library(ggvis)
-library(magrittr)
-
-# contruct avg_pop and gdp
-country_vars %<>%
-  group_by(ctry) %>%
-  summarise(avg_pop = mean(pop)) %>%
-  merge(country_vars, . , by = "ctry")
-
-country_vars$avg_gdp <- with(country_vars, avg_pop * avg_gdppc)
-
-# create factor gdp var
-country_vars$ic      <- with(country_vars, ifelse(avg_gdppc <= 6000, "lic",
-                                                  ifelse(avg_gdppc > 12000, "hic", "mic") ) )
-
-# merge wwz and country vars
-w1995_2008 %<>% merge(country_vars,
-                      by.x = c("year", "Exporting_Country"),
-                      by.y = c("year", "ctry")              )
-
-# merge gvc indicators and country vars
-gvc_indicators %<>% merge(country_vars, by = c("ctry", "year") )
-
-# merge gvc indicators and nrca
-gvc_indicators %<>% merge(nrca, by.x = c("ctry", "isic", "year"), by.y = c("country", "industry", "year") )
-gvc_indicators %<>% merge(trca, by = c("ctry", "isic", "year") )
-```
-
-## The expansion of GVCs
-
-```{r, echo=FALSE}
-w1995_2008 %>%
-  group_by(year) %>%
-  summarise( RDV = sum(RDV_INT) + sum(RDV_FIN) + sum(RDV_FIN2),
-             PDC = sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) %>%
-  ggvis(~year, ~RDV, stroke="RDV") %>%
-  layer_lines() %>%
-  layer_lines(~year, ~PDC, stroke="PDC")
-```
 
 
 ## The growth of GVC participation.
+
+Rising value added in 3rd country exports.
 
 ```{r, echo=FALSE}
 gvc_indicators %>%
@@ -163,32 +153,53 @@ gvc_indicators %>%
 ```
 
 
-## GVC participation by *IC: I2E
-Importing to Export (I2E)
+## The expansion of GVCs
+
+Increasing amounts of double counting indicate elongation of GVCs.
 
 ```{r, echo=FALSE}
-# i2e by year, ic
-gvc_indicators %>%
-  group_by(year, ic) %>%
-  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
-  ggvis(~year, ~i2e, stroke = ~ic ) %>%
+w1995_2008 %>%
+  group_by(year) %>%
+  summarise( PDC = ( sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) / sum(texp) ) %>%
+  ggvis(~year, ~PDC) %>%
   layer_lines()
 ```
 
-## GVC participation by *IC: E2R
-Exporting to Re-export (E2R)
+
+## I2E by industry
+
+Distance to final demand predicts an industry's GVC participation.
 
 ```{r, echo=FALSE}
-# e2r by year, ic
+# i2e by industry
 gvc_indicators %>%
-  group_by(year, ic) %>%
-  summarise(e2r = sum(dvar_ik) / sum(exports_ik) ) %>%
-  ggvis(~year, ~e2r, stroke = ~ic ) %>%
-  layer_lines()
+  group_by(ind_name) %>%
+  summarise(i2e = sum(fvax_ams_ik) * 100 / sum(exports_ik) ) %>%
+  top_n(10) %>%
+  ggvis(~factor(ind_name), ~i2e) %>%
+  layer_bars() %>%
+  add_axis("x", title = "industry name")
 ```
 
-## An application to new data: Confirming stylized facts
 
+## E2R by industry
+
+```{r, echo=FALSE}
+# e2r by industry
+gvc_indicators %>%
+  group_by(ind_name) %>%
+  filter(ind_name != "pvh" & ind_name != "edu" & ind_name != "egw" & ind_name != "con" & ind_name != "rea" & ind_name != "gov" & ind_name != "hth" & ind_name != "ptl") %>%
+  summarise(e2r = sum(dvar_ik) * 100 / sum(exports_ik) ) %>%
+  top_n(10) %>%
+  ggvis(~factor(ind_name), ~e2r) %>%
+  layer_bars() %>%
+  add_axis("x", title = "industry name")
+```
+
+
+## I2E by country
+
+country size and export composition determine GVC participation.
 
 ```{r, echo=FALSE, }
 gvc_indicators %>%
@@ -199,7 +210,7 @@ gvc_indicators %>%
   layer_bars()
 ```
 
-## An application to new data: Confirming stylized facts
+## E2R by country
 
 ```{r, echo=FALSE}
 gvc_indicators %>%
@@ -210,42 +221,86 @@ gvc_indicators %>%
   layer_bars()
 ```
 
-## An application to new data: Confirming stylized facts
+
+## Natural Resources and E2R
 
 ```{r, echo=FALSE}
 gvc_indicators %>%
   group_by(ctry) %>%
-  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik), avg_gdp = mean(avg_gdp) ) %>%
-  ggvis(~avg_gdp, ~i2e ) %>%
+  summarise(e2r = sum(dvar_ik) / sum(exports_ik), nat_res_exports = mean(nat_res_exp_sha_t_3) ) %>%
+  ggvis(~nat_res_exports, ~e2r ) %>%
   layer_points() %>%
   layer_model_predictions(model = "lm")
 ```
 
 
-## An application to new data: Confirming stylized facts
+# GVC indicators for LMICs
+
+
+## GVC participation by *IC: I2E
+
+LMICs drive recent growth in GVC participation.
 
 ```{r, echo=FALSE}
+# i2e by year, ic
 gvc_indicators %>%
-  group_by(ctry) %>%
-  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik), nat_res_exp_sha_t_3 = mean(nat_res_exp_sha_t_3) ) %>%
-  ggvis(~nat_res_exp_sha_t_3, ~i2e ) %>%
-  layer_points() %>%
-  layer_model_predictions(model = "lm")
-```
-
-## An application to new data: Confirming stylized facts
-
-```{r, echo=FALSE}
-gvc_indicators %>%
-  group_by(ctry) %>%
-  summarise(e2r = sum(dvar_ik) / sum(exports_ik), nat_res_exp_sha_t_3 = mean(nat_res_exp_sha_t_3) ) %>%
-  ggvis(~nat_res_exp_sha_t_3, ~e2r ) %>%
-  layer_points() %>%
-  layer_model_predictions(model = "lm")
+  group_by(year, ic) %>%
+  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
+  ggvis(~year, ~i2e, stroke = ~ic ) %>%
+  layer_lines()
 ```
 
 
-## CEQ of China
+## Sourcing I2E
+
+```{r, echo=FALSE}
+# i2e lo mi sourcing
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(i2e_lic = sum(fvax_loinc_ams_ik) / sum(exports_ik),
+            i2e_mic = sum(fvax_midinc_ams_ik) / sum(exports_ik),
+            i2e_hic = sum(fvax_hiinc_ams_ik) / sum(exports_ik)) %>%
+  ggvis(~year, ~i2e_lic, stroke = "i2e_lic" ) %>%
+  layer_lines() %>%
+  layer_lines(~year, ~i2e_mic, stroke="i2e_mic") %>%
+  layer_lines(~year, ~i2e_hic, stroke="i2e_hic")
+```
+
+
+## GVC participation by *IC: E2R
+
+```{r, echo=FALSE}
+# e2r by year, ic
+gvc_indicators %>%
+  group_by(year, ic) %>%
+  summarise(e2r = sum(dvar_ik) / sum(exports_ik) ) %>%
+  ggvis(~year, ~e2r, stroke = ~ic ) %>%
+  layer_lines()
+```
+
+
+## Sourcing E2R
+
+```{r, echo=FALSE}
+# e2r lo mi sourcing
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(e2r_lic = sum(dvar_loinc_ik) / sum(exports_ik),
+            e2r_mic = sum(dvar_midinc_ik) / sum(exports_ik),
+            e2r_hic = sum(dvar_hiinc_ik) / sum(exports_ik)) %>%
+  ggvis(~year, ~e2r_lic, stroke = "e2r_lic" ) %>%
+  layer_lines() %>%
+  layer_lines(~year, ~e2r_mic, stroke="e2r_mic") %>%
+  layer_lines(~year, ~e2r_hic, stroke="e2r_hic")
+```
+
+
+# New Indicators for GVC Analysis
+
+
+## NRCA
+
+Computer Equipment in China: Traditional overestimation
 
 ```{r, echo=FALSE, } 
 # TRCA vs NRCA for China, ELQ
@@ -260,5 +315,63 @@ gvc_indicators %>%
 ```
 
 
+## NRCA II
+
+Motor and Transport Equipment: Traditional underestimation
+
+```{r, echo=FALSE, } 
+# TRCA vs NRCA for China, ELQ
+gvc_indicators %>%
+  filter(ctry == "tha") %>%
+  filter(ind_name == "mtr") %>%
+  group_by(year) %>%
+  summarise( trca = sum(rca), nrca = sum(nrca) ) %>%
+  ggvis(~year, ~trca, stroke = "trca") %>%
+  layer_lines() %>%
+  layer_lines(~year, ~nrca, stroke="nrca")
+```
+
+
+## I2E: Final Goods
+
+Final-good assembly is relatively low-skilled.
+
+```{r, echo=FALSE, warning=FALSE}
+# FVA FIN china thailand india indonesia
+w1995_2008 %>%
+  filter(Exporting_Country == "chn" | Exporting_Country == "tha" | Exporting_Country == "ind" | Exporting_Country == "idn") %>%
+  group_by(year, Exporting_Country) %>%
+  summarise( I2E_FIN = ( sum(OVA_FIN) + sum(MVA_FIN) ) / sum(texp) ) %>%
+  ggvis(~year, ~I2E_FIN, stroke = ~factor(Exporting_Country) ) %>%
+  layer_lines()
+```
+
+
+## I2E: Intermediate Goods
+
+Rising intermediate good exports indicate moving up the value chain.
+
+```{r, echo=FALSE, warning=FALSE}
+# FVA INT china thailand india indonesia
+w1995_2008 %>%
+  filter(Exporting_Country == "chn" | Exporting_Country == "tha" | Exporting_Country == "ind" | Exporting_Country == "idn") %>%
+  group_by(year, Exporting_Country) %>%
+  summarise( I2E_INT = ( sum(OVA_INT) + sum(MVA_INT) ) / sum(texp) ) %>%
+  ggvis(~year, ~I2E_INT, stroke = ~factor(Exporting_Country) ) %>%
+  layer_lines()
+```
+
+
 ## Conclusion
   
+  - new data
+  - focus on LMICs
+
+
+
+  - new indicators suited for non-traditional trade patterns
+  - non-trivial linear algebra involved
+  - simplified application of mew algorithms
+  - many more indicators and tools available in the packages
+    - decompr: decomposition
+    - gvc: analysis

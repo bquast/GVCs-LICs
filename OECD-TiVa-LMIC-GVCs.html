@@ -102,6 +102,8 @@
           </hgroup>
   </slide>
 
+<p><code>##   ## Attaching package: &#39;dplyr&#39;  ##   ## The following object is masked from &#39;package:stats&#39;:  ##   ##     filter  ##   ## The following objects are masked from &#39;package:base&#39;:  ##   ##     intersect, setdiff, setequal, union</code></p>
+
 <slide class=''><hgroup><h2>Motivation: The rise of GVCs</h2></hgroup><article  id="motivation-the-rise-of-gvcs">
 
 <ul>
@@ -186,239 +188,31 @@ VB = V + VA + VAA + VAAA + ... = V (I+A+A^{2}+A^{3}+...)
 
 <p><code>## block_matrix : function (x, s)    ## e2r : function (x)    ## i2e : function (x)    ## minus_block_matrix : function (x, s)    ## nrca : function (x)</code></p>
 
-<p><code>##   ## Attaching package: &#39;dplyr&#39;  ##   ## The following object is masked from &#39;package:stats&#39;:  ##   ##     filter  ##   ## The following objects are masked from &#39;package:base&#39;:  ##   ##     intersect, setdiff, setequal, union</code></p>
-
-</article></slide><slide class=''><hgroup><h2>The expansion of GVCs</h2></hgroup><article  id="the-expansion-of-gvcs">
-
-<p><div id="plot_id433698112-container" class="ggvis-output-container">
-<div id="plot_id433698112" class="ggvis-output"></div>
-<div class="plot-gear-icon">
-<nav class="ggvis-control">
-<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
-<ul class="ggvis-dropdown">
-<li>
-Renderer: 
-<a id="plot_id433698112_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id433698112" data-renderer="svg">SVG</a>
- | 
-<a id="plot_id433698112_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id433698112" data-renderer="canvas">Canvas</a>
-</li>
-<li>
-<a id="plot_id433698112_download" class="ggvis-download" data-plot-id="plot_id433698112">Download</a>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-<script type="text/javascript">
-var plot_id433698112_spec = {
-  "data": [
-    {
-      "name": ".0/arrange1",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "year": "number",
-          "RDV": "number"
-        }
-      },
-      "values": "\"year\",\"RDV\"\n1995,102657.34285675\n2000,174973.071691524\n2005,193343.403592411\n2008,229529.998592428"
-    },
-    {
-      "name": ".0/arrange2",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "year": "number",
-          "PDC": "number"
-        }
-      },
-      "values": "\"year\",\"PDC\"\n1995,231115.156819784\n2000,381990.720150373\n2005,735515.403632063\n2008,1143183.71509495"
-    },
-    {
-      "name": "scale/stroke",
-      "format": {
-        "type": "csv",
-        "parse": {}
-      },
-      "values": "\"domain\"\n\"RDV\"\n\"PDC\""
-    },
-    {
-      "name": "scale/x",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "domain": "number"
-        }
-      },
-      "values": "\"domain\"\n1994.35\n2008.65"
-    },
-    {
-      "name": "scale/y",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "domain": "number"
-        }
-      },
-      "values": "\"domain\"\n50631.02424484\n1195210.03370687"
-    }
-  ],
-  "scales": [
-    {
-      "name": "stroke",
-      "type": "ordinal",
-      "domain": {
-        "data": "scale/stroke",
-        "field": "data.domain"
-      },
-      "points": true,
-      "sort": false,
-      "range": "category10"
-    },
-    {
-      "name": "x",
-      "domain": {
-        "data": "scale/x",
-        "field": "data.domain"
-      },
-      "zero": false,
-      "nice": false,
-      "clamp": false,
-      "range": "width"
-    },
-    {
-      "name": "y",
-      "domain": {
-        "data": "scale/y",
-        "field": "data.domain"
-      },
-      "zero": false,
-      "nice": false,
-      "clamp": false,
-      "range": "height"
-    }
-  ],
-  "marks": [
-    {
-      "type": "line",
-      "properties": {
-        "update": {
-          "stroke": {
-            "scale": "stroke",
-            "value": "RDV"
-          },
-          "x": {
-            "scale": "x",
-            "field": "data.year"
-          },
-          "y": {
-            "scale": "y",
-            "field": "data.RDV"
-          }
-        },
-        "ggvis": {
-          "data": {
-            "value": ".0/arrange1"
-          }
-        }
-      },
-      "from": {
-        "data": ".0/arrange1"
-      }
-    },
-    {
-      "type": "line",
-      "properties": {
-        "update": {
-          "stroke": {
-            "scale": "stroke",
-            "value": "PDC"
-          },
-          "x": {
-            "scale": "x",
-            "field": "data.year"
-          },
-          "y": {
-            "scale": "y",
-            "field": "data.PDC"
-          }
-        },
-        "ggvis": {
-          "data": {
-            "value": ".0/arrange2"
-          }
-        }
-      },
-      "from": {
-        "data": ".0/arrange2"
-      }
-    }
-  ],
-  "width": 480,
-  "height": 288,
-  "legends": [
-    {
-      "orient": "right",
-      "stroke": "stroke"
-    }
-  ],
-  "axes": [
-    {
-      "type": "x",
-      "scale": "x",
-      "orient": "bottom",
-      "layer": "back",
-      "grid": true,
-      "title": "year"
-    },
-    {
-      "type": "y",
-      "scale": "y",
-      "orient": "left",
-      "layer": "back",
-      "grid": true,
-      "title": "PDC"
-    }
-  ],
-  "padding": null,
-  "ggvis_opts": {
-    "keep_aspect": false,
-    "resizable": true,
-    "padding": {},
-    "duration": 250,
-    "renderer": "svg",
-    "hover_duration": 0,
-    "width": 480,
-    "height": 288
-  },
-  "handlers": null
-};
-ggvis.getPlot("plot_id433698112").parseSpec(plot_id433698112_spec);
-</script></p>
-
 </article></slide><slide class=''><hgroup><h2>The growth of GVC participation.</h2></hgroup><article  id="the-growth-of-gvc-participation.">
 
-<p><div id="plot_id673780379-container" class="ggvis-output-container">
-<div id="plot_id673780379" class="ggvis-output"></div>
+<p>Rising value added in 3rd country exports.</p>
+
+<p><div id="plot_id372928958-container" class="ggvis-output-container">
+<div id="plot_id372928958" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id673780379_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id673780379" data-renderer="svg">SVG</a>
+<a id="plot_id372928958_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id372928958" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id673780379_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id673780379" data-renderer="canvas">Canvas</a>
+<a id="plot_id372928958_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id372928958" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id673780379_download" class="ggvis-download" data-plot-id="plot_id673780379">Download</a>
+<a id="plot_id372928958_download" class="ggvis-download" data-plot-id="plot_id372928958">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id673780379_spec = {
+var plot_id372928958_spec = {
   "data": [
     {
       "name": ".0/arrange1",
@@ -601,32 +395,1004 @@ var plot_id673780379_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id673780379").parseSpec(plot_id673780379_spec);
+ggvis.getPlot("plot_id372928958").parseSpec(plot_id372928958_spec);
 </script></p>
 
-</article></slide><slide class=''><hgroup><h2>GVC participation by *IC: I2E Importing to Export (I2E)</h2></hgroup><article  id="gvc-participation-by-ic-i2e-importing-to-export-i2e">
+</article></slide><slide class=''><hgroup><h2>The expansion of GVCs</h2></hgroup><article  id="the-expansion-of-gvcs">
 
-<p><div id="plot_id180958111-container" class="ggvis-output-container">
-<div id="plot_id180958111" class="ggvis-output"></div>
+<p>Increasing amounts of double counting indicate elongation of GVCs.</p>
+
+<p><div id="plot_id252663836-container" class="ggvis-output-container">
+<div id="plot_id252663836" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id180958111_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id180958111" data-renderer="svg">SVG</a>
+<a id="plot_id252663836_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id252663836" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id180958111_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id180958111" data-renderer="canvas">Canvas</a>
+<a id="plot_id252663836_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id252663836" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id180958111_download" class="ggvis-download" data-plot-id="plot_id180958111">Download</a>
+<a id="plot_id252663836_download" class="ggvis-download" data-plot-id="plot_id252663836">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id180958111_spec = {
+var plot_id252663836_spec = {
+  "data": [
+    {
+      "name": ".0/arrange1",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "PDC": "number"
+        }
+      },
+      "values": "\"year\",\"PDC\"\n1995,0.0427124406931771\n2000,0.0578182770818575\n2005,0.0701149724159143\n2008,0.0727787368696912"
+    },
+    {
+      "name": "scale/x",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n1994.35\n2008.65"
+    },
+    {
+      "name": "scale/y",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n0.0412091258843514\n0.0742820516785169"
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "domain": {
+        "data": "scale/x",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "domain": {
+        "data": "scale/y",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "height"
+    }
+  ],
+  "marks": [
+    {
+      "type": "line",
+      "properties": {
+        "update": {
+          "stroke": {
+            "value": "#000000"
+          },
+          "x": {
+            "scale": "x",
+            "field": "data.year"
+          },
+          "y": {
+            "scale": "y",
+            "field": "data.PDC"
+          }
+        },
+        "ggvis": {
+          "data": {
+            "value": ".0/arrange1"
+          }
+        }
+      },
+      "from": {
+        "data": ".0/arrange1"
+      }
+    }
+  ],
+  "width": 480,
+  "height": 288,
+  "legends": [],
+  "axes": [
+    {
+      "type": "x",
+      "scale": "x",
+      "orient": "bottom",
+      "layer": "back",
+      "grid": true,
+      "title": "year"
+    },
+    {
+      "type": "y",
+      "scale": "y",
+      "orient": "left",
+      "layer": "back",
+      "grid": true,
+      "title": "PDC"
+    }
+  ],
+  "padding": null,
+  "ggvis_opts": {
+    "keep_aspect": false,
+    "resizable": true,
+    "padding": {},
+    "duration": 250,
+    "renderer": "svg",
+    "hover_duration": 0,
+    "width": 480,
+    "height": 288
+  },
+  "handlers": null
+};
+ggvis.getPlot("plot_id252663836").parseSpec(plot_id252663836_spec);
+</script></p>
+
+</article></slide><slide class=''><hgroup><h2>I2E by industry</h2></hgroup><article  id="i2e-by-industry">
+
+<p>Distance to final demand predicts an industry&#39;s GVC participation.</p>
+
+<pre >## Selecting by i2e</pre>
+
+<p><div id="plot_id230255734-container" class="ggvis-output-container">
+<div id="plot_id230255734" class="ggvis-output"></div>
+<div class="plot-gear-icon">
+<nav class="ggvis-control">
+<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+<ul class="ggvis-dropdown">
+<li>
+Renderer: 
+<a id="plot_id230255734_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id230255734" data-renderer="svg">SVG</a>
+ | 
+<a id="plot_id230255734_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id230255734" data-renderer="canvas">Canvas</a>
+</li>
+<li>
+<a id="plot_id230255734_download" class="ggvis-download" data-plot-id="plot_id230255734">Download</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<script type="text/javascript">
+var plot_id230255734_spec = {
+  "data": [
+    {
+      "name": ".0/count1/stack2",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "stack_lwr_": "number",
+          "stack_upr_": "number"
+        }
+      },
+      "values": "\"x_\",\"stack_lwr_\",\"stack_upr_\"\n\"ceq\",0,32.4093400203529\n\"chm\",0,25.4528402142784\n\"elq\",0,25.0649975090036\n\"its\",0,23.3377737978386\n\"meq\",0,21.9166200517516\n\"met\",0,23.6822813669503\n\"mtr\",0,29.5287782794914\n\"otm\",0,22.9644078118258\n\"rbp\",0,25.2318928619849\n\"trq\",0,25.7621226168588"
+    },
+    {
+      "name": "scale/x",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"ceq\"\n\"chm\"\n\"elq\"\n\"its\"\n\"meq\"\n\"met\"\n\"mtr\"\n\"otm\"\n\"rbp\"\n\"trq\""
+    },
+    {
+      "name": "scale/y",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n0\n34.0298070213706"
+    }
+  ],
+  "scales": [
+    {
+      "domain": {
+        "data": "scale/x",
+        "field": "data.domain"
+      },
+      "name": "x",
+      "type": "ordinal",
+      "points": false,
+      "padding": 0.1,
+      "sort": false,
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "domain": {
+        "data": "scale/y",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "height"
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "properties": {
+        "update": {
+          "stroke": {
+            "value": "#000000"
+          },
+          "fill": {
+            "value": "#333333"
+          },
+          "x": {
+            "scale": "x",
+            "field": "data.x_"
+          },
+          "y": {
+            "scale": "y",
+            "field": "data.stack_lwr_"
+          },
+          "y2": {
+            "scale": "y",
+            "field": "data.stack_upr_"
+          },
+          "width": {
+            "scale": "x",
+            "band": true
+          }
+        },
+        "ggvis": {
+          "data": {
+            "value": ".0/count1/stack2"
+          }
+        }
+      },
+      "from": {
+        "data": ".0/count1/stack2"
+      }
+    }
+  ],
+  "width": 480,
+  "height": 288,
+  "legends": [],
+  "axes": [
+    {
+      "type": "x",
+      "scale": "x",
+      "orient": "bottom",
+      "title": "industry name",
+      "layer": "back",
+      "grid": true
+    },
+    {
+      "type": "y",
+      "scale": "y",
+      "orient": "left",
+      "layer": "back",
+      "grid": true,
+      "title": "i2e"
+    }
+  ],
+  "padding": null,
+  "ggvis_opts": {
+    "keep_aspect": false,
+    "resizable": true,
+    "padding": {},
+    "duration": 250,
+    "renderer": "svg",
+    "hover_duration": 0,
+    "width": 480,
+    "height": 288
+  },
+  "handlers": null
+};
+ggvis.getPlot("plot_id230255734").parseSpec(plot_id230255734_spec);
+</script></p>
+
+</article></slide><slide class=''><hgroup><h2>E2R by industry</h2></hgroup><article  id="e2r-by-industry">
+
+<pre >## Selecting by e2r</pre>
+
+<p><div id="plot_id819515948-container" class="ggvis-output-container">
+<div id="plot_id819515948" class="ggvis-output"></div>
+<div class="plot-gear-icon">
+<nav class="ggvis-control">
+<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+<ul class="ggvis-dropdown">
+<li>
+Renderer: 
+<a id="plot_id819515948_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id819515948" data-renderer="svg">SVG</a>
+ | 
+<a id="plot_id819515948_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id819515948" data-renderer="canvas">Canvas</a>
+</li>
+<li>
+<a id="plot_id819515948_download" class="ggvis-download" data-plot-id="plot_id819515948">Download</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<script type="text/javascript">
+var plot_id819515948_spec = {
+  "data": [
+    {
+      "name": ".0/count1/stack2",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "stack_lwr_": "number",
+          "stack_upr_": "number"
+        }
+      },
+      "values": "\"x_\",\"stack_lwr_\",\"stack_upr_\"\n\"bzs\",0,61.864434903101\n\"fbm\",0,26.9446017223507\n\"fin\",0,43.8041158354181\n\"its\",0,33.336196823475\n\"met\",0,28.544821367572\n\"min\",0,43.9864424285027\n\"ots\",0,44.3115461603349\n\"rmq\",0,58.9593892384576\n\"trn\",0,26.7856170129201\n\"wrt\",0,46.2712412693652"
+    },
+    {
+      "name": "scale/x",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"bzs\"\n\"fbm\"\n\"fin\"\n\"its\"\n\"met\"\n\"min\"\n\"ots\"\n\"rmq\"\n\"trn\"\n\"wrt\""
+    },
+    {
+      "name": "scale/y",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n0\n64.957656648256"
+    }
+  ],
+  "scales": [
+    {
+      "domain": {
+        "data": "scale/x",
+        "field": "data.domain"
+      },
+      "name": "x",
+      "type": "ordinal",
+      "points": false,
+      "padding": 0.1,
+      "sort": false,
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "domain": {
+        "data": "scale/y",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "height"
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "properties": {
+        "update": {
+          "stroke": {
+            "value": "#000000"
+          },
+          "fill": {
+            "value": "#333333"
+          },
+          "x": {
+            "scale": "x",
+            "field": "data.x_"
+          },
+          "y": {
+            "scale": "y",
+            "field": "data.stack_lwr_"
+          },
+          "y2": {
+            "scale": "y",
+            "field": "data.stack_upr_"
+          },
+          "width": {
+            "scale": "x",
+            "band": true
+          }
+        },
+        "ggvis": {
+          "data": {
+            "value": ".0/count1/stack2"
+          }
+        }
+      },
+      "from": {
+        "data": ".0/count1/stack2"
+      }
+    }
+  ],
+  "width": 480,
+  "height": 288,
+  "legends": [],
+  "axes": [
+    {
+      "type": "x",
+      "scale": "x",
+      "orient": "bottom",
+      "title": "industry name",
+      "layer": "back",
+      "grid": true
+    },
+    {
+      "type": "y",
+      "scale": "y",
+      "orient": "left",
+      "layer": "back",
+      "grid": true,
+      "title": "e2r"
+    }
+  ],
+  "padding": null,
+  "ggvis_opts": {
+    "keep_aspect": false,
+    "resizable": true,
+    "padding": {},
+    "duration": 250,
+    "renderer": "svg",
+    "hover_duration": 0,
+    "width": 480,
+    "height": 288
+  },
+  "handlers": null
+};
+ggvis.getPlot("plot_id819515948").parseSpec(plot_id819515948_spec);
+</script></p>
+
+</article></slide><slide class=''><hgroup><h2>I2E by country</h2></hgroup><article  id="i2e-by-country">
+
+<p>country size and export composition determine GVC participation.</p>
+
+<p><div id="plot_id173410860-container" class="ggvis-output-container">
+<div id="plot_id173410860" class="ggvis-output"></div>
+<div class="plot-gear-icon">
+<nav class="ggvis-control">
+<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+<ul class="ggvis-dropdown">
+<li>
+Renderer: 
+<a id="plot_id173410860_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id173410860" data-renderer="svg">SVG</a>
+ | 
+<a id="plot_id173410860_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id173410860" data-renderer="canvas">Canvas</a>
+</li>
+<li>
+<a id="plot_id173410860_download" class="ggvis-download" data-plot-id="plot_id173410860">Download</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<script type="text/javascript">
+var plot_id173410860_spec = {
+  "data": [
+    {
+      "name": ".0/count1/stack2",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "stack_lwr_": "number",
+          "stack_upr_": "number"
+        }
+      },
+      "values": "\"x_\",\"stack_lwr_\",\"stack_upr_\"\n\"cze\",0,0.355256162872551\n\"est\",0,0.404820997651727\n\"hun\",0,0.418134598979385\n\"irl\",0,0.442097846491563\n\"lux\",0,0.545372951158354\n\"mlt\",0,0.40909724254333\n\"mys\",0,0.373968886718947\n\"phl\",0,0.390883271786387\n\"sgp\",0,0.442431709766065\n\"svk\",0,0.404109194420201"
+    },
+    {
+      "name": "scale/x",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"cze\"\n\"est\"\n\"hun\"\n\"irl\"\n\"lux\"\n\"mlt\"\n\"mys\"\n\"phl\"\n\"sgp\"\n\"svk\""
+    },
+    {
+      "name": "scale/y",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n0\n0.572641598716272"
+    }
+  ],
+  "scales": [
+    {
+      "domain": {
+        "data": "scale/x",
+        "field": "data.domain"
+      },
+      "name": "x",
+      "type": "ordinal",
+      "points": false,
+      "padding": 0.1,
+      "sort": false,
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "domain": {
+        "data": "scale/y",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "height"
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "properties": {
+        "update": {
+          "stroke": {
+            "value": "#000000"
+          },
+          "fill": {
+            "value": "#333333"
+          },
+          "x": {
+            "scale": "x",
+            "field": "data.x_"
+          },
+          "y": {
+            "scale": "y",
+            "field": "data.stack_lwr_"
+          },
+          "y2": {
+            "scale": "y",
+            "field": "data.stack_upr_"
+          },
+          "width": {
+            "scale": "x",
+            "band": true
+          }
+        },
+        "ggvis": {
+          "data": {
+            "value": ".0/count1/stack2"
+          }
+        }
+      },
+      "from": {
+        "data": ".0/count1/stack2"
+      }
+    }
+  ],
+  "width": 480,
+  "height": 288,
+  "legends": [],
+  "axes": [
+    {
+      "type": "x",
+      "scale": "x",
+      "orient": "bottom",
+      "layer": "back",
+      "grid": true,
+      "title": "factor(ctry)"
+    },
+    {
+      "type": "y",
+      "scale": "y",
+      "orient": "left",
+      "layer": "back",
+      "grid": true,
+      "title": "i2e"
+    }
+  ],
+  "padding": null,
+  "ggvis_opts": {
+    "keep_aspect": false,
+    "resizable": true,
+    "padding": {},
+    "duration": 250,
+    "renderer": "svg",
+    "hover_duration": 0,
+    "width": 480,
+    "height": 288
+  },
+  "handlers": null
+};
+ggvis.getPlot("plot_id173410860").parseSpec(plot_id173410860_spec);
+</script></p>
+
+</article></slide><slide class=''><hgroup><h2>E2R by country</h2></hgroup><article  id="e2r-by-country">
+
+<p><div id="plot_id723113910-container" class="ggvis-output-container">
+<div id="plot_id723113910" class="ggvis-output"></div>
+<div class="plot-gear-icon">
+<nav class="ggvis-control">
+<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+<ul class="ggvis-dropdown">
+<li>
+Renderer: 
+<a id="plot_id723113910_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id723113910" data-renderer="svg">SVG</a>
+ | 
+<a id="plot_id723113910_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id723113910" data-renderer="canvas">Canvas</a>
+</li>
+<li>
+<a id="plot_id723113910_download" class="ggvis-download" data-plot-id="plot_id723113910">Download</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<script type="text/javascript">
+var plot_id723113910_spec = {
+  "data": [
+    {
+      "name": ".0/count1/stack2",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "stack_lwr_": "number",
+          "stack_upr_": "number"
+        }
+      },
+      "values": "\"x_\",\"stack_lwr_\",\"stack_upr_\"\n\"aus\",0,0.290622969250389\n\"brn\",0,0.359457484638925\n\"chl\",0,0.300327285108306\n\"gbr\",0,0.26101759507258\n\"idn\",0,0.269845932749116\n\"lva\",0,0.276972761634773\n\"nor\",0,0.413254925579684\n\"rus\",0,0.459943804953914\n\"sau\",0,0.424366935424975\n\"usa\",0,0.291020062068914"
+    },
+    {
+      "name": "scale/x",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"aus\"\n\"brn\"\n\"chl\"\n\"gbr\"\n\"idn\"\n\"lva\"\n\"nor\"\n\"rus\"\n\"sau\"\n\"usa\""
+    },
+    {
+      "name": "scale/y",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n0\n0.48294099520161"
+    }
+  ],
+  "scales": [
+    {
+      "domain": {
+        "data": "scale/x",
+        "field": "data.domain"
+      },
+      "name": "x",
+      "type": "ordinal",
+      "points": false,
+      "padding": 0.1,
+      "sort": false,
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "domain": {
+        "data": "scale/y",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "height"
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "properties": {
+        "update": {
+          "stroke": {
+            "value": "#000000"
+          },
+          "fill": {
+            "value": "#333333"
+          },
+          "x": {
+            "scale": "x",
+            "field": "data.x_"
+          },
+          "y": {
+            "scale": "y",
+            "field": "data.stack_lwr_"
+          },
+          "y2": {
+            "scale": "y",
+            "field": "data.stack_upr_"
+          },
+          "width": {
+            "scale": "x",
+            "band": true
+          }
+        },
+        "ggvis": {
+          "data": {
+            "value": ".0/count1/stack2"
+          }
+        }
+      },
+      "from": {
+        "data": ".0/count1/stack2"
+      }
+    }
+  ],
+  "width": 480,
+  "height": 288,
+  "legends": [],
+  "axes": [
+    {
+      "type": "x",
+      "scale": "x",
+      "orient": "bottom",
+      "layer": "back",
+      "grid": true,
+      "title": "factor(ctry)"
+    },
+    {
+      "type": "y",
+      "scale": "y",
+      "orient": "left",
+      "layer": "back",
+      "grid": true,
+      "title": "e2r"
+    }
+  ],
+  "padding": null,
+  "ggvis_opts": {
+    "keep_aspect": false,
+    "resizable": true,
+    "padding": {},
+    "duration": 250,
+    "renderer": "svg",
+    "hover_duration": 0,
+    "width": 480,
+    "height": 288
+  },
+  "handlers": null
+};
+ggvis.getPlot("plot_id723113910").parseSpec(plot_id723113910_spec);
+</script></p>
+
+</article></slide><slide class=''><hgroup><h2>Natural Resources and E2R</h2></hgroup><article  id="natural-resources-and-e2r">
+
+<pre >## Guessing formula = e2r ~ nat_res_exports</pre>
+
+<p><div id="plot_id176793566-container" class="ggvis-output-container">
+<div id="plot_id176793566" class="ggvis-output"></div>
+<div class="plot-gear-icon">
+<nav class="ggvis-control">
+<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+<ul class="ggvis-dropdown">
+<li>
+Renderer: 
+<a id="plot_id176793566_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id176793566" data-renderer="svg">SVG</a>
+ | 
+<a id="plot_id176793566_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id176793566" data-renderer="canvas">Canvas</a>
+</li>
+<li>
+<a id="plot_id176793566_download" class="ggvis-download" data-plot-id="plot_id176793566">Download</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<script type="text/javascript">
+var plot_id176793566_spec = {
+  "data": [
+    {
+      "name": ".0",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "nat_res_exports": "number",
+          "e2r": "number"
+        }
+      },
+      "values": "\"nat_res_exports\",\"e2r\"\n0.208661625,0.220739582903409\n0.367620175,0.290622969250389\n0.01057025,0.237609970649895\n0.013294525,0.21205315734228\n0.11301285,0.170076410800206\n0.1467755,0.255129930281481\n0.796302025,0.359457484638925\n0.19785535,0.126648791356632\n0.005680475,0.228183165174785\n0.5103913,0.300327285108306\n0.031694625,0.161061203029376\n0.033139375,0.220559038626507\n0.031669825,0.228309672297039\n0.010676325,0.237330742225727\n0.062368175,0.196738711979615\n0.041194125,0.205862899671527\n0.0519317,0.196305021550274\n0.00672355,0.238614535696013\n0.03705585,0.222073178907962\n0.063734775,0.26101759507258\n0.0440256,0.196412345873689\n0.003388,0.212798427624111\n0.043810675,0.178143057325692\n0.2158565,0.269845932749116\n0.089299325,0.207251865977086\n0.0119655,0.177160184942663\n0.036686725,0.17322412425314\n0.032136225,0.18168939099685\n0.016764125,0.207311135247094\n0.001767225,0.260922023430349\n0.34275175,0.0608678140287215\n0.006856575,0.208911323505136\n0.085519875,0.174061999205093\n0.009855325,0.151906029836498\n0.084312275,0.276972761634773\n0.134444075,0.110645101264186\n0.015926075,0.14913832154688\n0.20953235,0.235089840588556\n0.09990225,0.218685661334681\n0.4867445,0.413254925579684\n0.1523794,0.157856399839856\n0.0659024,0.242786404282253\n0.0720476,0.221393564247751\n0.022706975,0.188423466895567\n0.04170085,0.217170178652216\n0.3600733,0.459943804953914\n0.792964575,0.424366935424975\n0.000946175,0.190963516044545\n0.030031275,0.201119521084333\n0.0121663,0.182250581191985\n0.01443265,0.229485091766502\n0.0194416,0.15761854045049\n0.04816965,0.160486076780209\n0.00769365,0.208124435120701\n0.04305525,0.291020062068914\n0.400250775,0.161620497491834\n0.38328075,0.1984902618558"
+    },
+    {
+      "name": ".0/model_prediction1",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "pred_": "number",
+          "resp_": "number"
+        }
+      },
+      "values": "\"pred_\",\"resp_\"\n0.000946175,0.193312277884748\n0.0110139705696203,0.195442113316615\n0.0210817661392405,0.197571948748482\n0.0311495617088608,0.199701784180349\n0.041217357278481,0.201831619612216\n0.0512851528481013,0.203961455044083\n0.0613529484177215,0.206091290475951\n0.0714207439873418,0.208221125907818\n0.081488539556962,0.210350961339685\n0.0915563351265823,0.212480796771552\n0.101624130696203,0.214610632203419\n0.111691926265823,0.216740467635286\n0.121759721835443,0.218870303067153\n0.131827517405063,0.22100013849902\n0.141895312974684,0.223129973930887\n0.151963108544304,0.225259809362754\n0.162030904113924,0.227389644794621\n0.172098699683544,0.229519480226488\n0.182166495253165,0.231649315658355\n0.192234290822785,0.233779151090223\n0.202302086392405,0.23590898652209\n0.212369881962025,0.238038821953957\n0.222437677531646,0.240168657385824\n0.232505473101266,0.242298492817691\n0.242573268670886,0.244428328249558\n0.252641064240506,0.246558163681425\n0.262708859810127,0.248687999113292\n0.272776655379747,0.250817834545159\n0.282844450949367,0.252947669977026\n0.292912246518987,0.255077505408893\n0.302980042088608,0.25720734084076\n0.313047837658228,0.259337176272628\n0.323115633227848,0.261467011704495\n0.333183428797468,0.263596847136362\n0.343251224367089,0.265726682568229\n0.353319019936709,0.267856518000096\n0.363386815506329,0.269986353431963\n0.373454611075949,0.27211618886383\n0.38352240664557,0.274246024295697\n0.39359020221519,0.276375859727564\n0.40365799778481,0.278505695159431\n0.41372579335443,0.280635530591298\n0.423793588924051,0.282765366023165\n0.433861384493671,0.284895201455032\n0.443929180063291,0.2870250368869\n0.453996975632911,0.289154872318767\n0.464064771202532,0.291284707750634\n0.474132566772152,0.293414543182501\n0.484200362341772,0.295544378614368\n0.494268157911392,0.297674214046235\n0.504335953481013,0.299804049478102\n0.514403749050633,0.301933884909969\n0.524471544620253,0.304063720341836\n0.534539340189873,0.306193555773703\n0.544607135759494,0.30832339120557\n0.554674931329114,0.310453226637437\n0.564742726898734,0.312583062069305\n0.574810522468355,0.314712897501172\n0.584878318037975,0.316842732933039\n0.594946113607595,0.318972568364906\n0.605013909177215,0.321102403796773\n0.615081704746835,0.32323223922864\n0.625149500316456,0.325362074660507\n0.635217295886076,0.327491910092374\n0.645285091455696,0.329621745524241\n0.655352887025316,0.331751580956108\n0.665420682594937,0.333881416387975\n0.675488478164557,0.336011251819842\n0.685556273734177,0.338141087251709\n0.695624069303797,0.340270922683577\n0.705691864873418,0.342400758115444\n0.715759660443038,0.344530593547311\n0.725827456012658,0.346660428979178\n0.735895251582279,0.348790264411045\n0.745963047151899,0.350920099842912\n0.756030842721519,0.353049935274779\n0.766098638291139,0.355179770706646\n0.77616643386076,0.357309606138513\n0.78623422943038,0.35943944157038\n0.796302025,0.361569277002247"
+    },
+    {
+      "name": "scale/x",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n-0.0388216175\n0.8360698175"
+    },
+    {
+      "name": "scale/y",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n0.0409140144824619\n0.479897604500174"
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "domain": {
+        "data": "scale/x",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "domain": {
+        "data": "scale/y",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "height"
+    }
+  ],
+  "marks": [
+    {
+      "type": "symbol",
+      "properties": {
+        "update": {
+          "fill": {
+            "value": "#000000"
+          },
+          "size": {
+            "value": 50
+          },
+          "x": {
+            "scale": "x",
+            "field": "data.nat_res_exports"
+          },
+          "y": {
+            "scale": "y",
+            "field": "data.e2r"
+          }
+        },
+        "ggvis": {
+          "data": {
+            "value": ".0"
+          }
+        }
+      },
+      "from": {
+        "data": ".0"
+      }
+    },
+    {
+      "type": "line",
+      "properties": {
+        "update": {
+          "stroke": {
+            "value": "#000000"
+          },
+          "strokeWidth": {
+            "value": 2
+          },
+          "x": {
+            "scale": "x",
+            "field": "data.pred_"
+          },
+          "y": {
+            "scale": "y",
+            "field": "data.resp_"
+          },
+          "fill": {
+            "value": "transparent"
+          }
+        },
+        "ggvis": {
+          "data": {
+            "value": ".0/model_prediction1"
+          }
+        }
+      },
+      "from": {
+        "data": ".0/model_prediction1"
+      }
+    }
+  ],
+  "width": 480,
+  "height": 288,
+  "legends": [],
+  "axes": [
+    {
+      "type": "x",
+      "scale": "x",
+      "orient": "bottom",
+      "layer": "back",
+      "grid": true,
+      "title": "nat_res_exports"
+    },
+    {
+      "type": "y",
+      "scale": "y",
+      "orient": "left",
+      "layer": "back",
+      "grid": true,
+      "title": "e2r"
+    }
+  ],
+  "padding": null,
+  "ggvis_opts": {
+    "keep_aspect": false,
+    "resizable": true,
+    "padding": {},
+    "duration": 250,
+    "renderer": "svg",
+    "hover_duration": 0,
+    "width": 480,
+    "height": 288
+  },
+  "handlers": null
+};
+ggvis.getPlot("plot_id176793566").parseSpec(plot_id176793566_spec);
+</script></p>
+
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>GVC indicators for LMICs</h2></hgroup><article  id="gvc-indicators-for-lmics">
+
+</article></slide><slide class=''><hgroup><h2>GVC participation by *IC: I2E</h2></hgroup><article  id="gvc-participation-by-ic-i2e">
+
+<p>LMICs drive recent growth in GVC participation.</p>
+
+<p><div id="plot_id714073511-container" class="ggvis-output-container">
+<div id="plot_id714073511" class="ggvis-output"></div>
+<div class="plot-gear-icon">
+<nav class="ggvis-control">
+<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+<ul class="ggvis-dropdown">
+<li>
+Renderer: 
+<a id="plot_id714073511_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id714073511" data-renderer="svg">SVG</a>
+ | 
+<a id="plot_id714073511_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id714073511" data-renderer="canvas">Canvas</a>
+</li>
+<li>
+<a id="plot_id714073511_download" class="ggvis-download" data-plot-id="plot_id714073511">Download</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<script type="text/javascript">
+var plot_id714073511_spec = {
   "data": [
     {
       "name": ".0/group_by1/arrange2_flat",
@@ -789,32 +1555,278 @@ var plot_id180958111_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id180958111").parseSpec(plot_id180958111_spec);
+ggvis.getPlot("plot_id714073511").parseSpec(plot_id714073511_spec);
 </script></p>
 
-</article></slide><slide class=''><hgroup><h2>GVC participation by *IC: E2R Exporting to Re-export (E2R)</h2></hgroup><article  id="gvc-participation-by-ic-e2r-exporting-to-re-export-e2r">
+</article></slide><slide class=''><hgroup><h2>Sourcing I2E</h2></hgroup><article  id="sourcing-i2e">
 
-<p><div id="plot_id154685561-container" class="ggvis-output-container">
-<div id="plot_id154685561" class="ggvis-output"></div>
+<p><div id="plot_id353889486-container" class="ggvis-output-container">
+<div id="plot_id353889486" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id154685561_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id154685561" data-renderer="svg">SVG</a>
+<a id="plot_id353889486_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id353889486" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id154685561_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id154685561" data-renderer="canvas">Canvas</a>
+<a id="plot_id353889486_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id353889486" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id154685561_download" class="ggvis-download" data-plot-id="plot_id154685561">Download</a>
+<a id="plot_id353889486_download" class="ggvis-download" data-plot-id="plot_id353889486">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id154685561_spec = {
+var plot_id353889486_spec = {
+  "data": [
+    {
+      "name": ".0/arrange1",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "i2e_lic": "number"
+        }
+      },
+      "values": "\"year\",\"i2e_lic\"\n1995,0.0226863687240525\n2000,0.0303191252315173\n2005,0.0427554493997434\n2008,0.0495532825969857"
+    },
+    {
+      "name": ".0/arrange2",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "i2e_mic": "number"
+        }
+      },
+      "values": "\"year\",\"i2e_mic\"\n1995,0.0135096990661975\n2000,0.0190954153030336\n2005,0.0246469258781063\n2008,0.0247581651069841"
+    },
+    {
+      "name": ".0/arrange3",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "i2e_hic": "number"
+        }
+      },
+      "values": "\"year\",\"i2e_hic\"\n1995,0.143974215597205\n2000,0.160981586696785\n2005,0.15046571649903\n2008,0.134778670466431"
+    },
+    {
+      "name": "scale/stroke",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"i2e_lic\"\n\"i2e_mic\"\n\"i2e_hic\""
+    },
+    {
+      "name": "scale/x",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n1994.35\n2008.65"
+    },
+    {
+      "name": "scale/y",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n0.00613610468466816\n0.168355181078315"
+    }
+  ],
+  "scales": [
+    {
+      "name": "stroke",
+      "type": "ordinal",
+      "domain": {
+        "data": "scale/stroke",
+        "field": "data.domain"
+      },
+      "points": true,
+      "sort": false,
+      "range": "category10"
+    },
+    {
+      "name": "x",
+      "domain": {
+        "data": "scale/x",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "domain": {
+        "data": "scale/y",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "height"
+    }
+  ],
+  "marks": [
+    {
+      "type": "line",
+      "properties": {
+        "update": {
+          "stroke": {
+            "scale": "stroke",
+            "value": "i2e_lic"
+          },
+          "x": {
+            "scale": "x",
+            "field": "data.year"
+          },
+          "y": {
+            "scale": "y",
+            "field": "data.i2e_lic"
+          }
+        },
+        "ggvis": {
+          "data": {
+            "value": ".0/arrange1"
+          }
+        }
+      },
+      "from": {
+        "data": ".0/arrange1"
+      }
+    },
+    {
+      "type": "line",
+      "properties": {
+        "update": {
+          "stroke": {
+            "scale": "stroke",
+            "value": "i2e_mic"
+          },
+          "x": {
+            "scale": "x",
+            "field": "data.year"
+          },
+          "y": {
+            "scale": "y",
+            "field": "data.i2e_mic"
+          }
+        },
+        "ggvis": {
+          "data": {
+            "value": ".0/arrange2"
+          }
+        }
+      },
+      "from": {
+        "data": ".0/arrange2"
+      }
+    },
+    {
+      "type": "line",
+      "properties": {
+        "update": {
+          "stroke": {
+            "scale": "stroke",
+            "value": "i2e_hic"
+          },
+          "x": {
+            "scale": "x",
+            "field": "data.year"
+          },
+          "y": {
+            "scale": "y",
+            "field": "data.i2e_hic"
+          }
+        },
+        "ggvis": {
+          "data": {
+            "value": ".0/arrange3"
+          }
+        }
+      },
+      "from": {
+        "data": ".0/arrange3"
+      }
+    }
+  ],
+  "width": 480,
+  "height": 288,
+  "legends": [
+    {
+      "orient": "right",
+      "stroke": "stroke"
+    }
+  ],
+  "axes": [
+    {
+      "type": "x",
+      "scale": "x",
+      "orient": "bottom",
+      "layer": "back",
+      "grid": true,
+      "title": "year"
+    },
+    {
+      "type": "y",
+      "scale": "y",
+      "orient": "left",
+      "layer": "back",
+      "grid": true,
+      "title": "i2e_hic"
+    }
+  ],
+  "padding": null,
+  "ggvis_opts": {
+    "keep_aspect": false,
+    "resizable": true,
+    "padding": {},
+    "duration": 250,
+    "renderer": "svg",
+    "hover_duration": 0,
+    "width": 480,
+    "height": 288
+  },
+  "handlers": null
+};
+ggvis.getPlot("plot_id353889486").parseSpec(plot_id353889486_spec);
+</script></p>
+
+</article></slide><slide class=''><hgroup><h2>GVC participation by *IC: E2R</h2></hgroup><article  id="gvc-participation-by-ic-e2r">
+
+<p><div id="plot_id286781518-container" class="ggvis-output-container">
+<div id="plot_id286781518" class="ggvis-output"></div>
+<div class="plot-gear-icon">
+<nav class="ggvis-control">
+<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+<ul class="ggvis-dropdown">
+<li>
+Renderer: 
+<a id="plot_id286781518_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id286781518" data-renderer="svg">SVG</a>
+ | 
+<a id="plot_id286781518_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id286781518" data-renderer="canvas">Canvas</a>
+</li>
+<li>
+<a id="plot_id286781518_download" class="ggvis-download" data-plot-id="plot_id286781518">Download</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<script type="text/javascript">
+var plot_id286781518_spec = {
   "data": [
     {
       "name": ".0/group_by1/arrange2_flat",
@@ -977,51 +1989,83 @@ var plot_id154685561_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id154685561").parseSpec(plot_id154685561_spec);
+ggvis.getPlot("plot_id286781518").parseSpec(plot_id286781518_spec);
 </script></p>
 
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts">
+</article></slide><slide class=''><hgroup><h2>Sourcing E2R</h2></hgroup><article  id="sourcing-e2r">
 
-<p><div id="plot_id377977641-container" class="ggvis-output-container">
-<div id="plot_id377977641" class="ggvis-output"></div>
+<p><div id="plot_id997007802-container" class="ggvis-output-container">
+<div id="plot_id997007802" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id377977641_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id377977641" data-renderer="svg">SVG</a>
+<a id="plot_id997007802_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id997007802" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id377977641_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id377977641" data-renderer="canvas">Canvas</a>
+<a id="plot_id997007802_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id997007802" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id377977641_download" class="ggvis-download" data-plot-id="plot_id377977641">Download</a>
+<a id="plot_id997007802_download" class="ggvis-download" data-plot-id="plot_id997007802">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id377977641_spec = {
+var plot_id997007802_spec = {
   "data": [
     {
-      "name": ".0/count1/stack2",
+      "name": ".0/arrange1",
       "format": {
         "type": "csv",
         "parse": {
-          "stack_lwr_": "number",
-          "stack_upr_": "number"
+          "year": "number",
+          "e2r_lic": "number"
         }
       },
-      "values": "\"x_\",\"stack_lwr_\",\"stack_upr_\"\n\"cze\",0,0.355256162872551\n\"est\",0,0.404820997651727\n\"hun\",0,0.418134598979385\n\"irl\",0,0.442097846491563\n\"lux\",0,0.545372951158354\n\"mlt\",0,0.40909724254333\n\"mys\",0,0.373968886718947\n\"phl\",0,0.390883271786387\n\"sgp\",0,0.442431709766065\n\"svk\",0,0.404109194420201"
+      "values": "\"year\",\"e2r_lic\"\n1995,0.0307448000729368\n2000,0.037822842196852\n2005,0.05100063499423\n2008,0.0533706099575139"
     },
     {
-      "name": "scale/x",
+      "name": ".0/arrange2",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "e2r_mic": "number"
+        }
+      },
+      "values": "\"year\",\"e2r_mic\"\n1995,0.0270365363054904\n2000,0.0380018601821784\n2005,0.0424094724024294\n2008,0.0446671267291724"
+    },
+    {
+      "name": ".0/arrange3",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "e2r_hic": "number"
+        }
+      },
+      "values": "\"year\",\"e2r_hic\"\n1995,0.141623623637165\n2000,0.152525253334069\n2005,0.149824394338804\n2008,0.144407091654839"
+    },
+    {
+      "name": "scale/stroke",
       "format": {
         "type": "csv",
         "parse": {}
       },
-      "values": "\"domain\"\n\"cze\"\n\"est\"\n\"hun\"\n\"irl\"\n\"lux\"\n\"mlt\"\n\"mys\"\n\"phl\"\n\"sgp\"\n\"svk\""
+      "values": "\"domain\"\n\"e2r_lic\"\n\"e2r_mic\"\n\"e2r_hic\""
+    },
+    {
+      "name": "scale/x",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n1994.35\n2008.65"
     },
     {
       "name": "scale/y",
@@ -1031,335 +2075,21 @@ var plot_id377977641_spec = {
           "domain": "number"
         }
       },
-      "values": "\"domain\"\n0\n0.572641598716272"
+      "values": "\"domain\"\n0.0207621004540614\n0.158799689185497"
     }
   ],
   "scales": [
     {
-      "domain": {
-        "data": "scale/x",
-        "field": "data.domain"
-      },
-      "name": "x",
+      "name": "stroke",
       "type": "ordinal",
-      "points": false,
-      "padding": 0.1,
+      "domain": {
+        "data": "scale/stroke",
+        "field": "data.domain"
+      },
+      "points": true,
       "sort": false,
-      "range": "width"
+      "range": "category10"
     },
-    {
-      "name": "y",
-      "domain": {
-        "data": "scale/y",
-        "field": "data.domain"
-      },
-      "zero": false,
-      "nice": false,
-      "clamp": false,
-      "range": "height"
-    }
-  ],
-  "marks": [
-    {
-      "type": "rect",
-      "properties": {
-        "update": {
-          "stroke": {
-            "value": "#000000"
-          },
-          "fill": {
-            "value": "#333333"
-          },
-          "x": {
-            "scale": "x",
-            "field": "data.x_"
-          },
-          "y": {
-            "scale": "y",
-            "field": "data.stack_lwr_"
-          },
-          "y2": {
-            "scale": "y",
-            "field": "data.stack_upr_"
-          },
-          "width": {
-            "scale": "x",
-            "band": true
-          }
-        },
-        "ggvis": {
-          "data": {
-            "value": ".0/count1/stack2"
-          }
-        }
-      },
-      "from": {
-        "data": ".0/count1/stack2"
-      }
-    }
-  ],
-  "width": 480,
-  "height": 288,
-  "legends": [],
-  "axes": [
-    {
-      "type": "x",
-      "scale": "x",
-      "orient": "bottom",
-      "layer": "back",
-      "grid": true,
-      "title": "factor(ctry)"
-    },
-    {
-      "type": "y",
-      "scale": "y",
-      "orient": "left",
-      "layer": "back",
-      "grid": true,
-      "title": "i2e"
-    }
-  ],
-  "padding": null,
-  "ggvis_opts": {
-    "keep_aspect": false,
-    "resizable": true,
-    "padding": {},
-    "duration": 250,
-    "renderer": "svg",
-    "hover_duration": 0,
-    "width": 480,
-    "height": 288
-  },
-  "handlers": null
-};
-ggvis.getPlot("plot_id377977641").parseSpec(plot_id377977641_spec);
-</script></p>
-
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-1">
-
-<p><div id="plot_id394086781-container" class="ggvis-output-container">
-<div id="plot_id394086781" class="ggvis-output"></div>
-<div class="plot-gear-icon">
-<nav class="ggvis-control">
-<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
-<ul class="ggvis-dropdown">
-<li>
-Renderer: 
-<a id="plot_id394086781_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id394086781" data-renderer="svg">SVG</a>
- | 
-<a id="plot_id394086781_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id394086781" data-renderer="canvas">Canvas</a>
-</li>
-<li>
-<a id="plot_id394086781_download" class="ggvis-download" data-plot-id="plot_id394086781">Download</a>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-<script type="text/javascript">
-var plot_id394086781_spec = {
-  "data": [
-    {
-      "name": ".0/count1/stack2",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "stack_lwr_": "number",
-          "stack_upr_": "number"
-        }
-      },
-      "values": "\"x_\",\"stack_lwr_\",\"stack_upr_\"\n\"aus\",0,0.290622969250389\n\"brn\",0,0.359457484638925\n\"chl\",0,0.300327285108306\n\"gbr\",0,0.26101759507258\n\"idn\",0,0.269845932749116\n\"lva\",0,0.276972761634773\n\"nor\",0,0.413254925579684\n\"rus\",0,0.459943804953914\n\"sau\",0,0.424366935424975\n\"usa\",0,0.291020062068914"
-    },
-    {
-      "name": "scale/x",
-      "format": {
-        "type": "csv",
-        "parse": {}
-      },
-      "values": "\"domain\"\n\"aus\"\n\"brn\"\n\"chl\"\n\"gbr\"\n\"idn\"\n\"lva\"\n\"nor\"\n\"rus\"\n\"sau\"\n\"usa\""
-    },
-    {
-      "name": "scale/y",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "domain": "number"
-        }
-      },
-      "values": "\"domain\"\n0\n0.48294099520161"
-    }
-  ],
-  "scales": [
-    {
-      "domain": {
-        "data": "scale/x",
-        "field": "data.domain"
-      },
-      "name": "x",
-      "type": "ordinal",
-      "points": false,
-      "padding": 0.1,
-      "sort": false,
-      "range": "width"
-    },
-    {
-      "name": "y",
-      "domain": {
-        "data": "scale/y",
-        "field": "data.domain"
-      },
-      "zero": false,
-      "nice": false,
-      "clamp": false,
-      "range": "height"
-    }
-  ],
-  "marks": [
-    {
-      "type": "rect",
-      "properties": {
-        "update": {
-          "stroke": {
-            "value": "#000000"
-          },
-          "fill": {
-            "value": "#333333"
-          },
-          "x": {
-            "scale": "x",
-            "field": "data.x_"
-          },
-          "y": {
-            "scale": "y",
-            "field": "data.stack_lwr_"
-          },
-          "y2": {
-            "scale": "y",
-            "field": "data.stack_upr_"
-          },
-          "width": {
-            "scale": "x",
-            "band": true
-          }
-        },
-        "ggvis": {
-          "data": {
-            "value": ".0/count1/stack2"
-          }
-        }
-      },
-      "from": {
-        "data": ".0/count1/stack2"
-      }
-    }
-  ],
-  "width": 480,
-  "height": 288,
-  "legends": [],
-  "axes": [
-    {
-      "type": "x",
-      "scale": "x",
-      "orient": "bottom",
-      "layer": "back",
-      "grid": true,
-      "title": "factor(ctry)"
-    },
-    {
-      "type": "y",
-      "scale": "y",
-      "orient": "left",
-      "layer": "back",
-      "grid": true,
-      "title": "e2r"
-    }
-  ],
-  "padding": null,
-  "ggvis_opts": {
-    "keep_aspect": false,
-    "resizable": true,
-    "padding": {},
-    "duration": 250,
-    "renderer": "svg",
-    "hover_duration": 0,
-    "width": 480,
-    "height": 288
-  },
-  "handlers": null
-};
-ggvis.getPlot("plot_id394086781").parseSpec(plot_id394086781_spec);
-</script></p>
-
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-2">
-
-<pre >## Guessing formula = i2e ~ avg_gdp</pre>
-
-<p><div id="plot_id516121396-container" class="ggvis-output-container">
-<div id="plot_id516121396" class="ggvis-output"></div>
-<div class="plot-gear-icon">
-<nav class="ggvis-control">
-<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
-<ul class="ggvis-dropdown">
-<li>
-Renderer: 
-<a id="plot_id516121396_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id516121396" data-renderer="svg">SVG</a>
- | 
-<a id="plot_id516121396_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id516121396" data-renderer="canvas">Canvas</a>
-</li>
-<li>
-<a id="plot_id516121396_download" class="ggvis-download" data-plot-id="plot_id516121396">Download</a>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-<script type="text/javascript">
-var plot_id516121396_spec = {
-  "data": [
-    {
-      "name": ".0",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "avg_gdp": "number",
-          "i2e": "number"
-        }
-      },
-      "values": "\"avg_gdp\",\"i2e\"\n184585.23588,0.111525996112366\n645671.2438875,0.104942585777461\n293449.74603,0.300529980967354\n360315.322965,0.350679979846441\n28491.366254,0.300366765519619\n858466.06344575,0.0928884510473637\n8658.85165,0.0884714348791804\n1040624.22225,0.218406360075872\n375366.1202925,0.256855622868013\n114606.38120775,0.150629925756538\n2210907.99132,0.198315241510326\n15872.385025,0.156751671250562\n125381.89777,0.355256162872551\n2747906.284545,0.219749520936926\n244135.9621975,0.28976352931893\n1034487.7825625,0.212624994256072\n12215.54228825,0.404820997651727\n182488.2246,0.285465545906436\n1958969.6657925,0.211638572312439\n2132698.45748,0.16739431548345\n221669.64869,0.184087712518047\n173831.90976,0.287706473299514\n100899.5151885,0.418134598979385\n274723.372924,0.139393810203032\n767988.79067575,0.166186940771882\n171448.8486,0.442097846491563\n14556.574725,0.352164673337446\n122186.596345,0.308609969759548\n1704704.7644625,0.212468520702963\n4428797.175,0.0993474528712513\n5865.103475,0.332399629481809\n786355.66527,0.268745585375309\n23751.862552,0.279609016335868\n33837.158615,0.545372951158354\n14036.7966125,0.263030343623872\n769239.568005,0.289372767634958\n5736.4002,0.40909724254333\n132239.42743875,0.373968886718947\n614432.50441,0.287975541247908\n284231.7212,0.138988414551892\n103240.30548,0.17454844024368\n94896.6384,0.390883271786387\n299435.773456,0.248240434241528\n182381.1259675,0.263942155906472\n99056.507911,0.228734891063293\n741922.5779,0.0809406874892693\n301211.093135,0.0252190726755613\n112085.643475,0.442431709766065\n60191.7628,0.404109194420201\n33789.824145,0.352892613662556\n346045.91358,0.276200715170743\n165962.294528,0.307418465784616\n439917.3334605,0.180967353196177\n341201.5392225,0.335502361912433\n11984332.3902675,0.0873401411820966\n52584.11780895,0.317185280586114\n236194.438155,0.136910318003598"
-    },
-    {
-      "name": ".0/model_prediction1",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "pred_": "number",
-          "resp_": "number"
-        }
-      },
-      "values": "\"pred_\",\"resp_\"\n5736.4002,0.270883637250486\n157364.197542627,0.267472143672316\n308991.994885253,0.264060650094146\n460619.79222788,0.260649156515975\n612247.589570506,0.257237662937805\n763875.386913133,0.253826169359635\n915503.184255759,0.250414675781465\n1067130.98159839,0.247003182203294\n1218758.77894101,0.243591688625124\n1370386.57628364,0.240180195046954\n1522014.37362627,0.236768701468783\n1673642.17096889,0.233357207890613\n1825269.96831152,0.229945714312443\n1976897.76565415,0.226534220734272\n2128525.56299677,0.223122727156102\n2280153.3603394,0.219711233577932\n2431781.15768203,0.216299739999761\n2583408.95502465,0.212888246421591\n2735036.75236728,0.209476752843421\n2886664.5497099,0.206065259265251\n3038292.34705253,0.20265376568708\n3189920.14439516,0.19924227210891\n3341547.94173779,0.19583077853074\n3493175.73908041,0.192419284952569\n3644803.53642304,0.189007791374399\n3796431.33376566,0.185596297796229\n3948059.13110829,0.182184804218058\n4099686.92845092,0.178773310639888\n4251314.72579354,0.175361817061718\n4402942.52313617,0.171950323483547\n4554570.3204788,0.168538829905377\n4706198.11782142,0.165127336327207\n4857825.91516405,0.161715842749037\n5009453.71250668,0.158304349170866\n5161081.5098493,0.154892855592696\n5312709.30719193,0.151481362014526\n5464337.10453456,0.148069868436355\n5615964.90187718,0.144658374858185\n5767592.69921981,0.141246881280015\n5919220.49656244,0.137835387701844\n6070848.29390506,0.134423894123674\n6222476.09124769,0.131012400545504\n6374103.88859032,0.127600906967334\n6525731.68593294,0.124189413389163\n6677359.48327557,0.120777919810993\n6828987.2806182,0.117366426232823\n6980615.07796082,0.113954932654652\n7132242.87530345,0.110543439076482\n7283870.67264608,0.107131945498312\n7435498.4699887,0.103720451920141\n7587126.26733133,0.100308958341971\n7738754.06467396,0.0968974647638008\n7890381.86201658,0.0934859711856305\n8042009.65935921,0.0900744776074602\n8193637.45670184,0.0866629840292898\n8345265.25404446,0.0832514904511195\n8496893.05138709,0.0798399968729492\n8648520.84872971,0.0764285032947789\n8800148.64607234,0.0730170097166087\n8951776.44341497,0.0696055161384384\n9103404.2407576,0.066194022560268\n9255032.03810022,0.0627825289820977\n9406659.83544285,0.0593710354039274\n9558287.63278547,0.0559595418257571\n9709915.4301281,0.0525480482475868\n9861543.22747073,0.0491365546694165\n10013171.0248134,0.0457250610912462\n10164798.822156,0.0423135675130759\n10316426.6194986,0.0389020739349056\n10468054.4168412,0.0354905803567352\n10619682.2141839,0.0320790867785649\n10771310.0115265,0.0286675932003946\n10922937.8088691,0.0252560996222243\n11074565.6062117,0.021844606044054\n11226193.4035544,0.0184331124658837\n11377821.200897,0.0150216188877134\n11529448.9982396,0.0116101253095431\n11681076.7955822,0.00819863173137281\n11832704.5929249,0.00478713815320247\n11984332.3902675,0.0013756445750322"
-    },
-    {
-      "name": "scale/x",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "domain": "number"
-        }
-      },
-      "values": "\"domain\"\n-593193.399303375\n12583262.1897709"
-    },
-    {
-      "name": "scale/y",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "domain": "number"
-        }
-      },
-      "values": "\"domain\"\n-0.0258242207541339\n0.57257281648752"
-    }
-  ],
-  "scales": [
     {
       "name": "x",
       "domain": {
@@ -1385,32 +2115,30 @@ var plot_id516121396_spec = {
   ],
   "marks": [
     {
-      "type": "symbol",
+      "type": "line",
       "properties": {
         "update": {
-          "fill": {
-            "value": "#000000"
-          },
-          "size": {
-            "value": 50
+          "stroke": {
+            "scale": "stroke",
+            "value": "e2r_lic"
           },
           "x": {
             "scale": "x",
-            "field": "data.avg_gdp"
+            "field": "data.year"
           },
           "y": {
             "scale": "y",
-            "field": "data.i2e"
+            "field": "data.e2r_lic"
           }
         },
         "ggvis": {
           "data": {
-            "value": ".0"
+            "value": ".0/arrange1"
           }
         }
       },
       "from": {
-        "data": ".0"
+        "data": ".0/arrange1"
       }
     },
     {
@@ -1418,192 +2146,26 @@ var plot_id516121396_spec = {
       "properties": {
         "update": {
           "stroke": {
-            "value": "#000000"
-          },
-          "strokeWidth": {
-            "value": 2
+            "scale": "stroke",
+            "value": "e2r_mic"
           },
           "x": {
             "scale": "x",
-            "field": "data.pred_"
+            "field": "data.year"
           },
           "y": {
             "scale": "y",
-            "field": "data.resp_"
-          },
-          "fill": {
-            "value": "transparent"
+            "field": "data.e2r_mic"
           }
         },
         "ggvis": {
           "data": {
-            "value": ".0/model_prediction1"
+            "value": ".0/arrange2"
           }
         }
       },
       "from": {
-        "data": ".0/model_prediction1"
-      }
-    }
-  ],
-  "width": 480,
-  "height": 288,
-  "legends": [],
-  "axes": [
-    {
-      "type": "x",
-      "scale": "x",
-      "orient": "bottom",
-      "layer": "back",
-      "grid": true,
-      "title": "avg_gdp"
-    },
-    {
-      "type": "y",
-      "scale": "y",
-      "orient": "left",
-      "layer": "back",
-      "grid": true,
-      "title": "i2e"
-    }
-  ],
-  "padding": null,
-  "ggvis_opts": {
-    "keep_aspect": false,
-    "resizable": true,
-    "padding": {},
-    "duration": 250,
-    "renderer": "svg",
-    "hover_duration": 0,
-    "width": 480,
-    "height": 288
-  },
-  "handlers": null
-};
-ggvis.getPlot("plot_id516121396").parseSpec(plot_id516121396_spec);
-</script></p>
-
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-3">
-
-<pre >## Guessing formula = i2e ~ nat_res_exp_sha_t_3</pre>
-
-<p><div id="plot_id877392100-container" class="ggvis-output-container">
-<div id="plot_id877392100" class="ggvis-output"></div>
-<div class="plot-gear-icon">
-<nav class="ggvis-control">
-<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
-<ul class="ggvis-dropdown">
-<li>
-Renderer: 
-<a id="plot_id877392100_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id877392100" data-renderer="svg">SVG</a>
- | 
-<a id="plot_id877392100_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id877392100" data-renderer="canvas">Canvas</a>
-</li>
-<li>
-<a id="plot_id877392100_download" class="ggvis-download" data-plot-id="plot_id877392100">Download</a>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-<script type="text/javascript">
-var plot_id877392100_spec = {
-  "data": [
-    {
-      "name": ".0",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "nat_res_exp_sha_t_3": "number",
-          "i2e": "number"
-        }
-      },
-      "values": "\"nat_res_exp_sha_t_3\",\"i2e\"\n0.208661625,0.111525996112366\n0.367620175,0.104942585777461\n0.01057025,0.300529980967354\n0.013294525,0.350679979846441\n0.11301285,0.300366765519619\n0.1467755,0.0928884510473637\n0.796302025,0.0884714348791804\n0.19785535,0.218406360075872\n0.005680475,0.256855622868013\n0.5103913,0.150629925756538\n0.031694625,0.198315241510326\n0.033139375,0.156751671250562\n0.031669825,0.355256162872551\n0.010676325,0.219749520936926\n0.062368175,0.28976352931893\n0.041194125,0.212624994256072\n0.0519317,0.404820997651727\n0.00672355,0.285465545906436\n0.03705585,0.211638572312439\n0.063734775,0.16739431548345\n0.0440256,0.184087712518047\n0.003388,0.287706473299514\n0.043810675,0.418134598979385\n0.2158565,0.139393810203032\n0.089299325,0.166186940771882\n0.0119655,0.442097846491563\n0.036686725,0.352164673337446\n0.032136225,0.308609969759548\n0.016764125,0.212468520702963\n0.001767225,0.0993474528712513\n0.34275175,0.332399629481809\n0.006856575,0.268745585375309\n0.085519875,0.279609016335868\n0.009855325,0.545372951158354\n0.084312275,0.263030343623872\n0.134444075,0.289372767634958\n0.015926075,0.40909724254333\n0.20953235,0.373968886718947\n0.09990225,0.287975541247908\n0.4867445,0.138988414551892\n0.1523794,0.17454844024368\n0.0659024,0.390883271786387\n0.0720476,0.248240434241528\n0.022706975,0.263942155906472\n0.04170085,0.228734891063293\n0.3600733,0.0809406874892693\n0.792964575,0.0252190726755613\n0.000946175,0.442431709766065\n0.030031275,0.404109194420201\n0.0121663,0.352892613662556\n0.01443265,0.276200715170743\n0.0194416,0.307418465784616\n0.04816965,0.180967353196177\n0.00769365,0.335502361912433\n0.04305525,0.0873401411820966\n0.400250775,0.317185280586114\n0.38328075,0.136910318003598"
-    },
-    {
-      "name": ".0/model_prediction1",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "pred_": "number",
-          "resp_": "number"
-        }
-      },
-      "values": "\"pred_\",\"resp_\"\n0.000946175,0.293664201138969\n0.0110139705696203,0.290542136538003\n0.0210817661392405,0.287420071937036\n0.0311495617088608,0.284298007336069\n0.041217357278481,0.281175942735103\n0.0512851528481013,0.278053878134136\n0.0613529484177215,0.274931813533169\n0.0714207439873418,0.271809748932203\n0.081488539556962,0.268687684331236\n0.0915563351265823,0.265565619730269\n0.101624130696203,0.262443555129303\n0.111691926265823,0.259321490528336\n0.121759721835443,0.256199425927369\n0.131827517405063,0.253077361326402\n0.141895312974684,0.249955296725436\n0.151963108544304,0.246833232124469\n0.162030904113924,0.243711167523502\n0.172098699683544,0.240589102922536\n0.182166495253165,0.237467038321569\n0.192234290822785,0.234344973720602\n0.202302086392405,0.231222909119636\n0.212369881962025,0.228100844518669\n0.222437677531646,0.224978779917702\n0.232505473101266,0.221856715316735\n0.242573268670886,0.218734650715769\n0.252641064240506,0.215612586114802\n0.262708859810127,0.212490521513835\n0.272776655379747,0.209368456912869\n0.282844450949367,0.206246392311902\n0.292912246518987,0.203124327710935\n0.302980042088608,0.200002263109969\n0.313047837658228,0.196880198509002\n0.323115633227848,0.193758133908035\n0.333183428797468,0.190636069307069\n0.343251224367089,0.187514004706102\n0.353319019936709,0.184391940105135\n0.363386815506329,0.181269875504168\n0.373454611075949,0.178147810903202\n0.38352240664557,0.175025746302235\n0.39359020221519,0.171903681701268\n0.40365799778481,0.168781617100302\n0.41372579335443,0.165659552499335\n0.423793588924051,0.162537487898368\n0.433861384493671,0.159415423297402\n0.443929180063291,0.156293358696435\n0.453996975632911,0.153171294095468\n0.464064771202532,0.150049229494502\n0.474132566772152,0.146927164893535\n0.484200362341772,0.143805100292568\n0.494268157911392,0.140683035691601\n0.504335953481013,0.137560971090635\n0.514403749050633,0.134438906489668\n0.524471544620253,0.131316841888701\n0.534539340189873,0.128194777287735\n0.544607135759494,0.125072712686768\n0.554674931329114,0.121950648085801\n0.564742726898734,0.118828583484835\n0.574810522468355,0.115706518883868\n0.584878318037975,0.112584454282901\n0.594946113607595,0.109462389681934\n0.605013909177215,0.106340325080968\n0.615081704746835,0.103218260480001\n0.625149500316456,0.100096195879034\n0.635217295886076,0.0969741312780676\n0.645285091455696,0.093852066677101\n0.655352887025316,0.0907300020761343\n0.665420682594937,0.0876079374751676\n0.675488478164557,0.0844858728742009\n0.685556273734177,0.0813638082732342\n0.695624069303797,0.0782417436722675\n0.705691864873418,0.0751196790713008\n0.715759660443038,0.0719976144703341\n0.725827456012658,0.0688755498693674\n0.735895251582279,0.0657534852684007\n0.745963047151899,0.062631420667434\n0.756030842721519,0.0595093560664673\n0.766098638291139,0.0563872914655006\n0.77616643386076,0.0532652268645339\n0.78623422943038,0.0501431622635672\n0.796302025,0.0470210976626005"
-    },
-    {
-      "name": "scale/x",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "domain": "number"
-        }
-      },
-      "values": "\"domain\"\n-0.0388216175\n0.8360698175"
-    },
-    {
-      "name": "scale/y",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "domain": "number"
-        }
-      },
-      "values": "\"domain\"\n-0.000788621248578286\n0.571380645082494"
-    }
-  ],
-  "scales": [
-    {
-      "name": "x",
-      "domain": {
-        "data": "scale/x",
-        "field": "data.domain"
-      },
-      "zero": false,
-      "nice": false,
-      "clamp": false,
-      "range": "width"
-    },
-    {
-      "name": "y",
-      "domain": {
-        "data": "scale/y",
-        "field": "data.domain"
-      },
-      "zero": false,
-      "nice": false,
-      "clamp": false,
-      "range": "height"
-    }
-  ],
-  "marks": [
-    {
-      "type": "symbol",
-      "properties": {
-        "update": {
-          "fill": {
-            "value": "#000000"
-          },
-          "size": {
-            "value": 50
-          },
-          "x": {
-            "scale": "x",
-            "field": "data.nat_res_exp_sha_t_3"
-          },
-          "y": {
-            "scale": "y",
-            "field": "data.i2e"
-          }
-        },
-        "ggvis": {
-          "data": {
-            "value": ".0"
-          }
-        }
-      },
-      "from": {
-        "data": ".0"
+        "data": ".0/arrange2"
       }
     },
     {
@@ -1611,37 +2173,37 @@ var plot_id877392100_spec = {
       "properties": {
         "update": {
           "stroke": {
-            "value": "#000000"
-          },
-          "strokeWidth": {
-            "value": 2
+            "scale": "stroke",
+            "value": "e2r_hic"
           },
           "x": {
             "scale": "x",
-            "field": "data.pred_"
+            "field": "data.year"
           },
           "y": {
             "scale": "y",
-            "field": "data.resp_"
-          },
-          "fill": {
-            "value": "transparent"
+            "field": "data.e2r_hic"
           }
         },
         "ggvis": {
           "data": {
-            "value": ".0/model_prediction1"
+            "value": ".0/arrange3"
           }
         }
       },
       "from": {
-        "data": ".0/model_prediction1"
+        "data": ".0/arrange3"
       }
     }
   ],
   "width": 480,
   "height": 288,
-  "legends": [],
+  "legends": [
+    {
+      "orient": "right",
+      "stroke": "stroke"
+    }
+  ],
   "axes": [
     {
       "type": "x",
@@ -1649,7 +2211,7 @@ var plot_id877392100_spec = {
       "orient": "bottom",
       "layer": "back",
       "grid": true,
-      "title": "nat_res_exp_sha_t_3"
+      "title": "year"
     },
     {
       "type": "y",
@@ -1657,7 +2219,7 @@ var plot_id877392100_spec = {
       "orient": "left",
       "layer": "back",
       "grid": true,
-      "title": "i2e"
+      "title": "e2r_hic"
     }
   ],
   "padding": null,
@@ -1673,225 +2235,36 @@ var plot_id877392100_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id877392100").parseSpec(plot_id877392100_spec);
+ggvis.getPlot("plot_id997007802").parseSpec(plot_id997007802_spec);
 </script></p>
 
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-4">
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>New Indicators for GVC Analysis</h2></hgroup><article  id="new-indicators-for-gvc-analysis">
 
-<pre >## Guessing formula = e2r ~ nat_res_exp_sha_t_3</pre>
+</article></slide><slide class=''><hgroup><h2>NRCA</h2></hgroup><article  id="nrca">
 
-<p><div id="plot_id456530601-container" class="ggvis-output-container">
-<div id="plot_id456530601" class="ggvis-output"></div>
+<p>Computer Equipment in China: Traditional overestimation</p>
+
+<p><div id="plot_id120704000-container" class="ggvis-output-container">
+<div id="plot_id120704000" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id456530601_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id456530601" data-renderer="svg">SVG</a>
+<a id="plot_id120704000_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id120704000" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id456530601_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id456530601" data-renderer="canvas">Canvas</a>
+<a id="plot_id120704000_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id120704000" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id456530601_download" class="ggvis-download" data-plot-id="plot_id456530601">Download</a>
+<a id="plot_id120704000_download" class="ggvis-download" data-plot-id="plot_id120704000">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id456530601_spec = {
-  "data": [
-    {
-      "name": ".0",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "nat_res_exp_sha_t_3": "number",
-          "e2r": "number"
-        }
-      },
-      "values": "\"nat_res_exp_sha_t_3\",\"e2r\"\n0.208661625,0.220739582903409\n0.367620175,0.290622969250389\n0.01057025,0.237609970649895\n0.013294525,0.21205315734228\n0.11301285,0.170076410800206\n0.1467755,0.255129930281481\n0.796302025,0.359457484638925\n0.19785535,0.126648791356632\n0.005680475,0.228183165174785\n0.5103913,0.300327285108306\n0.031694625,0.161061203029376\n0.033139375,0.220559038626507\n0.031669825,0.228309672297039\n0.010676325,0.237330742225727\n0.062368175,0.196738711979615\n0.041194125,0.205862899671527\n0.0519317,0.196305021550274\n0.00672355,0.238614535696013\n0.03705585,0.222073178907962\n0.063734775,0.26101759507258\n0.0440256,0.196412345873689\n0.003388,0.212798427624111\n0.043810675,0.178143057325692\n0.2158565,0.269845932749116\n0.089299325,0.207251865977086\n0.0119655,0.177160184942663\n0.036686725,0.17322412425314\n0.032136225,0.18168939099685\n0.016764125,0.207311135247094\n0.001767225,0.260922023430349\n0.34275175,0.0608678140287215\n0.006856575,0.208911323505136\n0.085519875,0.174061999205093\n0.009855325,0.151906029836498\n0.084312275,0.276972761634773\n0.134444075,0.110645101264186\n0.015926075,0.14913832154688\n0.20953235,0.235089840588556\n0.09990225,0.218685661334681\n0.4867445,0.413254925579684\n0.1523794,0.157856399839856\n0.0659024,0.242786404282253\n0.0720476,0.221393564247751\n0.022706975,0.188423466895567\n0.04170085,0.217170178652216\n0.3600733,0.459943804953914\n0.792964575,0.424366935424975\n0.000946175,0.190963516044545\n0.030031275,0.201119521084333\n0.0121663,0.182250581191985\n0.01443265,0.229485091766502\n0.0194416,0.15761854045049\n0.04816965,0.160486076780209\n0.00769365,0.208124435120701\n0.04305525,0.291020062068914\n0.400250775,0.161620497491834\n0.38328075,0.1984902618558"
-    },
-    {
-      "name": ".0/model_prediction1",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "pred_": "number",
-          "resp_": "number"
-        }
-      },
-      "values": "\"pred_\",\"resp_\"\n0.000946175,0.193312277884748\n0.0110139705696203,0.195442113316615\n0.0210817661392405,0.197571948748482\n0.0311495617088608,0.199701784180349\n0.041217357278481,0.201831619612216\n0.0512851528481013,0.203961455044083\n0.0613529484177215,0.206091290475951\n0.0714207439873418,0.208221125907818\n0.081488539556962,0.210350961339685\n0.0915563351265823,0.212480796771552\n0.101624130696203,0.214610632203419\n0.111691926265823,0.216740467635286\n0.121759721835443,0.218870303067153\n0.131827517405063,0.22100013849902\n0.141895312974684,0.223129973930887\n0.151963108544304,0.225259809362754\n0.162030904113924,0.227389644794621\n0.172098699683544,0.229519480226488\n0.182166495253165,0.231649315658355\n0.192234290822785,0.233779151090223\n0.202302086392405,0.23590898652209\n0.212369881962025,0.238038821953957\n0.222437677531646,0.240168657385824\n0.232505473101266,0.242298492817691\n0.242573268670886,0.244428328249558\n0.252641064240506,0.246558163681425\n0.262708859810127,0.248687999113292\n0.272776655379747,0.250817834545159\n0.282844450949367,0.252947669977026\n0.292912246518987,0.255077505408893\n0.302980042088608,0.25720734084076\n0.313047837658228,0.259337176272628\n0.323115633227848,0.261467011704495\n0.333183428797468,0.263596847136362\n0.343251224367089,0.265726682568229\n0.353319019936709,0.267856518000096\n0.363386815506329,0.269986353431963\n0.373454611075949,0.27211618886383\n0.38352240664557,0.274246024295697\n0.39359020221519,0.276375859727564\n0.40365799778481,0.278505695159431\n0.41372579335443,0.280635530591298\n0.423793588924051,0.282765366023165\n0.433861384493671,0.284895201455032\n0.443929180063291,0.2870250368869\n0.453996975632911,0.289154872318767\n0.464064771202532,0.291284707750634\n0.474132566772152,0.293414543182501\n0.484200362341772,0.295544378614368\n0.494268157911392,0.297674214046235\n0.504335953481013,0.299804049478102\n0.514403749050633,0.301933884909969\n0.524471544620253,0.304063720341836\n0.534539340189873,0.306193555773703\n0.544607135759494,0.30832339120557\n0.554674931329114,0.310453226637437\n0.564742726898734,0.312583062069305\n0.574810522468355,0.314712897501172\n0.584878318037975,0.316842732933039\n0.594946113607595,0.318972568364906\n0.605013909177215,0.321102403796773\n0.615081704746835,0.32323223922864\n0.625149500316456,0.325362074660507\n0.635217295886076,0.327491910092374\n0.645285091455696,0.329621745524241\n0.655352887025316,0.331751580956108\n0.665420682594937,0.333881416387975\n0.675488478164557,0.336011251819842\n0.685556273734177,0.338141087251709\n0.695624069303797,0.340270922683577\n0.705691864873418,0.342400758115444\n0.715759660443038,0.344530593547311\n0.725827456012658,0.346660428979178\n0.735895251582279,0.348790264411045\n0.745963047151899,0.350920099842912\n0.756030842721519,0.353049935274779\n0.766098638291139,0.355179770706646\n0.77616643386076,0.357309606138513\n0.78623422943038,0.35943944157038\n0.796302025,0.361569277002247"
-    },
-    {
-      "name": "scale/x",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "domain": "number"
-        }
-      },
-      "values": "\"domain\"\n-0.0388216175\n0.8360698175"
-    },
-    {
-      "name": "scale/y",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "domain": "number"
-        }
-      },
-      "values": "\"domain\"\n0.0409140144824619\n0.479897604500174"
-    }
-  ],
-  "scales": [
-    {
-      "name": "x",
-      "domain": {
-        "data": "scale/x",
-        "field": "data.domain"
-      },
-      "zero": false,
-      "nice": false,
-      "clamp": false,
-      "range": "width"
-    },
-    {
-      "name": "y",
-      "domain": {
-        "data": "scale/y",
-        "field": "data.domain"
-      },
-      "zero": false,
-      "nice": false,
-      "clamp": false,
-      "range": "height"
-    }
-  ],
-  "marks": [
-    {
-      "type": "symbol",
-      "properties": {
-        "update": {
-          "fill": {
-            "value": "#000000"
-          },
-          "size": {
-            "value": 50
-          },
-          "x": {
-            "scale": "x",
-            "field": "data.nat_res_exp_sha_t_3"
-          },
-          "y": {
-            "scale": "y",
-            "field": "data.e2r"
-          }
-        },
-        "ggvis": {
-          "data": {
-            "value": ".0"
-          }
-        }
-      },
-      "from": {
-        "data": ".0"
-      }
-    },
-    {
-      "type": "line",
-      "properties": {
-        "update": {
-          "stroke": {
-            "value": "#000000"
-          },
-          "strokeWidth": {
-            "value": 2
-          },
-          "x": {
-            "scale": "x",
-            "field": "data.pred_"
-          },
-          "y": {
-            "scale": "y",
-            "field": "data.resp_"
-          },
-          "fill": {
-            "value": "transparent"
-          }
-        },
-        "ggvis": {
-          "data": {
-            "value": ".0/model_prediction1"
-          }
-        }
-      },
-      "from": {
-        "data": ".0/model_prediction1"
-      }
-    }
-  ],
-  "width": 480,
-  "height": 288,
-  "legends": [],
-  "axes": [
-    {
-      "type": "x",
-      "scale": "x",
-      "orient": "bottom",
-      "layer": "back",
-      "grid": true,
-      "title": "nat_res_exp_sha_t_3"
-    },
-    {
-      "type": "y",
-      "scale": "y",
-      "orient": "left",
-      "layer": "back",
-      "grid": true,
-      "title": "e2r"
-    }
-  ],
-  "padding": null,
-  "ggvis_opts": {
-    "keep_aspect": false,
-    "resizable": true,
-    "padding": {},
-    "duration": 250,
-    "renderer": "svg",
-    "hover_duration": 0,
-    "width": 480,
-    "height": 288
-  },
-  "handlers": null
-};
-ggvis.getPlot("plot_id456530601").parseSpec(plot_id456530601_spec);
-</script></p>
-
-</article></slide><slide class=''><hgroup><h2>CEQ of China</h2></hgroup><article  id="ceq-of-china">
-
-<p><div id="plot_id591499457-container" class="ggvis-output-container">
-<div id="plot_id591499457" class="ggvis-output"></div>
-<div class="plot-gear-icon">
-<nav class="ggvis-control">
-<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
-<ul class="ggvis-dropdown">
-<li>
-Renderer: 
-<a id="plot_id591499457_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id591499457" data-renderer="svg">SVG</a>
- | 
-<a id="plot_id591499457_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id591499457" data-renderer="canvas">Canvas</a>
-</li>
-<li>
-<a id="plot_id591499457_download" class="ggvis-download" data-plot-id="plot_id591499457">Download</a>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-<script type="text/javascript">
-var plot_id591499457_spec = {
+var plot_id120704000_spec = {
   "data": [
     {
       "name": ".0/arrange1",
@@ -2074,10 +2447,614 @@ var plot_id591499457_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id591499457").parseSpec(plot_id591499457_spec);
+ggvis.getPlot("plot_id120704000").parseSpec(plot_id120704000_spec);
 </script></p>
 
-</article></slide><slide class=''><hgroup><h2>Conclusion</h2></hgroup><article  id="conclusion"></article></slide>
+</article></slide><slide class=''><hgroup><h2>NRCA II</h2></hgroup><article  id="nrca-ii">
+
+<p>Motor and Transport Equipment: Traditional underestimation</p>
+
+<p><div id="plot_id912912443-container" class="ggvis-output-container">
+<div id="plot_id912912443" class="ggvis-output"></div>
+<div class="plot-gear-icon">
+<nav class="ggvis-control">
+<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+<ul class="ggvis-dropdown">
+<li>
+Renderer: 
+<a id="plot_id912912443_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id912912443" data-renderer="svg">SVG</a>
+ | 
+<a id="plot_id912912443_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id912912443" data-renderer="canvas">Canvas</a>
+</li>
+<li>
+<a id="plot_id912912443_download" class="ggvis-download" data-plot-id="plot_id912912443">Download</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<script type="text/javascript">
+var plot_id912912443_spec = {
+  "data": [
+    {
+      "name": ".0/arrange1",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "trca": "number"
+        }
+      },
+      "values": "\"year\",\"trca\"\n1995,0.2451082\n2000,0.3654459\n2005,0.3717092\n2008,0.4265504"
+    },
+    {
+      "name": ".0/arrange2",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "nrca": "number"
+        }
+      },
+      "values": "\"year\",\"nrca\"\n1995,0.520966318464248\n2000,0.697598875506047\n2005,0.725330104657336\n2008,0.889132760898778"
+    },
+    {
+      "name": "scale/stroke",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"trca\"\n\"nrca\""
+    },
+    {
+      "name": "scale/x",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n1994.35\n2008.65"
+    },
+    {
+      "name": "scale/y",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n0.212906971955061\n0.921333988943717"
+    }
+  ],
+  "scales": [
+    {
+      "name": "stroke",
+      "type": "ordinal",
+      "domain": {
+        "data": "scale/stroke",
+        "field": "data.domain"
+      },
+      "points": true,
+      "sort": false,
+      "range": "category10"
+    },
+    {
+      "name": "x",
+      "domain": {
+        "data": "scale/x",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "domain": {
+        "data": "scale/y",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "height"
+    }
+  ],
+  "marks": [
+    {
+      "type": "line",
+      "properties": {
+        "update": {
+          "stroke": {
+            "scale": "stroke",
+            "value": "trca"
+          },
+          "x": {
+            "scale": "x",
+            "field": "data.year"
+          },
+          "y": {
+            "scale": "y",
+            "field": "data.trca"
+          }
+        },
+        "ggvis": {
+          "data": {
+            "value": ".0/arrange1"
+          }
+        }
+      },
+      "from": {
+        "data": ".0/arrange1"
+      }
+    },
+    {
+      "type": "line",
+      "properties": {
+        "update": {
+          "stroke": {
+            "scale": "stroke",
+            "value": "nrca"
+          },
+          "x": {
+            "scale": "x",
+            "field": "data.year"
+          },
+          "y": {
+            "scale": "y",
+            "field": "data.nrca"
+          }
+        },
+        "ggvis": {
+          "data": {
+            "value": ".0/arrange2"
+          }
+        }
+      },
+      "from": {
+        "data": ".0/arrange2"
+      }
+    }
+  ],
+  "width": 480,
+  "height": 288,
+  "legends": [
+    {
+      "orient": "right",
+      "stroke": "stroke"
+    }
+  ],
+  "axes": [
+    {
+      "type": "x",
+      "scale": "x",
+      "orient": "bottom",
+      "layer": "back",
+      "grid": true,
+      "title": "year"
+    },
+    {
+      "type": "y",
+      "scale": "y",
+      "orient": "left",
+      "layer": "back",
+      "grid": true,
+      "title": "nrca"
+    }
+  ],
+  "padding": null,
+  "ggvis_opts": {
+    "keep_aspect": false,
+    "resizable": true,
+    "padding": {},
+    "duration": 250,
+    "renderer": "svg",
+    "hover_duration": 0,
+    "width": 480,
+    "height": 288
+  },
+  "handlers": null
+};
+ggvis.getPlot("plot_id912912443").parseSpec(plot_id912912443_spec);
+</script></p>
+
+</article></slide><slide class=''><hgroup><h2>I2E: Final Goods</h2></hgroup><article  id="i2e-final-goods">
+
+<p>Final-good assembly is relatively low-skilled.</p>
+
+<p><div id="plot_id260534175-container" class="ggvis-output-container">
+<div id="plot_id260534175" class="ggvis-output"></div>
+<div class="plot-gear-icon">
+<nav class="ggvis-control">
+<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+<ul class="ggvis-dropdown">
+<li>
+Renderer: 
+<a id="plot_id260534175_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id260534175" data-renderer="svg">SVG</a>
+ | 
+<a id="plot_id260534175_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id260534175" data-renderer="canvas">Canvas</a>
+</li>
+<li>
+<a id="plot_id260534175_download" class="ggvis-download" data-plot-id="plot_id260534175">Download</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<script type="text/javascript">
+var plot_id260534175_spec = {
+  "data": [
+    {
+      "name": ".0/group_by1/arrange2_flat",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "I2E_FIN": "number"
+        }
+      },
+      "values": "\"factor(Exporting_Country)\",\"year\",\"I2E_FIN\"\n\"chn\",1995,0.0769802111391113\n\"chn\",2000,0.117560273546311\n\"chn\",2005,0.154867357698693\n\"chn\",2008,0.123601288638077\n\"idn\",1995,0.0620997096936187\n\"idn\",2000,0.0710027351072671\n\"idn\",2005,0.0576285446571532\n\"idn\",2008,0.0658786811010937\n\"ind\",1995,0.0507892959243291\n\"ind\",2000,0.0584584266861328\n\"ind\",2005,0.0852406380430384\n\"ind\",2008,0.0856151634346808\n\"tha\",1995,0.166691712760111\n\"tha\",2000,0.163278131108346\n\"tha\",2005,0.168374875306142\n\"tha\",2008,0.155339230828146"
+    },
+    {
+      "name": ".0/group_by1/arrange2",
+      "source": ".0/group_by1/arrange2_flat",
+      "transform": [
+        {
+          "type": "treefacet",
+          "keys": [
+            "data.factor(Exporting_Country)"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "scale/stroke",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"chn\"\n\"idn\"\n\"ind\"\n\"tha\""
+    },
+    {
+      "name": "scale/x",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n1994.35\n2008.65"
+    },
+    {
+      "name": "scale/y",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n0.0449100169552385\n0.174254154275232"
+    }
+  ],
+  "scales": [
+    {
+      "name": "stroke",
+      "type": "ordinal",
+      "domain": {
+        "data": "scale/stroke",
+        "field": "data.domain"
+      },
+      "points": true,
+      "sort": false,
+      "range": "category10"
+    },
+    {
+      "name": "x",
+      "domain": {
+        "data": "scale/x",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "domain": {
+        "data": "scale/y",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "height"
+    }
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "data": ".0/group_by1/arrange2"
+      },
+      "marks": [
+        {
+          "type": "line",
+          "properties": {
+            "update": {
+              "stroke": {
+                "scale": "stroke",
+                "field": "data.factor(Exporting_Country)"
+              },
+              "x": {
+                "scale": "x",
+                "field": "data.year"
+              },
+              "y": {
+                "scale": "y",
+                "field": "data.I2E_FIN"
+              }
+            },
+            "ggvis": {
+              "data": {
+                "value": ".0/group_by1/arrange2"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "width": 480,
+  "height": 288,
+  "legends": [
+    {
+      "orient": "right",
+      "stroke": "stroke",
+      "title": "factor(Exporting_Country)"
+    }
+  ],
+  "axes": [
+    {
+      "type": "x",
+      "scale": "x",
+      "orient": "bottom",
+      "layer": "back",
+      "grid": true,
+      "title": "year"
+    },
+    {
+      "type": "y",
+      "scale": "y",
+      "orient": "left",
+      "layer": "back",
+      "grid": true,
+      "title": "I2E_FIN"
+    }
+  ],
+  "padding": null,
+  "ggvis_opts": {
+    "keep_aspect": false,
+    "resizable": true,
+    "padding": {},
+    "duration": 250,
+    "renderer": "svg",
+    "hover_duration": 0,
+    "width": 480,
+    "height": 288
+  },
+  "handlers": null
+};
+ggvis.getPlot("plot_id260534175").parseSpec(plot_id260534175_spec);
+</script></p>
+
+</article></slide><slide class=''><hgroup><h2>I2E: Intermediate Goods</h2></hgroup><article  id="i2e-intermediate-goods">
+
+<p>Rising intermediate good exports indicate moving up the value chain.</p>
+
+<p><div id="plot_id416087984-container" class="ggvis-output-container">
+<div id="plot_id416087984" class="ggvis-output"></div>
+<div class="plot-gear-icon">
+<nav class="ggvis-control">
+<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+<ul class="ggvis-dropdown">
+<li>
+Renderer: 
+<a id="plot_id416087984_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id416087984" data-renderer="svg">SVG</a>
+ | 
+<a id="plot_id416087984_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id416087984" data-renderer="canvas">Canvas</a>
+</li>
+<li>
+<a id="plot_id416087984_download" class="ggvis-download" data-plot-id="plot_id416087984">Download</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<script type="text/javascript">
+var plot_id416087984_spec = {
+  "data": [
+    {
+      "name": ".0/group_by1/arrange2_flat",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "I2E_INT": "number"
+        }
+      },
+      "values": "\"factor(Exporting_Country)\",\"year\",\"I2E_INT\"\n\"chn\",1995,0.0268780835770009\n\"chn\",2000,0.04386945799946\n\"chn\",2005,0.06785972963784\n\"chn\",2008,0.0675974912817354\n\"idn\",1995,0.0603319583215603\n\"idn\",2000,0.0781903068017868\n\"idn\",2005,0.0735190361503133\n\"idn\",2008,0.0656906199621232\n\"ind\",1995,0.0323377726391338\n\"ind\",2000,0.0472441801581535\n\"ind\",2005,0.0717935374397582\n\"ind\",2008,0.0992672774791651\n\"tha\",1995,0.0828584710353883\n\"tha\",2000,0.112028973833137\n\"tha\",2005,0.116377173035207\n\"tha\",2008,0.118926945128033"
+    },
+    {
+      "name": ".0/group_by1/arrange2",
+      "source": ".0/group_by1/arrange2_flat",
+      "transform": [
+        {
+          "type": "treefacet",
+          "keys": [
+            "data.factor(Exporting_Country)"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "scale/stroke",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"chn\"\n\"idn\"\n\"ind\"\n\"tha\""
+    },
+    {
+      "name": "scale/x",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n1994.35\n2008.65"
+    },
+    {
+      "name": "scale/y",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n0.0222756404994493\n0.123529388205584"
+    }
+  ],
+  "scales": [
+    {
+      "name": "stroke",
+      "type": "ordinal",
+      "domain": {
+        "data": "scale/stroke",
+        "field": "data.domain"
+      },
+      "points": true,
+      "sort": false,
+      "range": "category10"
+    },
+    {
+      "name": "x",
+      "domain": {
+        "data": "scale/x",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "domain": {
+        "data": "scale/y",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "height"
+    }
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "data": ".0/group_by1/arrange2"
+      },
+      "marks": [
+        {
+          "type": "line",
+          "properties": {
+            "update": {
+              "stroke": {
+                "scale": "stroke",
+                "field": "data.factor(Exporting_Country)"
+              },
+              "x": {
+                "scale": "x",
+                "field": "data.year"
+              },
+              "y": {
+                "scale": "y",
+                "field": "data.I2E_INT"
+              }
+            },
+            "ggvis": {
+              "data": {
+                "value": ".0/group_by1/arrange2"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "width": 480,
+  "height": 288,
+  "legends": [
+    {
+      "orient": "right",
+      "stroke": "stroke",
+      "title": "factor(Exporting_Country)"
+    }
+  ],
+  "axes": [
+    {
+      "type": "x",
+      "scale": "x",
+      "orient": "bottom",
+      "layer": "back",
+      "grid": true,
+      "title": "year"
+    },
+    {
+      "type": "y",
+      "scale": "y",
+      "orient": "left",
+      "layer": "back",
+      "grid": true,
+      "title": "I2E_INT"
+    }
+  ],
+  "padding": null,
+  "ggvis_opts": {
+    "keep_aspect": false,
+    "resizable": true,
+    "padding": {},
+    "duration": 250,
+    "renderer": "svg",
+    "hover_duration": 0,
+    "width": 480,
+    "height": 288
+  },
+  "handlers": null
+};
+ggvis.getPlot("plot_id416087984").parseSpec(plot_id416087984_spec);
+</script></p>
+
+</article></slide><slide class=''><hgroup><h2>Conclusion</h2></hgroup><article  id="conclusion">
+
+<ul>
+<li>new data</li>
+<li><p>focus on LMICs</p></li>
+<li>new indicators suited for non-traditional trade patterns</li>
+<li>non-trivial linear algebra involved</li>
+<li>simplified application of mew algorithms</li>
+<li>many more indicators and tools available in the packages
+
+<ul>
+<li>decompr: decomposition</li>
+<li>gvc: analysis</li>
+</ul></li>
+</ul></article></slide>
 
 
   <slide class="backdrop"></slide>
