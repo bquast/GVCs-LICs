@@ -151,20 +151,15 @@ VB = V + VA + VAA + VAAA + ... = V (I+A+A^{2}+A^{3}+...)
 
 </article></slide><slide class=''><hgroup><h2>New Toolbox and Indicators: decompr and gvc</h2></hgroup><article  id="new-toolbox-and-indicators-decompr-and-gvc-1">
 
-<p>Exemplary indicators:</p>
+<p>Indicators:</p>
 
 <ul>
-<li>I2E (importing-to-export, based on Hummels et al. 1998): The foreign value added content of domestic exports.
-
-<ul>
-<li>I2E_LMIC: The foreign value added content sourced in low- and middle income countries</li>
-<li>etc.</li>
-</ul></li>
+<li>I2E (importing-to-export, based on Hummels et al. 1998): The foreign value added content of domestic exports.</li>
 <li>E2R (exporting-to-reexport, based on Hummels et al. 1998): The domestic value added content of foreign exports.</li>
 <li>NRCA (New revealed comparative advantage, based on Wang, Wei, and Zhu 2014): Revealed comparative advantage measure based on value added data.</li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>An application to new data: ICIOS covering LMICs</h2></hgroup><article  id="an-application-to-new-data-icios-covering-lmics">
+</article></slide><slide class=''><hgroup><h2>An application to new data: ICIOs covering LMICs</h2></hgroup><article  id="an-application-to-new-data-icios-covering-lmics">
 
 <p>OECD ICIOs:</p>
 
@@ -172,10 +167,10 @@ VB = V + VA + VAA + VAAA + ... = V (I+A+A^{2}+A^{3}+...)
 <li><p>57 countries</p></li>
 <li><p>34 sectors</p></li>
 <li><p>1995, 2000, 2005, 2008, 2009</p></li>
-<li><p>LMICs</p></li>
+<li><p>Low- and Middle-Income Countries (LMICs)</p></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts">
+</article></slide><slide class=''><hgroup><h2>package: decompr</h2></hgroup><article  id="package-decompr">
 
 <p><code>r  library(decompr)</code></p>
 
@@ -185,243 +180,37 @@ VB = V + VA + VAA + VAAA + ... = V (I+A+A^{2}+A^{3}+...)
 
 <p><code>## decomp : function (x, y, k, i, o, method = c(&quot;leontief&quot;, &quot;wwz&quot;, &quot;leontief_output&quot;),   ##     long = TRUE)    ## leontief : function (x, long = TRUE)    ## leontief_output : function (x, long = TRUE)    ## load_tables : function (x, y)    ## load_tables_vectors : function (x, y, k, i, o)    ## wwz : function (x)</code></p>
 
+</article></slide><slide class=''><hgroup><h2>package: gvc</h2></hgroup><article  id="package-gvc">
+
 <p><code>r  library(gvc)  ls.str(&quot;package:gvc&quot;)</code></p>
 
-<p><code>## block_matrix : function (x, s)    ## e2r : function (x)    ## i2e : function (x)    ## minus_block_matrix : function (x, s)    ## nrca : function (x, country, sector)</code></p>
+<p><code>## block_matrix : function (x, s)    ## e2r : function (x)    ## i2e : function (x)    ## minus_block_matrix : function (x, s)    ## nrca : function (x)</code></p>
 
 <p><code>##   ## Attaching package: &#39;dplyr&#39;  ##   ## The following object is masked from &#39;package:stats&#39;:  ##   ##     filter  ##   ## The following objects are masked from &#39;package:base&#39;:  ##   ##     intersect, setdiff, setequal, union</code></p>
 
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-1">
+</article></slide><slide class=''><hgroup><h2>The expansion of GVCs</h2></hgroup><article  id="the-expansion-of-gvcs">
 
-<p>The growth of GVC participation. <div id="plot_id883346208-container" class="ggvis-output-container">
-<div id="plot_id883346208" class="ggvis-output"></div>
+<p><div id="plot_id433698112-container" class="ggvis-output-container">
+<div id="plot_id433698112" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id883346208_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id883346208" data-renderer="svg">SVG</a>
+<a id="plot_id433698112_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id433698112" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id883346208_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id883346208" data-renderer="canvas">Canvas</a>
+<a id="plot_id433698112_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id433698112" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id883346208_download" class="ggvis-download" data-plot-id="plot_id883346208">Download</a>
+<a id="plot_id433698112_download" class="ggvis-download" data-plot-id="plot_id433698112">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id883346208_spec = {
-  "data": [
-    {
-      "name": ".0/arrange1",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "year": "number",
-          "e2r": "number"
-        }
-      },
-      "values": "\"year\",\"e2r\"\n1995,0.199404958538163\n2000,0.228349959252784\n2005,0.243234499181721\n2008,0.242444833062273"
-    },
-    {
-      "name": ".0/arrange2",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "year": "number",
-          "i2e": "number"
-        }
-      },
-      "values": "\"year\",\"i2e\"\n1995,0.180170282264866\n2000,0.210396122787926\n2005,0.21786808807057\n2008,0.209090124351732"
-    },
-    {
-      "name": "scale/stroke",
-      "format": {
-        "type": "csv",
-        "parse": {}
-      },
-      "values": "\"domain\"\n\"e2r\"\n\"i2e\""
-    },
-    {
-      "name": "scale/x",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "domain": "number"
-        }
-      },
-      "values": "\"domain\"\n1994.35\n2008.65"
-    },
-    {
-      "name": "scale/y",
-      "format": {
-        "type": "csv",
-        "parse": {
-          "domain": "number"
-        }
-      },
-      "values": "\"domain\"\n0.177017071419023\n0.246387710027563"
-    }
-  ],
-  "scales": [
-    {
-      "name": "stroke",
-      "type": "ordinal",
-      "domain": {
-        "data": "scale/stroke",
-        "field": "data.domain"
-      },
-      "points": true,
-      "sort": false,
-      "range": "category10"
-    },
-    {
-      "name": "x",
-      "domain": {
-        "data": "scale/x",
-        "field": "data.domain"
-      },
-      "zero": false,
-      "nice": false,
-      "clamp": false,
-      "range": "width"
-    },
-    {
-      "name": "y",
-      "domain": {
-        "data": "scale/y",
-        "field": "data.domain"
-      },
-      "zero": false,
-      "nice": false,
-      "clamp": false,
-      "range": "height"
-    }
-  ],
-  "marks": [
-    {
-      "type": "line",
-      "properties": {
-        "update": {
-          "x": {
-            "scale": "x",
-            "field": "data.year"
-          },
-          "y": {
-            "scale": "y",
-            "field": "data.e2r"
-          },
-          "stroke": {
-            "scale": "stroke",
-            "value": "e2r"
-          }
-        },
-        "ggvis": {
-          "data": {
-            "value": ".0/arrange1"
-          }
-        }
-      },
-      "from": {
-        "data": ".0/arrange1"
-      }
-    },
-    {
-      "type": "line",
-      "properties": {
-        "update": {
-          "stroke": {
-            "scale": "stroke",
-            "value": "i2e"
-          },
-          "x": {
-            "scale": "x",
-            "field": "data.year"
-          },
-          "y": {
-            "scale": "y",
-            "field": "data.i2e"
-          }
-        },
-        "ggvis": {
-          "data": {
-            "value": ".0/arrange2"
-          }
-        }
-      },
-      "from": {
-        "data": ".0/arrange2"
-      }
-    }
-  ],
-  "width": 720,
-  "height": 432,
-  "legends": [
-    {
-      "orient": "right",
-      "stroke": "stroke"
-    }
-  ],
-  "axes": [
-    {
-      "type": "x",
-      "scale": "x",
-      "orient": "bottom",
-      "layer": "back",
-      "grid": true,
-      "title": "year"
-    },
-    {
-      "type": "y",
-      "scale": "y",
-      "orient": "left",
-      "layer": "back",
-      "grid": true,
-      "title": "i2e"
-    }
-  ],
-  "padding": null,
-  "ggvis_opts": {
-    "keep_aspect": false,
-    "resizable": true,
-    "padding": {},
-    "duration": 250,
-    "renderer": "svg",
-    "hover_duration": 0,
-    "width": 720,
-    "height": 432
-  },
-  "handlers": null
-};
-ggvis.getPlot("plot_id883346208").parseSpec(plot_id883346208_spec);
-</script></p>
-
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-2">
-
-<p>The expansion of GVCs. <div id="plot_id207071363-container" class="ggvis-output-container">
-<div id="plot_id207071363" class="ggvis-output"></div>
-<div class="plot-gear-icon">
-<nav class="ggvis-control">
-<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
-<ul class="ggvis-dropdown">
-<li>
-Renderer: 
-<a id="plot_id207071363_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id207071363" data-renderer="svg">SVG</a>
- | 
-<a id="plot_id207071363_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id207071363" data-renderer="canvas">Canvas</a>
-</li>
-<li>
-<a id="plot_id207071363_download" class="ggvis-download" data-plot-id="plot_id207071363">Download</a>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-<script type="text/javascript">
-var plot_id207071363_spec = {
+var plot_id433698112_spec = {
   "data": [
     {
       "name": ".0/arrange1",
@@ -565,8 +354,8 @@ var plot_id207071363_spec = {
       }
     }
   ],
-  "width": 720,
-  "height": 432,
+  "width": 480,
+  "height": 288,
   "legends": [
     {
       "orient": "right",
@@ -599,58 +388,77 @@ var plot_id207071363_spec = {
     "duration": 250,
     "renderer": "svg",
     "hover_duration": 0,
-    "width": 720,
-    "height": 432
+    "width": 480,
+    "height": 288
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id207071363").parseSpec(plot_id207071363_spec);
+ggvis.getPlot("plot_id433698112").parseSpec(plot_id433698112_spec);
 </script></p>
 
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-3">
+</article></slide><slide class=''><hgroup><h2>The growth of GVC participation.</h2></hgroup><article  id="the-growth-of-gvc-participation.">
 
-<pre >## Selecting by i2e</pre>
-
-<p><div id="plot_id348229538-container" class="ggvis-output-container">
-<div id="plot_id348229538" class="ggvis-output"></div>
+<p><div id="plot_id673780379-container" class="ggvis-output-container">
+<div id="plot_id673780379" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id348229538_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id348229538" data-renderer="svg">SVG</a>
+<a id="plot_id673780379_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id673780379" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id348229538_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id348229538" data-renderer="canvas">Canvas</a>
+<a id="plot_id673780379_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id673780379" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id348229538_download" class="ggvis-download" data-plot-id="plot_id348229538">Download</a>
+<a id="plot_id673780379_download" class="ggvis-download" data-plot-id="plot_id673780379">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id348229538_spec = {
+var plot_id673780379_spec = {
   "data": [
     {
-      "name": ".0/count1/stack2",
+      "name": ".0/arrange1",
       "format": {
         "type": "csv",
         "parse": {
-          "stack_lwr_": "number",
-          "stack_upr_": "number"
+          "year": "number",
+          "e2r": "number"
         }
       },
-      "values": "\"x_\",\"stack_lwr_\",\"stack_upr_\"\n\"ceq\",0,32.4093400203529\n\"chm\",0,25.4528402142784\n\"elq\",0,25.0649975090036\n\"its\",0,23.3377737978386\n\"meq\",0,21.9166200517516\n\"met\",0,23.6822813669503\n\"mtr\",0,29.5287782794914\n\"otm\",0,22.9644078118258\n\"rbp\",0,25.2318928619849\n\"trq\",0,25.7621226168588"
+      "values": "\"year\",\"e2r\"\n1995,0.199404958538163\n2000,0.228349959252784\n2005,0.243234499181721\n2008,0.242444833062273"
+    },
+    {
+      "name": ".0/arrange2",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "i2e": "number"
+        }
+      },
+      "values": "\"year\",\"i2e\"\n1995,0.180170282264866\n2000,0.210396122787926\n2005,0.21786808807057\n2008,0.209090124351732"
+    },
+    {
+      "name": "scale/stroke",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"e2r\"\n\"i2e\""
     },
     {
       "name": "scale/x",
       "format": {
         "type": "csv",
-        "parse": {}
+        "parse": {
+          "domain": "number"
+        }
       },
-      "values": "\"domain\"\n\"ceq\"\n\"chm\"\n\"elq\"\n\"its\"\n\"meq\"\n\"met\"\n\"mtr\"\n\"otm\"\n\"rbp\"\n\"trq\""
+      "values": "\"domain\"\n1994.35\n2008.65"
     },
     {
       "name": "scale/y",
@@ -660,20 +468,30 @@ var plot_id348229538_spec = {
           "domain": "number"
         }
       },
-      "values": "\"domain\"\n0\n34.0298070213706"
+      "values": "\"domain\"\n0.177017071419023\n0.246387710027563"
     }
   ],
   "scales": [
     {
+      "name": "stroke",
+      "type": "ordinal",
+      "domain": {
+        "data": "scale/stroke",
+        "field": "data.domain"
+      },
+      "points": true,
+      "sort": false,
+      "range": "category10"
+    },
+    {
+      "name": "x",
       "domain": {
         "data": "scale/x",
         "field": "data.domain"
       },
-      "name": "x",
-      "type": "ordinal",
-      "points": false,
-      "padding": 0.1,
-      "sort": false,
+      "zero": false,
+      "nice": false,
+      "clamp": false,
       "range": "width"
     },
     {
@@ -690,54 +508,76 @@ var plot_id348229538_spec = {
   ],
   "marks": [
     {
-      "type": "rect",
+      "type": "line",
       "properties": {
         "update": {
-          "stroke": {
-            "value": "#000000"
-          },
-          "fill": {
-            "value": "#333333"
-          },
           "x": {
             "scale": "x",
-            "field": "data.x_"
+            "field": "data.year"
           },
           "y": {
             "scale": "y",
-            "field": "data.stack_lwr_"
+            "field": "data.e2r"
           },
-          "y2": {
-            "scale": "y",
-            "field": "data.stack_upr_"
-          },
-          "width": {
-            "scale": "x",
-            "band": true
+          "stroke": {
+            "scale": "stroke",
+            "value": "e2r"
           }
         },
         "ggvis": {
           "data": {
-            "value": ".0/count1/stack2"
+            "value": ".0/arrange1"
           }
         }
       },
       "from": {
-        "data": ".0/count1/stack2"
+        "data": ".0/arrange1"
+      }
+    },
+    {
+      "type": "line",
+      "properties": {
+        "update": {
+          "stroke": {
+            "scale": "stroke",
+            "value": "i2e"
+          },
+          "x": {
+            "scale": "x",
+            "field": "data.year"
+          },
+          "y": {
+            "scale": "y",
+            "field": "data.i2e"
+          }
+        },
+        "ggvis": {
+          "data": {
+            "value": ".0/arrange2"
+          }
+        }
+      },
+      "from": {
+        "data": ".0/arrange2"
       }
     }
   ],
-  "width": 720,
-  "height": 432,
-  "legends": [],
+  "width": 480,
+  "height": 288,
+  "legends": [
+    {
+      "orient": "right",
+      "stroke": "stroke"
+    }
+  ],
   "axes": [
     {
       "type": "x",
       "scale": "x",
       "orient": "bottom",
-      "title": "industry name",
       "layer": "back",
-      "grid": true
+      "grid": true,
+      "title": "year"
     },
     {
       "type": "y",
@@ -756,56 +596,78 @@ var plot_id348229538_spec = {
     "duration": 250,
     "renderer": "svg",
     "hover_duration": 0,
-    "width": 720,
-    "height": 432
+    "width": 480,
+    "height": 288
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id348229538").parseSpec(plot_id348229538_spec);
+ggvis.getPlot("plot_id673780379").parseSpec(plot_id673780379_spec);
 </script></p>
 
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-4">
+</article></slide><slide class=''><hgroup><h2>GVC participation by *IC: I2E Importing to Export (I2E)</h2></hgroup><article  id="gvc-participation-by-ic-i2e-importing-to-export-i2e">
 
-<p><div id="plot_id588859390-container" class="ggvis-output-container">
-<div id="plot_id588859390" class="ggvis-output"></div>
+<p><div id="plot_id180958111-container" class="ggvis-output-container">
+<div id="plot_id180958111" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id588859390_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id588859390" data-renderer="svg">SVG</a>
+<a id="plot_id180958111_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id180958111" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id588859390_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id588859390" data-renderer="canvas">Canvas</a>
+<a id="plot_id180958111_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id180958111" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id588859390_download" class="ggvis-download" data-plot-id="plot_id588859390">Download</a>
+<a id="plot_id180958111_download" class="ggvis-download" data-plot-id="plot_id180958111">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id588859390_spec = {
+var plot_id180958111_spec = {
   "data": [
     {
-      "name": ".0/count1/stack2",
+      "name": ".0/group_by1/arrange2_flat",
       "format": {
         "type": "csv",
         "parse": {
-          "stack_lwr_": "number",
-          "stack_upr_": "number"
+          "year": "number",
+          "i2e": "number"
         }
       },
-      "values": "\"x_\",\"stack_lwr_\",\"stack_upr_\"\n\"bzs\",0,61.864434903101\n\"con\",0,65.4271963686003\n\"edu\",0,64.7959428974568\n\"egw\",0,135.62282763327\n\"gov\",0,77.2191954386415\n\"ptl\",0,61.7530929296615\n\"pvh\",0,Inf\n\"rea\",0,221.986168372704\n\"rmq\",0,58.9593892384576\n\"wrt\",0,46.2712412693652"
+      "values": "\"ic\",\"year\",\"i2e\"\n\"hic\",1995,0.181317990055524\n\"hic\",2000,0.206090872297488\n\"hic\",2005,0.213778962591894\n\"hic\",2008,0.209846779192038\n\"lic\",1995,0.166163448451932\n\"lic\",2000,0.208836708772378\n\"lic\",2005,0.213763458694054\n\"lic\",2008,0.185559846818342\n\"mic\",1995,0.198645572741999\n\"mic\",2000,0.281738847445014\n\"mic\",2005,0.285056291990823\n\"mic\",2008,0.28471659591445"
+    },
+    {
+      "name": ".0/group_by1/arrange2",
+      "source": ".0/group_by1/arrange2_flat",
+      "transform": [
+        {
+          "type": "treefacet",
+          "keys": [
+            "data.ic"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "scale/stroke",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"hic\"\n\"lic\"\n\"mic\""
     },
     {
       "name": "scale/x",
       "format": {
         "type": "csv",
-        "parse": {}
+        "parse": {
+          "domain": "number"
+        }
       },
-      "values": "\"domain\"\n\"bzs\"\n\"con\"\n\"edu\"\n\"egw\"\n\"gov\"\n\"ptl\"\n\"pvh\"\n\"rea\"\n\"rmq\"\n\"wrt\""
+      "values": "\"domain\"\n1994.35\n2008.65"
     },
     {
       "name": "scale/y",
@@ -815,20 +677,30 @@ var plot_id588859390_spec = {
           "domain": "number"
         }
       },
-      "values": "\"domain\"\nNaN\nInf"
+      "values": "\"domain\"\n0.160218806274987\n0.291000934167768"
     }
   ],
   "scales": [
     {
+      "name": "stroke",
+      "type": "ordinal",
+      "domain": {
+        "data": "scale/stroke",
+        "field": "data.domain"
+      },
+      "points": true,
+      "sort": false,
+      "range": "category10"
+    },
+    {
+      "name": "x",
       "domain": {
         "data": "scale/x",
         "field": "data.domain"
       },
-      "name": "x",
-      "type": "ordinal",
-      "points": false,
-      "padding": 0.1,
-      "sort": false,
+      "zero": false,
+      "nice": false,
+      "clamp": false,
       "range": "width"
     },
     {
@@ -845,54 +717,243 @@ var plot_id588859390_spec = {
   ],
   "marks": [
     {
-      "type": "rect",
-      "properties": {
-        "update": {
-          "stroke": {
-            "value": "#000000"
-          },
-          "fill": {
-            "value": "#333333"
-          },
-          "x": {
-            "scale": "x",
-            "field": "data.x_"
-          },
-          "y": {
-            "scale": "y",
-            "field": "data.stack_lwr_"
-          },
-          "y2": {
-            "scale": "y",
-            "field": "data.stack_upr_"
-          },
-          "width": {
-            "scale": "x",
-            "band": true
-          }
-        },
-        "ggvis": {
-          "data": {
-            "value": ".0/count1/stack2"
+      "type": "group",
+      "from": {
+        "data": ".0/group_by1/arrange2"
+      },
+      "marks": [
+        {
+          "type": "line",
+          "properties": {
+            "update": {
+              "stroke": {
+                "scale": "stroke",
+                "field": "data.ic"
+              },
+              "x": {
+                "scale": "x",
+                "field": "data.year"
+              },
+              "y": {
+                "scale": "y",
+                "field": "data.i2e"
+              }
+            },
+            "ggvis": {
+              "data": {
+                "value": ".0/group_by1/arrange2"
+              }
+            }
           }
         }
-      },
-      "from": {
-        "data": ".0/count1/stack2"
-      }
+      ]
     }
   ],
-  "width": 720,
-  "height": 432,
-  "legends": [],
+  "width": 480,
+  "height": 288,
+  "legends": [
+    {
+      "orient": "right",
+      "stroke": "stroke",
+      "title": "ic"
+    }
+  ],
   "axes": [
     {
       "type": "x",
       "scale": "x",
       "orient": "bottom",
-      "title": "industry name",
       "layer": "back",
-      "grid": true
+      "grid": true,
+      "title": "year"
+    },
+    {
+      "type": "y",
+      "scale": "y",
+      "orient": "left",
+      "layer": "back",
+      "grid": true,
+      "title": "i2e"
+    }
+  ],
+  "padding": null,
+  "ggvis_opts": {
+    "keep_aspect": false,
+    "resizable": true,
+    "padding": {},
+    "duration": 250,
+    "renderer": "svg",
+    "hover_duration": 0,
+    "width": 480,
+    "height": 288
+  },
+  "handlers": null
+};
+ggvis.getPlot("plot_id180958111").parseSpec(plot_id180958111_spec);
+</script></p>
+
+</article></slide><slide class=''><hgroup><h2>GVC participation by *IC: E2R Exporting to Re-export (E2R)</h2></hgroup><article  id="gvc-participation-by-ic-e2r-exporting-to-re-export-e2r">
+
+<p><div id="plot_id154685561-container" class="ggvis-output-container">
+<div id="plot_id154685561" class="ggvis-output"></div>
+<div class="plot-gear-icon">
+<nav class="ggvis-control">
+<a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+<ul class="ggvis-dropdown">
+<li>
+Renderer: 
+<a id="plot_id154685561_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id154685561" data-renderer="svg">SVG</a>
+ | 
+<a id="plot_id154685561_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id154685561" data-renderer="canvas">Canvas</a>
+</li>
+<li>
+<a id="plot_id154685561_download" class="ggvis-download" data-plot-id="plot_id154685561">Download</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<script type="text/javascript">
+var plot_id154685561_spec = {
+  "data": [
+    {
+      "name": ".0/group_by1/arrange2_flat",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "e2r": "number"
+        }
+      },
+      "values": "\"ic\",\"year\",\"e2r\"\n\"hic\",1995,0.202566415675603\n\"hic\",2000,0.236857955114237\n\"hic\",2005,0.251953501385532\n\"hic\",2008,0.247426432533129\n\"lic\",1995,0.195121451185698\n\"lic\",2000,0.206788120042282\n\"lic\",2005,0.229532682064654\n\"lic\",2008,0.242806705343585\n\"mic\",1995,0.143352987884664\n\"mic\",2000,0.151245544937664\n\"mic\",2005,0.172688483185679\n\"mic\",2008,0.183073582476789"
+    },
+    {
+      "name": ".0/group_by1/arrange2",
+      "source": ".0/group_by1/arrange2_flat",
+      "transform": [
+        {
+          "type": "treefacet",
+          "keys": [
+            "data.ic"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "scale/stroke",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"hic\"\n\"lic\"\n\"mic\""
+    },
+    {
+      "name": "scale/x",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n1994.35\n2008.65"
+    },
+    {
+      "name": "scale/y",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n0.137922962209621\n0.257383527060575"
+    }
+  ],
+  "scales": [
+    {
+      "name": "stroke",
+      "type": "ordinal",
+      "domain": {
+        "data": "scale/stroke",
+        "field": "data.domain"
+      },
+      "points": true,
+      "sort": false,
+      "range": "category10"
+    },
+    {
+      "name": "x",
+      "domain": {
+        "data": "scale/x",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "domain": {
+        "data": "scale/y",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "height"
+    }
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "data": ".0/group_by1/arrange2"
+      },
+      "marks": [
+        {
+          "type": "line",
+          "properties": {
+            "update": {
+              "stroke": {
+                "scale": "stroke",
+                "field": "data.ic"
+              },
+              "x": {
+                "scale": "x",
+                "field": "data.year"
+              },
+              "y": {
+                "scale": "y",
+                "field": "data.e2r"
+              }
+            },
+            "ggvis": {
+              "data": {
+                "value": ".0/group_by1/arrange2"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "width": 480,
+  "height": 288,
+  "legends": [
+    {
+      "orient": "right",
+      "stroke": "stroke",
+      "title": "ic"
+    }
+  ],
+  "axes": [
+    {
+      "type": "x",
+      "scale": "x",
+      "orient": "bottom",
+      "layer": "back",
+      "grid": true,
+      "title": "year"
     },
     {
       "type": "y",
@@ -911,37 +972,37 @@ var plot_id588859390_spec = {
     "duration": 250,
     "renderer": "svg",
     "hover_duration": 0,
-    "width": 720,
-    "height": 432
+    "width": 480,
+    "height": 288
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id588859390").parseSpec(plot_id588859390_spec);
+ggvis.getPlot("plot_id154685561").parseSpec(plot_id154685561_spec);
 </script></p>
 
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-5">
+</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts">
 
-<p><div id="plot_id174673056-container" class="ggvis-output-container">
-<div id="plot_id174673056" class="ggvis-output"></div>
+<p><div id="plot_id377977641-container" class="ggvis-output-container">
+<div id="plot_id377977641" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id174673056_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id174673056" data-renderer="svg">SVG</a>
+<a id="plot_id377977641_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id377977641" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id174673056_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id174673056" data-renderer="canvas">Canvas</a>
+<a id="plot_id377977641_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id377977641" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id174673056_download" class="ggvis-download" data-plot-id="plot_id174673056">Download</a>
+<a id="plot_id377977641_download" class="ggvis-download" data-plot-id="plot_id377977641">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id174673056_spec = {
+var plot_id377977641_spec = {
   "data": [
     {
       "name": ".0/count1/stack2",
@@ -1037,8 +1098,8 @@ var plot_id174673056_spec = {
       }
     }
   ],
-  "width": 720,
-  "height": 432,
+  "width": 480,
+  "height": 288,
   "legends": [],
   "axes": [
     {
@@ -1066,37 +1127,37 @@ var plot_id174673056_spec = {
     "duration": 250,
     "renderer": "svg",
     "hover_duration": 0,
-    "width": 720,
-    "height": 432
+    "width": 480,
+    "height": 288
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id174673056").parseSpec(plot_id174673056_spec);
+ggvis.getPlot("plot_id377977641").parseSpec(plot_id377977641_spec);
 </script></p>
 
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-6">
+</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-1">
 
-<p><div id="plot_id458816576-container" class="ggvis-output-container">
-<div id="plot_id458816576" class="ggvis-output"></div>
+<p><div id="plot_id394086781-container" class="ggvis-output-container">
+<div id="plot_id394086781" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id458816576_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id458816576" data-renderer="svg">SVG</a>
+<a id="plot_id394086781_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id394086781" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id458816576_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id458816576" data-renderer="canvas">Canvas</a>
+<a id="plot_id394086781_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id394086781" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id458816576_download" class="ggvis-download" data-plot-id="plot_id458816576">Download</a>
+<a id="plot_id394086781_download" class="ggvis-download" data-plot-id="plot_id394086781">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id458816576_spec = {
+var plot_id394086781_spec = {
   "data": [
     {
       "name": ".0/count1/stack2",
@@ -1192,8 +1253,8 @@ var plot_id458816576_spec = {
       }
     }
   ],
-  "width": 720,
-  "height": 432,
+  "width": 480,
+  "height": 288,
   "legends": [],
   "axes": [
     {
@@ -1221,39 +1282,39 @@ var plot_id458816576_spec = {
     "duration": 250,
     "renderer": "svg",
     "hover_duration": 0,
-    "width": 720,
-    "height": 432
+    "width": 480,
+    "height": 288
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id458816576").parseSpec(plot_id458816576_spec);
+ggvis.getPlot("plot_id394086781").parseSpec(plot_id394086781_spec);
 </script></p>
 
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-7">
+</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-2">
 
 <pre >## Guessing formula = i2e ~ avg_gdp</pre>
 
-<p><div id="plot_id729309751-container" class="ggvis-output-container">
-<div id="plot_id729309751" class="ggvis-output"></div>
+<p><div id="plot_id516121396-container" class="ggvis-output-container">
+<div id="plot_id516121396" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id729309751_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id729309751" data-renderer="svg">SVG</a>
+<a id="plot_id516121396_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id516121396" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id729309751_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id729309751" data-renderer="canvas">Canvas</a>
+<a id="plot_id516121396_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id516121396" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id729309751_download" class="ggvis-download" data-plot-id="plot_id729309751">Download</a>
+<a id="plot_id516121396_download" class="ggvis-download" data-plot-id="plot_id516121396">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id729309751_spec = {
+var plot_id516121396_spec = {
   "data": [
     {
       "name": ".0",
@@ -1385,8 +1446,8 @@ var plot_id729309751_spec = {
       }
     }
   ],
-  "width": 720,
-  "height": 432,
+  "width": 480,
+  "height": 288,
   "legends": [],
   "axes": [
     {
@@ -1414,39 +1475,39 @@ var plot_id729309751_spec = {
     "duration": 250,
     "renderer": "svg",
     "hover_duration": 0,
-    "width": 720,
-    "height": 432
+    "width": 480,
+    "height": 288
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id729309751").parseSpec(plot_id729309751_spec);
+ggvis.getPlot("plot_id516121396").parseSpec(plot_id516121396_spec);
 </script></p>
 
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-8">
+</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-3">
 
 <pre >## Guessing formula = i2e ~ nat_res_exp_sha_t_3</pre>
 
-<p><div id="plot_id316253477-container" class="ggvis-output-container">
-<div id="plot_id316253477" class="ggvis-output"></div>
+<p><div id="plot_id877392100-container" class="ggvis-output-container">
+<div id="plot_id877392100" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id316253477_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id316253477" data-renderer="svg">SVG</a>
+<a id="plot_id877392100_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id877392100" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id316253477_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id316253477" data-renderer="canvas">Canvas</a>
+<a id="plot_id877392100_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id877392100" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id316253477_download" class="ggvis-download" data-plot-id="plot_id316253477">Download</a>
+<a id="plot_id877392100_download" class="ggvis-download" data-plot-id="plot_id877392100">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id316253477_spec = {
+var plot_id877392100_spec = {
   "data": [
     {
       "name": ".0",
@@ -1578,8 +1639,8 @@ var plot_id316253477_spec = {
       }
     }
   ],
-  "width": 720,
-  "height": 432,
+  "width": 480,
+  "height": 288,
   "legends": [],
   "axes": [
     {
@@ -1607,39 +1668,39 @@ var plot_id316253477_spec = {
     "duration": 250,
     "renderer": "svg",
     "hover_duration": 0,
-    "width": 720,
-    "height": 432
+    "width": 480,
+    "height": 288
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id316253477").parseSpec(plot_id316253477_spec);
+ggvis.getPlot("plot_id877392100").parseSpec(plot_id877392100_spec);
 </script></p>
 
-</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-9">
+</article></slide><slide class=''><hgroup><h2>An application to new data: Confirming stylized facts</h2></hgroup><article  id="an-application-to-new-data-confirming-stylized-facts-4">
 
 <pre >## Guessing formula = e2r ~ nat_res_exp_sha_t_3</pre>
 
-<p><div id="plot_id454652922-container" class="ggvis-output-container">
-<div id="plot_id454652922" class="ggvis-output"></div>
+<p><div id="plot_id456530601-container" class="ggvis-output-container">
+<div id="plot_id456530601" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id454652922_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id454652922" data-renderer="svg">SVG</a>
+<a id="plot_id456530601_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id456530601" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id454652922_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id454652922" data-renderer="canvas">Canvas</a>
+<a id="plot_id456530601_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id456530601" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id454652922_download" class="ggvis-download" data-plot-id="plot_id454652922">Download</a>
+<a id="plot_id456530601_download" class="ggvis-download" data-plot-id="plot_id456530601">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id454652922_spec = {
+var plot_id456530601_spec = {
   "data": [
     {
       "name": ".0",
@@ -1771,8 +1832,8 @@ var plot_id454652922_spec = {
       }
     }
   ],
-  "width": 720,
-  "height": 432,
+  "width": 480,
+  "height": 288,
   "legends": [],
   "axes": [
     {
@@ -1800,246 +1861,37 @@ var plot_id454652922_spec = {
     "duration": 250,
     "renderer": "svg",
     "hover_duration": 0,
-    "width": 720,
-    "height": 432
+    "width": 480,
+    "height": 288
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id454652922").parseSpec(plot_id454652922_spec);
+ggvis.getPlot("plot_id456530601").parseSpec(plot_id456530601_spec);
 </script></p>
-
-</article></slide><slide class=''><hgroup><h2>General Stylised Facts</h2></hgroup><article  id="general-stylised-facts">
-
-<ul>
-<li>section 3.1 of wwz</li>
-<li>growth of GVC trade</li>
-<li>length of GVC</li>
-<li>determinants of an industry&#39;s participation</li>
-<li>determinants of a country&#39;s participation</li>
-<li>trade balanses in VA terms differ substantially from those in gross terms</li>
-</ul>
-
-</article></slide><slide class=''><hgroup><h2>I2E</h2></hgroup><article  id="i2e">
-
-<p><div id="plot_id737256767-container" class="ggvis-output-container">
-  <div id="plot_id737256767" class="ggvis-output"></div>
-  <div class="plot-gear-icon">
-  <nav class="ggvis-control">
-  <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
-  <ul class="ggvis-dropdown">
-  <li>
-  Renderer: 
-  <a id="plot_id737256767_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id737256767" data-renderer="svg">SVG</a>
-   | 
-  <a id="plot_id737256767_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id737256767" data-renderer="canvas">Canvas</a>
-  </li>
-  <li>
-  <a id="plot_id737256767_download" class="ggvis-download" data-plot-id="plot_id737256767">Download</a>
-  </li>
-  </ul>
-  </nav>
-  </div>
-  </div>
-  <script type="text/javascript">
-  var plot_id737256767_spec = {
-    "data": [
-      {
-        "name": ".0/group_by1/arrange2_flat",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "year": "number",
-            "i2e": "number"
-          }
-        },
-        "values": "\"ic\",\"year\",\"i2e\"\n\"hic\",1995,0.181317990055524\n\"hic\",2000,0.206090872297488\n\"hic\",2005,0.213778962591894\n\"hic\",2008,0.209846779192038\n\"lic\",1995,0.166163448451932\n\"lic\",2000,0.208836708772378\n\"lic\",2005,0.213763458694054\n\"lic\",2008,0.185559846818342\n\"mic\",1995,0.198645572741999\n\"mic\",2000,0.281738847445014\n\"mic\",2005,0.285056291990823\n\"mic\",2008,0.28471659591445"
-      },
-      {
-        "name": ".0/group_by1/arrange2",
-        "source": ".0/group_by1/arrange2_flat",
-        "transform": [
-          {
-            "type": "treefacet",
-            "keys": [
-              "data.ic"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "scale/stroke",
-        "format": {
-          "type": "csv",
-          "parse": {}
-        },
-        "values": "\"domain\"\n\"hic\"\n\"lic\"\n\"mic\""
-      },
-      {
-        "name": "scale/x",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "domain": "number"
-          }
-        },
-        "values": "\"domain\"\n1994.35\n2008.65"
-      },
-      {
-        "name": "scale/y",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "domain": "number"
-          }
-        },
-        "values": "\"domain\"\n0.160218806274987\n0.291000934167768"
-      }
-    ],
-    "scales": [
-      {
-        "name": "stroke",
-        "type": "ordinal",
-        "domain": {
-          "data": "scale/stroke",
-          "field": "data.domain"
-        },
-        "points": true,
-        "sort": false,
-        "range": "category10"
-      },
-      {
-        "name": "x",
-        "domain": {
-          "data": "scale/x",
-          "field": "data.domain"
-        },
-        "zero": false,
-        "nice": false,
-        "clamp": false,
-        "range": "width"
-      },
-      {
-        "name": "y",
-        "domain": {
-          "data": "scale/y",
-          "field": "data.domain"
-        },
-        "zero": false,
-        "nice": false,
-        "clamp": false,
-        "range": "height"
-      }
-    ],
-    "marks": [
-      {
-        "type": "group",
-        "from": {
-          "data": ".0/group_by1/arrange2"
-        },
-        "marks": [
-          {
-            "type": "line",
-            "properties": {
-              "update": {
-                "stroke": {
-                  "scale": "stroke",
-                  "field": "data.ic"
-                },
-                "x": {
-                  "scale": "x",
-                  "field": "data.year"
-                },
-                "y": {
-                  "scale": "y",
-                  "field": "data.i2e"
-                }
-              },
-              "ggvis": {
-                "data": {
-                  "value": ".0/group_by1/arrange2"
-                }
-              }
-            }
-          }
-        ]
-      }
-    ],
-    "width": 720,
-    "height": 432,
-    "legends": [
-      {
-        "orient": "right",
-        "stroke": "stroke",
-        "title": "ic"
-      }
-    ],
-    "axes": [
-      {
-        "type": "x",
-        "scale": "x",
-        "orient": "bottom",
-        "layer": "back",
-        "grid": true,
-        "title": "year"
-      },
-      {
-        "type": "y",
-        "scale": "y",
-        "orient": "left",
-        "layer": "back",
-        "grid": true,
-        "title": "i2e"
-      }
-    ],
-    "padding": null,
-    "ggvis_opts": {
-      "keep_aspect": false,
-      "resizable": true,
-      "padding": {},
-      "duration": 250,
-      "renderer": "svg",
-      "hover_duration": 0,
-      "width": 720,
-      "height": 432
-    },
-    "handlers": null
-  };
-  ggvis.getPlot("plot_id737256767").parseSpec(plot_id737256767_spec);
-  </script></p>
-
-</article></slide><slide class=''><hgroup><h2>GVCs of LMICs</h2></hgroup><article  id="gvcs-of-lmics">
-
-<ul>
-<li>stylised facts for LMICs</li>
-<li>source / using countries specific indicators for LMICs</li>
-<li>nrca and trca of LMIC</li>
-<li>fvafin vs. fvaint for LMICs (WWZ 3.3)</li>
-<li>dvix decomposition (WWZ 3.4)</li>
-</ul>
 
 </article></slide><slide class=''><hgroup><h2>CEQ of China</h2></hgroup><article  id="ceq-of-china">
 
-<p><div id="plot_id969163939-container" class="ggvis-output-container">
-<div id="plot_id969163939" class="ggvis-output"></div>
+<p><div id="plot_id591499457-container" class="ggvis-output-container">
+<div id="plot_id591499457" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id969163939_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id969163939" data-renderer="svg">SVG</a>
+<a id="plot_id591499457_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id591499457" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id969163939_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id969163939" data-renderer="canvas">Canvas</a>
+<a id="plot_id591499457_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id591499457" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id969163939_download" class="ggvis-download" data-plot-id="plot_id969163939">Download</a>
+<a id="plot_id591499457_download" class="ggvis-download" data-plot-id="plot_id591499457">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id969163939_spec = {
+var plot_id591499457_spec = {
   "data": [
     {
       "name": ".0/arrange1",
@@ -2050,7 +1902,7 @@ var plot_id969163939_spec = {
           "trca": "number"
         }
       },
-      "values": "\"year\",\"trca\"\n1995,0.8424569\n2000,3.362698\n2005,1.86676\n2008,2.299375"
+      "values": "\"year\",\"trca\"\n1995,1.122317\n2000,1.088674\n2005,2.175881\n2008,2.384222"
     },
     {
       "name": ".0/arrange2",
@@ -2061,7 +1913,7 @@ var plot_id969163939_spec = {
           "nrca": "number"
         }
       },
-      "values": "\"year\",\"nrca\"\n1995,0.78333960123847\n2000,2.79956328157549\n2005,1.30049555952109\n2008,1.70489931707486"
+      "values": "\"year\",\"nrca\"\n1995,0.911677332375247\n2000,0.689053405432388\n2005,1.40961619983322\n2008,1.69921479534023"
     },
     {
       "name": "scale/stroke",
@@ -2089,7 +1941,7 @@ var plot_id969163939_spec = {
           "domain": "number"
         }
       },
-      "values": "\"domain\"\n0.654371681300393\n3.49166591993808"
+      "values": "\"domain\"\n0.604294975704008\n2.46898042972838"
     }
   ],
   "scales": [
@@ -2183,8 +2035,8 @@ var plot_id969163939_spec = {
       }
     }
   ],
-  "width": 720,
-  "height": 432,
+  "width": 480,
+  "height": 288,
   "legends": [
     {
       "orient": "right",
@@ -2217,12 +2069,12 @@ var plot_id969163939_spec = {
     "duration": 250,
     "renderer": "svg",
     "hover_duration": 0,
-    "width": 720,
-    "height": 432
+    "width": 480,
+    "height": 288
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id969163939").parseSpec(plot_id969163939_spec);
+ggvis.getPlot("plot_id591499457").parseSpec(plot_id591499457_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>Conclusion</h2></hgroup><article  id="conclusion"></article></slide>
