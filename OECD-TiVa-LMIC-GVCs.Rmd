@@ -10,7 +10,7 @@ output:
 ---
 
  
- ```{r, echo=FALSE, warnings=FALSE}
+ ```{r, echo=FALSE, warnings=FALSE, message=FALSE}
  # load the data
 load("data/gvc_indicators.RData")
 load("data/nrca_df.RData")
@@ -101,13 +101,31 @@ The multipliers can be post-multiplied with exports to estimate industry-level v
 
 $V$ - Value added / Output, $A$ - Input-output coefficients.
 
-## New Toolbox and Indicators: decompr and gvc
+
+## package: decompr
+ 
+Decompositions 
+ 
+ - Leontief (post: exports / output)
+ - new Wang-Wei-Zhu algorithm
+ 
+ - citation info
+ 
+ ```{r, tidy=FALSE}
+ library(decompr)
+ ```
+
+ 
+## package: gvc
 
 Indicators:  
 
-- I2E (importing-to-export, based on Hummels et al. 1998): The foreign value added content of domestic exports.
-- E2R (exporting-to-reexport, based on Hummels et al. 1998): The domestic value added content of foreign exports.
-- NRCA (New revealed comparative advantage, based on Wang, Wei, and Zhu 2014): Revealed comparative advantage measure based on value added data.
+ - I2E (importing-to-export, based on Hummels et al. 1998): The foreign value added content of domestic exports.
+ - E2R (exporting-to-reexport, based on Hummels et al. 1998): The domestic value added content of foreign exports.
+ - NRCA (New revealed comparative advantage, based on Wang, Wei, and Zhu 2014): Revealed comparative advantage measure based on value added data.
+ 
+ - no citation info (yet!)
+
 
 ## An application to new data: ICIOs covering LMICs
 
@@ -121,21 +139,8 @@ OECD ICIOs:
 
 - Low- and Middle-Income Countries (LMICs)
 
-    
-## package: decompr
 
- ```{r, tidy=FALSE}
- library(decompr)
- ls.str("package:decompr")
- ```
-
- 
-## package: gvc
- 
- ```{r, tidy=FALSE}
- library(gvc)
- ls.str("package:gvc")
- ```
+# Trends in GVCs
 
 
 ## The growth of GVC participation.
@@ -317,7 +322,7 @@ gvc_indicators %>%
 
 ## NRCA II
 
-Motor and Transport Equipment: Traditional underestimation
+Motor and Transport Equipment in Thailand: Traditional underestimation
 
 ```{r, echo=FALSE, } 
 # TRCA vs NRCA for China, ELQ
@@ -369,7 +374,7 @@ w1995_2008 %>%
 
   - new indicators suited for non-traditional trade patterns
   - non-trivial linear algebra involved
-  - simplified application of mew algorithms
+  - simplified application of new algorithms
   - many more indicators and tools available in the packages
     - decompr: decomposition
     - gvc: analysis

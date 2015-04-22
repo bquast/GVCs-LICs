@@ -102,8 +102,6 @@
           </hgroup>
   </slide>
 
-<p><code>##   ## Attaching package: &#39;dplyr&#39;  ##   ## The following object is masked from &#39;package:stats&#39;:  ##   ##     filter  ##   ## The following objects are masked from &#39;package:base&#39;:  ##   ##     intersect, setdiff, setequal, union</code></p>
-
 <slide class=''><hgroup><h2>Motivation: The rise of GVCs</h2></hgroup><article  id="motivation-the-rise-of-gvcs">
 
 <ul>
@@ -151,14 +149,29 @@ VB = V + VA + VAA + VAAA + ... = V (I+A+A^{2}+A^{3}+...)
 
 <p>\(V\) - Value added / Output, \(A\) - Input-output coefficients.</p>
 
-</article></slide><slide class=''><hgroup><h2>New Toolbox and Indicators: decompr and gvc</h2></hgroup><article  id="new-toolbox-and-indicators-decompr-and-gvc-1">
+</article></slide><slide class=''><hgroup><h2>package: decompr</h2></hgroup><article  id="package-decompr">
+
+<p>Decompositions</p>
+
+<ul>
+<li>Leontief (post: exports / output)</li>
+<li><p>new Wang-Wei-Zhu algorithm</p></li>
+<li><p>citation info</p></li>
+</ul>
+
+<p><code>r  library(decompr)</code></p>
+
+<p><code>## If you use decompr for data analysis,  ## please cite both R and decompr,  ## using citation() and citation(&quot;decompr&quot;) respectively.</code></p>
+
+</article></slide><slide class=''><hgroup><h2>package: gvc</h2></hgroup><article  id="package-gvc">
 
 <p>Indicators:</p>
 
 <ul>
 <li>I2E (importing-to-export, based on Hummels et al. 1998): The foreign value added content of domestic exports.</li>
 <li>E2R (exporting-to-reexport, based on Hummels et al. 1998): The domestic value added content of foreign exports.</li>
-<li>NRCA (New revealed comparative advantage, based on Wang, Wei, and Zhu 2014): Revealed comparative advantage measure based on value added data.</li>
+<li><p>NRCA (New revealed comparative advantage, based on Wang, Wei, and Zhu 2014): Revealed comparative advantage measure based on value added data.</p></li>
+<li><p>no citation info (yet!)</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>An application to new data: ICIOs covering LMICs</h2></hgroup><article  id="an-application-to-new-data-icios-covering-lmics">
@@ -172,47 +185,33 @@ VB = V + VA + VAA + VAAA + ... = V (I+A+A^{2}+A^{3}+...)
 <li><p>Low- and Middle-Income Countries (LMICs)</p></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>package: decompr</h2></hgroup><article  id="package-decompr">
-
-<p><code>r  library(decompr)</code></p>
-
-<p><code>## If you use decompr for data analysis,  ## please cite both R and decompr,  ## using citation() and citation(&quot;decompr&quot;) respectively.</code></p>
-
-<p><code>r  ls.str(&quot;package:decompr&quot;)</code></p>
-
-<p><code>## decomp : function (x, y, k, i, o, method = c(&quot;leontief&quot;, &quot;wwz&quot;, &quot;leontief_output&quot;),   ##     long = TRUE)    ## leontief : function (x, long = TRUE)    ## leontief_output : function (x, long = TRUE)    ## load_tables : function (x, y)    ## load_tables_vectors : function (x, y, k, i, o)    ## wwz : function (x)</code></p>
-
-</article></slide><slide class=''><hgroup><h2>package: gvc</h2></hgroup><article  id="package-gvc">
-
-<p><code>r  library(gvc)  ls.str(&quot;package:gvc&quot;)</code></p>
-
-<p><code>## block_matrix : function (x, s)    ## e2r : function (x)    ## i2e : function (x)    ## minus_block_matrix : function (x, s)    ## nrca : function (x)</code></p>
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Trends in GVCs</h2></hgroup><article  id="trends-in-gvcs">
 
 </article></slide><slide class=''><hgroup><h2>The growth of GVC participation.</h2></hgroup><article  id="the-growth-of-gvc-participation.">
 
 <p>Rising value added in 3rd country exports.</p>
 
-<p><div id="plot_id857003248-container" class="ggvis-output-container">
-<div id="plot_id857003248" class="ggvis-output"></div>
+<p><div id="plot_id502428930-container" class="ggvis-output-container">
+<div id="plot_id502428930" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id857003248_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id857003248" data-renderer="svg">SVG</a>
+<a id="plot_id502428930_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id502428930" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id857003248_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id857003248" data-renderer="canvas">Canvas</a>
+<a id="plot_id502428930_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id502428930" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id857003248_download" class="ggvis-download" data-plot-id="plot_id857003248">Download</a>
+<a id="plot_id502428930_download" class="ggvis-download" data-plot-id="plot_id502428930">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id857003248_spec = {
+var plot_id502428930_spec = {
   "data": [
     {
       "name": ".0/arrange1",
@@ -395,34 +394,34 @@ var plot_id857003248_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id857003248").parseSpec(plot_id857003248_spec);
+ggvis.getPlot("plot_id502428930").parseSpec(plot_id502428930_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>The expansion of GVCs</h2></hgroup><article  id="the-expansion-of-gvcs">
 
 <p>Increasing amounts of double counting indicate elongation of GVCs.</p>
 
-<p><div id="plot_id491818865-container" class="ggvis-output-container">
-<div id="plot_id491818865" class="ggvis-output"></div>
+<p><div id="plot_id546094600-container" class="ggvis-output-container">
+<div id="plot_id546094600" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id491818865_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id491818865" data-renderer="svg">SVG</a>
+<a id="plot_id546094600_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id546094600" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id491818865_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id491818865" data-renderer="canvas">Canvas</a>
+<a id="plot_id546094600_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id546094600" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id491818865_download" class="ggvis-download" data-plot-id="plot_id491818865">Download</a>
+<a id="plot_id546094600_download" class="ggvis-download" data-plot-id="plot_id546094600">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id491818865_spec = {
+var plot_id546094600_spec = {
   "data": [
     {
       "name": ".0/arrange1",
@@ -542,34 +541,34 @@ var plot_id491818865_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id491818865").parseSpec(plot_id491818865_spec);
+ggvis.getPlot("plot_id546094600").parseSpec(plot_id546094600_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>I2E by industry</h2></hgroup><article  id="i2e-by-industry">
 
 <p>Distance to final demand predicts an industry&#39;s GVC participation.</p>
 
-<p><div id="plot_id353279526-container" class="ggvis-output-container">
-<div id="plot_id353279526" class="ggvis-output"></div>
+<p><div id="plot_id324033422-container" class="ggvis-output-container">
+<div id="plot_id324033422" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id353279526_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id353279526" data-renderer="svg">SVG</a>
+<a id="plot_id324033422_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id324033422" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id353279526_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id353279526" data-renderer="canvas">Canvas</a>
+<a id="plot_id324033422_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id324033422" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id353279526_download" class="ggvis-download" data-plot-id="plot_id353279526">Download</a>
+<a id="plot_id324033422_download" class="ggvis-download" data-plot-id="plot_id324033422">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id353279526_spec = {
+var plot_id324033422_spec = {
   "data": [
     {
       "name": ".0/count1/stack2",
@@ -699,32 +698,32 @@ var plot_id353279526_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id353279526").parseSpec(plot_id353279526_spec);
+ggvis.getPlot("plot_id324033422").parseSpec(plot_id324033422_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>E2R by industry</h2></hgroup><article  id="e2r-by-industry">
 
-<p><div id="plot_id992787351-container" class="ggvis-output-container">
-<div id="plot_id992787351" class="ggvis-output"></div>
+<p><div id="plot_id252879873-container" class="ggvis-output-container">
+<div id="plot_id252879873" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id992787351_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id992787351" data-renderer="svg">SVG</a>
+<a id="plot_id252879873_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id252879873" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id992787351_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id992787351" data-renderer="canvas">Canvas</a>
+<a id="plot_id252879873_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id252879873" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id992787351_download" class="ggvis-download" data-plot-id="plot_id992787351">Download</a>
+<a id="plot_id252879873_download" class="ggvis-download" data-plot-id="plot_id252879873">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id992787351_spec = {
+var plot_id252879873_spec = {
   "data": [
     {
       "name": ".0/count1/stack2",
@@ -854,34 +853,34 @@ var plot_id992787351_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id992787351").parseSpec(plot_id992787351_spec);
+ggvis.getPlot("plot_id252879873").parseSpec(plot_id252879873_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>I2E by country</h2></hgroup><article  id="i2e-by-country">
 
 <p>country size and export composition determine GVC participation.</p>
 
-<p><div id="plot_id580855277-container" class="ggvis-output-container">
-<div id="plot_id580855277" class="ggvis-output"></div>
+<p><div id="plot_id785794962-container" class="ggvis-output-container">
+<div id="plot_id785794962" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id580855277_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id580855277" data-renderer="svg">SVG</a>
+<a id="plot_id785794962_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id785794962" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id580855277_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id580855277" data-renderer="canvas">Canvas</a>
+<a id="plot_id785794962_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id785794962" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id580855277_download" class="ggvis-download" data-plot-id="plot_id580855277">Download</a>
+<a id="plot_id785794962_download" class="ggvis-download" data-plot-id="plot_id785794962">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id580855277_spec = {
+var plot_id785794962_spec = {
   "data": [
     {
       "name": ".0/count1/stack2",
@@ -1011,32 +1010,32 @@ var plot_id580855277_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id580855277").parseSpec(plot_id580855277_spec);
+ggvis.getPlot("plot_id785794962").parseSpec(plot_id785794962_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>E2R by country</h2></hgroup><article  id="e2r-by-country">
 
-<p><div id="plot_id986877227-container" class="ggvis-output-container">
-<div id="plot_id986877227" class="ggvis-output"></div>
+<p><div id="plot_id988640868-container" class="ggvis-output-container">
+<div id="plot_id988640868" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id986877227_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id986877227" data-renderer="svg">SVG</a>
+<a id="plot_id988640868_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id988640868" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id986877227_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id986877227" data-renderer="canvas">Canvas</a>
+<a id="plot_id988640868_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id988640868" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id986877227_download" class="ggvis-download" data-plot-id="plot_id986877227">Download</a>
+<a id="plot_id988640868_download" class="ggvis-download" data-plot-id="plot_id988640868">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id986877227_spec = {
+var plot_id988640868_spec = {
   "data": [
     {
       "name": ".0/count1/stack2",
@@ -1166,32 +1165,32 @@ var plot_id986877227_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id986877227").parseSpec(plot_id986877227_spec);
+ggvis.getPlot("plot_id988640868").parseSpec(plot_id988640868_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>Natural Resources and E2R</h2></hgroup><article  id="natural-resources-and-e2r">
 
-<p><div id="plot_id490566629-container" class="ggvis-output-container">
-<div id="plot_id490566629" class="ggvis-output"></div>
+<p><div id="plot_id221593132-container" class="ggvis-output-container">
+<div id="plot_id221593132" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id490566629_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id490566629" data-renderer="svg">SVG</a>
+<a id="plot_id221593132_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id221593132" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id490566629_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id490566629" data-renderer="canvas">Canvas</a>
+<a id="plot_id221593132_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id221593132" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id490566629_download" class="ggvis-download" data-plot-id="plot_id490566629">Download</a>
+<a id="plot_id221593132_download" class="ggvis-download" data-plot-id="plot_id221593132">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id490566629_spec = {
+var plot_id221593132_spec = {
   "data": [
     {
       "name": ".0",
@@ -1357,7 +1356,7 @@ var plot_id490566629_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id490566629").parseSpec(plot_id490566629_spec);
+ggvis.getPlot("plot_id221593132").parseSpec(plot_id221593132_spec);
 </script></p>
 
 </article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>GVC indicators for LMICs</h2></hgroup><article  id="gvc-indicators-for-lmics">
@@ -1366,27 +1365,27 @@ ggvis.getPlot("plot_id490566629").parseSpec(plot_id490566629_spec);
 
 <p>LMICs drive recent growth in GVC participation.</p>
 
-<p><div id="plot_id740448550-container" class="ggvis-output-container">
-<div id="plot_id740448550" class="ggvis-output"></div>
+<p><div id="plot_id862102195-container" class="ggvis-output-container">
+<div id="plot_id862102195" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id740448550_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id740448550" data-renderer="svg">SVG</a>
+<a id="plot_id862102195_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id862102195" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id740448550_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id740448550" data-renderer="canvas">Canvas</a>
+<a id="plot_id862102195_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id862102195" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id740448550_download" class="ggvis-download" data-plot-id="plot_id740448550">Download</a>
+<a id="plot_id862102195_download" class="ggvis-download" data-plot-id="plot_id862102195">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id740448550_spec = {
+var plot_id862102195_spec = {
   "data": [
     {
       "name": ".0/group_by1/arrange2_flat",
@@ -1549,32 +1548,32 @@ var plot_id740448550_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id740448550").parseSpec(plot_id740448550_spec);
+ggvis.getPlot("plot_id862102195").parseSpec(plot_id862102195_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>Sourcing I2E</h2></hgroup><article  id="sourcing-i2e">
 
-<p><div id="plot_id977637383-container" class="ggvis-output-container">
-<div id="plot_id977637383" class="ggvis-output"></div>
+<p><div id="plot_id560606836-container" class="ggvis-output-container">
+<div id="plot_id560606836" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id977637383_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id977637383" data-renderer="svg">SVG</a>
+<a id="plot_id560606836_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id560606836" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id977637383_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id977637383" data-renderer="canvas">Canvas</a>
+<a id="plot_id560606836_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id560606836" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id977637383_download" class="ggvis-download" data-plot-id="plot_id977637383">Download</a>
+<a id="plot_id560606836_download" class="ggvis-download" data-plot-id="plot_id560606836">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id977637383_spec = {
+var plot_id560606836_spec = {
   "data": [
     {
       "name": ".0/arrange1",
@@ -1795,32 +1794,32 @@ var plot_id977637383_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id977637383").parseSpec(plot_id977637383_spec);
+ggvis.getPlot("plot_id560606836").parseSpec(plot_id560606836_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>GVC participation by *IC: E2R</h2></hgroup><article  id="gvc-participation-by-ic-e2r">
 
-<p><div id="plot_id290546381-container" class="ggvis-output-container">
-<div id="plot_id290546381" class="ggvis-output"></div>
+<p><div id="plot_id103089902-container" class="ggvis-output-container">
+<div id="plot_id103089902" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id290546381_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id290546381" data-renderer="svg">SVG</a>
+<a id="plot_id103089902_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id103089902" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id290546381_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id290546381" data-renderer="canvas">Canvas</a>
+<a id="plot_id103089902_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id103089902" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id290546381_download" class="ggvis-download" data-plot-id="plot_id290546381">Download</a>
+<a id="plot_id103089902_download" class="ggvis-download" data-plot-id="plot_id103089902">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id290546381_spec = {
+var plot_id103089902_spec = {
   "data": [
     {
       "name": ".0/group_by1/arrange2_flat",
@@ -1983,32 +1982,32 @@ var plot_id290546381_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id290546381").parseSpec(plot_id290546381_spec);
+ggvis.getPlot("plot_id103089902").parseSpec(plot_id103089902_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>Sourcing E2R</h2></hgroup><article  id="sourcing-e2r">
 
-<p><div id="plot_id968940472-container" class="ggvis-output-container">
-<div id="plot_id968940472" class="ggvis-output"></div>
+<p><div id="plot_id821947610-container" class="ggvis-output-container">
+<div id="plot_id821947610" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id968940472_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id968940472" data-renderer="svg">SVG</a>
+<a id="plot_id821947610_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id821947610" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id968940472_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id968940472" data-renderer="canvas">Canvas</a>
+<a id="plot_id821947610_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id821947610" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id968940472_download" class="ggvis-download" data-plot-id="plot_id968940472">Download</a>
+<a id="plot_id821947610_download" class="ggvis-download" data-plot-id="plot_id821947610">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id968940472_spec = {
+var plot_id821947610_spec = {
   "data": [
     {
       "name": ".0/arrange1",
@@ -2229,7 +2228,7 @@ var plot_id968940472_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id968940472").parseSpec(plot_id968940472_spec);
+ggvis.getPlot("plot_id821947610").parseSpec(plot_id821947610_spec);
 </script></p>
 
 </article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>New Indicators for GVC Analysis</h2></hgroup><article  id="new-indicators-for-gvc-analysis">
@@ -2238,27 +2237,27 @@ ggvis.getPlot("plot_id968940472").parseSpec(plot_id968940472_spec);
 
 <p>Computer Equipment in China: Traditional overestimation</p>
 
-<p><div id="plot_id303595870-container" class="ggvis-output-container">
-<div id="plot_id303595870" class="ggvis-output"></div>
+<p><div id="plot_id341193520-container" class="ggvis-output-container">
+<div id="plot_id341193520" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id303595870_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id303595870" data-renderer="svg">SVG</a>
+<a id="plot_id341193520_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id341193520" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id303595870_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id303595870" data-renderer="canvas">Canvas</a>
+<a id="plot_id341193520_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id341193520" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id303595870_download" class="ggvis-download" data-plot-id="plot_id303595870">Download</a>
+<a id="plot_id341193520_download" class="ggvis-download" data-plot-id="plot_id341193520">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id303595870_spec = {
+var plot_id341193520_spec = {
   "data": [
     {
       "name": ".0/arrange1",
@@ -2441,34 +2440,34 @@ var plot_id303595870_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id303595870").parseSpec(plot_id303595870_spec);
+ggvis.getPlot("plot_id341193520").parseSpec(plot_id341193520_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>NRCA II</h2></hgroup><article  id="nrca-ii">
 
-<p>Motor and Transport Equipment: Traditional underestimation</p>
+<p>Motor and Transport Equipment in Thailand: Traditional underestimation</p>
 
-<p><div id="plot_id805770186-container" class="ggvis-output-container">
-<div id="plot_id805770186" class="ggvis-output"></div>
+<p><div id="plot_id310606241-container" class="ggvis-output-container">
+<div id="plot_id310606241" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id805770186_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id805770186" data-renderer="svg">SVG</a>
+<a id="plot_id310606241_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id310606241" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id805770186_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id805770186" data-renderer="canvas">Canvas</a>
+<a id="plot_id310606241_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id310606241" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id805770186_download" class="ggvis-download" data-plot-id="plot_id805770186">Download</a>
+<a id="plot_id310606241_download" class="ggvis-download" data-plot-id="plot_id310606241">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id805770186_spec = {
+var plot_id310606241_spec = {
   "data": [
     {
       "name": ".0/arrange1",
@@ -2651,34 +2650,34 @@ var plot_id805770186_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id805770186").parseSpec(plot_id805770186_spec);
+ggvis.getPlot("plot_id310606241").parseSpec(plot_id310606241_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>I2E: Final Goods</h2></hgroup><article  id="i2e-final-goods">
 
 <p>Final-good assembly is relatively low-skilled.</p>
 
-<p><div id="plot_id768485263-container" class="ggvis-output-container">
-<div id="plot_id768485263" class="ggvis-output"></div>
+<p><div id="plot_id350960219-container" class="ggvis-output-container">
+<div id="plot_id350960219" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id768485263_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id768485263" data-renderer="svg">SVG</a>
+<a id="plot_id350960219_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id350960219" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id768485263_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id768485263" data-renderer="canvas">Canvas</a>
+<a id="plot_id350960219_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id350960219" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id768485263_download" class="ggvis-download" data-plot-id="plot_id768485263">Download</a>
+<a id="plot_id350960219_download" class="ggvis-download" data-plot-id="plot_id350960219">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id768485263_spec = {
+var plot_id350960219_spec = {
   "data": [
     {
       "name": ".0/group_by1/arrange2_flat",
@@ -2841,34 +2840,34 @@ var plot_id768485263_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id768485263").parseSpec(plot_id768485263_spec);
+ggvis.getPlot("plot_id350960219").parseSpec(plot_id350960219_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>I2E: Intermediate Goods</h2></hgroup><article  id="i2e-intermediate-goods">
 
 <p>Rising intermediate good exports indicate moving up the value chain.</p>
 
-<p><div id="plot_id717229645-container" class="ggvis-output-container">
-<div id="plot_id717229645" class="ggvis-output"></div>
+<p><div id="plot_id684668899-container" class="ggvis-output-container">
+<div id="plot_id684668899" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id717229645_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id717229645" data-renderer="svg">SVG</a>
+<a id="plot_id684668899_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id684668899" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id717229645_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id717229645" data-renderer="canvas">Canvas</a>
+<a id="plot_id684668899_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id684668899" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id717229645_download" class="ggvis-download" data-plot-id="plot_id717229645">Download</a>
+<a id="plot_id684668899_download" class="ggvis-download" data-plot-id="plot_id684668899">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id717229645_spec = {
+var plot_id684668899_spec = {
   "data": [
     {
       "name": ".0/group_by1/arrange2_flat",
@@ -3031,7 +3030,7 @@ var plot_id717229645_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id717229645").parseSpec(plot_id717229645_spec);
+ggvis.getPlot("plot_id684668899").parseSpec(plot_id684668899_spec);
 </script></p>
 
 </article></slide><slide class=''><hgroup><h2>Conclusion</h2></hgroup><article  id="conclusion">
@@ -3041,7 +3040,7 @@ ggvis.getPlot("plot_id717229645").parseSpec(plot_id717229645_spec);
 <li><p>focus on LMICs</p></li>
 <li>new indicators suited for non-traditional trade patterns</li>
 <li>non-trivial linear algebra involved</li>
-<li>simplified application of mew algorithms</li>
+<li>simplified application of new algorithms</li>
 <li>many more indicators and tools available in the packages
 
 <ul>
