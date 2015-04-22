@@ -53,6 +53,17 @@ gvc_indicators %>%
   ggvis(~year, ~i2e ) %>%
   layer_lines()
 
+# i2e lo mi sourcing
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(i2e_lic = sum(fvax_loinc_ams_ik) / sum(exports_ik),
+            i2e_mic = sum(fvax_midinc_ams_ik) / sum(exports_ik),
+            i2e_hic = sum(fvax_hiinc_ams_ik) / sum(exports_ik)) %>%
+  ggvis(~year, ~i2e_lic, stroke = "i2e_lic" ) %>%
+  layer_lines() %>%
+  layer_lines(~year, ~i2e_mic, stroke="i2e_mic") %>%
+  layer_lines(~year, ~i2e_hic, stroke="i2e_hic")
+
 # e2r
 gvc_indicators %>%
   group_by(year) %>%
@@ -110,6 +121,15 @@ gvc_indicators %>%
   layer_bars() %>%
   add_axis("x", title = "industry name")
 
+# e2r by industry
+gvc_indicators %>%
+  group_by(ind_name) %>%
+  filter(ind_name != "pvh" & ind_name != "edu" & ind_name != "egw" & ind_name != "con" & ind_name != "rea" & ind_name != "gov" & ind_name != "hth" & ind_name != "ptl") %>%
+  summarise(e2r = sum(dvar_ik) * 100 / sum(exports_ik) ) %>%
+  top_n(10) %>%
+  ggvis(~factor(ind_name), ~e2r) %>%
+  layer_bars() %>%
+  add_axis("x", title = "industry name")
 
 ## TRCA NRCA
 
@@ -168,22 +188,22 @@ gvc_indicators %>%
 # RDV
 w1995_2008 %>%
   group_by(year) %>%
-  summarise( RDV = sum(RDV_INT) + sum(RDV_FIN) + sum(RDV_FIN2) ) %>%
+  summarise( RDV = () sum(RDV_INT) + sum(RDV_FIN) + sum(RDV_FIN2) ) / sum(texp) ) %>%
   ggvis(~year, ~RDV) %>%
   layer_lines()
 
 # PDC
 w1995_2008 %>%
   group_by(year) %>%
-  summarise( PDC = sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) %>%
+  summarise( PDC = ( sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) / sum(texp) ) %>%
   ggvis(~year, ~PDC) %>%
   layer_lines()
 
 # both
 w1995_2008 %>%
   group_by(year) %>%
-  summarise( RDV = sum(RDV_INT) + sum(RDV_FIN) + sum(RDV_FIN2),
-             PDC = sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) %>%
+  summarise( RDV = ( sum(RDV_INT) + sum(RDV_FIN) + sum(RDV_FIN2) ) / sum(texp),
+             PDC = ( sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) / sum(texp) ) %>%
   ggvis(~year, ~RDV, stroke="RDV") %>%
   layer_lines() %>%
   layer_lines(~year, ~PDC, stroke="PDC")
@@ -312,13 +332,30 @@ w1995_2008 %>%
   ggvis(~year, ~FVA_FIN, stroke = ~factor(Exporting_Country) ) %>%
   layer_lines()
 
+# FVA FIN china thailand india indonesia
+w1995_2008 %>%
+  filter(Exporting_Country == "chn" | Exporting_Country == "tha" | Exporting_Country == "ind" | Exporting_Country == "idn") %>%
+  group_by(year, Exporting_Country) %>%
+  summarise( I2E_FIN = ( sum(OVA_FIN) + sum(MVA_FIN) ) / sum(texp) ) %>%
+  ggvis(~year, ~I2E_FIN, stroke = ~factor(Exporting_Country) ) %>%
+  layer_lines()
+
 # FVA INT by year, Exporting Country, for LIC
 w1995_2008 %>%
-  filter(ic == "lic") %>%
+  filter( == "lic") %>%
   group_by(year, Exporting_Country) %>%
   summarise( FVA_INT = ( sum(OVA_INT) + sum(MVA_INT) ) / sum(texp) ) %>%
   ggvis(~year, ~FVA_INT, stroke = ~factor(Exporting_Country) ) %>%
   layer_lines()
+
+# FVA INT china thailand india indonesia
+w1995_2008 %>%
+  filter(Exporting_Country == "chn" | Exporting_Country == "tha" | Exporting_Country == "ind" | Exporting_Country == "idn") %>%
+  group_by(year, Exporting_Country) %>%
+  summarise( I2E_INT = ( sum(OVA_INT) + sum(MVA_INT) ) / sum(texp) ) %>%
+  ggvis(~year, ~I2E_INT, stroke = ~factor(Exporting_Country) ) %>%
+  layer_lines()
+
 
 # FVA FIN by year, Exporting Country, for MIC
 w1995_2008 %>%
