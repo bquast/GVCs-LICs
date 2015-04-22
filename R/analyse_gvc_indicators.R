@@ -189,49 +189,8 @@ w1995_2008 %>%
   layer_lines(~year, ~PDC, stroke="PDC")
 
 
-### LMICs
-# LMIC definition I
+## by *IC (LIC/MIC/HIC)
 
-# i2e hi lo
-gvc_indicators %>%
-  group_by(year) %>%
-  summarise(i2e_lomid = sum(fvax_lomidinc_ams_ik) / sum(exports_ik),
-            i2e_hi    = sum(fvax_hiinc_ams_ik)    / sum(exports_ik) ) %>%
-  ggvis(~year, ~i2e_lomid ) %>%
-  layer_lines(stroke="i2e_lomid") %>%
-  layer_lines(~year, ~i2e_hi, stroke="i2e_hi")
-
-# e2r hi lo
-gvc_indicators %>%
-  group_by(year) %>%
-  summarise(e2r_lomid = sum(dvar_lomidinc_ik) / sum(exports_ik),
-            e2r_hi    = sum(dvar_hiinc_ik)    / sum(exports_ik) ) %>%
-  ggvis(~year, ~e2r_lomid ) %>%
-  layer_lines(stroke="e2r_lomid") %>%
-  layer_lines(~year, ~e2r_hi, stroke="e2r_hi")
-
-
-# LMIC definition II
-
-# i2e hi lo
-gvc_indicators %>%
-  group_by(year) %>%
-  summarise(i2e_lomid = sum(fvax_lomidinc1_ams_ik) / sum(exports_ik),
-            i2e_hi    = sum(fvax_hiinc1_ams_ik)    / sum(exports_ik) ) %>%
-  ggvis(~year, ~i2e_lomid ) %>%
-  layer_lines(stroke="i2e_lomid") %>%
-  layer_lines(~year, ~i2e_hi, stroke="i2e_hi")
-
-# e2r hi lo
-gvc_indicators %>%
-  group_by(year) %>%
-  summarise(e2r_lomid = sum(dvar_lomidinc1_ik) / sum(exports_ik),
-            e2r_hi    = sum(dvar_hiinc1_ik)    / sum(exports_ik) ) %>%
-  ggvis(~year, ~e2r_lomid ) %>%
-  layer_lines(stroke="e2r_lomid") %>%
-  layer_lines(~year, ~e2r_hi, stroke="e2r_hi")
-
-# LMIC defition III
 # i2e by year, ic
 gvc_indicators %>%
   group_by(year, ic) %>%
@@ -309,7 +268,7 @@ gvc_indicators %>%
   layer_points()
 
 
-# WWZ by IC
+## WWZ by IC
 
 # RDV
 w1995_2008 %>%
@@ -326,7 +285,7 @@ w1995_2008 %>%
   layer_lines()
 
 
-## FVA FIN INT
+## FVA FIN INT by *IC
 
 # FVA FIN by year, IC
 w1995_2008 %>%
@@ -341,6 +300,9 @@ w1995_2008 %>%
   summarise( FVA_INT = ( sum(OVA_INT) + sum(MVA_INT) ) / sum(texp) ) %>%
   ggvis(~year, ~FVA_INT, stroke = ~ic) %>%
   layer_lines()
+
+
+## FVA FIN INT by exporting country
 
 # FVA FIN by year, Exporting Country, for LIC
 w1995_2008 %>%
@@ -391,7 +353,7 @@ w1995_2008 %>%
   layer_lines()
 
 
-## DViX
+## DViX by Exporting Country
 
 # DVix by year, Exporting Country, for LICs
 w1995_2008 %>%
