@@ -1,34 +1,86 @@
 ---
-title: "OECD TiVa LMIC GVCs"
+title: "Global Value Chain Analysis of LMICs"
 author: "Victor Kummritz and Bastiaan Quast"
-date: "March 24, 2015"
+date: "April 22, 2015"
 output: ioslides_presentation
 ---
 
-## Motivation
+## Motivation: The rise of GVCs
 
- - Global Value Chains relevance
- - GVCs in developement (capacity building)
- - General GVC picture overemphasises north-north because of higher monetary value
+* "[O]ne of the most important factors shaping contemporary international trade [is] the rise of global value chains."  
+*Pascal Lamy, September 2012*
+<br />  <br />
+* "We value [...] the relevance of regional and global value chains [...] in fostering economic growth, employment and development."  
+*G20 leaders, June 2012*
+<br /><br />
+* "Today, however, production processes increasingly involve global
+supply chains spanning multiple countries,[...]."  
+*Costinot, Vogel, and Wang, January 2013*
 
-## This paper
+## Motivation: GVCs and development
 
-$$E_x$$
+GVCs offer a new way to development: Countries can join value chains instead of building them:  
 
-## Data
+  + World Economic Forum (2013): Reductions of GVC trade barriers
+could raise global GDP by 5\% and international trade by 15\%.
+  + UNCTAD (2013): Economies with the fastest growing GVC
+participation have GDP per capita growth rates around two percentage
+points above the average.
 
-ICIOs from TiVa (not WIOD)
+## Motivation: Current shortcomings in the GVCs analysis
 
-TiVa data
- - 57 countries
- - 34 sectors
- - LMICs
-
-## New Toolbox and Indicators
-
- - source / using countries specific indicators
- - decompor and gvc functions
+ - Limited data availability reduces analysis to high- and middle-income countries, which might not be representative.  
  
+ - Analysis so far mostly based on limited set of indicators.
+ 
+ - Technical complexity of standard GVC indicators represents a large entry barrier to GVC analysis.
+
+## This project
+
+- Develop tools that automate and simplify the derivation of GVC indicators.
+
+- Implement the calculation of novel GVC indicators.
+
+- Analyse these indicators using new data with extensive country coverage.
+
+## New Toolbox and Indicators: decompr and gvc
+Background: Leontief decomposition  
+
+Applying the Leontief (1936) insight to Inter-Country Input-Output tables to derive value added multipliers ($VB$) following Hummels et al. (1998, 2001):
+$$
+VB = V + VA + VAA + VAAA + ... = V (I+A+A^{2}+A^{3}+...)
+$$
+$$
+= V (I-A)^{-1}.
+$$
+
+The multipliers can be post-multiplied with exports to estimate industry-level value added origins of each industry's exports.  
+
+$V$ - Value added / Output, $A$ - Input-output coefficients.
+
+## New Toolbox and Indicators: decompr and gvc
+Exemplary indicators:  
+
+- I2E (importing-to-export, based on Hummels et al. 1998): The foreign value added content of domestic exports.
+    - I2E_LMIC: The foreign value added content sourced in low- and middle income   countries
+    - etc.
+- E2R (exporting-to-reexport, based on Hummels et al. 1998): The domestic value added content of foreign exports.
+- NRCA (New revealed comparative advantage, based on Wang, Wei, and Zhu 2014): Revealed comparative advantage measure based on value added data.
+
+## An application to new data: ICIOS covering LMICs
+
+OECD ICIOs: 
+
+- 57 countries
+
+- 34 sectors
+
+- 1995, 2000, 2005, 2008, 2009
+
+- LMICs
+    
+## An application to new data: Confirming stylized facts
+
  ```{r}
  library(decompr)
  ls.str("package:decompr")
@@ -77,7 +129,109 @@ gvc_indicators %<>% merge(nrca, by.x = c("ctry", "isic", "year"), by.y = c("coun
 gvc_indicators %<>% merge(trca, by = c("ctry", "isic", "year") )
 ```
 
+## An application to new data: Confirming stylized facts
+The growth of GVC participation.
+```{r, echo=FALSE}
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(e2r = sum(dvar_ik) / sum(exports_ik),
+            i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
+  ggvis(~year, ~e2r ) %>%
+  layer_lines(stroke="e2r") %>%
+  layer_lines(~year, ~i2e, stroke="i2e")
+```
 
+## An application to new data: Confirming stylized facts
+The expansion of GVCs.
+```{r, echo=FALSE}
+w1995_2008 %>%
+  group_by(year) %>%
+  summarise( RDV = sum(RDV_INT) + sum(RDV_FIN) + sum(RDV_FIN2),
+             PDC = sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) %>%
+  ggvis(~year, ~RDV, stroke="RDV") %>%
+  layer_lines() %>%
+  layer_lines(~year, ~PDC, stroke="PDC")
+```
+
+## An application to new data: Confirming stylized facts
+
+```{r, echo=FALSE}
+gvc_indicators %>%
+  group_by(ind_name) %>%
+  summarise(i2e = sum(fvax_ams_ik) * 100 / sum(exports_ik) ) %>%
+  top_n(10) %>%
+  ggvis(~factor(ind_name), ~i2e) %>%
+  layer_bars() %>%
+  add_axis("x", title = "industry name")
+```
+
+## An application to new data: Confirming stylized facts
+
+```{r, echo=FALSE}
+gvc_indicators %>%
+  group_by(ind_name) %>%
+  summarise(e2r = sum(dvar_ik) * 100 / sum(exports_ik) ) %>%
+  top_n(10, e2r) %>%
+  ggvis(~factor(ind_name), ~e2r) %>%
+  layer_bars() %>%
+  add_axis("x", title = "industry name")
+```
+
+## An application to new data: Confirming stylized facts
+
+```{r, echo=FALSE}
+gvc_indicators %>%
+  group_by(ctry) %>%
+  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
+  top_n(10, i2e) %>%
+  ggvis(~factor(ctry), ~i2e ) %>%
+  layer_bars()
+```
+
+## An application to new data: Confirming stylized facts
+
+```{r, echo=FALSE}
+gvc_indicators %>%
+  group_by(ctry) %>%
+  summarise(e2r = sum(dvar_ik) / sum(exports_ik) ) %>%
+  top_n(10, e2r) %>%
+  ggvis(~factor(ctry), ~e2r ) %>%
+  layer_bars()
+```
+
+## An application to new data: Confirming stylized facts
+
+```{r, echo=FALSE}
+gvc_indicators %>%
+  group_by(ctry) %>%
+  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik), avg_gdp = mean(avg_gdp) ) %>%
+  ggvis(~avg_gdp, ~i2e ) %>%
+  layer_points() %>%
+  layer_model_predictions(model = "lm")
+```
+
+
+## An application to new data: Confirming stylized facts
+
+```{r, echo=FALSE}
+gvc_indicators %>%
+  group_by(ctry) %>%
+  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik), nat_res_exp_sha_t_3 = mean(nat_res_exp_sha_t_3) ) %>%
+  ggvis(~nat_res_exp_sha_t_3, ~i2e ) %>%
+  layer_points() %>%
+  layer_model_predictions(model = "lm")
+```
+
+## An application to new data: Confirming stylized facts
+
+```{r, echo=FALSE}
+gvc_indicators %>%
+  group_by(ctry) %>%
+  summarise(e2r = sum(dvar_ik) / sum(exports_ik), nat_res_exp_sha_t_3 = mean(nat_res_exp_sha_t_3) ) %>%
+  ggvis(~nat_res_exp_sha_t_3, ~e2r ) %>%
+  layer_points() %>%
+  layer_model_predictions(model = "lm")
+```
 
 ## General Stylised Facts
 
