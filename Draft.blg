@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Draft.aux
+The style file: chicago.bst
+Database file #1: GVCandLMICs.bib
+Repeated entry---line 474 of file GVCandLMICs.bib
+ : @techreport{baquviku15
+ :                       ,
+I'm skipping whatever remains of this entry
+Warning--empty year in joamsoca15
+Warning--no number and no volume in joamsoca15
+Warning--page numbers missing in joamsoca15
+Warning--no volume for dahuetal98
+You've used 12 entries,
+            2861 wiz_defined-function locations,
+            685 strings with 6640 characters,
+and the built_in function-call counts, 7628 in all, are:
+= -- 646
+> -- 556
+< -- 5
++ -- 160
+- -- 192
+* -- 663
+:= -- 1438
+add.period$ -- 37
+call.type$ -- 12
+change.case$ -- 85
+chr.to.int$ -- 12
+cite$ -- 16
+duplicate$ -- 206
+empty$ -- 440
+format.name$ -- 224
+if$ -- 1394
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 6
+newline$ -- 64
+num.names$ -- 120
+pop$ -- 58
+preamble$ -- 1
+purify$ -- 156
+quote$ -- 0
+skip$ -- 217
+stack$ -- 0
+substring$ -- 330
+swap$ -- 63
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 240
+warning$ -- 4
+while$ -- 109
+width$ -- 0
+write$ -- 168
+(There was 1 error message)
