@@ -5,7 +5,10 @@
 # load the library
 library(decompr)
 
-# run the Leontief decomposition
+
+# run the decompositions and save the output
+
+## run the Leontief decomposition
 l1995 <- decomp(inter1995,
                 final1995,
                 countries,
@@ -49,12 +52,17 @@ l2011 <- decomp(inter2011,
                 output2011,
                 method = "leontief")
 
-# save Leontief the data
-save(l1995, l2000, l2005, l2008, file = "data/TiVa-Leontief.RData")
+## save Leontief the data
+save(l1995,
+     l2000,
+     l2005,
+     l2008,
+     l2009,
+     l2010,
+     l2011,
+     file = "data/TiVa-Leontief.RData")
 
-
-
-# run the Wang-Wei-Zhu decomposition
+## run the Wang-Wei-Zhu decomposition
 w1995 <- decomp(inter1995,
                 final1995,
                 countries,
@@ -79,6 +87,31 @@ w2008 <- decomp(inter2008,
                 industries,
                 output2008,
                 method = "wwz")
+w2009 <- decomp(inter2009,
+                final2009,
+                countries,
+                industries,
+                output2009,
+                method = "wwz")
+w2010 <- decomp(inter2010,
+                final2010,
+                countries,
+                industries,
+                output2010,
+                method = "wwz")
+w2011 <- decomp(inter2011,
+                final2011,
+                countries,
+                industries,
+                output2011,
+                method = "wwz")
 
 # save the Wang-Wei-Zhu data
-save(w1995, w2000, w2005, w2008, file = "data/TiVa-WWZ.RData")
+save(w1995,
+     w2000,
+     w2005,
+     w2008,
+     w2009,
+     w2010,
+     w2011,
+     file = "data/TiVa-WWZ.RData")
