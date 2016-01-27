@@ -1,6 +1,79 @@
 # import.R
+# ---------------------------
+# import data from csv files
+#
 # Bastiaan Quast
 # bquast@gmail.com
+
+
+# unzip
+unzip(zipfile = 'data/tiva.zip', exdir = 'data')
+
+
+# load data
+countries  <- read.csv(file = 'data/countries1995.csv',  header = FALSE, sep = '', stringsAsFactors = FALSE)
+industries <- read.csv(file = 'data/industries1995.csv', header = FALSE, sep = '', stringsAsFactors = FALSE)
+inter1995  <- read.csv(file = 'data/inter1995.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+inter2000  <- read.csv(file = 'data/inter2000.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+inter2005  <- read.csv(file = 'data/inter2005.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+inter2008  <- read.csv(file = 'data/inter2008.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+inter2009  <- read.csv(file = 'data/inter2009.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+inter2010  <- read.csv(file = 'data/inter2010.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+inter2011  <- read.csv(file = 'data/inter2011.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+final1995  <- read.csv(file = 'data/final1995.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+final2000  <- read.csv(file = 'data/final2000.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+final2005  <- read.csv(file = 'data/final2005.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+final2008  <- read.csv(file = 'data/final2008.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+final2009  <- read.csv(file = 'data/final2009.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+final2010  <- read.csv(file = 'data/final2010.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+final2011  <- read.csv(file = 'data/final2011.csv',      header = FALSE, sep = '', stringsAsFactors = FALSE)
+output1995 <- read.csv(file = 'data/output1995.csv',     header = FALSE, sep = '', stringsAsFactors = FALSE)
+output2000 <- read.csv(file = 'data/output2000.csv',     header = FALSE, sep = '', stringsAsFactors = FALSE)
+output2005 <- read.csv(file = 'data/output2005.csv',     header = FALSE, sep = '', stringsAsFactors = FALSE)
+output2008 <- read.csv(file = 'data/output2008.csv',     header = FALSE, sep = '', stringsAsFactors = FALSE)
+output2009 <- read.csv(file = 'data/output2009.csv',     header = FALSE, sep = '', stringsAsFactors = FALSE)
+output2010 <- read.csv(file = 'data/output2010.csv',     header = FALSE, sep = '', stringsAsFactors = FALSE)
+output2011 <- read.csv(file = 'data/output2011.csv',     header = FALSE, sep = '', stringsAsFactors = FALSE)
+
+
+# convert to matrices and vectors
+
+## countries and industries
+countries  <- as.vector(countries[,1])
+industries <- as.vector(industries[,1])
+
+## intermediate demand
+inter1995 <- as.matrix(inter1995)
+inter2000 <- as.matrix(inter2000)
+inter2005 <- as.matrix(inter2005)
+inter2008 <- as.matrix(inter2008)
+inter2009 <- as.matrix(inter2009)
+inter2010 <- as.matrix(inter2010)
+inter2011 <- as.matrix(inter2011)
+
+## final demand
+final1995 <- as.matrix(final1995)
+final2000 <- as.matrix(final2000)
+final2005 <- as.matrix(final2005)
+final2008 <- as.matrix(final2008)
+final2009 <- as.matrix(final2009)
+final2010 <- as.matrix(final2010)
+final2011 <- as.matrix(final2011)
+
+## output
+output1995 <- as.vector(output1995[,1])
+output2000 <- as.vector(output2000[,1])
+output2005 <- as.vector(output2005[,1])
+output2008 <- as.vector(output2008[,1])
+output2009 <- as.vector(output2009[,1])
+output2010 <- as.vector(output2010[,1])
+output2011 <- as.vector(output2011[,1])
+
+
+
+# save imported data
+save.image(file = 'data/imported.RData')
+
 
 # load the readxl library
 # for excell files (.xls / .xlsx )
