@@ -6,7 +6,7 @@
 load("data/gvc_indicators.RData")
 load("data/nrca_df.RData")
 load("data/country_vars.RData")
-load("data/w1995_2008.RData")
+load("data/w1995_2011.RData")
 load("data/trca.RData")
 
 # load required libraries
@@ -27,7 +27,7 @@ country_vars$ic      <- with(country_vars, ifelse(avg_gdppc <= 6000, "lic",
                                                   ifelse(avg_gdppc > 12000, "hic", "mic") ) )
 
 # merge wwz and country vars
-w1995_2008 %<>% merge(country_vars,
+w1995_2011 %<>% merge(country_vars,
                       by.x = c("year", "Exporting_Country"),
                       by.y = c("year", "ctry")              )
 
@@ -186,21 +186,21 @@ gvc_indicators %>%
 
 # plot gvc_length
 # RDV
-w1995_2008 %>%
+w1995_2011 %>%
   group_by(year) %>%
   summarise( RDV = () sum(RDV_INT) + sum(RDV_FIN) + sum(RDV_FIN2) ) / sum(texp) ) %>%
   ggvis(~year, ~RDV) %>%
   layer_lines()
 
 # PDC
-w1995_2008 %>%
+w1995_2011 %>%
   group_by(year) %>%
   summarise( PDC = ( sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) / sum(texp) ) %>%
   ggvis(~year, ~PDC) %>%
   layer_lines()
 
 # both
-w1995_2008 %>%
+w1995_2011 %>%
   group_by(year) %>%
   summarise( RDV = ( sum(RDV_INT) + sum(RDV_FIN) + sum(RDV_FIN2) ) / sum(texp),
              PDC = ( sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) / sum(texp) ) %>%
@@ -291,14 +291,14 @@ gvc_indicators %>%
 ## WWZ by IC
 
 # RDV
-w1995_2008 %>%
+w1995_2011 %>%
   group_by(year, ic) %>%
   summarise( RDV = ( sum(RDV_INT) + sum(RDV_FIN) + sum(RDV_FIN2) ) / sum(texp) ) %>%
   ggvis(~year, ~RDV, stroke = ~ic) %>%
   layer_lines()
 
 # PDC
-w1995_2008 %>%
+w1995_2011 %>%
   group_by(year, ic) %>%
   summarise( PDC = ( sum(DDC_FIN) + sum(DDC_INT) + sum(ODC) + sum(MDC) ) / sum(texp) ) %>%
   ggvis(~year, ~PDC, stroke = ~ic) %>%
@@ -308,14 +308,14 @@ w1995_2008 %>%
 ## FVA FIN INT by *IC
 
 # FVA FIN by year, IC
-w1995_2008 %>%
+w1995_2011 %>%
   group_by(year, ic) %>%
   summarise( FVA_FIN = ( sum(OVA_FIN) + sum(MVA_FIN) ) / sum(texp) ) %>%
   ggvis(~year, ~FVA_FIN, stroke = ~ic) %>%
   layer_lines()
 
 # FVA INT by year, IC
-w1995_2008 %>%
+w1995_2011 %>%
   group_by(year, ic) %>%
   summarise( FVA_INT = ( sum(OVA_INT) + sum(MVA_INT) ) / sum(texp) ) %>%
   ggvis(~year, ~FVA_INT, stroke = ~ic) %>%
@@ -325,7 +325,7 @@ w1995_2008 %>%
 ## FVA FIN INT by exporting country
 
 # FVA FIN by year, Exporting Country, for LIC
-w1995_2008 %>%
+w1995_2011 %>%
   filter(ic == "lic") %>%
   group_by(year, Exporting_Country) %>%
   summarise( FVA_FIN = ( sum(OVA_FIN) + sum(MVA_FIN) ) / sum(texp) ) %>%
@@ -333,7 +333,7 @@ w1995_2008 %>%
   layer_lines()
 
 # FVA FIN china thailand india indonesia
-w1995_2008 %>%
+w1995_2011 %>%
   filter(Exporting_Country == "chn" | Exporting_Country == "tha" | Exporting_Country == "ind" | Exporting_Country == "idn") %>%
   group_by(year, Exporting_Country) %>%
   summarise( I2E_FIN = ( sum(OVA_FIN) + sum(MVA_FIN) ) / sum(texp) ) %>%
@@ -341,7 +341,7 @@ w1995_2008 %>%
   layer_lines()
 
 # FVA INT by year, Exporting Country, for LIC
-w1995_2008 %>%
+w1995_2011 %>%
   filter( == "lic") %>%
   group_by(year, Exporting_Country) %>%
   summarise( FVA_INT = ( sum(OVA_INT) + sum(MVA_INT) ) / sum(texp) ) %>%
@@ -349,7 +349,7 @@ w1995_2008 %>%
   layer_lines()
 
 # FVA INT china thailand india indonesia
-w1995_2008 %>%
+w1995_2011 %>%
   filter(Exporting_Country == "chn" | Exporting_Country == "tha" | Exporting_Country == "ind" | Exporting_Country == "idn") %>%
   group_by(year, Exporting_Country) %>%
   summarise( I2E_INT = ( sum(OVA_INT) + sum(MVA_INT) ) / sum(texp) ) %>%
@@ -358,7 +358,7 @@ w1995_2008 %>%
 
 
 # FVA FIN by year, Exporting Country, for MIC
-w1995_2008 %>%
+w1995_2011 %>%
   filter(ic == "mic") %>%
   group_by(year, Exporting_Country) %>%
   summarise( FVA_FIN = ( sum(OVA_FIN) + sum(MVA_FIN) ) / sum(texp) ) %>%
@@ -366,7 +366,7 @@ w1995_2008 %>%
   layer_lines()
 
 # FVA INT by year, Exporting Country, for MIC
-w1995_2008 %>%
+w1995_2011 %>%
   filter(ic == "mic") %>%
   group_by(year, Exporting_Country) %>%
   summarise( FVA_INT = ( sum(OVA_INT) + sum(MVA_INT) ) / sum(texp) ) %>%
@@ -374,7 +374,7 @@ w1995_2008 %>%
   layer_lines()
 
 # FVA FIN by year, Exporting Country, for HIC
-w1995_2008 %>%
+w1995_2011 %>%
   filter(ic == "hic") %>%
   group_by(year, Exporting_Country) %>%
   summarise( FVA_FIN = ( sum(OVA_FIN) + sum(MVA_FIN) ) /sum(texp) ) %>%
@@ -382,7 +382,7 @@ w1995_2008 %>%
   layer_lines()
 
 # FVA INT by year, Exporting Country, for HIC
-w1995_2008 %>%
+w1995_2011 %>%
   filter(ic == "hic") %>%
   group_by(year, Exporting_Country) %>%
   summarise( FVA_INT = ( sum(OVA_INT) + sum(MVA_INT) ) / sum(texp) ) %>%
@@ -393,14 +393,14 @@ w1995_2008 %>%
 ## DViX by Exporting Country
 
 # DVix by year, Exporting Country, for LICs
-w1995_2008 %>%
+w1995_2011 %>%
   filter(ic == "lic") %>%
   group_by(year, Exporting_Country) %>%
   summarise( DViX_Fsr = sum(DViX_Fsr) / sum(texp) ) %>%
   ggvis(~year, ~DViX_Fsr, stroke = ~factor(Exporting_Country) ) %>%
   layer_lines()
 
-w1995_2008 %>%
+w1995_2011 %>%
   filter(Exporting_Country == "chn") %>%
   group_by(Exporting_Industry, year) %>%
   summarise( DViX_Fsr = sum(DViX_Fsr) / sum(texp) ) %>%
@@ -409,7 +409,7 @@ w1995_2008 %>%
 
 # DYNAMIC!!!
 # FVA INT by year, Exporting Country
-w1995_2008 %>%
+w1995_2011 %>%
   group_by(year, ic, Exporting_Country) %>%
   summarise( FVA_INT = ( sum(OVA_INT) + sum(MVA_INT) ) / sum(texp) ) %>%
   ggvis(~year, ~FVA_INT, stroke = ~Exporting_Country ) %>%
