@@ -4,6 +4,11 @@
 
 # load the library
 library(decompr)
+library(gvc)
+
+
+# load the imported data
+load(file = 'data/imported.RData')
 
 
 # run the decompositions and save the output
@@ -61,6 +66,7 @@ save(l1995,
      l2010,
      l2011,
      file = "data/TiVa-Leontief.RData")
+
 
 ## run the Wang-Wei-Zhu decomposition
 w1995 <- decomp(inter1995,
