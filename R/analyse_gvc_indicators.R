@@ -11,12 +11,15 @@ load(file = 'data/extra_vars.RData')
 load(file = 'data/w1995_2011.RData')
 # load("data/trca.RData")
 
+
 # load required libraries
 library(dplyr)
 library(ggvis)
 library(magrittr)
 
-country_vars <- extra
+
+# country_vars <- extra
+
 
 # contruct avg_pop and gdp
 country_vars %<>%
