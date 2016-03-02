@@ -3,16 +3,20 @@
 # bquast@gmail.com
 
 # load the data
-load("data/gvc_indicators.RData")
-load("data/nrca_df.RData")
-load("data/country_vars.RData")
-load("data/w1995_2011.RData")
-load("data/trca.RData")
+load(file = 'data/gvc_indicators.RData')
+load(file = 'data/nrca_df.RData')
+# load("data/country_vars.RData") # NOT USING THIS ONE, USING COUNTRY_CHARS
+load(file = 'data/country_chars.RData')
+load(file = 'data/extra_vars.RData')
+load(file = 'data/w1995_2011.RData')
+# load("data/trca.RData")
 
 # load required libraries
 library(dplyr)
 library(ggvis)
 library(magrittr)
+
+country_vars <- extra
 
 # contruct avg_pop and gdp
 country_vars %<>%
