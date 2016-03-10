@@ -19,27 +19,15 @@ library(magrittr)
 
 
 # country_vars <- extra
+country_chars$iso3 <- tolower(country_chars$iso3)
 
 
-# contruct avg_pop and gdp
-country_vars %<>%
-  group_by(ctry) %>%
-  summarise(avg_pop = mean(pop)) %>%
-  merge(country_vars, . , by = "ctry")
+# merge wwz and country chars
+w1995_2011 %<>% merge(country_chars, by.x = 'Exporting_Country', by.y = 'iso3')
 
-country_vars$avg_gdp <- with(country_vars, avg_pop * avg_gdppc)
-
-# create factor gdp var
-country_vars$ic      <- with(country_vars, ifelse(avg_gdppc <= 6000, "lic",
-                                                  ifelse(avg_gdppc > 12000, "hic", "mic") ) )
-
-# merge wwz and country vars
-w1995_2011 %<>% merge(country_vars,
-                      by.x = c("year", "Exporting_Country"),
-                      by.y = c("year", "ctry")              )
 
 # merge gvc indicators and country vars
-gvc_indicators %<>% merge(country_vars, by = c("ctry", "year") )
+gvc_indicators %<>% merge(country_chars, by.x = 'ctry', by.y = 'Exporting_Country')
 
 # merge gvc indicators and nrca
 gvc_indicators %<>% merge(nrca, by.x = c("ctry", "isic", "year"), by.y = c("country", "industry", "year") )
