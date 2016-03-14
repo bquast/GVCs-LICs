@@ -13,6 +13,9 @@ library(magrittr)
 
 # load data
 load(file = 'data/TiVa-Leontief.RData')
+load(file = 'data/country_chars.RData')
+
+country_chars$iso3 <- tolower(country_chars$iso3)
 
 
 # merge with country_chars
