@@ -30,6 +30,10 @@ w1995_2011 %<>% merge(country_chars, by.x = 'Exporting_Country', by.y = 'iso3')
 gvc_indicators %<>% merge(country_chars, by.x = 'country', by.y = 'iso3')
 
 
+# save
+save(gvc_indicators, file = 'gvc_indicators_merged.RData')
+
+
 # merge gvc indicators and nrca
 gvc_indicators %<>% merge(nrca, by.x = c("ctry", "isic", "year"), by.y = c("country", "industry", "year") )
 gvc_indicators %<>% merge(trca, by = c("ctry", "isic", "year") )
@@ -42,11 +46,32 @@ gvc_indicators %<>% merge(trca, by = c("ctry", "isic", "year") )
 
 ## create basic summaries
 
+# # i2e
+# gvc_indicators %>%
+#   group_by(year) %>%
+#   summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
+#   ggvis(~year, ~i2e ) %>%
+#   layer_lines()
+
 # i2e
 gvc_indicators %>%
   group_by(year) %>%
-  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
+  summarise(i2e = sum(i2e) ) %>%
   ggvis(~year, ~i2e ) %>%
+  layer_lines()
+
+# i2e class == L
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(i2eL = sum(i2eL) ) %>%
+  ggvis(~year, ~i2e ) %>%
+  layer_lines()
+
+# e2r class == L
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(e2rL = sum(e2rL) ) %>%
+  ggvis(~year, ~e2rL ) %>%
   layer_lines()
 
 # i2e lo mi sourcing
