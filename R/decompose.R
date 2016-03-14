@@ -57,6 +57,20 @@ l2011 <- decomp(inter2011,
                 output2011,
                 method = "leontief")
 
+
+## add year
+l1995 <- cbind(year = '1995', l1995)
+l2000 <- cbind(year = '2000', l2000)
+l2005 <- cbind(year = '2005', l2005)
+l2008 <- cbind(year = '2008', l2008)
+l2009 <- cbind(year = '2009', l2009)
+l2010 <- cbind(year = '2010', l2010)
+l2011 <- cbind(year = '2011', l2011)
+
+
+# stack vertically
+l1995_2011 <- rbind(l1995, l2000, l2005, l2008, l2009, l2010, l2011)
+
 ## save Leontief the data
 save(l1995,
      l2000,
@@ -65,7 +79,9 @@ save(l1995,
      l2009,
      l2010,
      l2011,
-     file = "data/TiVa-Leontief.RData")
+     file = 'data/TiVa-Leontief.RData')
+
+save(l1995_2011, file = 'data/l1995_2011.RData')
 
 
 ## run the Wang-Wei-Zhu decomposition
