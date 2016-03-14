@@ -31,7 +31,7 @@ gvc_indicators %<>% merge(country_chars, by.x = 'country', by.y = 'iso3', all.x 
 
 
 # save
-save(gvc_indicators, file = 'gvc_indicators_merged.RData')
+save(gvc_indicators, file = 'data/gvc_indicators_merged.RData')
 
 
 # merge gvc indicators and nrca
@@ -67,13 +67,6 @@ gvc_indicators %>%
   ggvis(~year, ~i2eL ) %>%
   layer_lines()
 
-# e2r class == L
-gvc_indicators %>%
-  group_by(year) %>%
-  summarise(e2rL = sum(e2rL) ) %>%
-  ggvis(~year, ~e2rL ) %>%
-  layer_lines()
-
 # i2e lo mi sourcing
 gvc_indicators %>%
   group_by(year) %>%
@@ -88,15 +81,15 @@ gvc_indicators %>%
 # e2r
 gvc_indicators %>%
   group_by(year) %>%
-  summarise(e2r = sum(dvar_ik) / sum(exports_ik) ) %>%
+  summarise(e2r = sum(e2r) ) %>%
   ggvis(~year, ~e2r ) %>%
   layer_lines()
 
 # GVC growth
 gvc_indicators %>%
   group_by(year) %>%
-  summarise(e2r = sum(dvar_ik) / sum(exports_ik),
-            i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
+  summarise(e2r = sum(e2r),
+            i2e = sum(i2e) ) %>%
   ggvis(~year, ~e2r ) %>%
   layer_lines(stroke="e2r") %>%
   layer_lines(~year, ~i2e, stroke="i2e")
@@ -104,7 +97,7 @@ gvc_indicators %>%
 # i2e against GDP
 gvc_indicators %>%
   group_by(ctry) %>%
-  summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik), avg_gdp = mean(avg_gdp) ) %>%
+  summarise(i2e = sum(i2e), avg_gdp = mean(gdppc) ) %>%
   ggvis(~avg_gdp, ~i2e ) %>%
   layer_points() %>%
   layer_model_predictions(model = "lm")
