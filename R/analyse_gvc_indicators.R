@@ -3,7 +3,7 @@
 # bquast@gmail.com
 
 # load the data
-load(file = 'data/gvc_indicators.RData')
+load(file = 'data/new_gvc_indicators.RData')
 load(file = 'data/nrca_df.RData')
 # load("data/country_vars.RData") # NOT USING THIS ONE, USING COUNTRY_CHARS
 load(file = 'data/country_chars.RData')
@@ -27,7 +27,7 @@ w1995_2011 %<>% merge(country_chars, by.x = 'Exporting_Country', by.y = 'iso3')
 
 
 # merge gvc indicators and country vars
-gvc_indicators %<>% merge(country_chars, by.x = 'country', by.y = 'iso3')
+gvc_indicators %<>% merge(country_chars, by.x = 'country', by.y = 'iso3', all.x = TRUE)
 
 
 # save
@@ -64,7 +64,7 @@ gvc_indicators %>%
 gvc_indicators %>%
   group_by(year) %>%
   summarise(i2eL = sum(i2eL) ) %>%
-  ggvis(~year, ~i2e ) %>%
+  ggvis(~year, ~i2eL ) %>%
   layer_lines()
 
 # e2r class == L
