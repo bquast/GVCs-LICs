@@ -27,7 +27,8 @@ w1995_2011 %<>% merge(country_chars, by.x = 'Exporting_Country', by.y = 'iso3')
 
 
 # merge gvc indicators and country vars
-gvc_indicators %<>% merge(country_chars, by.x = 'ctry', by.y = 'Exporting_Country')
+gvc_indicators %<>% merge(country_chars, by.x = 'country', by.y = 'iso3')
+
 
 # merge gvc indicators and nrca
 gvc_indicators %<>% merge(nrca, by.x = c("ctry", "isic", "year"), by.y = c("country", "industry", "year") )
