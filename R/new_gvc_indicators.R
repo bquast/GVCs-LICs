@@ -31,13 +31,13 @@ l2010U <-  merge(l2010, country_chars, by.x = 'Using_Country', by.y = 'iso3', al
 l2011U <-  merge(l2011, country_chars, by.x = 'Using_Country', by.y = 'iso3', all.x = TRUE, sort=FALSE)
 
 ## sort
-l1995U <-l1995S[order(l1995U$Source_Country, l1995U$Source_Industry, l1995U$Using_Country, l1995U$Using_Industry),]
-l2000U <-l2000S[order(l2000U$Source_Country, l2000U$Source_Industry, l2000U$Using_Country, l2000U$Using_Industry),]
-l2005U <-l2005S[order(l2005U$Source_Country, l2005U$Source_Industry, l2005U$Using_Country, l2005U$Using_Industry),]
-l2008U <-l2008S[order(l2008U$Source_Country, l2008U$Source_Industry, l2008U$Using_Country, l2008U$Using_Industry),]
-l2009U <-l2009S[order(l2009U$Source_Country, l2009U$Source_Industry, l2009U$Using_Country, l2009U$Using_Industry),]
-l2010U <-l2010S[order(l2010U$Source_Country, l2010U$Source_Industry, l2010U$Using_Country, l2010U$Using_Industry),]
-l2011U <-l2011S[order(l2011U$Source_Country, l2011U$Source_Industry, l2011U$Using_Country, l2011U$Using_Industry),]
+l1995U <-l1995U[order(l1995U$Source_Country, l1995U$Source_Industry, l1995U$Using_Country, l1995U$Using_Industry),]
+l2000U <-l2000U[order(l2000U$Source_Country, l2000U$Source_Industry, l2000U$Using_Country, l2000U$Using_Industry),]
+l2005U <-l2005U[order(l2005U$Source_Country, l2005U$Source_Industry, l2005U$Using_Country, l2005U$Using_Industry),]
+l2008U <-l2008U[order(l2008U$Source_Country, l2008U$Source_Industry, l2008U$Using_Country, l2008U$Using_Industry),]
+l2009U <-l2009U[order(l2009U$Source_Country, l2009U$Source_Industry, l2009U$Using_Country, l2009U$Using_Industry),]
+l2010U <-l2010U[order(l2010U$Source_Country, l2010U$Source_Industry, l2010U$Using_Country, l2010U$Using_Industry),]
+l2011U <-l2011U[order(l2011U$Source_Country, l2011U$Source_Industry, l2011U$Using_Country, l2011U$Using_Industry),]
 
 ## fix names post merge
 names(l1995U)[6:8] <- c('GDPpc', 'class', 'region')
