@@ -46,12 +46,40 @@ gvc_indicators %<>% merge(trca, by = c("ctry", "isic", "year") )
 
 ## create basic summaries
 
-# # i2e
-# gvc_indicators %>%
-#   group_by(year) %>%
-#   summarise(i2e = sum(fvax_ams_ik) / sum(exports_ik) ) %>%
-#   ggvis(~year, ~i2e ) %>%
-#   layer_lines()
+# e2r
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(e2r = sum(e2r) ) %>%
+  ggvis(~year, ~e2r ) %>%
+  layer_lines()
+
+# e2r class == L
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(e2rL = sum(e2rL) ) %>%
+  ggvis(~year, ~e2rL ) %>%
+  layer_lines()
+
+# e2r class == LM
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(e2rLM = sum(e2rLM) ) %>%
+  ggvis(~year, ~e2rLM ) %>%
+  layer_lines()
+
+# e2r class == UM
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(e2rUM = sum(e2rUM) ) %>%
+  ggvis(~year, ~e2rUM ) %>%
+  layer_lines()
+
+# e2r class == H
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(e2rH = sum(e2rH) ) %>%
+  ggvis(~year, ~e2rH ) %>%
+  layer_lines()
 
 # i2e
 gvc_indicators %>%
@@ -65,6 +93,27 @@ gvc_indicators %>%
   group_by(year) %>%
   summarise(i2eL = sum(i2eL) ) %>%
   ggvis(~year, ~i2eL ) %>%
+  layer_lines()
+
+# i2e class == LM
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(i2eLM = sum(i2eLM) ) %>%
+  ggvis(~year, ~i2eLM ) %>%
+  layer_lines()
+
+# i2e class == UM
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(i2eUM = sum(i2eUM) ) %>%
+  ggvis(~year, ~i2eUM ) %>%
+  layer_lines()
+
+# i2e class == H
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(i2eH = sum(i2eH) ) %>%
+  ggvis(~year, ~i2eH ) %>%
   layer_lines()
 
 # i2e lo mi sourcing
