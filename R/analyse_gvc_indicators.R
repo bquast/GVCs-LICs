@@ -73,6 +73,18 @@ gvc_indicators %<>% merge(trca, by = c("ctry", "isic", "year") )
 # gvc_indicators$lic  <- gvc_indicators$avg_gdppc <=  6000
 # gvc_indicators$lmic <- gvc_indicators$avg_gdppc <= 12000
 # gvc_indicators$hic  <- gvc_indicators$avg_gdppc >= 12000
+gvc_indicators %>%
+  group_by(class, year) %>%
+  filter(!is.na(class)) %>%
+  summarise(fdloge2r = log(sum(e2r, na.rm=TRUE)) ) -> logged
+
+logged$fdloge2r <- logged$fdloge2r - lag(logged$fdloge2r)
+
+logged <- subset(logged, year!=1995)
+
+logged %>%
+  ggvis(~year, ~fdloge2r, stroke= ~class) %>%
+  layer_lines()
 
 
 ## create basic summaries
