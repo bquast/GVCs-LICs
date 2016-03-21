@@ -153,6 +153,40 @@ gvc_indicators %>%
   ggvis(~year, ~i2eH ) %>%
   layer_lines()
 
+# i2e log
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(i2elog = log(sum(i2e)) ) %>%
+  ggvis(~year, ~i2elog ) %>%
+  layer_lines()
+
+# i2e log class == L
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(i2eLlog = log(sum(i2eL)) ) %>%
+  ggvis(~year, ~i2eLlog ) %>%
+  layer_lines()
+
+# i2e log class == LM
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(i2eLMlog = log(sum(i2eLM)) ) %>%
+  ggvis(~year, ~i2eLMlog ) %>%
+  layer_lines()
+
+# i2e log class == UM
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(i2eUMlog = log(sum(i2eUM)) ) %>%
+  ggvis(~year, ~i2eUMlog ) %>%
+  layer_lines()
+
+# i2e log class == H
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(i2eHlog = log(sum(i2eH)) ) %>%
+  ggvis(~year, ~i2eHlog ) %>%
+  layer_lines()
 
 # add PVC
 # add intermediate imports (?)
