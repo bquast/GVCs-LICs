@@ -30,6 +30,37 @@ w1995_2011 %<>% merge(country_chars, by.x = 'Exporting_Country', by.y = 'iso3')
 gvc_indicators %<>% merge(country_chars, by.x = 'country', by.y = 'iso3', all.x = TRUE)
 
 
+# order gvc_indicators
+gvc_indicators <- gvc_indicators[order(gvc_indicators$country, gvc_indicators$sector, gvc_indicators$year),]
+
+
+# year as numeric
+gvc_indicators$year <- as.numeric(as.character(gvc_indicators$year))
+
+
+# remove values close to zero
+gvc_indicators[which(gvc_indicators$e2r   <= 0.01),]$e2r   <- NA
+gvc_indicators[which(gvc_indicators$e2rL  <= 0.01),]$e2rL  <- NA
+gvc_indicators[which(gvc_indicators$e2rLM <= 0.01),]$e2rLM <- NA
+gvc_indicators[which(gvc_indicators$e2rUM <= 0.01),]$e2rUM <- NA
+gvc_indicators[which(gvc_indicators$e2rH  <= 0.01),]$e2rH  <- NA
+
+
+# create fd
+gvc_indicators %<>%
+  group_by(sector) %>%
+  mutate(fdloge2r   = log(e2r)   - lag(log(e2r)),
+         fdloge2rL  = log(e2rL)  - lag(log(e2rL)),
+         fdloge2rLM = log(e2rLM) - lag(log(e2rLM)),
+         fdloge2rUM = log(e2rUM) - lag(log(e2rUM)),
+         fdloge2rH  = log(e2rH)  - lag(log(e2rH)),
+         fdlogi2e   = log(i2e)   - lag(log(i2e)),
+         fdlogi2eL  = log(i2eL)  - lag(log(i2eL)),
+         fdlogi2eLM = log(i2eLM) - lag(log(i2eLM)),
+         fdlogi2eUM = log(i2eUM) - lag(log(i2eUM)),
+         fdlogi2eH  = log(i2eH)  - lag(log(i2eH))     )
+
+
 # save
 save(gvc_indicators, file = 'data/gvc_indicators_merged.RData')
 
@@ -186,6 +217,87 @@ gvc_indicators %>%
   group_by(year) %>%
   summarise(i2eHlog = log(sum(i2eH)) ) %>%
   ggvis(~year, ~i2eHlog ) %>%
+  layer_lines()
+
+
+# fdloge2r
+gvc_indicators %>%
+  filter(year > 1995) %>%
+  group_by(year) %>%
+  summarise(fdloge2r = sum(fdloge2r, na.rm=TRUE) ) %>%
+  ggvis(~year, ~fdloge2r ) %>%
+  layer_lines()
+
+# fdloge2r class == L
+gvc_indicators %>%
+  filter(year > 1995) %>%
+  group_by(year) %>%
+  summarise(fdloge2rL = sum(fdloge2rL, na.rm=TRUE) ) %>%
+  ggvis(~year, ~fdloge2rL ) %>%
+  layer_lines()
+
+# fdloge2r class == LM
+gvc_indicators %>%
+  filter(year > 1995) %>%
+  group_by(year) %>%
+  summarise(fdloge2rLM = sum(fdloge2rLM, na.rm=TRUE) ) %>%
+  ggvis(~year, ~fdloge2rLM ) %>%
+  layer_lines()
+
+# fdloge2r class == UM
+gvc_indicators %>%
+  filter(year > 1995) %>%
+  group_by(year) %>%
+  summarise(fdloge2rUM = sum(fdloge2rUM, na.rm=TRUE) ) %>%
+  ggvis(~year, ~fdloge2rUM ) %>%
+  layer_lines()
+
+# fdloge2r class == H
+gvc_indicators %>%
+  filter(year > 1995) %>%
+  group_by(year) %>%
+  summarise(fdloge2rH = sum(fdloge2rH, na.rm=TRUE) ) %>%
+  ggvis(~year, ~fdloge2rH ) %>%
+  layer_lines()
+
+# fdlogi2e
+gvc_indicators %>%
+  filter(year > 1995) %>%
+  group_by(year) %>%
+  summarise(fdlogi2e = sum(fdlogi2e, na.rm=TRUE) ) %>%
+  ggvis(~year, ~fdlogi2e ) %>%
+  layer_lines()
+
+# fdlogi2e class == L
+gvc_indicators %>%
+  filter(year > 1995) %>%
+  group_by(year) %>%
+  summarise(fdlogi2eL = sum(fdlogi2eL, na.rm=TRUE) ) %>%
+  ggvis(~year, ~fdlogi2eL ) %>%
+  layer_lines()
+
+# fdlogi2e class == LM
+gvc_indicators %>%
+  filter(year > 1995) %>%
+  group_by(year) %>%
+  summarise(fdlogi2eLM = sum(fdlogi2eLM, na.rm=TRUE) ) %>%
+  ggvis(~year, ~fdlogi2eLM ) %>%
+  layer_lines()
+
+# fdlogi2e class == UM
+gvc_indicators %>%
+  filter(year > 1995) %>%
+  group_by(year) %>%
+  summarise(fdlogi2eUM = sum(fdlogi2eUM, na.rm=TRUE) ) %>%
+  ggvis(~year, ~fdlogi2eUM ) %>%
+  layer_lines()
+
+# fdlogi2e class == H
+gvc_indicators %>%
+  filter(year > 1995) %>%
+  group_by(year) %>%
+  summarise(fdlogi2eH = sum(fdlogi2eH, na.rm=TRUE) ) %>%
+  ggvis(~year, ~fdlogi2eH ) %>%
   layer_lines()
 
 # add PVC
