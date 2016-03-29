@@ -74,7 +74,7 @@ gvc_indicators %<>% merge(trca, by = c("ctry", "isic", "year") )
 # gvc_indicators$lmic <- gvc_indicators$avg_gdppc <= 12000
 # gvc_indicators$hic  <- gvc_indicators$avg_gdppc >= 12000
 gvc_indicators %>%
-  group_by(class, year) %>% ###### REMOVE CLASS HERE THEN RUN AGAIN AND PLOT
+  group_by(year) %>% ###### REMOVE CLASS HERE THEN RUN AGAIN AND PLOT
   summarise(fdloge2r   = log(sum(e2r,   na.rm=TRUE)),
             fdloge2rL  = log(sum(e2rL,  na.rm=TRUE)),
             fdloge2rLM = log(sum(e2rLM, na.rm=TRUE)),
@@ -97,11 +97,26 @@ logged$fdlogi2eLM <- logged$fdlogi2eLM - lag(logged$fdlogi2eLM)
 logged$fdlogi2eUM <- logged$fdlogi2eUM - lag(logged$fdlogi2eUM)
 logged$fdlogi2eH  <- logged$fdlogi2eH  - lag(logged$fdlogi2eH)
 
+
 logged <- subset(logged, year!=1995)
 
+# e2r plot
 logged %>%
-  ggvis(~year, ~fdloge2r, stroke= ~class) %>%
-  layer_lines()
+  ggvis(~year, ~fdloge2r, stroke='e2r') %>%
+  layer_lines() %>%
+  layer_lines(~year, ~fdloge2rL,  stroke='e2r (L)') %>%
+  layer_lines(~year, ~fdloge2rLM, stroke='e2r (LM)') %>%
+  layer_lines(~year, ~fdloge2rUM, stroke='e2r (UM)') %>%
+  layer_lines(~year, ~fdloge2rH,  stroke='e2r (H)')
+
+# i2e plot
+logged %>%
+  ggvis(~year, ~fdlogi2e, stroke='i2e') %>%
+  layer_lines() %>%
+  layer_lines(~year, ~fdlogi2eL,  stroke='i2e (L)') %>%
+  layer_lines(~year, ~fdlogi2eLM, stroke='i2e (LM)') %>%
+  layer_lines(~year, ~fdlogi2eUM, stroke='i2e (UM)') %>%
+  layer_lines(~year, ~fdlogi2eH,  stroke='i2e (H)')
 
 
 ## create basic summaries
