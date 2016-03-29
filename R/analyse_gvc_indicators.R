@@ -38,27 +38,27 @@ gvc_indicators <- gvc_indicators[order(gvc_indicators$country, gvc_indicators$se
 gvc_indicators$year <- as.numeric(as.character(gvc_indicators$year))
 
 
-# remove values close to zero
-gvc_indicators[which(gvc_indicators$e2r   <= 0.01),]$e2r   <- NA
-gvc_indicators[which(gvc_indicators$e2rL  <= 0.01),]$e2rL  <- NA
-gvc_indicators[which(gvc_indicators$e2rLM <= 0.01),]$e2rLM <- NA
-gvc_indicators[which(gvc_indicators$e2rUM <= 0.01),]$e2rUM <- NA
-gvc_indicators[which(gvc_indicators$e2rH  <= 0.01),]$e2rH  <- NA
+# # remove values close to zero
+# gvc_indicators[which(gvc_indicators$e2r   <= 0.01),]$e2r   <- NA
+# gvc_indicators[which(gvc_indicators$e2rL  <= 0.01),]$e2rL  <- NA
+# gvc_indicators[which(gvc_indicators$e2rLM <= 0.01),]$e2rLM <- NA
+# gvc_indicators[which(gvc_indicators$e2rUM <= 0.01),]$e2rUM <- NA
+# gvc_indicators[which(gvc_indicators$e2rH  <= 0.01),]$e2rH  <- NA
 
-
+# below does NOT work
 # create fd
-gvc_indicators %<>%
-  group_by(sector) %>%
-  mutate(fdloge2r   = log(e2r)   - lag(log(e2r)),
-         fdloge2rL  = log(e2rL)  - lag(log(e2rL)),
-         fdloge2rLM = log(e2rLM) - lag(log(e2rLM)),
-         fdloge2rUM = log(e2rUM) - lag(log(e2rUM)),
-         fdloge2rH  = log(e2rH)  - lag(log(e2rH)),
-         fdlogi2e   = log(i2e)   - lag(log(i2e)),
-         fdlogi2eL  = log(i2eL)  - lag(log(i2eL)),
-         fdlogi2eLM = log(i2eLM) - lag(log(i2eLM)),
-         fdlogi2eUM = log(i2eUM) - lag(log(i2eUM)),
-         fdlogi2eH  = log(i2eH)  - lag(log(i2eH))     )
+# gvc_indicators %<>%
+#   group_by(sector) %>%
+#   mutate(fdloge2r   = log(e2r)   - lag(log(e2r)),
+#          fdloge2rL  = log(e2rL)  - lag(log(e2rL)),
+#          fdloge2rLM = log(e2rLM) - lag(log(e2rLM)),
+#          fdloge2rUM = log(e2rUM) - lag(log(e2rUM)),
+#          fdloge2rH  = log(e2rH)  - lag(log(e2rH)),
+#          fdlogi2e   = log(i2e)   - lag(log(i2e)),
+#          fdlogi2eL  = log(i2eL)  - lag(log(i2eL)),
+#          fdlogi2eLM = log(i2eLM) - lag(log(i2eLM)),
+#          fdlogi2eUM = log(i2eUM) - lag(log(i2eUM)),
+#          fdlogi2eH  = log(i2eH)  - lag(log(i2eH))     )
 
 
 # save
@@ -74,11 +74,28 @@ gvc_indicators %<>% merge(trca, by = c("ctry", "isic", "year") )
 # gvc_indicators$lmic <- gvc_indicators$avg_gdppc <= 12000
 # gvc_indicators$hic  <- gvc_indicators$avg_gdppc >= 12000
 gvc_indicators %>%
-  group_by(class, year) %>%
-  filter(!is.na(class)) %>%
-  summarise(fdloge2r = log(sum(e2r, na.rm=TRUE)) ) -> logged
+  group_by(class, year) %>% ###### REMOVE CLASS HERE THEN RUN AGAIN AND PLOT
+  summarise(fdloge2r   = log(sum(e2r,   na.rm=TRUE)),
+            fdloge2rL  = log(sum(e2rL,  na.rm=TRUE)),
+            fdloge2rLM = log(sum(e2rLM, na.rm=TRUE)),
+            fdloge2rUM = log(sum(e2rUM, na.rm=TRUE)),
+            fdloge2rH  = log(sum(e2rH,  na.rm=TRUE)),
+            fdlogi2e   = log(sum(i2e,   na.rm=TRUE)),
+            fdlogi2eL  = log(sum(i2eL,  na.rm=TRUE)),
+            fdlogi2eLM = log(sum(i2eLM, na.rm=TRUE)),
+            fdlogi2eUM = log(sum(i2eUM, na.rm=TRUE)),
+            fdlogi2eH  = log(sum(i2eH,  na.rm=TRUE)) ) -> logged
 
-logged$fdloge2r <- logged$fdloge2r - lag(logged$fdloge2r)
+logged$fdloge2r   <- logged$fdloge2r   - lag(logged$fdloge2r)
+logged$fdloge2rL  <- logged$fdloge2rL  - lag(logged$fdloge2rL)
+logged$fdloge2rLM <- logged$fdloge2rLM - lag(logged$fdloge2rLM)
+logged$fdloge2rUM <- logged$fdloge2rUM - lag(logged$fdloge2rUM)
+logged$fdloge2rH  <- logged$fdloge2rH  - lag(logged$fdloge2rH)
+logged$fdlogi2e   <- logged$fdlogi2e   - lag(logged$fdlogi2e)
+logged$fdlogi2eL  <- logged$fdlogi2eL  - lag(logged$fdlogi2eL)
+logged$fdlogi2eLM <- logged$fdlogi2eLM - lag(logged$fdlogi2eLM)
+logged$fdlogi2eUM <- logged$fdlogi2eUM - lag(logged$fdlogi2eUM)
+logged$fdlogi2eH  <- logged$fdlogi2eH  - lag(logged$fdlogi2eH)
 
 logged <- subset(logged, year!=1995)
 
