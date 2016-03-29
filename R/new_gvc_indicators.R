@@ -15,9 +15,6 @@ library(magrittr)
 load(file = 'data/TiVa-Leontief.RData')
 load(file = 'data/country_chars.RData')
 
-country_chars$iso3 <- tolower(country_chars$iso3)
-
-
 
 # merge with country_chars and Using_Country
 
@@ -39,23 +36,30 @@ l2009U <-l2009U[order(l2009U$Source_Country, l2009U$Source_Industry, l2009U$Usin
 l2010U <-l2010U[order(l2010U$Source_Country, l2010U$Source_Industry, l2010U$Using_Country, l2010U$Using_Industry),]
 l2011U <-l2011U[order(l2011U$Source_Country, l2011U$Source_Industry, l2011U$Using_Country, l2011U$Using_Industry),]
 
-## fix names post merge
-names(l1995U)[6:8] <- c('GDPpc', 'class', 'region')
-names(l2000U)[6:8] <- c('GDPpc', 'class', 'region')
-names(l2005U)[6:8] <- c('GDPpc', 'class', 'region')
-names(l2008U)[6:8] <- c('GDPpc', 'class', 'region')
-names(l2009U)[6:8] <- c('GDPpc', 'class', 'region')
-names(l2010U)[6:8] <- c('GDPpc', 'class', 'region')
-names(l2011U)[6:8] <- c('GDPpc', 'class', 'region')
+## remove rownames
+rownames(l1995U) <- NULL
+rownames(l2000U) <- NULL
+rownames(l2005U) <- NULL
+rownames(l2008U) <- NULL
+rownames(l2009U) <- NULL
+rownames(l2010U) <- NULL
+rownames(l2011U) <- NULL
 
 ## add attributes to merged objectes post merge
-attributes(l1995U) <- attributes(l1995)
-attributes(l2000U) <- attributes(l2000)
-attributes(l2005U) <- attributes(l2005)
-attributes(l2008U) <- attributes(l2008)
-attributes(l2009U) <- attributes(l2009)
-attributes(l2010U) <- attributes(l2010)
-attributes(l2011U) <- attributes(l2011)
+attr(l1995U, 'k') <- attr(l1995, 'k')
+attr(l1995U, 'i') <- attr(l1995, 'i')
+attr(l2000U, 'k') <- attr(l2000, 'k')
+attr(l2000U, 'i') <- attr(l2000, 'i')
+attr(l2005U, 'k') <- attr(l2005, 'k')
+attr(l2005U, 'i') <- attr(l2005, 'i')
+attr(l2008U, 'k') <- attr(l2008, 'k')
+attr(l2008U, 'i') <- attr(l2008, 'i')
+attr(l2009U, 'k') <- attr(l2009, 'k')
+attr(l2009U, 'i') <- attr(l2009, 'i')
+attr(l2010U, 'k') <- attr(l2010, 'k')
+attr(l2010U, 'i') <- attr(l2010, 'i')
+attr(l2011U, 'k') <- attr(l2011, 'k')
+attr(l2011U, 'i') <- attr(l2011, 'i')
 
 ## save
 save(l1995U, l2000U, l2005U, l2008U, l2009U, l2010U, l2011U, file = 'data/Tiva-Leontief-merged-Using.RData')
@@ -81,23 +85,30 @@ l2009S <- l2009S[order(l2009S$Source_Country, l2009S$Source_Industry, l2009S$Usi
 l2010S <- l2010S[order(l2010S$Source_Country, l2010S$Source_Industry, l2010S$Using_Country, l2010S$Using_Industry),]
 l2011S <- l2011S[order(l2011S$Source_Country, l2011S$Source_Industry, l2011S$Using_Country, l2011S$Using_Industry),]
 
-## fix names post merge
-names(l1995S)[6:8] <- c('GDPpc', 'class', 'region')
-names(l2000S)[6:8] <- c('GDPpc', 'class', 'region')
-names(l2005S)[6:8] <- c('GDPpc', 'class', 'region')
-names(l2008S)[6:8] <- c('GDPpc', 'class', 'region')
-names(l2009S)[6:8] <- c('GDPpc', 'class', 'region')
-names(l2010S)[6:8] <- c('GDPpc', 'class', 'region')
-names(l2011S)[6:8] <- c('GDPpc', 'class', 'region')
+## remove rownames
+rownames(l1995S) <- NULL
+rownames(l2000S) <- NULL
+rownames(l2005S) <- NULL
+rownames(l2008S) <- NULL
+rownames(l2009S) <- NULL
+rownames(l2010S) <- NULL
+rownames(l2011S) <- NULL
 
 ## add attributes to merged objectes post merge
-attributes(l1995S) <- attributes(l1995)
-attributes(l2000S) <- attributes(l2000)
-attributes(l2005S) <- attributes(l2005)
-attributes(l2008S) <- attributes(l2008)
-attributes(l2009S) <- attributes(l2009)
-attributes(l2010S) <- attributes(l2010)
-attributes(l2011S) <- attributes(l2011)
+attr(l1995S, 'k') <- attr(l1995, 'k')
+attr(l1995S, 'i') <- attr(l1995, 'i')
+attr(l2000S, 'k') <- attr(l2000, 'k')
+attr(l2000S, 'i') <- attr(l2000, 'i')
+attr(l2005S, 'k') <- attr(l2005, 'k')
+attr(l2005S, 'i') <- attr(l2005, 'i')
+attr(l2008S, 'k') <- attr(l2008, 'k')
+attr(l2008S, 'i') <- attr(l2008, 'i')
+attr(l2009S, 'k') <- attr(l2009, 'k')
+attr(l2009S, 'i') <- attr(l2009, 'i')
+attr(l2010S, 'k') <- attr(l2010, 'k')
+attr(l2010S, 'i') <- attr(l2010, 'i')
+attr(l2011S, 'k') <- attr(l2011, 'k')
+attr(l2011S, 'i') <- attr(l2011, 'i')
 
 
 # save merged
