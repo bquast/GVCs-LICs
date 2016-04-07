@@ -200,6 +200,21 @@ gvc_indicators %>%
   ggvis(~year, ~i2e ) %>%
   layer_lines()
 
+# i2e with divided
+# i2e with divided
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(i2e = sum(i2e) ) %>%
+  mutate(divided = c(17.3, 20.5, 22.1, 23.2, 21.0, 22.4, 23.2)) %>%
+  ggvis(x=~year) %>%
+  layer_lines(y=~i2e) %>%
+  add_axis('y', orient = 'left', title = 'i2e') %>%
+  add_axis('y', 'ydiv' , orient = 'right',
+           title= 'i2e as Percentage of exports (red)', grid=F, title_offset = 50,
+           properties = axis_props(labels = list(fill = 'red')) ) %>%
+  layer_lines( prop('y', ~divided, scale='ydiv'), stroke:='red' )
+
+
 # i2e class == L
 gvc_indicators %>%
   group_by(year) %>%
