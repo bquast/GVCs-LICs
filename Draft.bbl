@@ -13,6 +13,12 @@ Baldwin, R. (2012, August).
   they are going}.
 \newblock CEPR Discussion Papers 9103, C.E.P.R. Discussion Papers.
 
+\bibitem[\protect\citeauthoryear{Baldwin, Forslid, and Ito}{Baldwin
+  et~al.}{2015}]{ribaetal15}
+Baldwin, R., R.~Forslid, and T.~Ito (2015).
+\newblock Unveiling the evolving sources of value added in exports.
+\newblock Joint Research Program Series 161, IDE-JETRO.
+
 \bibitem[\protect\citeauthoryear{Baldwin and Lopez-Gonzalez}{Baldwin and
   Lopez-Gonzalez}{2013}]{ribajalo13}
 Baldwin, R. and J.~Lopez-Gonzalez (2013, April).
@@ -40,6 +46,13 @@ Johnson, R.~C. and G.~Noguera (2012).
 \newblock {\em Journal of International Economics\/}~{\em 86\/}(2), 224--236.
 
 \bibitem[\protect\citeauthoryear{Koopman, Wang, and Wei}{Koopman
+  et~al.}{2012}]{rokoetal12}
+Koopman, R., Z.~Wang, and S.-J. Wei (2012).
+\newblock {Estimating domestic content in exports when processing trade is
+  pervasive}.
+\newblock {\em Journal of Development Economics\/}~{\em 99\/}(1), 178--189.
+
+\bibitem[\protect\citeauthoryear{Koopman, Wang, and Wei}{Koopman
   et~al.}{2014}]{rokoetal14}
 Koopman, R., Z.~Wang, and S.-J. Wei (2014, February).
 \newblock {Tracing Value-Added and Double Counting in Gross Exports}.
@@ -62,7 +75,7 @@ Leontief, W. (1936).
 Quast, B.~A. and V.~Kummritz (2015).
 \newblock decompr: Global value chain decomposition in r.
 \newblock CTEI Working Papers 2015-01, Centre for Trade and Economic
-  Integration, Geneva.
+  Integration.
 
 \bibitem[\protect\citeauthoryear{UNCTAD}{UNCTAD}{2013}]{unct13}
 UNCTAD (2013).

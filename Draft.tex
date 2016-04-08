@@ -7,18 +7,18 @@
 \usepackage{changepage}
 \usepackage{verbatim}
 \usepackage{epigraph}
-\usepackage{verbatim}
 \usepackage{lscape}
 \usepackage{pbox}
 \usepackage{array}
 \usepackage{natbib}
+\usepackage{graphicx}
 
 \linespread{1.5}
+\graphicspath{{/Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/}}
+
 
 
 \begin{document}
-
-
 
 \section{Introduction}
 The emergence of Global Value Chains (GVCs) offers a new path to industrialisation for developing countries. As \cite{riba12} phrases it, internationally fragmented production allows developing countries to join existing supply chains instead of building them. This brings about many potential advantages for these countries. Connecting with firms from advanced nations allows developing nations, for instance, to benefit from their sophisticated technologies and know-how. In addition, relying on an existing production network frees them from constraints imposed by economies of scale and the increased specialisation that GVCs imply limits the negative impact of unproductive parts of the domestic supply chain. After all, when competition moves from goods to tasks, comparative advantage becomes much finer and does not require a broad range of productive stages domestically. Conditional evidence for such a positive impact of GVC participation in low- and middle-income countries is presented in \citet{viku16} and \citet{unct13}.
@@ -137,14 +137,28 @@ The high resolution of the WWZ decomposition does, however, not mean that the Le
 
 
 \subsection{OECD ICIOs}\label{sub:icios}
-We use the new OECD ICIOs as the main data source for the GVC indicators and the industry position indicators. The OECD ICIOs constitute the most recent and most advanced release of Inter-Country Input-Output tables. The new version of the database provides ICIOs covering 61 countries and 34 industries for the years 1995, 2000, 2005, and 2008 to 2011.\footnote{Countries and industries are listed in the Appendix.}\textsuperscript{,}\footnote{Note that in the analysis 2009 and 2010 are excluded due to the global crisis.} This extensive country coverage is crucial for analysing how GVCs affect countries at different stages of development over time, a feature that has not been possible due to limited data availability in previous databases. The empirical literature discussed above shows that especially the extended coverage of Asia is important. To create ICIOs, the OECD combines national IO tables with international trade data. As OECD countries have a harmonised construction methodology, potential discrepancies between national IO tables should be minor. Furthermore, the advanced harmonisation across countries reduces the use of proportionality assumptions to derive the ratio of imported intermediates in an industry's demand to a minimum. In addition, the OECD has used elabourate techniques to deal with China's processing trade. Due to China's outstanding role in GVCs and processing trade, this implies a significant improvement for the reliability of the database.\footnote{See \citet{rokoetal12} for an analysis of China's processing trade.}
+We use the new OECD ICIOs as the main data source for the GVC indicators and the industry position indicators. The OECD ICIOs constitute the most recent and most advanced release of Inter-Country Input-Output tables. The new version of the database provides ICIOs covering 61 countries and 34 industries for the years 1995, 2000, 2005, and 2008 to 2011.\footnote{Countries and industries are listed in the Appendix.}\textsuperscript{,}\footnote{Note that in the analysis 2009 and 2010 are excluded due to the global crisis.} This extensive country coverage is crucial for analysing how GVCs affect countries at different stages of development over time, a feature that has not been possible due to limited data availability in previous databases. The empirical literature discussed above shows that especially the extended coverage of Asia is important. To create ICIOs, the OECD combines national IO tables with international trade data. As OECD countries have a harmonised construction methodology, potential discrepancies between national IO tables should be minor. Furthermore, the advanced harmonisation across countries reduces the use of proportionality assumptions to derive the ratio of imported intermediates in an industry's demand to a minimum. In addition, the OECD has used elaborate techniques to deal with China's processing trade. Due to China's outstanding role in GVCs and processing trade, this implies a significant improvement for the reliability of the database.\footnote{See \citet{rokoetal12} for an analysis of China's processing trade.}
 
 
 
 \section{What we know: Old facts with new data}\label{sec:basics}
 
-In this section we confirm standard stylized facts of GVC integration that are typically based on smaller samples with OECD ICIO data. We starting by look at the development of two basic measures of GVC integration introduced by \citet{dahuetal01}, namely $fvax$ and $dvar$. Both show the well-known increase 
+In this section we confirm with OECD ICIO data standard stylised facts of GVC integration that are typically based on smaller samples. We starting by look at the development of the most basic measure of GVC integration introduced by \citet{dahuetal01}, namely the amount of foreign value added in exports or $fvax$, which captures backward linkages into value chains. It shows the well-known increase in GVC integration from 1995 to 2011. As illustrated in Figure \ref{fig:i2e_t}, the value of $fvax$ has grown by approximately 350\% and by 35\% as a share of total exports from around 17\% to over 23\%. Thus, countries rely for their export production increasingly on inputs produced abroad. After the slump during the financial crises in 2009, GVCs seem to have quickly recovered and already have started to exceed their pre-crisis levels in 2011.
 
+\begin{figure}
+\centering
+\label{fig:i2e_t}
+\includegraphics[scale=0.4]{i2epercentage.png}
+\caption{The development of GVC integration over time}
+\end{figure}
+
+Looking at sectoral $fvax$ averages, Figure \ref{fig:i2e_s} reveals that the sectors exhibiting the highest dependency on foreign inputs are heavy manufactures such as motor vehicles (MTR), other transport equipment (TRQ) and the metal industry (MET) as well as computers and electronics (CEQ and ELQ). In particular, the transport equipment and electronics industry are strongly engaged in GVCs having highly international production networks. For instance, Apple's iPhone contains inputs from 9 to 10 countries while the Boeing 787 production spans more than 5 countries. These sectors are typically close to final demand or depend on imported raw materials.
+
+The bottom 6 industries are primary and services sectors such as agriculture (AGR), mining (MIN), R\&D and business services (BZS), or wholesale and retail trade (WRT). These sectors are typically located upstream in the supply chain far from final demand and have high high value added to output ratios.
+
+Naturally then, things are reversed when we look at the corresponding forward linkage GVC measure, $dvar$. It captures the amount of domestic value added in foreign exports and thus quantifies how important domestic industries are for foreign export production. Here, Figure \ref{fig:e2r_s} depicts that this indicator is dominated by the same upstream industries that are at the bottom of the $fvax$ ranking such as mining or financial and telecommunication services (FIN and PTL). This shows that these industries are also strongly engaged in GVCs but their participation is of a different type. They primarily supply important inputs but do not serve final demand. 
+
+With respect to services, it is also indicative of the servicification of manufacturing as described by \citet{ribaetal15}. This means that an increasing share of manufacturing gross exports is actually value added generated in services sectors and then embedded in the intermediate exports of manufacturers. This importance of services sectors for exports cannot be seen from standard gross trade statistics and thus constitutes a major advantage of trade in value added measures. It is also indicative of a growing internationalisation of services. Increasingly, services are being offshored and sourced from abroad. In that respect, it is also interesting to note that despite the low absolute $fvax$ shares, it is in services where a lot of the growth in $fvax$ has taken place. As can be seen in Figure \ref{fig:i2e_st}, five out of the six sectors with the highest growth in $fvax$ shares are services sectors.
 
 \section{New trends and patterns in GVCs}\label{sec:news}
 
