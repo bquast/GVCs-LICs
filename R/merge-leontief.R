@@ -84,7 +84,7 @@ names(nrca2010) <- c("country", "industry", "year", "nrca")
 names(nrca2011) <- c("country", "industry", "year", "nrca")
 
 # combining the data.frames
-nrca <- rbind(nrca1995, nrca2000, nrca2005, nrca2008)
+nrca <- rbind(nrca1995, nrca2000, nrca2005, nrca2008, nrca2009, nrca2010, nrca2011)
 
 # save again
 save(nrca, file = "data/nrca_df.RData")
