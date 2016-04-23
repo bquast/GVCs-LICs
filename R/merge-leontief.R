@@ -2,10 +2,22 @@
 # Bastiaan Quast
 # bquast@gmail.com
 
+
 # load the data sets
 load("data/nrca.RData")
 load("data/trca.RData")
 load("data/gvc_indicators.RData")
+
+
+# make into data frame
+nrca1995 <- cbind(l1995[1:2108,3:4],1995,nrca1995)
+nrca2000 <- cbind(l1995[1:2108,3:4],2000,nrca2000)
+nrca2005 <- cbind(l1995[1:2108,3:4],2005,nrca2005)
+nrca2008 <- cbind(l1995[1:2108,3:4],2008,nrca2008)
+nrca2009 <- cbind(l1995[1:2108,3:4],2009,nrca2009)
+nrca2010 <- cbind(l1995[1:2108,3:4],2010,nrca2010)
+nrca2011 <- cbind(l1995[1:2108,3:4],2011,nrca2011)
+
 
 # extract names
 names_nrca1995 <- names(nrca1995)
@@ -63,10 +75,13 @@ nrca2000 <- cbind(countries_industries2000, 2000, nrca2000)
 nrca2005 <- cbind(countries_industries2005, 2005, nrca2005)
 nrca2008 <- cbind(countries_industries2008, 2008, nrca2008)
 
-names(nrca1995) <- c("country", "industry", "industry_description", "year", "nrca")
-names(nrca2000) <- c("country", "industry", "industry_description", "year", "nrca")
-names(nrca2005) <- c("country", "industry", "industry_description", "year", "nrca")
-names(nrca2008) <- c("country", "industry", "industry_description", "year", "nrca")
+names(nrca1995) <- c("country", "industry", "year", "nrca")
+names(nrca2000) <- c("country", "industry", "year", "nrca")
+names(nrca2005) <- c("country", "industry", "year", "nrca")
+names(nrca2008) <- c("country", "industry", "year", "nrca")
+names(nrca2009) <- c("country", "industry", "year", "nrca")
+names(nrca2010) <- c("country", "industry", "year", "nrca")
+names(nrca2011) <- c("country", "industry", "year", "nrca")
 
 # combining the data.frames
 nrca <- rbind(nrca1995, nrca2000, nrca2005, nrca2008)
