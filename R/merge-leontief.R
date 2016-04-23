@@ -12,24 +12,36 @@ names_nrca1995 <- names(nrca1995)
 names_nrca2000 <- names(nrca2000)
 names_nrca2005 <- names(nrca2005)
 names_nrca2008 <- names(nrca2008)
+names_nrca2009 <- names(nrca2009)
+names_nrca2010 <- names(nrca2010)
+names_nrca2011 <- names(nrca2011)
 
 # change to lower case
 names_nrca1995 <- tolower(names_nrca1995)
 names_nrca2000 <- tolower(names_nrca2000)
 names_nrca2005 <- tolower(names_nrca2005)
 names_nrca2008 <- tolower(names_nrca2008)
+names_nrca2009 <- tolower(names_nrca2009)
+names_nrca2010 <- tolower(names_nrca2010)
+names_nrca2011 <- tolower(names_nrca2011)
 
 # substitute the problematic c30.32
 names_nrca1995 <- gsub("c30.32.33", "c303233" , names_nrca1995)
 names_nrca2000 <- gsub("c30.32.33", "c303233" , names_nrca2000)
 names_nrca2005 <- gsub("c30.32.33", "c303233" , names_nrca2005)
 names_nrca2008 <- gsub("c30.32.33", "c303233" , names_nrca2008)
+names_nrca2009 <- gsub("c30.32.33", "c303233" , names_nrca2009)
+names_nrca2010 <- gsub("c30.32.33", "c303233" , names_nrca2010)
+names_nrca2011 <- gsub("c30.32.33", "c303233" , names_nrca2011)
 
 # split by period
 countries_industries1995 <- read.table(text = names_nrca1995, sep = ".", colClasses = "character")
 countries_industries2000 <- read.table(text = names_nrca2000, sep = ".", colClasses = "character")
 countries_industries2005 <- read.table(text = names_nrca2005, sep = ".", colClasses = "character")
 countries_industries2008 <- read.table(text = names_nrca2008, sep = ".", colClasses = "character")
+countries_industries2009 <- read.table(text = names_nrca2009, sep = ".", colClasses = "character")
+countries_industries2010 <- read.table(text = names_nrca2010, sep = ".", colClasses = "character")
+countries_industries2011 <- read.table(text = names_nrca2011, sep = ".", colClasses = "character")
 
 # extract the last three characters from V2
 countries_industries1995[,3] <- regmatches(countries_industries1995[,2],regexpr("...$", countries_industries1995[,2]))
