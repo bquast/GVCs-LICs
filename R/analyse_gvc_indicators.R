@@ -22,11 +22,14 @@ library(magrittr)
 country_chars$iso3 <- tolower(country_chars$iso3)
 
 
+# merge NRCA and country chars
+nrca %<>% merge(country_chars, by.x = 'country', by.y = 'iso3')
+
 # merge wwz and country chars
 w1995_2011 %<>% merge(country_chars, by.x = 'Exporting_Country', by.y = 'iso3')
 
 
-# merge gvc indicators and country vars
+# merge gvc indicators and country chars
 gvc_indicators %<>% merge(country_chars, by.x = 'country', by.y = 'iso3', all.x = TRUE)
 
 
@@ -63,6 +66,25 @@ gvc_indicators$year <- as.numeric(as.character(gvc_indicators$year))
 
 # save
 save(gvc_indicators, file = 'data/gvc_indicators_merged.RData')
+
+# plot some NRCA
+
+## Low income
+nrca %>%
+  group_by(country, year) %>%
+  filter(class == 'L') %>%
+  summarise(nrca = sum(nrca, na.rm=TRUE)) %>%
+  ggvis(~year, ~nrca, stroke=~factor(country)) %>%
+  layer_lines()
+
+## Lower middle income
+nrca %>%
+  group_by(country, year) %>%
+  filter(class == 'LM') %>%
+  summarise(nrca = sum(nrca, na.rm=TRUE)) %>%
+  ggvis(~year, ~nrca, stroke=~factor(country)) %>%
+  layer_lines()
+
 
 
 # merge gvc indicators and nrca
