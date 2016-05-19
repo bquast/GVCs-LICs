@@ -45,9 +45,9 @@ sector_desc %>%
 # e2r plot top 6
 sector_desc %>%
   group_by(sector) %>%
-  summarise(e2r=fvax_s/exp) %>%
+  summarise(e2r=dvar_s/exp) %>%
   arrange(e2r) %>%
-  filter(e2r > 0.30) %>%
+  filter(e2r > 0.3) %>%
   ggvis(x=~sector, y=~e2r) %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
@@ -55,9 +55,9 @@ sector_desc %>%
 # e2r plot bottom 6
 sector_desc %>%
   group_by(sector) %>%
-  summarise(e2r=fvax_s/exp) %>%
+  summarise(e2r=dvar_s/exp) %>%
   arrange(e2r) %>%
-  filter(e2r < 0.13) %>%
+  filter(e2r < 0.108) %>%
   ggvis(x=~sector, y=~e2r) %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
@@ -65,9 +65,9 @@ sector_desc %>%
 # e2r plot top 6 and bottom 6
 sector_desc %>%
   group_by(sector) %>%
-  summarise(e2r=fvax_s/exp) %>%
+  summarise(e2r=dvar_s/exp) %>%
   arrange(e2r) %>%
-  filter(e2r > 0.30 | e2r < 0.13) %>%
+  filter(e2r > 0.30 | e2r < 0.108) %>%
   ggvis(x=~sector, y=~e2r) %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
