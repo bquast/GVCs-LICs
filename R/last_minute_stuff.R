@@ -9,6 +9,7 @@ library(dplyr)
 # load data
 sector_desc <- read_excel(path = 'data/sector_desc.xlsx')
 wwz         <- read_excel(path = 'data/graphs.xlsx')
+pdc         <- read_excel(path = 'data/graphs2.xlsx')
 
 # plot top 6
 sector_desc %>%
@@ -58,3 +59,8 @@ wwz2 %>%
   layer_lines(x=~year, y=~fva_inter, stroke='fva_inter') %>%
   layer_lines(x=~year, y=~dva_fin,   stroke='dva_fin')   %>%
   layer_lines(x=~year, y=~dva_inter, stroke='dva_inter')
+
+pdc %>%
+  ggvis(x=~year, y=~pdc_t, stroke='pdc_t') %>%
+  layer_lines() %>%
+  layer_lines(x=~year, y=~pdc_exp, stroke='pdc_exp')
