@@ -162,13 +162,15 @@ wwz2 %>%
   layer_lines() %>%
   layer_lines(x=~year, y=~fva_inter, stroke='fva_inter') %>%
   layer_lines(x=~year, y=~dva_fin,   stroke='dva_fin')   %>%
-  layer_lines(x=~year, y=~dva_inter, stroke='dva_inter')
+  layer_lines(x=~year, y=~dva_inter, stroke='dva_inter') %>%
+  add_axis('y', title = 'pdc_t')
+
 
 pdc %>%
   ggvis(x=~year) %>%
   layer_lines(y=~pdc_t) %>%
   add_axis('y', orient = 'left', title = 'pdc_t') %>%
-  add_axis('y', 'ydiv' , orient = 'right',
+  add_axis('y', 'ydiv', orient = 'right',
            title= 'pdc_exp', grid=F, title_offset = 50,
            properties = axis_props(labels = list(fill = 'red')) ) %>%
   layer_lines( prop('y', ~pdc_exp, scale='ydiv'), stroke:='red' )
