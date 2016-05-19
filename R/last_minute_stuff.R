@@ -8,6 +8,7 @@ library(dplyr)
 
 # load data
 sector_desc <- read_excel(path = 'data/sector_desc.xlsx')
+wwz         <- read_excel(path = 'data/graphs.xlsx')
 
 # plot top 6
 sector_desc %>%
@@ -28,3 +29,21 @@ sector_desc %>%
   ggvis(x=~sector, y=~fvax) %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
+
+wwz1 <- wwz[2:8,1:3]
+names(wwz1) <- c('year', 'e2rL-LM', 'i2eL-LM')
+wwz1$year <- as.numeric(wwz1$year)
+wwz2 <- wwz[11:17,]
+names(wwz2) <- wwz[10,]
+names(wwz2)[1] <- 'year'
+wwz2$year      <- as.numeric(wwz2$year)
+wwz2$fva_fin   <- as.numeric(wwz2$fva_fin)
+wwz2$fva_inter <- as.numeric(wwz2$fva_inter)
+wwz2$dva_fin   <- as.numeric(wwz2$dva_fin)
+wwz2$dva_inter <- as.numeric(wwz2$dva_inter)
+wwz2$rdv       <- as.numeric(wwz2$rdv)
+
+wwz1 %>%
+  ggvis(x=~year, y=~`e2rL-LM`, stroke='e2r') %>%
+  layer_lines() %>%
+  layer_lines(x=~year, y=~`i2eL-LM`, stroke='i2e')
