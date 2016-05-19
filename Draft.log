@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.2)  19 MAY 2016 14:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.2)  19 MAY 2016 15:37
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -352,76 +352,167 @@ phic file (type png)
 
 <use /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/i2epercentage.png>
 Package pdftex.def Info: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/i2
-epercentage.png used on input line 152.
-(pdftex.def)             Requested size: 234.07034pt x 210.38226pt.
+epercentage.png used on input line 163.
+(pdftex.def)             Requested size: 161.9989pt x 145.59987pt.
+
+</Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/pdcII.png, id=42, 853.1875
+pt x 882.29625pt>
+File: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/pdcII.png Graphic fil
+e (type png)
+
+<use /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/pdcII.png>
+Package pdftex.def Info: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/pd
+cII.png used on input line 169.
+(pdftex.def)             Requested size: 161.9989pt x 167.51686pt.
+ [9]
+</Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_i2e_top6.png, i
+d=46, 458.71375pt x 523.9575pt>
+File: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_i2e_top6.p
+ng Graphic file (type png)
+
+<use /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_i2e_top6.pn
+g>
+Package pdftex.def Info: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/in
+dustries_i2e_top6.png used on input line 183.
+(pdftex.def)             Requested size: 161.9989pt x 185.04282pt.
+
+</Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_i2e_bottom6.png
+, id=47, 458.71375pt x 523.9575pt>
+File: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_i2e_bottom
+6.png Graphic file (type png)
+
+<use /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_i2e_bottom6
+.png>
+Package pdftex.def Info: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/in
+dustries_i2e_bottom6.png used on input line 187.
+(pdftex.def)             Requested size: 161.9989pt x 185.04282pt.
+ [10 </Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/i2epercentage.png> </
+Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/pdcII.png>]
+</Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_e2r_top6.png, i
+d=53, 458.71375pt x 523.9575pt>
+File: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_e2r_top6.p
+ng Graphic file (type png)
+
+<use /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_e2r_top6.pn
+g>
+Package pdftex.def Info: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/in
+dustries_e2r_top6.png used on input line 201.
+(pdftex.def)             Requested size: 161.9989pt x 185.04282pt.
+
+</Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_e2r_bottom6.png
+, id=54, 458.71375pt x 523.9575pt>
+File: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_e2r_bottom
+6.png Graphic file (type png)
+
+<use /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_e2r_bottom6
+.png>
+Package pdftex.def Info: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/in
+dustries_e2r_bottom6.png used on input line 205.
+(pdftex.def)             Requested size: 161.9989pt x 185.04282pt.
 
 
-LaTeX Warning: Reference `fig:pdc_t' on page 9 undefined on input line 156.
+LaTeX Warning: Reference `i2e_k' on page 11 undefined on input line 211.
+
+[11 </Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_i2e_top6.pn
+g> </Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_i2e_bottom6.
+png>]
+</Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/country_i2e_top_6.png, id=
+60, 458.71375pt x 523.9575pt>
+File: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/country_i2e_top_6.png
+ Graphic file (type png)
+
+<use /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/country_i2e_top_6.png>
+Package pdftex.def Info: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/co
+untry_i2e_top_6.png used on input line 217.
+(pdftex.def)             Requested size: 161.9989pt x 185.04282pt.
+
+</Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/countries_i2e_bottom_6.png
+, id=61, 458.71375pt x 523.9575pt>
+File: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/countries_i2e_bottom_
+6.png Graphic file (type png)
+
+<use /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/countries_i2e_bottom_6
+.png>
+Package pdftex.def Info: /Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/co
+untries_i2e_bottom_6.png used on input line 221.
+(pdftex.def)             Requested size: 161.9989pt x 185.04282pt.
 
 
-LaTeX Warning: Reference `fig:i2e_s' on page 9 undefined on input line 160.
-
-[9]
-
-LaTeX Warning: Reference `fig:e2r_s' on page 10 undefined on input line 166.
-
-[10 </Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/i2epercentage.png>]
-
-LaTeX Warning: Reference `fig:i2e_st' on page 11 undefined on input line 168.
+LaTeX Warning: File `country_e2r_top_6.png' not found on input line 233.
 
 
-LaTeX Warning: Reference `i2e_k' on page 11 undefined on input line 172.
+./Draft.tex:233: Package pdftex.def Error: File `country_e2r_top_6.png' not fou
+nd.
 
-[11]
-Overfull \hbox (14.14304pt too wide) in paragraph at lines 184--184
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.233 ...[width=\textwidth]{country_e2r_top_6.png}
+                                                  
+? 
+
+LaTeX Warning: File `countries_e2r_bottom_6.png' not found on input line 237.
+
+
+./Draft.tex:237: Package pdftex.def Error: File `countries_e2r_bottom_6.png' no
+t found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.237 ...h=\textwidth]{countries_e2r_bottom_6.png}
+                                                  
+? 
+[12 </Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_e2r_top6.pn
+g> </Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/industries_e2r_bottom6.
+png>] [13 </Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/country_i2e_top_
+6.png> </Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/countries_i2e_botto
+m_6.png>]
+Overfull \hbox (14.14304pt too wide) in paragraph at lines 249--249
 []\OT1/cmr/bx/n/12 General trends in the par-tic-i-pa-tion of de-vel-op-ing eco
 nomies 
  []
 
-[12] [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (71.34523pt too wide) in paragraph at lines 269--284
- []|  [] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[16] [17]
-Overfull \hbox (84.12303pt too wide) in paragraph at lines 314--328
+[17]
+Overfull \hbox (71.34523pt too wide) in paragraph at lines 334--349
  []|  [] 
  []
 
 [18]
-Overfull \hbox (96.73422pt too wide) in paragraph at lines 355--367
+Overfull \hbox (84.12303pt too wide) in paragraph at lines 379--393
  []|  [] 
  []
 
-[19] [20] [21] (./Draft.bbl [22
+[19]
+Overfull \hbox (96.73422pt too wide) in paragraph at lines 420--432
+ []|  [] 
+ []
 
-]) [23] (./Draft.aux)
+[20] [21] [22] [23] (./Draft.bbl [24
+
+]) [25] (./Draft.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3526 strings out of 493117
- 50018 string characters out of 6135433
- 130354 words of memory out of 5000000
- 6917 multiletter control sequences out of 15000+600000
- 11693 words of font info for 42 fonts, out of 8000000 for 9000
+ 3566 strings out of 493117
+ 52450 string characters out of 6135433
+ 131399 words of memory out of 5000000
+ 6947 multiletter control sequences out of 15000+600000
+ 11861 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,15n,30p,1594b,303s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -435,11 +526,12 @@ al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
 texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Draft.pdf (23 pages, 219400 bytes).
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Draft.pdf (25 pages, 340349 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 154 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
