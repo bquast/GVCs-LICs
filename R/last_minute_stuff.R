@@ -94,7 +94,6 @@ country_desc %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
 
-
 # i2e plot top 6 and bottom 6
 country_desc %>%
   group_by(country) %>%
@@ -109,9 +108,9 @@ country_desc %>%
 # e2r plot top 6
 country_desc %>%
   group_by(country) %>%
-  summarise(e2r=fvax_s/exp) %>%
+  summarise(e2r=dva_sha) %>%
   arrange(e2r) %>%
-  filter(e2r > 0.30) %>%
+  filter(e2r > 0.265) %>%
   ggvis(x=~country, y=~e2r) %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
@@ -119,9 +118,9 @@ country_desc %>%
 # e2r plot bottom 6
 country_desc %>%
   group_by(country) %>%
-  summarise(e2r=fvax_s/exp) %>%
+  summarise(e2r=dva_sha) %>%
   arrange(e2r) %>%
-  filter(e2r < 0.13) %>%
+  filter(e2r < 0.14404) %>%
   ggvis(x=~country, y=~e2r) %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
@@ -131,7 +130,7 @@ country_desc %>%
   group_by(country) %>%
   summarise(e2r=fvax_s/exp) %>%
   arrange(e2r) %>%
-  filter(e2r > 0.30 | e2r < 0.13) %>%
+  filter(e2r > 0.265 | e2r < 0.14404) %>%
   ggvis(x=~country, y=~e2r) %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
