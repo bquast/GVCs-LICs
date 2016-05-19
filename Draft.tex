@@ -3,6 +3,7 @@
 \usepackage{mathtools}
 \usepackage{threeparttable}
 \usepackage{longtable}
+\usepackage{multirow}
 \usepackage{booktabs}
 \usepackage{changepage}
 \usepackage{verbatim}
@@ -31,9 +32,9 @@ However, these contributions typically have two shortcomings. Firstly, most evid
 
 In this paper we address these issues by applying the novel and more detailed gross export decomposition developed by \citet{zhwaetal13} and \citet{rokoetal14} to a new set of Inter-Country Input-Output tables (ICIOs) with extensive country coverage provided by the OECD. The new ICIOs allow us to get a better understanding of the GVC activities of low- and middle-income countries while the new decomposition allows us to zoom in more closely at these activities revealing information not available from standard GVC indicators.
 
-Our analysis confirms the expansion of GVCs in recent years and presents evidence that GVCs have become longer over time. We also find that these developments are increasingly driven by low- and middle-income countries while the integration of high-income countries has begun to even out at a high level.
+Our analysis confirms the expansion of GVCs in recent years and presents evidence that GVCs have become longer over time. We also find that these developments are increasingly driven by low- and middle-income countries while the integration of high-income countries has begun to even out at a high level. In addition, we find that high-income countries typically are the starting and end points of GVCs in that they provide upstream inputs and then serve eventually again as demand markets for the final products. Low- and middle-income countries, on the other hand, are rather specialised in downstream activities such as assembly and export typically less domestic value added. However, we also observe that developing economies move more and more upstream along the value chain and should thus be able to generate more gains from their GVC participation.
 
-The paper is organised as follows. Section \ref{sec:data} reviews shortly the decomposition proposed by \citet[WWZ henceforth]{zhwaetal13} and outlines the new ICIOs provided by the OECD. Section \ref{sec:basics} discusses standard indicators and measures calculated with the new data while section \ref{sec:news} discusses the results for the novel indicators. Section \ref{sec:conclusion} concludes.
+The paper is organised as follows. Section \ref{sec:data} reviews shortly the decomposition proposed by \citet[WWZ henceforth]{zhwaetal13} and outlines the new ICIOs provided by the OECD. Section \ref{sec:basics} discusses results using standard indicators and measures calculated with the new data while section \ref{sec:news} discusses the results for the novel indicators. Section \ref{sec:conclusion} concludes.
 
 
 
@@ -51,7 +52,7 @@ VB = V (I-A)^{-1},
 \end{equation}
 where \textit{V} is a matrix with the diagonal representing the direct value added contribution of each industry, \textit{A} is the Input-Output coefficient matrix, which means it gives the direct input flows between industries required for 1\$ of output, and $B = (I-A)^{-1}$ is the so called Leontief inverse. \textit{VB} gives thus so called value added multipliers, which denote the amount of value added that the production of an industry's 1\$ of output or exports brings about in all other industries. If we post-multiply $VB$ with exports, we get a matrix with the value added origins of each industry's exports.
  
-This basic decomposition has been widely used in GVC analysis since it allows the calculation of two informative GVC participation measures, namely foreign value added in exports (Vertical Specialisation) and domestic value added in foreign exports (Vertical Specialisation 1). These indicators can tell us how much a country is integrated in GVCs and if it acts mainly as a supplier or a host of value added. However, the Leontief decomposition is only informative for the origin and destination of value added while ICIOs also contain info on the type of good that is being traded and and how often an intermediate crosses borders. The WWZ decomposition extends the Leontief decomposition in this direction and thereby extracts more insights from ICIOs.
+This basic decomposition has been widely used in GVC analysis since it allows the calculation of two informative GVC participation measures, namely foreign value added in exports (Hummels et al.'s Vertical Specialisation) and domestic value added in foreign exports (Hummels et al.'s Vertical Specialisation 1). These indicators can tell us how much a country is integrated into GVCs and if it acts mainly as a supplier or a user of foreign value added. However, the Leontief decomposition is only informative for the origin and destination of value added while ICIOs also contain info on the type of good that is being traded and and how often an intermediate crosses borders. The WWZ decomposition extends the Leontief decomposition in this direction and thereby extracts more insights from ICIOs.
 
 
 \subsection{Wang-Wei-Zhu decomposition}\label{sub:wwz}
@@ -143,7 +144,7 @@ We use the new OECD ICIOs as the main data source for the GVC indicators and the
 
 \section{What we know: Old facts with new data}\label{sec:basics}
 
-In this section we confirm with OECD ICIO data standard stylised facts of GVC integration that are typically based on smaller samples. We starting by look at the development of the most basic measure of GVC integration introduced by \citet{dahuetal01}, namely the amount of foreign value added in exports or $fvax$, which captures backward linkages into value chains. It shows the well-known increase in GVC integration from 1995 to 2011. As illustrated in Figure \ref{fig:i2e_t}, the value of $fvax$ has grown by approximately 350\% and by 35\% as a share of total exports from around 17\% to over 23\%. Thus, countries rely for their export production increasingly on inputs produced abroad. After the slump during the financial crises in 2009, GVCs seem to have quickly recovered and already have started to exceed their pre-crisis levels in 2011.
+In this section we look into stylised facts on GVC integration that are typically based on smaller samples with our extensive OECD ICIO dataset. We start by examining the development of the most basic measure of GVC integration introduced by \citet{dahuetal01}, namely the amount of foreign value added in exports labeled by \citet{ribajalo13} as $i2e$.\footnote{Note that at the aggregate level forward and backward linkages are identical and thus we only look at one of the two measures.} It captures backward linkages into value chains and shows the well-known increase in GVC integration from 1995 to 2011. As illustrated in Figure \ref{fig:i2e_t}, the value of $i2e$ has grown by approximately 350\% and by 35\% as a share of total exports from around 17\% to over 23\%. Thus, countries rely for their export production increasingly on inputs produced abroad. The numbers are in line with similar findings by \citet{rojoguno12b} but their sample ends in 2009. It is then interesting to see that after the slump during the financial crises in 2009, GVCs have quickly recovered and already have started to exceed their pre-crisis levels in 2011.
 
 \begin{figure}
 \centering
@@ -152,19 +153,234 @@ In this section we confirm with OECD ICIO data standard stylised facts of GVC in
 \caption{The development of GVC integration over time}
 \end{figure}
 
-Looking at sectoral $fvax$ averages, Figure \ref{fig:i2e_s} reveals that the sectors exhibiting the highest dependency on foreign inputs are heavy manufactures such as motor vehicles (MTR), other transport equipment (TRQ) and the metal industry (MET) as well as computers and electronics (CEQ and ELQ). In particular, the transport equipment and electronics industry are strongly engaged in GVCs having highly international production networks. For instance, Apple's iPhone contains inputs from 9 to 10 countries while the Boeing 787 production spans more than 5 countries. These sectors are typically close to final demand or depend on imported raw materials.
+Another way to examine the expansion of GVCs from 1995 to 2011 is to look at their intensity or length instead of their trade volume. \citet{zhwaetal13} propose to use the amount of double counted trade, $pdc$, as a proxy for GVC length since its value goes up the more back-and-forth trade occurs, which is equivalent to an increase in the number of production stages. They show that its value has increased for the 40 WIOD countries. In Figure \ref{fig:pdc_t}, we observe similarly that $pdc$ as a share of total exports has increased over the examined period by 73\% and thus more than $i2e$. Therefore, GVCs do not only channel more trade but also have become longer over time.
 
-The bottom 6 industries are primary and services sectors such as agriculture (AGR), mining (MIN), R\&D and business services (BZS), or wholesale and retail trade (WRT). These sectors are typically located upstream in the supply chain far from final demand and have high high value added to output ratios.
+%pdc change over time figure
 
-Naturally then, things are reversed when we look at the corresponding forward linkage GVC measure, $dvar$. It captures the amount of domestic value added in foreign exports and thus quantifies how important domestic industries are for foreign export production. Here, Figure \ref{fig:e2r_s} depicts that this indicator is dominated by the same upstream industries that are at the bottom of the $fvax$ ranking such as mining or financial and telecommunication services (FIN and PTL). This shows that these industries are also strongly engaged in GVCs but their participation is of a different type. They primarily supply important inputs but do not serve final demand. 
+Turning from the development over time to sectoral differences in GVC integration, Figure \ref{fig:i2e_s} reveals in line with \citet{rojoguno12a} that the sectors exhibiting the highest dependency on foreign inputs in terms of $i2e$ shares are heavy manufactures such as motor vehicles (MTR), other transport equipment (TRQ) and the metal industry (MET) as well as computers and electronics (CEQ and ELQ). In particular, the transport equipment and electronics industry are strongly engaged in GVCs having highly international production networks. For instance, Apple's iPhone contains inputs from 9 to 10 countries while the Boeing 787 production spans more than 5 countries. The sectors can be characterised as being close to final demand or being dependent on imported raw materials. These characteristics can thus explain differences in GVC integration.
 
-With respect to services, it is also indicative of the servicification of manufacturing as described by \citet{ribaetal15}. This means that an increasing share of manufacturing gross exports is actually value added generated in services sectors and then embedded in the intermediate exports of manufacturers. This importance of services sectors for exports cannot be seen from standard gross trade statistics and thus constitutes a major advantage of trade in value added measures. It is also indicative of a growing internationalisation of services. Increasingly, services are being offshored and sourced from abroad. In that respect, it is also interesting to note that despite the low absolute $fvax$ shares, it is in services where a lot of the growth in $fvax$ has taken place. As can be seen in Figure \ref{fig:i2e_st}, five out of the six sectors with the highest growth in $fvax$ shares are services sectors.
+The bottom 6 industries in terms of $i2e$ shares are primary and services sectors such as agriculture (AGR), mining (MIN), R\&D and business services (BZS), or wholesale and retail trade (WRT). These sectors are typically located upstream in the supply chain far from final demand and have high high value added to output ratios.
 
-\section{New trends and patterns in GVCs}\label{sec:news}
+% sectoral graph i2e
+
+Naturally then, things are reversed when we look at the corresponding forward linkage GVC measure, $e2r$. It captures the amount of domestic value added in foreign exports and thus quantifies how important domestic industries are for foreign export production. Here, Figure \ref{fig:e2r_s} depicts that this indicator is dominated by the same upstream industries that are at the bottom of the $i2e$ ranking such as mining or financial and telecommunication services (FIN and PTL). This shows that these industries are also strongly engaged in GVCs but their participation is of a different type. They primarily supply important inputs but do not serve final demand. 
+
+With respect to services, it is also indicative of the servicification of manufacturing as described by \citet{ribaetal15}. This means that an increasing share of manufacturing gross exports is actually value added generated in services sectors and then embedded in the intermediate exports of manufacturers. This importance of services sectors for exports cannot be seen from standard gross trade statistics and thus constitutes a major advantage of trade in value added measures. It is also indicative of a growing internationalisation of services. Increasingly, services are being offshored and sourced from abroad. In that respect, it is also interesting to note that despite the low absolute $i2e$ shares, it is in services where a lot of the growth in $i2e$ has taken place. As can be seen in Figure \ref{fig:i2e_st}, five out of the six sectors with the highest growth in $i2e$ shares are services sectors.
+
+% sectoral graph e2r
+
+Finally, when we turn to differences in GVC integration by country we can confirm the findings by \citet{ribajalo13}. Figure \ref{i2e_k} shows that small countries close to the major GVC hubs in Asia, Europe, and North America such as Slovakia or Malaysia have the highest average $i2e$ shares. Countries specialised in the primary sector or assembly on the other hand have very low values. Correspondingly, Latin American countries with their focus on agriculture and mining have very weak backward linkages into GVCs. However, the development over time shows that some of the countries with the relatively low GVC integration have begun to catch up. For instance, Argentina, Indian and Turkey are in the top 6 when it comes to the growth of $i2e$ shares from 1995 to 2011.
+
+%country graph i2e
+
+Driven by the sectoral statistics, we then find again that for $e2r$ the picture is reversed with raw material exporters on top. If we abstract from these countries we find technologically advanced countries such as Switzerland and the main GVC hubs Japan, USA, and Germany to exhibit strong forward linkages into GVCs. In particular low and middle-income countries without raw materials such as Cambodia, Mexico, or Turkey have in contrast very weak linkages and have not been able to strengthen them significantly between 1995 and 2011.
+
+%country graph e2r
+
+\section{The role of developing economies: New trends and patterns in GVCs}\label{sec:news}
+
+The central advantage of our application is that we have new indicators for a new set of countries. In particular, the OECD ICIO database extends the WIOD database by the following 21 regions: Argentina, Brunei Darussalam, Cambodia, Chile, Colombia, Costa Rica, Croatia, Hong Kong, Iceland, Israel, Malaysia, Norway, New Zealand, Philippines, Saudi Arabia, Singapore, Thailand, Tunisia, Vietnam, South Africa, and Switzerland. This means that in particular the coverage low and middle income countries has increased considerably which allows us to analyse the GVC integration in developing economies in a much more detailed fashion than before. In particular, we will merge a subset of the new countries into the three regions Central and South America (CSA), South East Asia (SEA), and Africa (AFR) and analyse the development of their GVC participation\footnote{CSA covers Argentina, Chile, Colombia, and Costa Rica; SEA covers Cambodia, Malaysia, Philippines, Thailand, and Vietnam; AFR covers South Africa and Tunisia.}.
+
+\subsection{General trends in the participation of developing economies}
+
+Regarding the integration of low- and middle-income countries, \citet{rojoguno12a} have observed that per capita income is only a weak predictor for GVC integration due to the heterogeneity of developing economies in terms of size, industrial structure and location. In Table \ref{tab:gvc} we see that the average integration measured by either $i2e$ or $e2r$ does not vary strongly between income groups defined by the World Bank classification at the beginning of the sample period in 1995. High-income economies have slightly stronger forward linkages but lower backward linkages which implies that their exports contain more domestic value added. Developing economies could thus try to upgrade their GVC integration by increasing domestic content.
+
+\begin{table}[htbp]\small
+  \centering
+  \caption{GVC integration by income}
+    \begin{tabular}{lrrrr}
+    \toprule
+    Country group & \multicolumn{2}{c}{\textit{i2e}} & \multicolumn{2}{c}{\textit{e2r}} \\
+          & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} \\
+              \midrule
+    Low/Lower middle & 23.46\% & 48.22\% & 20.35\% & 38.58\% \\
+    High & 22.64\% & 41.84\% & 21.85\% & 29.50\% \\
+    \bottomrule
+    \end{tabular}
+  \label{tab:gvc}
+\end{table}
+
+Looking at the development over time, it is striking that the rise of GVC integration is increasingly driven by developing countries. The growth of both $i2e$ or $e2r$ has been much more pronounced in these economies as can be seen in Table \ref{tab:gvc}. The $i2e$ share of countries classified as low- or lower middle-income in total $i2e$ has increased from 9\% in 1995 to 24\% in 2011. Similarly, the $e2r$ share has increased from 9\% to 23\%.
+
+Moreover, low- and lower middle-income countries do not only sell and source more from GVCs but they are also increasingly on the other side of the transaction. The $i2e$ share sourced from low- and lower middle-income countries has risen from 17\% to 33\% and the $e2r$ share re-exported has expanded from 15\% to 28\%. Thus, developing countries have a large stake in GVCs and have moved from the periphery into the centre of these production networks.\footnote{However, we will see that GVC integration differs significantly among developing countries.}
+
+%insert graph for 17 to 33 and 15 to 28
+
+In a next step we zoom in and analyse the GVC participation of developing economies more closely with the help of the WWZ decomposition. As described in section \ref{sub:wwz}, \citet{zhwaetal13} show the structure and changes in the structure of domestic and foreign content in exports inform us on a country's movement along the value chain. In particular, $i2e$ consists of foreign value added in final goods exports ($fva\_fin$), intermediate goods exports ($fva\_int$), and double counting ($fdc$). On average, Table \ref{tab:wwz} shows that low- and lower middle-income countries have a higher share of $fva\_fin$ in $i2e$ (42\%) than high-income economies (39\%). This is in line with a specialisation of developing economies in downstream assembly tasks.
+
+\begin{table}[htbp]\small
+  \centering
+  \caption{WWZ decomposition results by income}
+    \begin{tabular}{lrrrrr}
+    \toprule
+    Country group & \multicolumn{1}{c}{\textit{fva\_fin}} & \multicolumn{1}{c}{\textit{fva\_inter}} & \multicolumn{1}{c}{\textit{dva\_fin}} & \multicolumn{1}{c}{\textit{dva\_inter}} & \multicolumn{1}{c}{\textit{rdv}} \\
+    \midrule
+    Low/Lower middle & 42.07\% & 57.93\% & 44.09\% & 54.73\% & 1.18\% \\
+    High  & 39.38\% & 60.62\% & 40.73\% & 56.85\% & 2.42\% \\
+    \bottomrule
+    \end{tabular}
+  \label{tab:wwz}
+\end{table}
+
+However, a shift from foreign content in final goods to intermediate goods and double counted value would be indicative of moving up the value chain. For low- and lower middle-income countries, we indeed find that the share of $fva\_fin$ in $i2e$ has fallen by about 4\%. This gain accrues to the double counting part which goes up by 6\%. This means that production has become more fragmented and that developing economies increasingly occupy more upstream stages.
+
+A similar exercise can be done for the domestic value added embodied in exports. The domestic value added of high-income countries tends to be dominated by intermediate goods (57\%) while for instance low-income countries only achieve a value of 55\%. We obtain the same information when we look at the share of domestic value added that eventually returns home. Here the value for high-income countries (2.42\%) is more than twice as high than its low- and lower-middle income counterpart (1.18\%), which indicates that high-income countries are located upstream in the value chain using developing economies for assembly. Here as well, the data shows though that developing economies have improved their position over time. The amount of domestic value added returning home has tripled from 1995 to 2011 and the share of final goods has decreased by more than 5\%. 
+
+%insert graph on change over time
+
+Thus, overall we get a clear picture that while developing economies are still positioned relatively more downstream in the value chain, they have succeeded to move up over the past two decades.
+
+
+
+\subsection{Revealing new trends in the participation of developing economies}
+
+The trends described in the previous section inform us on the average performance of developing countries but they might hide considerable heterogeneity among these countries. Therefore, we focus in this section on selected countries in the three regions Central and South America (CSA), South East Asia (SEA), and Africa (AFR) described above, for which data has not been available previously.\\\
+
+\textit{South East Asia}\\
+The SEA economies for which data is newly available are Cambodia, Hong Kong, Malaysia, Philippines, Singapore, Thailand, and Vietnam. Since Singapore and Hong Kong are special cases due to their per capita income and size, we focus on Cambodia, Malaysia, Philippines, Thailand, and Vietnam. 
+
+The two basic indicators of these countries, $i2e$ and $e2r$, presented in Table \ref{tab:seagvc} show that all five countries are primarily integrated into GVCs through backward linkages but in particular the Philippines have increased their forward linkages over the past two decades considerably. It also stands out that Cambodia and Vietnam have very low $e2r$ values suggesting a strong specialisation in low value added tasks located downstream in the chain. To obtain more detailed information on how these countries engage in GVCs we need however more disaggregated indicators.
+
+The WWZ decomposition provides us with the necessary tools. We can see in Table \ref{tab:seawwz} that according to their high $fva\_fin$ values Cambodia and to a lesser extent Vietnam indeed perform mostly downstream tasks with typically low value added whereas Malaysia, Thailand, and the Philippines are higher positioned in the value chain exhibiting much lower $fva\_fin$ and $dva\_fin$ but higher $rdv$ values. The latter set of countries thus have a similar GVC integration structure as Indonesia but still are behind Korea and Taiwan. 
+
+When we look at the change over time from 1995 to 2011, we see that Cambodia has actually moved into assembly with an increase of $fva\_fin$ of 35.2\%. This is in stark contrast to the remaining SEA countries which all achieved to move up the value chain. In particular, Vietnam is on a good path with the highest decline of $fva\_fin$ and might soon catch up with its local competitors regarding its position in GVCs. For Cambodia, on the other hand, this means that GVCs offer a major untapped potential for future growth. If the country manages to introduce more GVC-friendly policies it can leverage its location close to the GVC hubs China and Japan to continue on its successful growth path.\\
+
+\begin{table}[!h]\small
+  \centering
+  \caption{GVC integration of SEA countries}
+    \begin{tabular}{lrrrr}
+    \toprule
+    Country & \multicolumn{2}{c}{\multirow{1}[0]{*}{$i2e$}} & \multicolumn{2}{c}{\multirow{1}[0]{*}{$e2r$}} \\
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} \\
+    \midrule
+    Cambodia & 39.4\% & 90.7\% & 8.4\% & -11.9\% \\
+    Malaysia & 44.3\% & 37.1\% & 13.9\% & 10.2\% \\
+    Philippines & 29.6\% & -20.7\% & 22.6\% & 105.0\% \\
+    Thailand & 36.9\% & 64.3\% & 13.1\% & 20.2\% \\
+    Vietnam & 38.3\% & 66.1\% & 10.6\% & 5.3\% \\
+    \bottomrule
+    \end{tabular}
+  \label{tab:seagvc}
+\end{table}
+
+\begin{table}[!h]\small
+  \centering
+  \caption{WWZ decomposition results for SEA countries}
+  \hspace*{-2.7cm}
+    \begin{tabular}{lrrrrrrrrrr} 
+    \toprule
+    \multicolumn{1}{l}{\multirow{1}[0]{*}{Country}} & \multicolumn{2}{c}{$fva\_fin$} & \multicolumn{2}{c}{$fva\_inter$} & \multicolumn{2}{c}{$dva\_fin$} & \multicolumn{2}{c}{$dva\_inter$} & \multicolumn{2}{c}{$rdv$} \\
+    \multicolumn{1}{l}{} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} &
+\multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} \\
+  \midrule
+    Cambodia & 68.1\% & 35.2\% & 31.9\% & -35.7\% & 64.5\% & 26.8\% & 35.5\% & -27.5\% & 0.0\% & -29.7\% \\
+    Malaysia & 39.3\% & -9.0\% & 60.7\% & 6.3\% & 40.8\% & -4.5\% & 58.9\% & 3.4\% & 0.4\% & -21.5\% \\
+    Philippines & 35.5\% & -21.7\% & 64.5\% & 16.0\% & 38.9\% & -19.1\% & 60.9\% & 16.0\% & 0.2\% & 18.2\% \\
+    Thailand & 41.4\% & -12.9\% & 58.6\% & 11.3\% & 47.4\% & -14.6\% & 52.3\% & 17.7\% & 0.3\% & 20.0\% \\
+    Vietnam & 47.1\% & -22.6\% & 52.9\% & 30.0\% & 55.0\% & -9.0\% & 44.8\% & 12.7\% & 0.1\% & 103.4\% \\
+    \bottomrule
+    \end{tabular}
+  \label{tab:seawwz}
+\end{table}
+
+
+\textit{Central and South America}\\
+The newly available CSA economies comprise Argentina, Chile, Colombia, and Costa Rica compared to previously only Mexico and Brazil. What stands out from looking at the standard GVC indicators presented in Table \ref{tab:csagvc} is that CSA is on average less integrated into GVCs than SEA. In particular, Argentina and Colombia have both very low backward and forward linkages highlighting the role of remoteness and sound policies as drivers of GVC integration. This is also mirrored in the fact that Chile and Costa Rica exhibit much higher GVC participation rates; albeit still below the SEA countries. These countries perform relatively well in several measures capturing a country's policy environment such as the World Bank's Doing Business Indicators or World Governance Indicators and, in the case of Costa Rica, are relatively closer to the North American GVC centre encompassing the USA, Canada, and Mexico. 
+
+Focusing therefore on Costa Rica and Chile, we observe in Table \ref{tab:csawwz} that Chile's GVC integration structure resembles already the structure of high income countries. The major part of the country's integration is through intermediates as shown by the high $fva_inter$ and $dva_inter$ shares (78\% and 75\% respectively). However, the share of returned domestic value ($rdv$) is still much lower than the high-income average of 2.4\% and thus indicates that Chile is still in the process of catching up.
+
+Costa Rica on the other hand possesses the typical GVC integration structure of lower middle-income economies with high $fva_fin$ and $dva_fin$ shares and a very small $rdv$ value of 0.02\%. Comparing the country to SEA, its structure resembles most closely the GVC integration of Vietnam. This comparison holds also when we look at Costa Rica's development over time, where we see a rapid expansion of $fva_inter$, $dva_inter$, and $rdv$ shares. The country is thus successfully moving up the value chain.
+
+\begin{table}[htbp]\small
+  \centering
+  \caption{GVC integration of CSA countries}
+    \begin{tabular}{lrrrr}
+    \toprule
+    Country & \multicolumn{2}{c}{\multirow{1}[0]{*}{$i2e$}} & \multicolumn{2}{c}{\multirow{1}[0]{*}{$e2r$}} \\
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} \\
+    \midrule
+    Argentina & 13.4\% & 154.9\% & 13.4\% & 19.4\% \\
+    Chile & 20.0\% & 44.8\% & 26.4\% & 35.4\% \\
+    Colombia & 13.2\% & 15.2\% & 17.0\% & 45.5\% \\
+    Costa Rica & 29.0\% & 21.1\% & 16.0\% & 60.8\% \\
+    \bottomrule
+\end{tabular}
+  \label{tab:csagvc}
+\end{table}
+
+\begin{table}[htbp]\small
+  \centering
+  \caption{WWZ decomposition results for CSA countries}
+  \hspace*{-2.7cm}
+    \begin{tabular}{lrrrrrrrrrr} 
+    \toprule
+    \multicolumn{1}{l}{\multirow{1}[0]{*}{Country}} & \multicolumn{2}{c}{$fva\_fin$} & \multicolumn{2}{c}{$fva\_inter$} & \multicolumn{2}{c}{$dva\_fin$} & \multicolumn{2}{c}{$dva\_inter$} & \multicolumn{2}{c}{$rdv$} \\
+    \multicolumn{1}{l}{} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} &
+\multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} \\
+  \midrule
+    Argentina & 51.15\% & -6.33\% & 48.85\% & 7.95\% & 51.92\% & -5.71\% & 47.90\% & 7.01\% & 0.18\% & 49.61\% \\
+    Chile & 22.23\% & -22.29\% & 77.77\% & 8.54\% & 24.61\% & -23.44\% & 75.25\% & 10.03\% & 0.14\% & 81.25\% \\
+    Colombia & 39.41\% & -19.09\% & 60.59\% & 15.30\% & 39.32\% & -33.76\% & 60.55\% & 32.06\% & 0.12\% & 25.56\% \\
+    Costa Rica & 45.99\% & -11.17\% & 54.01\% & 11.29\% & 50.97\% & -17.88\% & 49.01\% & 24.97\% & 0.02\% & 43.05\% \\
+   \bottomrule
+    \end{tabular}
+  \label{tab:csawwz}
+\end{table}
+
+\textit{Africa}\\
+To conclude, we turn to Africa. GVC data on Africa is scarce and typically it is assumed that integration levels are low. However, the newly available OECD data comprises with Tunisia and South Africa two interesting and unique cases. Tunisia and South Africa offer two optimal case studies given their relatively stable political situation and relatively high degree of industrialisation. Unlike many other African they do thus fulfil the basic requirements for GVC integration.
+
+In line with this we find that in fact Tunisia has relatively high integration levels. Its integration structure is very similar in both intensity, structure, and trend to Costa Rica and Vietnam. This shows that especially North Africa with its proximity to the European GVC hub can benefit considerably from GVCs.
+
+South Africa is a different case since it is located far from most production networks and focuses primarily on raw materials. As a result, the country's integration levels are fairly low and more similar to Argentina and Colombia. Nevertheless, it is likely that it has benefitted from the boom in commodities caused by the rise of GVCs.
+
+\begin{table}[htbp]\small
+  \centering
+  \caption{GVC integration of AFR countries}
+    \begin{tabular}{lrrrr}
+    \toprule
+    Country & \multicolumn{2}{c}{\multirow{1}[0]{*}{$i2e$}} & \multicolumn{2}{c}{\multirow{1}[0]{*}{$e2r$}} \\
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} \\
+    \midrule
+    South Africa & 21.3\% & 61.4\% & 19.9\% & 16.4\% \\
+    Tunisia & 32.1\% & 35.6\% & 13.2\% & 33.1\% \\
+\bottomrule
+\end{tabular}
+  \label{tab:afrgvc}
+\end{table}
+
+\begin{table}[htbp]\small
+  \centering
+  \caption{WWZ decomposition results for AFR countries}
+  \hspace*{-2.7cm}
+    \begin{tabular}{lrrrrrrrrrr} 
+    \toprule
+    \multicolumn{1}{l}{\multirow{1}[0]{*}{Country}} & \multicolumn{2}{c}{$fva\_fin$} & \multicolumn{2}{c}{$fva\_inter$} & \multicolumn{2}{c}{$dva\_fin$} & \multicolumn{2}{c}{$dva\_inter$} & \multicolumn{2}{c}{$rdv$} \\
+    \multicolumn{1}{l}{} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} &
+\multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} & \multicolumn{1}{c}{Average} & \multicolumn{1}{c}{95-11} \\
+  \midrule
+South Africa & 48.76\% & -11.76\% & 51.24\% & 13.56\% & 54.43\% & -14.60\% & 45.49\% & 21.41\% & 0.08\% & 7.07\% \\
+    Tunisia & 45.09\% & -14.97\% & 54.91\% & 15.19\% & 56.62\% & -4.47\% & 43.10\% & 5.56\% & 0.28\% & 147.59\% \\
+\bottomrule
+    \end{tabular}
+  \label{tab:afrwwz}
+\end{table}
 
 
 
 \section{Conclusion}\label{sec:conclusion}
+GVCs are a major new factor in international trade. International production networks span across many countries and affect many industries while changing the way trade impacts domestic economies. This development requires new data and new statistics that appropriately capture countries' integration into GVCs. In this paper, we make use both such novelties in terms of data and statistics by applying a novel gross export decomposition methodology to a new expanded dataset.
+
+More precisely, we apply the Wang-Wei-Zhu decomposition based on \citet{zhwaetal13} and \citet{rokoetal14} to a new set of Inter-Country Input-Output tables built by the OECD. The advantage is that twofold. Firstly, the WWZ decomposition allows to analyse the structure of regions' GVC integration in addition to the intensity measures provided by previous decompositions. Secondly, the new OECD ICIOs cover a much larger fraction of developing economies than previous ICIOs. This allows us to get a better understanding of how these countries integrate into GVCs.
+
+We find that many ideas based on previous anecdotal evidence can be confirmed by the data. In particular, there is a central difference in the structure of high-income economies' integration into GVCs when compared to developing economies when it comes to their position in GVCs. If we abstract from primary sectors, high-income economies are typically positioned more upstream in the value chain which can be seen from the concentration of their value added in intermediate goods exports. In addition, they also serve as market of final demand which can be seen from their relatively high share of exported domestic value added returning home eventually for final consumption.
+
+Developing economies, on the other hand, tend to be positioned more downstream which can be deduced from the concentration of their GVC participation in final goods exports and the fact that their forward linkages and returning domestic value added tend to be low. These two stylised facts suggest that high-income economies use GVCs to outsource low value added downstream production stages and before reimporting the final goods. However, when looking at the development over time it is positive to see that many developing economies have succeeded in moving up the value chain and that the general trends point in the right direction.
+
+Finally, we use the new data to look at selected low- and middle income economies in three different regions, namely South-East Asia, Latin America and the Caribbean, and Africa. South-East Asia has as expected the highest levels of GVC integration while we observe more heterogeneity in Latin America and the Caribbean where especially Chile and Costa Rica perform well. In Africa, we find that Tunisia has developed backward linkages into GVCs, which shows that Northern Africa has the potential to become part of the European GVC network.
+
+Overall, we show that low- and middle-income countries have become an integral part of GVCs and are increasingly the driver of their expansion. In addition, they increasingly succeed in moving into higher value added stages of the production networks. While the exact implications of integration into GVCs are still being researched, it is clear that they offer significant potential for industrialisation and growth and therefore countries like the Philippines, Costa Rica, or Tunisia are in a good position and can serve as examples for comparable countries.
+
 
 \clearpage
 
