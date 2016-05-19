@@ -61,6 +61,10 @@ wwz2 %>%
   layer_lines(x=~year, y=~dva_inter, stroke='dva_inter')
 
 pdc %>%
-  ggvis(x=~year, y=~pdc_t, stroke='pdc_t') %>%
-  layer_lines() %>%
-  layer_lines(x=~year, y=~pdc_exp, stroke='pdc_exp')
+  ggvis(x=~year) %>%
+  layer_lines(y=~pdc_t) %>%
+  add_axis('y', orient = 'left', title = 'pdc_t') %>%
+  add_axis('y', 'ydiv' , orient = 'right',
+           title= 'i2e as Percentage of exports (red)', grid=F, title_offset = 50,
+           properties = axis_props(labels = list(fill = 'red')) ) %>%
+  layer_lines( prop('y', ~pdc_exp, scale='ydiv'), stroke:='red' )
