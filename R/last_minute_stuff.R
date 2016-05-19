@@ -163,8 +163,12 @@ wwz2 %>%
   layer_lines(x=~year, y=~fva_inter, stroke='fva_inter') %>%
   layer_lines(x=~year, y=~dva_fin,   stroke='dva_fin')   %>%
   layer_lines(x=~year, y=~dva_inter, stroke='dva_inter') %>%
-  layer_lines(x=~year, y=~rdv,       stroke='rdv')       %>%
-  add_axis('y', title = 'WWZ decomposition indicators')
+  add_axis('y', orient='left', title = 'WWZ decomposition indicators')  %>%
+  add_axis('y', 'ydiv', orient = 'right',
+           title= 'rdv', grid=F, title_offset = 50,
+           properties = axis_props(labels = list(fill = 'purple')) ) %>%
+  layer_lines( prop('y', ~rdv, scale='ydiv'), stroke='rdv' )
+
 
 
 pdc %>%
