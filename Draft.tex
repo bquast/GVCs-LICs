@@ -144,38 +144,103 @@ We use the new OECD ICIOs as the main data source for the GVC indicators and the
 
 \section{What we know: Old facts with new data}\label{sec:basics}
 
-In this section we look into stylised facts on GVC integration that are typically based on smaller samples with our extensive OECD ICIO dataset. We start by examining the development of the most basic measure of GVC integration introduced by \citet{dahuetal01}, namely the amount of foreign value added in exports labeled by \citet{ribajalo13} as $i2e$.\footnote{Note that at the aggregate level forward and backward linkages are identical and thus we only look at one of the two measures.} It captures backward linkages into value chains and shows the well-known increase in GVC integration from 1995 to 2011. As illustrated in Figure \ref{fig:i2e_t}, the value of $i2e$ has grown by approximately 350\% and by 35\% as a share of total exports from around 17\% to over 23\%. Thus, countries rely for their export production increasingly on inputs produced abroad. The numbers are in line with similar findings by \citet{rojoguno12b} but their sample ends in 2009. It is then interesting to see that after the slump during the financial crises in 2009, GVCs have quickly recovered and already have started to exceed their pre-crisis levels in 2011.
+In this section we look with our extensive OECD ICIO dataset into stylised facts on GVC integration that are typically based on smaller samples. We start by examining the development of the most basic measure of GVC integration introduced by \citet{dahuetal01}, namely the amount of foreign value added in exports labeled by \citet{ribajalo13} as $i2e$.\footnote{Note that at the aggregate level forward and backward linkages are identical and thus we only look at one of the two measures.} It captures backward linkages into value chains and shows the well-known increase in GVC integration from 1995 to 2011. As illustrated in Figure \ref{fig:i2e_t}, the value of $i2e$ has grown by approximately 350\% and by 35\% as a share of total exports from around 17\% to over 23\%. Thus, countries rely for their export production increasingly on inputs produced abroad. The numbers are in line with similar findings by \citet{rojoguno12b} but their sample ends in 2009. It is then interesting to see that after the slump during the financial crises in 2009, GVCs have quickly recovered and already have started to exceed their pre-crisis levels in 2011.
 
-\begin{figure}
-\centering
-\label{fig:i2e_t}
-\includegraphics[scale=0.4]{i2epercentage.png}
-\caption{The development of GVC integration over time}
-\end{figure}
+%\begin{figure}[h]
+%\centering
+%\label{fig:i2e_t}
+%\includegraphics[width=7cm]{i2epercentage.png}
+%\caption{The development of GVC integration over time}
+%\end{figure}
 
 Another way to examine the expansion of GVCs from 1995 to 2011 is to look at their intensity or length instead of their trade volume. \citet{zhwaetal13} propose to use the amount of double counted trade, $pdc$, as a proxy for GVC length since its value goes up the more back-and-forth trade occurs, which is equivalent to an increase in the number of production stages. They show that its value has increased for the 40 WIOD countries. In Figure \ref{fig:pdc_t}, we observe similarly that $pdc$ as a share of total exports has increased over the examined period by 73\% and thus more than $i2e$. Therefore, GVCs do not only channel more trade but also have become longer over time.
 
-%pdc change over time figure
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\vspace{0.8cm}
+\centering
+\includegraphics[width=\textwidth]{i2epercentage.png}
+\caption{The development of GVC integration over time}
+\label{fig:i2e_t}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{pdcII.png}
+\caption{The development of double counted trade over time}
+\label{fig:pdc_t}
+\end{minipage}
+\end{figure}
 
 Turning from the development over time to sectoral differences in GVC integration, Figure \ref{fig:i2e_s} reveals in line with \citet{rojoguno12a} that the sectors exhibiting the highest dependency on foreign inputs in terms of $i2e$ shares are heavy manufactures such as motor vehicles (MTR), other transport equipment (TRQ) and the metal industry (MET) as well as computers and electronics (CEQ and ELQ). In particular, the transport equipment and electronics industry are strongly engaged in GVCs having highly international production networks. For instance, Apple's iPhone contains inputs from 9 to 10 countries while the Boeing 787 production spans more than 5 countries. The sectors can be characterised as being close to final demand or being dependent on imported raw materials. These characteristics can thus explain differences in GVC integration.
 
 The bottom 6 industries in terms of $i2e$ shares are primary and services sectors such as agriculture (AGR), mining (MIN), R\&D and business services (BZS), or wholesale and retail trade (WRT). These sectors are typically located upstream in the supply chain far from final demand and have high high value added to output ratios.
 
-% sectoral graph i2e
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{industries_i2e_top6.png}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{industries_i2e_bottom6.png}
+\end{minipage}
+\caption{Sectoral backward linkages into GVCs - Top and bottom 6.}
+\label{fig:i2e_s}
+\end{figure}
 
 Naturally then, things are reversed when we look at the corresponding forward linkage GVC measure, $e2r$. It captures the amount of domestic value added in foreign exports and thus quantifies how important domestic industries are for foreign export production. Here, Figure \ref{fig:e2r_s} depicts that this indicator is dominated by the same upstream industries that are at the bottom of the $i2e$ ranking such as mining or financial and telecommunication services (FIN and PTL). This shows that these industries are also strongly engaged in GVCs but their participation is of a different type. They primarily supply important inputs but do not serve final demand. 
 
-With respect to services, it is also indicative of the servicification of manufacturing as described by \citet{ribaetal15}. This means that an increasing share of manufacturing gross exports is actually value added generated in services sectors and then embedded in the intermediate exports of manufacturers. This importance of services sectors for exports cannot be seen from standard gross trade statistics and thus constitutes a major advantage of trade in value added measures. It is also indicative of a growing internationalisation of services. Increasingly, services are being offshored and sourced from abroad. In that respect, it is also interesting to note that despite the low absolute $i2e$ shares, it is in services where a lot of the growth in $i2e$ has taken place. As can be seen in Figure \ref{fig:i2e_st}, five out of the six sectors with the highest growth in $i2e$ shares are services sectors.
+With respect to services, it is also indicative of the servicification of manufacturing as described by \citet{ribaetal15}. This means that an increasing share of manufacturing gross exports is actually value added generated in services sectors and then embedded in the intermediate exports of manufacturers. This importance of services sectors for exports cannot be seen from standard gross trade statistics and thus constitutes a major advantage of trade in value added measures. It is also indicative of a growing internationalisation of services. Increasingly, services are being offshored and sourced from abroad. In that respect, it is also interesting to note that despite the low absolute $i2e$ shares, it is in services where a lot of the growth in $i2e$ has taken place. Five out of the six sectors with the highest growth in $i2e$ shares are services sectors.
 
-% sectoral graph e2r
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{industries_e2r_top6.png}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{industries_e2r_bottom6.png}
+\end{minipage}
+\caption{Sectoral forward linkages into GVCs - Top and bottom 6.}
+\label{fig:e2r_s}
+\end{figure}
 
 Finally, when we turn to differences in GVC integration by country we can confirm the findings by \citet{ribajalo13}. Figure \ref{i2e_k} shows that small countries close to the major GVC hubs in Asia, Europe, and North America such as Slovakia or Malaysia have the highest average $i2e$ shares. Countries specialised in the primary sector or assembly on the other hand have very low values. Correspondingly, Latin American countries with their focus on agriculture and mining have very weak backward linkages into GVCs. However, the development over time shows that some of the countries with the relatively low GVC integration have begun to catch up. For instance, Argentina, Indian and Turkey are in the top 6 when it comes to the growth of $i2e$ shares from 1995 to 2011.
 
-%country graph i2e
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{country_i2e_top_6.png}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{countries_i2e_bottom_6.png}
+\end{minipage}
+\caption{Countries' backward linkages into GVCs - Top and bottom 6.}
+\label{fig:i2e_k}
+\end{figure}
 
 Driven by the sectoral statistics, we then find again that for $e2r$ the picture is reversed with raw material exporters on top. If we abstract from these countries we find technologically advanced countries such as Switzerland and the main GVC hubs Japan, USA, and Germany to exhibit strong forward linkages into GVCs. In particular low and middle-income countries without raw materials such as Cambodia, Mexico, or Turkey have in contrast very weak linkages and have not been able to strengthen them significantly between 1995 and 2011.
 
-%country graph e2r
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{country_e2r_top_6.png}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{countries_e2r_bottom_6.png}
+\end{minipage}
+\caption{Countries' forward linkages into GVCs - Top and bottom 6.}
+\label{fig:e2r_k}
+\end{figure}
+
+
 
 \section{The role of developing economies: New trends and patterns in GVCs}\label{sec:news}
 
