@@ -11,7 +11,7 @@ sector_desc <- read_excel(path = 'data/sector_desc.xlsx')
 wwz         <- read_excel(path = 'data/graphs.xlsx')
 pdc         <- read_excel(path = 'data/graphs2.xlsx')
 
-# plot top 6
+# i2e plot top 6
 sector_desc %>%
   group_by(sector) %>%
   summarise(i2e=fvax_s/exp) %>%
@@ -21,7 +21,7 @@ sector_desc %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
 
-# plot bottom 6
+# i2e plot bottom 6
 sector_desc %>%
   group_by(sector) %>%
   summarise(i2e=fvax_s/exp) %>%
@@ -31,13 +31,43 @@ sector_desc %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
 
-# plot top 6 and bottom 6
+# i2e plot top 6 and bottom 6
 sector_desc %>%
   group_by(sector) %>%
   summarise(i2e=fvax_s/exp) %>%
   arrange(i2e) %>%
   filter(i2e > 0.30 | i2e < 0.13) %>%
   ggvis(x=~sector, y=~i2e) %>%
+  layer_bars() %>%
+  scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
+
+# e2r plot top 6
+sector_desc %>%
+  group_by(sector) %>%
+  summarise(e2r=fvax_s/exp) %>%
+  arrange(e2r) %>%
+  filter(e2r > 0.30) %>%
+  ggvis(x=~sector, y=~e2r) %>%
+  layer_bars() %>%
+  scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
+
+# e2r plot bottom 6
+sector_desc %>%
+  group_by(sector) %>%
+  summarise(e2r=fvax_s/exp) %>%
+  arrange(e2r) %>%
+  filter(e2r < 0.13) %>%
+  ggvis(x=~sector, y=~e2r) %>%
+  layer_bars() %>%
+  scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
+
+# e2r plot top 6 and bottom 6
+sector_desc %>%
+  group_by(sector) %>%
+  summarise(e2r=fvax_s/exp) %>%
+  arrange(e2r) %>%
+  filter(e2r > 0.30 | e2r < 0.13) %>%
+  ggvis(x=~sector, y=~e2r) %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
 
