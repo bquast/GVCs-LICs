@@ -7,9 +7,10 @@ library(ggvis)
 library(dplyr)
 
 # load data
-sector_desc <- read_excel(path = 'data/sector_desc.xlsx')
-wwz         <- read_excel(path = 'data/graphs.xlsx')
-pdc         <- read_excel(path = 'data/graphs2.xlsx')
+country_desc <- read_excel(path = 'data/country_stats.xlsx')
+sector_desc  <- read_excel(path = 'data/sector_desc.xlsx')
+wwz          <- read_excel(path = 'data/graphs.xlsx')
+pdc          <- read_excel(path = 'data/graphs2.xlsx')
 
 # i2e plot top 6
 sector_desc %>%
@@ -68,6 +69,70 @@ sector_desc %>%
   arrange(e2r) %>%
   filter(e2r > 0.30 | e2r < 0.13) %>%
   ggvis(x=~sector, y=~e2r) %>%
+  layer_bars() %>%
+  scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
+
+
+# i2e plot top 6
+country_desc %>%
+  group_by(country) %>%
+  summarise(i2e=fva_sha) %>%
+  arrange(i2e) %>%
+  filter(i2e > 0.419) %>%
+  filter(country != 'irl') %>%
+  ggvis(x=~country, y=~i2e) %>%
+  layer_bars() %>%
+  scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
+
+# i2e plot bottom 6
+country_desc %>%
+  group_by(country) %>%
+  summarise(i2e=fva_sha) %>%
+  arrange(i2e) %>%
+  filter(i2e < 0.128) %>%
+  ggvis(x=~country, y=~i2e) %>%
+  layer_bars() %>%
+  scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
+
+
+# i2e plot top 6 and bottom 6
+country_desc %>%
+  group_by(country) %>%
+  summarise(i2e=fva_sha) %>%
+  arrange(i2e) %>%
+  filter(i2e > 0.419 | i2e < 0.128) %>%
+  filter(country != 'irl') %>%
+  ggvis(x=~country, y=~i2e) %>%
+  layer_bars() %>%
+  scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
+
+# e2r plot top 6
+country_desc %>%
+  group_by(country) %>%
+  summarise(e2r=fvax_s/exp) %>%
+  arrange(e2r) %>%
+  filter(e2r > 0.30) %>%
+  ggvis(x=~country, y=~e2r) %>%
+  layer_bars() %>%
+  scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
+
+# e2r plot bottom 6
+country_desc %>%
+  group_by(country) %>%
+  summarise(e2r=fvax_s/exp) %>%
+  arrange(e2r) %>%
+  filter(e2r < 0.13) %>%
+  ggvis(x=~country, y=~e2r) %>%
+  layer_bars() %>%
+  scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
+
+# e2r plot top 6 and bottom 6
+country_desc %>%
+  group_by(country) %>%
+  summarise(e2r=fvax_s/exp) %>%
+  arrange(e2r) %>%
+  filter(e2r > 0.30 | e2r < 0.13) %>%
+  ggvis(x=~country, y=~e2r) %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
 
