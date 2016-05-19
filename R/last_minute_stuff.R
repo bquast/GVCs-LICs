@@ -128,7 +128,7 @@ country_desc %>%
 # e2r plot top 6 and bottom 6
 country_desc %>%
   group_by(country) %>%
-  summarise(e2r=fvax_s/exp) %>%
+  summarise(e2r=dva_sha) %>%
   arrange(e2r) %>%
   filter(e2r > 0.265 | e2r < 0.14404) %>%
   ggvis(x=~country, y=~e2r) %>%
