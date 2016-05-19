@@ -14,20 +14,30 @@ pdc         <- read_excel(path = 'data/graphs2.xlsx')
 # plot top 6
 sector_desc %>%
   group_by(sector) %>%
-  summarise(fvax=fvax_s/exp) %>%
-  arrange(fvax) %>%
-  filter(fvax > 0.30) %>%
-  ggvis(x=~sector, y=~fvax) %>%
+  summarise(i2e=fvax_s/exp) %>%
+  arrange(i2e) %>%
+  filter(i2e > 0.30) %>%
+  ggvis(x=~sector, y=~i2e) %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
 
 # plot bottom 6
 sector_desc %>%
   group_by(sector) %>%
-  summarise(fvax=fvax_s/exp) %>%
-  arrange(fvax) %>%
-  filter(fvax < 0.13) %>%
-  ggvis(x=~sector, y=~fvax) %>%
+  summarise(i2e=fvax_s/exp) %>%
+  arrange(i2e) %>%
+  filter(i2e < 0.13) %>%
+  ggvis(x=~sector, y=~i2e) %>%
+  layer_bars() %>%
+  scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
+
+# plot top 6 and bottom 6
+sector_desc %>%
+  group_by(sector) %>%
+  summarise(i2e=fvax_s/exp) %>%
+  arrange(i2e) %>%
+  filter(i2e > 0.30 | i2e < 0.13) %>%
+  ggvis(x=~sector, y=~i2e) %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
 
@@ -65,6 +75,6 @@ pdc %>%
   layer_lines(y=~pdc_t) %>%
   add_axis('y', orient = 'left', title = 'pdc_t') %>%
   add_axis('y', 'ydiv' , orient = 'right',
-           title= 'i2e as Percentage of exports (red)', grid=F, title_offset = 50,
+           title= 'pdc_exp', grid=F, title_offset = 50,
            properties = axis_props(labels = list(fill = 'red')) ) %>%
   layer_lines( prop('y', ~pdc_exp, scale='ydiv'), stroke:='red' )
