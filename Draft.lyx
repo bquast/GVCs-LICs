@@ -90,6 +90,18 @@
 
 \begin_body
 
+\begin_layout Title
+Global Value Chains in Low and Middle Income Countries
+\end_layout
+
+\begin_layout Author
+Victor Kummritz and Bastiaan Quast
+\end_layout
+
+\begin_layout Abstract
+Global Value Chains are ...
+\end_layout
+
 \begin_layout Section
 Introduction
 \end_layout
@@ -1136,19 +1148,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Box Frameless
 position "c"
 hor_pos "l"
@@ -1332,24 +1331,13 @@ The bottom 6 industries in terms of
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
+\align center
 \begin_inset Box Frameless
 position "c"
 hor_pos "l"
@@ -1369,19 +1357,6 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
  
 \begin_inset Graphics
 	filename misc/industries_i2e_top6.png
@@ -1418,19 +1393,6 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
  
 \begin_inset Graphics
 	filename misc/industries_i2e_bottom6.png
@@ -1538,24 +1500,13 @@ It is also indicative of a growing internationalisation of services.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
+\align center
 \begin_inset Box Frameless
 position "c"
 hor_pos "l"
@@ -1575,19 +1526,6 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
  
 \begin_inset Graphics
 	filename misc/industries_e2r_top6.png
@@ -1624,20 +1562,6 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Graphics
 	filename misc/industries_e2r_bottom6.png
 	width 100text%
@@ -1751,25 +1675,13 @@ The full set of results for
 
 \begin_layout Standard
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
+\align center
 \begin_inset Box Frameless
 position "c"
 hor_pos "l"
@@ -1893,25 +1805,13 @@ name "fig:i2e_k"
 
 \begin_layout Standard
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
+\align center
 \begin_inset Box Frameless
 position "c"
 hor_pos "l"
@@ -2114,27 +2014,15 @@ Note that in this section indicators are based only on manufacturing and
 
 \begin_layout Standard
 \begin_inset Float table
-placement htbp
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 
 \size small
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2387,6 +2275,12 @@ High
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size small
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:gvc"
@@ -2497,7 +2391,7 @@ However, we will see that GVC integration differs significantly among developing
 
 \begin_layout Standard
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status collapsed
@@ -2600,27 +2494,15 @@ reference "tab:wwz"
 
 \begin_layout Standard
 \begin_inset Float table
-placement htbp
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 
 \size small
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2853,13 +2735,23 @@ High
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:wwz"
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
 \begin_inset Caption Unnumbered
 
 \begin_layout Plain Layout
@@ -3134,27 +3026,15 @@ l growth path.
 
 \begin_layout Standard
 \begin_inset Float table
-placement !h
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 
 \size small
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -3582,6 +3462,12 @@ Vietnam
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size small
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:seagvc"
@@ -3612,7 +3498,7 @@ Data is averaged across sectors and years.
 
 \begin_layout Standard
 \begin_inset Float table
-placement !h
+placement H
 wide false
 sideways false
 status open
@@ -3621,19 +3507,6 @@ status open
 \align center
 
 \size small
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -3644,7 +3517,7 @@ WWZ decomposition results for SEA countries
 
 
 \begin_inset space \hspace*{}
-\length -2.7cm
+\length -3cm
 \end_inset
 
  
@@ -4546,6 +4419,12 @@ Vietnam
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size small
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:seawwz"
@@ -4688,27 +4567,15 @@ Costa Rica on the other hand possesses the typical GVC integration structure
 
 \begin_layout Standard
 \begin_inset Float table
-placement htbp
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 
 \size small
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5079,6 +4946,11 @@ Costa Rica
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:csagvc"
@@ -5109,27 +4981,15 @@ Data is averaged across sectors and years.
 
 \begin_layout Standard
 \begin_inset Float table
-placement htbp
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 
 \size small
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5140,7 +5000,7 @@ WWZ decomposition results for CSA countries
 
 
 \begin_inset space \hspace*{}
-\length -2.7cm
+\length -3cm
 \end_inset
 
  
@@ -5919,6 +5779,11 @@ Costa Rica
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:csawwz"
@@ -6020,27 +5885,15 @@ South Africa is a different case since it is located far from most production
 
 \begin_layout Standard
 \begin_inset Float table
-placement htbp
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 
 \size small
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -6297,6 +6150,11 @@ Tunisia
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:afrgvc"
@@ -6327,27 +6185,15 @@ Data is averaged across sectors and years.
 
 \begin_layout Standard
 \begin_inset Float table
-placement htbp
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 
 \size small
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -6358,10 +6204,10 @@ WWZ decomposition results for AFR countries
 
 
 \begin_inset space \hspace*{}
-\length -2.7cm
+\length -3cm
 \end_inset
 
- 
+
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="11">
 <features booktabs="true" tabularvalignment="middle">
@@ -6891,6 +6737,11 @@ Tunisia
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:afrwwz"
@@ -7061,54 +6912,28 @@ options "chicago"
 
 \end_layout
 
-\begin_layout Standard
-\start_of_appendix
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%dummy comment inserted by tex2lyx to ensure that this paragraph is not
- empty
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
+\start_of_appendix
 Appendix
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float table
 placement h
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
+\size small
 \begin_inset space \hspace*{}
-\length -2.8cm
+\length -3cm
 \end_inset
 
- 
+
 \begin_inset Tabular
 <lyxtabular version="3" rows="31" columns="7">
 <features booktabs="true" tabularvalignment="middle">
@@ -9595,29 +9420,17 @@ isl
 
 \begin_layout Standard
 \begin_inset Float table
-placement h
+placement H
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
+\size small
 \begin_inset space \hspace*{}
-\length -2.8cm
+\length -3cm
 \end_inset
 
  
@@ -12205,24 +12018,12 @@ name "tab:gvc_k"
 placement h
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
+\size small
 \begin_inset space \hspace*{}
 \length -3cm
 \end_inset
