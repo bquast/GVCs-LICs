@@ -6,6 +6,9 @@
 \origin unavailable
 \textclass article
 \begin_preamble
+\usepackage[style=philosophy-modern,natbib=true,backend=biber]{biblatex}
+\addbibresource{/Users/quast/OECD-TiVA-LMIC-GVCs/GVCandLMICs.bib}
+
 
 
 \usepackage{threeparttable}
@@ -18,14 +21,12 @@
 \usepackage{pbox}
 \usepackage{array}
 \usepackage{caption}
-
-
-
-\linespread{1.5}
-\graphicspath{{/Users/VK/Documents/Github/OECD-TiVA-LMIC-GVCs/misc/}}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
+\begin_local_layout
+Provides natbib 1
+\end_local_layout
 \language english
 \language_package none
 \inputencoding auto
@@ -43,7 +44,7 @@
 \graphics default
 \default_output_format default
 \output_sync 0
-\bibtex_command default
+\bibtex_command biber
 \index_command default
 \paperfontsize 11
 \spacing single
@@ -969,10 +970,17 @@ name "sub:icios"
  The new version of the database provides ICIOs covering 61 countries and
  34 industries for the years 1995, 2000, 2005, and 2008 to 2011.
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Countries and industries are listed in the Appendix.
+Countries and industries are listed in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:appendix"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -988,10 +996,11 @@ Countries and industries are listed in the Appendix.
 
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Note that in the analysis 2009 and 2010 are excluded due to the global crisis.
+Note that in the analysis 2009 and 2010 are excluded due to the global financial
+ crisis.
 \end_layout
 
 \end_inset
@@ -1084,7 +1093,7 @@ Note that at the aggregate level forward (
  As illustrated in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:i2e_t"
+reference "fig:i2et"
 
 \end_inset
 
@@ -1123,7 +1132,7 @@ Another way to examine the expansion of GVCs from 1995 to 2011 is to look
  In Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:pdc_t"
+reference "fig:pdct"
 
 \end_inset
 
@@ -1172,19 +1181,6 @@ status collapsed
 \end_inset
 
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Graphics
 	filename misc/i2epercentage.png
 	width 100text%
@@ -1203,7 +1199,7 @@ The development of GVC integration over time
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:i2e_t"
+name "fig:i2et"
 
 \end_inset
 
@@ -1233,22 +1229,9 @@ separation "3pt"
 shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
-status collapsed
+status open
 
 \begin_layout Plain Layout
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
  
 \begin_inset Graphics
 	filename misc/pdcII.png
@@ -1268,7 +1251,7 @@ The development of double counted trade over time
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:pdc_t"
+name "fig:pdct"
 
 \end_inset
 
@@ -1290,7 +1273,7 @@ Turning from the development over time to sectoral differences in GVC integratio
 n, Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:i2e_s"
+reference "fig:i2es"
 
 \end_inset
 
@@ -1421,7 +1404,7 @@ Sectoral
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:i2e_s"
+name "fig:i2es"
 
 \end_inset
 
@@ -1445,7 +1428,7 @@ Naturally then, things are reversed when we look at the corresponding forward
  Here, Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:e2r_s"
+reference "fig:e2rs"
 
 \end_inset
 
@@ -1589,7 +1572,7 @@ Sectoral
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:e2r_s"
+name "fig:e2rs"
 
 \end_inset
 
@@ -1614,7 +1597,7 @@ key "ribajalo13"
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:i2e_k"
+reference "fig:i2ek"
 
 \end_inset
 
@@ -1791,7 +1774,7 @@ Countries'
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:i2e_k"
+name "fig:i2ek"
 
 \end_inset
 
@@ -6894,11 +6877,35 @@ d, it is clear that they offer significant potential for industrialisation
 \end_layout
 
 \begin_layout Standard
- 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+printbibliography
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "GVCandLMICs"
 options "chicago"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -6915,6 +6922,16 @@ options "chicago"
 \begin_layout Section
 \start_of_appendix
 Appendix
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:appendix"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
