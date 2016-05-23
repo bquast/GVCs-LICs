@@ -47,7 +47,7 @@ Provides natbib 1
 \bibtex_command biber
 \index_command default
 \paperfontsize 11
-\spacing single
+\spacing onehalf
 \use_hyperref false
 \papersize a4paper
 \use_geometry false
@@ -276,7 +276,7 @@ Our analysis confirms the expansion of GVCs in recent years and presents
  value added.
  However, we observe that developing economies have begun to move upstream
  along the value chain and out of pure assembly occupying a wider set stages.
- This should allow them to generate more gains from GVC participation.
+ This should allow them to generate greater gains from GVC participation.
 \end_layout
 
 \begin_layout Standard
@@ -288,7 +288,7 @@ reference "sec:data"
 
 \end_inset
 
- reviews shortly the decomposition proposed by 
+ briefly reviews the decomposition proposed by 
 \begin_inset CommandInset citation
 LatexCommand citet
 after "WWZ henceforth"
@@ -384,7 +384,7 @@ GVC analysis relies typically on Inter-Country Input-Output tables (ICIOs).
  For instance, ICIOs state the amount of inputs of the Indian steel industry
  in the output of the US car industry.
  However, for a correct examination of GVCs it is necessary to go a step
- further from the ICIOs by deriving the true value added origins of the
+ further from the ICIOs, by deriving the true value added origins of the
  US car output.
  If, for example, India depends on inputs from the US steel industry to
  supply the US car industry, then ICIOs overstate the actual contribution
@@ -481,8 +481,8 @@ A
 \shape italic
 VB
 \shape default
- gives thus so called value added multipliers, which denote the amount of
- value added that the production of an industry's 1$ of output or exports
+ thus gives so called value added multipliers, which denote the amount of
+ value added that the production of an industry's $1 of output or exports
  brings about in all other industries.
  If we post-multiply 
 \begin_inset Formula $VB$
@@ -568,8 +568,8 @@ name "sub:wwz"
 \end_layout
 
 \begin_layout Standard
-Since the derivation itself is not the focus of this paper, we present here
- only the final result for a 
+Since the derivation itself is not the focus of this paper, here we only
+ present the final result for a 
 \begin_inset Formula $G$
 \end_inset
 
@@ -897,11 +897,11 @@ For the analysis, we use
 \end_inset
 
  and the two aggregate measures 
-\begin_inset Formula $dva_{i}nter$
+\begin_inset Formula $dva\_inter$
 \end_inset
 
  combining 
-\begin_inset Formula $dva_{i}nt$
+\begin_inset Formula $dva\_int$
 \end_inset
 
  and 
@@ -909,11 +909,11 @@ For the analysis, we use
 \end_inset
 
  as well as 
-\begin_inset Formula $fva_{i}nter$
+\begin_inset Formula $fva\_inter$
 \end_inset
 
  combining 
-\begin_inset Formula $fva_{i}nt$
+\begin_inset Formula $fva\_int$
 \end_inset
 
  and 
@@ -934,8 +934,8 @@ The advantage of such a detailed decomposition is that these new indicators
  High amounts of domestic value added in intermediate exports, on the other
  hand, are evidence of a more upstream specialisation in tasks that add
  a lot of value, such as business services.
- By tracking these two variables over time we can then see which countries
- have succeeded in moving up the value chain.
+ By tracking these two variables over time we can see which countries have
+ succeeded in moving up the value chain.
  We will explain the indicators in more detail in combination with the decomposi
 tion results to facilitate the understanding.
 \end_layout
@@ -1055,7 +1055,7 @@ name "sec:basics"
 \end_layout
 
 \begin_layout Standard
-In this section we reassess with our extensive OECD ICIO dataset stylised
+In this section we use the extensive OECD ICIO dataset to reasses some stylised
  facts on GVC integration that are typically based on smaller samples.
  We start by examining the development of our most basic measure of GVC
  integration, namely the amount of foreign value added in exports labeled
@@ -1229,7 +1229,7 @@ separation "3pt"
 shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
-status open
+status collapsed
 
 \begin_layout Plain Layout
  
@@ -1277,14 +1277,14 @@ reference "fig:i2es"
 
 \end_inset
 
- reveals in line with 
+ shows - in line with 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "rojoguno12a"
 
 \end_inset
 
- that the sectors exhibiting the highest degree of international fragmentation
+ - that the sectors exhibiting the highest degree of international fragmentation
  in terms of 
 \begin_inset Formula $i2e$
 \end_inset
@@ -1432,7 +1432,7 @@ reference "fig:e2rs"
 
 \end_inset
 
- depicts that this indicator is dominated by the same upstream industries
+ shows that this indicator is dominated by the same upstream industries
  that are at the bottom of the 
 \begin_inset Formula $i2e$
 \end_inset
@@ -1440,12 +1440,16 @@ reference "fig:e2rs"
  ranking such as mining or business and telecommunication services (PTL).
  This shows that these industries are also strongly engaged in GVCs but
  their participation is of a different type.
- They primarily supply important inputs but do not serve final demand.
+ They primarily supply important inputs, but they do not serve final demand.
 \end_layout
 
 \begin_layout Standard
-With respect to services, it is also indicative of the servicification of
- manufacturing as described by 
+The high 
+\begin_inset Formula $e2r$
+\end_inset
+
+ values of the services sector, also suggest the servicification of manufacturin
+g as described by 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "ribaetal15"
@@ -1456,7 +1460,7 @@ key "ribaetal15"
  This means that an increasing share of manufacturing gross exports is actually
  value added generated in services sectors and then embedded in the intermediate
  goods exports of manufacturers.
- This importance of services sectors for exports cannot be seen from standard
+ This importance of services sectors to exports cannot be seen from standard
  gross trade statistics and thus constitutes a major advantage of trade
  in value added measures.
 \end_layout
@@ -1469,7 +1473,7 @@ It is also indicative of a growing internationalisation of services.
 \begin_inset Formula $i2e$
 \end_inset
 
- shares, it is in services where a lot of the growth in 
+ shares, it is in services where much of the growth in 
 \begin_inset Formula $i2e$
 \end_inset
 
@@ -1632,10 +1636,10 @@ Driven by the sectoral statistics, we then find again that for
  such as Switzerland and the main GVC hubs Japan, USA, and Germany to exhibit
  strong forward linkages into GVCs.
  In particular low and middle-income countries without raw materials such
- as Cambodia, Mexico, or Turkey have in contrast very weak linkages and
+ as Cambodia, Mexico, or Turkey in contrast have very weak linkages and
  have not been able to strengthen them significantly between 1995 and 2011.
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 The full set of results for 
@@ -1646,9 +1650,16 @@ The full set of results for
 \begin_inset Formula $e2r$
 \end_inset
 
- by country, and sector can be found in the Appendix.
- Since the results of WWZ decomposition are much more detailed the results
- not presented here are only available from the authors upon request.
+ by country, and sector can be found in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:appendix"
+
+\end_inset
+
+.
+ Since the results of WWZ decomposition are much more detailed, these results
+ are not presented here are only available from the authors upon request.
 \end_layout
 
 \end_inset
@@ -1931,10 +1942,10 @@ name "sec:news"
 \end_layout
 
 \begin_layout Standard
-The central advantage of our application is that we have new indicators
+The central advantage of our methodology is that we have new indicators
  for a new set of countries.
- This means we can not only confirm previous findings with a more representative
- sample but also provide several new insights.
+ This means that other than confirming previous findings with a more representat
+ive sample, we can also provide several new insights.
  In particular, the OECD ICIO database extends the available list of countries
  in ICIOs by the following 21 regions: Argentina, Brunei Darussalam, Cambodia,
  Chile, Colombia, Costa Rica, Croatia, Hong Kong, Iceland, Israel, Malaysia,
@@ -1942,7 +1953,7 @@ The central advantage of our application is that we have new indicators
  Vietnam, South Africa, and Switzerland.
  This means that in particular the coverage of low and middle income countries
  has increased considerably which allows us to analyse the GVC integration
- of developing economies in a much more detailed fashion than before.
+ of developing economies in a more detailed fashion.
 \end_layout
 
 \begin_layout Subsection
@@ -6890,11 +6901,8 @@ printbibliography
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset CommandInset bibtex
