@@ -7,7 +7,7 @@
 \textclass article
 \begin_preamble
 \usepackage[style=philosophy-modern,natbib=true,backend=biber]{biblatex}
-\addbibresource{/Users/quast/OECD-TiVA-LMIC-GVCs/GVCandLMICs.bib}
+\addbibresource{/Users/quast/OECD-TiVA-LMIC-GVCs/GVC-LMICs.bib}
 
 
 
@@ -1177,10 +1177,6 @@ status collapsed
 
 \begin_layout Plain Layout
  
-\begin_inset VSpace 0.8cm
-\end_inset
-
- 
 \begin_inset Graphics
 	filename misc/i2epercentage.png
 	width 100text%
@@ -1942,8 +1938,8 @@ name "sec:news"
 \end_layout
 
 \begin_layout Standard
-The central advantage of our methodology is that we have new indicators
- for a new set of countries.
+The central advantage of our approach is that we have new indicators for
+ a new set of countries.
  This means that other than confirming previous findings with a more representat
 ive sample, we can also provide several new insights.
  In particular, the OECD ICIO database extends the available list of countries
@@ -1978,6 +1974,33 @@ reference "tab:gvc"
 
 \end_inset
 
+
+\size small
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Data is averaged across countries, sectors and years.
+ 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ 95-11 refers to the growth of the 
+\shape italic
+i2e
+\shape default
+ and 
+\shape italic
+e2r
+\shape default
+ values from 1995 to 2011.
+\end_layout
+
+\end_inset
+
+
+\size default
  we see that the average integration measured by either 
 \begin_inset Formula $i2e$
 \end_inset
@@ -2017,15 +2040,6 @@ status open
 \align center
 
 \size small
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-GVC integration by income
-\end_layout
-
-\end_inset
-
-
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="5">
 <features booktabs="true" tabularvalignment="middle">
@@ -2041,7 +2055,7 @@ GVC integration by income
 \begin_layout Plain Layout
 
 \size small
-Country group 
+Country group
 \end_layout
 
 \end_inset
@@ -2275,6 +2289,15 @@ High
 \align center
 
 \size small
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GVC integration by income
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:gvc"
@@ -2282,28 +2305,6 @@ name "tab:gvc"
 \end_inset
 
  
-\begin_inset Caption Unnumbered
-
-\begin_layout Plain Layout
-Data is averaged across countries, sectors and years.
- 
-\begin_inset Formula $\Delta$
-\end_inset
-
- 95-11 refers to the growth of the 
-\shape italic
-i2e
-\shape default
- and 
-\shape italic
-e2r
-\shape default
- values from 1995 to 2011.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -2472,6 +2473,33 @@ reference "tab:wwz"
 
 \end_inset
 
+
+\size small
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Data is averaged across countries, sectors and years.
+ 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ 95-11 refers to the growth of the 
+\shape italic
+i2e
+\shape default
+ and 
+\shape italic
+e2r
+\shape default
+ values from 1995 to 2011.
+\end_layout
+
+\end_inset
+
+
+\size default
  shows that on average low- and lower middle-income countries have a higher
  share of 
 \begin_inset Formula $fva\_fin$
@@ -2497,15 +2525,6 @@ status open
 \align center
 
 \size small
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-WWZ decomposition results by income
-\end_layout
-
-\end_inset
-
-
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="6">
 <features booktabs="true" tabularvalignment="middle">
@@ -2732,42 +2751,27 @@ High
 \end_layout
 
 \begin_layout Plain Layout
+\align center
+
+\size small
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+WWZ decomposition results by income
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 
 \size small
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:wwz"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset Caption Unnumbered
-
-\begin_layout Plain Layout
-Data is averaged across countries, sectors and years.
- 
-\begin_inset Formula $fva$
-\end_inset
-
- variables are expressed as % of 
-\begin_inset Formula $i2e$
-\end_inset
-
-, 
-\begin_inset Formula $dva$
-\end_inset
-
- and 
-\begin_inset Formula $rdv$
-\end_inset
-
- variables as % of domestic value added in total exports.
-\end_layout
 
 \end_inset
 
@@ -2945,6 +2949,21 @@ reference "tab:seagvc"
 
 \end_inset
 
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Data is averaged across sectors and years.
+ 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ 95-11 refers to growth from 1995 to 2011.
+\end_layout
+
+\end_inset
+
  show that all five countries are primarily integrated into GVCs through
  backward linkages but in particular the Philippines have increased their
  forward linkages over the past two decades considerably.
@@ -2964,6 +2983,38 @@ The WWZ decomposition provides us with the necessary tools.
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:seawwz"
+
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Data is averaged across sectors and years.
+ 
+\begin_inset Formula $fva$
+\end_inset
+
+ variables are expressed as % of 
+\begin_inset Formula $i2e$
+\end_inset
+
+, 
+\begin_inset Formula $dva$
+\end_inset
+
+ and 
+\begin_inset Formula $rdv$
+\end_inset
+
+ variables as % of domestic value added in total exports.
+ 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ 95-11 refers to growth from 1995 to 2011.
+\end_layout
 
 \end_inset
 
@@ -3029,15 +3080,6 @@ status open
 \align center
 
 \size small
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-GVC integration of SEA countries
-\end_layout
-
-\end_inset
-
-
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="5">
 <features booktabs="true" tabularvalignment="middle">
@@ -3462,6 +3504,21 @@ Vietnam
 \align center
 
 \size small
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GVC integration of SEA countries
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size small
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:seagvc"
@@ -3469,20 +3526,6 @@ name "tab:seagvc"
 \end_inset
 
  
-\begin_inset Caption Unnumbered
-
-\begin_layout Plain Layout
-Data is averaged across sectors and years.
- 
-\begin_inset Formula $\Delta$
-\end_inset
-
- 95-11 refers to growth from 1995 to 2011.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -3501,15 +3544,6 @@ status open
 \align center
 
 \size small
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-WWZ decomposition results for SEA countries
-\end_layout
-
-\end_inset
-
-
 \begin_inset space \hspace*{}
 \length -3cm
 \end_inset
@@ -4419,6 +4453,21 @@ Vietnam
 \align center
 
 \size small
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+WWZ decomposition results for SEA countries
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size small
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:seawwz"
@@ -4426,37 +4475,6 @@ name "tab:seawwz"
 \end_inset
 
  
-\begin_inset Caption Unnumbered
-
-\begin_layout Plain Layout
-Data is averaged across sectors and years.
- 
-\begin_inset Formula $fva$
-\end_inset
-
- variables are expressed as % of 
-\begin_inset Formula $i2e$
-\end_inset
-
-, 
-\begin_inset Formula $dva$
-\end_inset
-
- and 
-\begin_inset Formula $rdv$
-\end_inset
-
- variables as % of domestic value added in total exports.
- 
-\begin_inset Formula $\Delta$
-\end_inset
-
- 95-11 refers to growth from 1995 to 2011.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -4579,6 +4597,25 @@ GVC integration of CSA countries
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size small
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:csagvc"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size small
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="5">
 <features booktabs="true" tabularvalignment="middle">
@@ -4945,13 +4982,6 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:csagvc"
-
-\end_inset
-
- 
 \begin_inset Caption Unnumbered
 
 \begin_layout Plain Layout
@@ -4993,6 +5023,25 @@ WWZ decomposition results for CSA countries
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size small
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:csawwz"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size small
 \begin_inset space \hspace*{}
 \length -3cm
 \end_inset
@@ -5778,13 +5827,6 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:csawwz"
-
-\end_inset
-
- 
 \begin_inset Caption Unnumbered
 
 \begin_layout Plain Layout
@@ -5897,6 +5939,25 @@ GVC integration of AFR countries
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size small
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:afrgvc"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size small
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="5">
 <features booktabs="true" tabularvalignment="middle">
@@ -6149,13 +6210,6 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:afrgvc"
-
-\end_inset
-
- 
 \begin_inset Caption Unnumbered
 
 \begin_layout Plain Layout
@@ -6197,6 +6251,25 @@ WWZ decomposition results for AFR countries
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size small
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:afrwwz"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size small
 \begin_inset space \hspace*{}
 \length -3cm
 \end_inset
@@ -6736,13 +6809,6 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:afrwwz"
-
-\end_inset
-
- 
 \begin_inset Caption Unnumbered
 
 \begin_layout Plain Layout
@@ -6902,12 +6968,12 @@ printbibliography
 
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "GVCandLMICs"
+bibfiles "GVC-LMICs"
 options "chicago"
 
 \end_inset
