@@ -6,29 +6,22 @@
 \origin unavailable
 \textclass article
 \begin_preamble
+\usepackage{appendix}
 \usepackage[style=philosophy-modern,natbib=true,backend=biber]{biblatex}
-\addbibresource{/Users/quast/OECD-TiVA-LMIC-GVCs/GVC-LMICs.bib}
-
-
-
-\usepackage{threeparttable}
-\usepackage{longtable}
-\usepackage{changepage}
-\usepackage{verbatim}
-\usepackage{epigraph}
-\usepackage{lscape}
-\usepackage{pbox}
-\usepackage{array}
+\addbibresource{/Users/quast/[LOCATION]/bibliography.bib}
 \end_preamble
-\use_default_options false
+\use_default_options true
+\begin_modules
+knitr
+\end_modules
 \maintain_unincluded_children false
 \begin_local_layout
 Provides natbib 1
 \end_local_layout
-\language english
-\language_package none
+\language british
+\language_package default
 \inputencoding auto
-\fontencoding default
+\fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -44,30 +37,40 @@ Provides natbib 1
 \output_sync 0
 \bibtex_command biber
 \index_command default
-\paperfontsize 11
-\spacing onehalf
-\use_hyperref false
-\papersize a4paper
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_author "Bastiaan Quast"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 0
-\use_package cancel 0
+\use_package amssymb 1
+\use_package cancel 1
 \use_package esint 1
-\use_package mathdots 0
-\use_package mathtools 2
-\use_package mhchem 0
-\use_package stackrel 0
-\use_package stmaryrd 0
-\use_package undertilde 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine natbib
 \cite_engine_type authoryear
-\biblio_style plainnat
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 0
+\use_refstyle 1
 \index Index
 \shortcut idx
 \color #008000
@@ -90,22 +93,32 @@ Provides natbib 1
 \begin_body
 
 \begin_layout Title
+
+\lang english
 Global Value Chains in Low and Middle Income Countries
 \end_layout
 
 \begin_layout Author
+
+\lang english
 Victor Kummritz and Bastiaan Quast
 \end_layout
 
 \begin_layout Abstract
+
+\lang english
 Global Value Chains are ...
 \end_layout
 
 \begin_layout Section
+
+\lang english
 Introduction
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 The emergence of Global Value Chains (GVCs) offers a new path to industrialisati
 on for developing countries.
  As 
@@ -146,6 +159,8 @@ key "unct13"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Empirically, the considerable expansion of GVCs has been documented in several
  recent studies.
  For instance, 
@@ -181,6 +196,8 @@ key "ribajalo13"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 A central step towards a more in-depth analysis of GVCs has been laid by
  
 \begin_inset CommandInset citation
@@ -209,6 +226,8 @@ te how individual countries are integrated into GVCs.
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 See 
 \begin_inset CommandInset citation
 LatexCommand citeauthor
@@ -226,6 +245,8 @@ key "joamsoca15"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 However, these contributions typically have one of two shortcomings.
  Firstly, most evidence is based on data from high-income countries.
  The reason is that reliable time-series of both national and international
@@ -237,6 +258,8 @@ s that hide valuable information stemming from more decomposed and disaggregated
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 In this paper we address these issues by applying the novel and more detailed
  gross export decomposition developed by 
 \begin_inset CommandInset citation
@@ -261,6 +284,8 @@ key "rokoetal14"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Our analysis confirms the expansion of GVCs in recent years and presents
  evidence that GVCs have become longer over time.
  We also find that these developments are increasingly driven by low- and
@@ -278,6 +303,8 @@ Our analysis confirms the expansion of GVCs in recent years and presents
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 The paper is organised as follows.
  Section 
 \begin_inset CommandInset ref
@@ -322,10 +349,14 @@ reference "sec:conclusion"
 \end_layout
 
 \begin_layout Section
+
+\lang english
 \begin_inset Argument 1
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 New data and new indicators
 \end_layout
 
@@ -336,6 +367,8 @@ New data and new indicators
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 The following section draws heavily from 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -366,6 +399,8 @@ key "baquviku15"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:data"
@@ -376,6 +411,8 @@ name "sec:data"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 GVC analysis relies typically on Inter-Country Input-Output tables (ICIOs).
  ICIOs are matrices that give supply and demand relationships between industries
  within and across countries.
@@ -406,6 +443,8 @@ key "dahuetal01"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 The idea is that the production of industry 
 \shape italic
 i
@@ -499,6 +538,8 @@ VB
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 This basic decomposition has been widely used in GVC analysis since it allows
  the calculation of two informative GVC participation measures.
  Firstly, a backward linkage indicator that is given by the import content
@@ -541,6 +582,8 @@ where
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 These indicators can tell us how much a country is integrated into GVCs
  and if it acts mainly as a supplier or a user of foreign value added.
  However, the Leontief decomposition is only informative for the origin
@@ -552,10 +595,14 @@ These indicators can tell us how much a country is integrated into GVCs
 \end_layout
 
 \begin_layout Subsection
+
+\lang english
 Wang-Wei-Zhu decomposition
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:wwz"
@@ -566,6 +613,8 @@ name "sub:wwz"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Since the derivation itself is not the focus of this paper, here we only
  present the final result for a 
 \begin_inset Formula $G$
@@ -638,11 +687,15 @@ T
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 The four main categories are further divided according to their final destinatio
 n so that the final decomposition is given by:
 \end_layout
 
 \begin_layout Itemize
+
+\lang english
 Domestic value added absorbed abroad (
 \shape italic
 VAX_G
@@ -652,6 +705,8 @@ VAX_G
 
 \begin_deeper
 \begin_layout Itemize
+
+\lang english
 Domestic value added in final exports (
 \shape italic
 DVA_FIN
@@ -660,6 +715,8 @@ DVA_FIN
 \end_layout
 
 \begin_layout Itemize
+
+\lang english
 Domestic value added in intermediate exports (
 \shape italic
 DVA_INT
@@ -669,6 +726,8 @@ DVA_INT
 
 \begin_deeper
 \begin_layout Itemize
+
+\lang english
 Domestic value added in intermediate exports absorbed by direct importers
  (
 \shape italic
@@ -678,6 +737,8 @@ DVA_INT
 \end_layout
 
 \begin_layout Itemize
+
+\lang english
 Domestic value added in intermediate exports re-exported to third countries
  (
 \shape italic
@@ -688,6 +749,8 @@ DVA_INTrex
 
 \begin_deeper
 \begin_layout Itemize
+
+\lang english
 Domestic value added in intermediate exports re-exported to third countries
  as intermediate goods to produce domestic final goods (
 \shape italic
@@ -697,6 +760,8 @@ DVA_INTrexI1
 \end_layout
 
 \begin_layout Itemize
+
+\lang english
 Domestic value added in intermediate exports re-exported to third countries
  as final goods (
 \shape italic
@@ -706,6 +771,8 @@ DVA_INTrexF
 \end_layout
 
 \begin_layout Itemize
+
+\lang english
 Domestic value added in intermediate exports re-exported to third countries
  as intermediate goods to produce exports (
 \shape italic
@@ -718,6 +785,8 @@ DVA_INTrexI2
 \end_deeper
 \end_deeper
 \begin_layout Itemize
+
+\lang english
 Domestic value added returning home (
 \shape italic
 RDV
@@ -727,6 +796,8 @@ RDV
 
 \begin_deeper
 \begin_layout Itemize
+
+\lang english
 Domestic value added returning home as final goods (
 \shape italic
 RDV_FIN
@@ -735,6 +806,8 @@ RDV_FIN
 \end_layout
 
 \begin_layout Itemize
+
+\lang english
 Domestic value added returning home as final goods through third countries
  (
 \shape italic
@@ -744,6 +817,8 @@ RDV_FIN2
 \end_layout
 
 \begin_layout Itemize
+
+\lang english
 Domestic value added returning home as intermediate goods (
 \shape italic
 RDV_INT
@@ -753,6 +828,8 @@ RDV_INT
 
 \end_deeper
 \begin_layout Itemize
+
+\lang english
 Foreign value added (
 \shape italic
 FVA
@@ -762,6 +839,8 @@ FVA
 
 \begin_deeper
 \begin_layout Itemize
+
+\lang english
 Foreign value added in final good exports (
 \shape italic
 FVA_FIN
@@ -771,6 +850,8 @@ FVA_FIN
 
 \begin_deeper
 \begin_layout Itemize
+
+\lang english
 Foreign value added in final good exports sourced from direct importer (
 \shape italic
 MVA_FIN
@@ -779,6 +860,8 @@ MVA_FIN
 \end_layout
 
 \begin_layout Itemize
+
+\lang english
 Foreign value added in final good exports sourced from other countries (
 \shape italic
 OVA_FIN
@@ -788,6 +871,8 @@ OVA_FIN
 
 \end_deeper
 \begin_layout Itemize
+
+\lang english
 Foreign value added in intermediate good exports (
 \shape italic
 FVA_INT
@@ -797,6 +882,8 @@ FVA_INT
 
 \begin_deeper
 \begin_layout Itemize
+
+\lang english
 Foreign value added in intermediate good exports sourced from direct importer
  (
 \shape italic
@@ -806,6 +893,8 @@ MVA_INT
 \end_layout
 
 \begin_layout Itemize
+
+\lang english
 Foreign value added in intermediate good exports sourced from other countries(
 \shape italic
 OVA_INT
@@ -816,6 +905,8 @@ OVA_INT
 \end_deeper
 \end_deeper
 \begin_layout Itemize
+
+\lang english
 Pure double counting (
 \shape italic
 PDC
@@ -825,6 +916,8 @@ PDC
 
 \begin_deeper
 \begin_layout Itemize
+
+\lang english
 Pure double counting from domestic source (
 \shape italic
 DDC
@@ -834,6 +927,8 @@ DDC
 
 \begin_deeper
 \begin_layout Itemize
+
+\lang english
 Due to final goods exports production (
 \shape italic
 DDF
@@ -842,6 +937,8 @@ DDF
 \end_layout
 
 \begin_layout Itemize
+
+\lang english
 Due to intermediate goods exports production (
 \shape italic
 DDI
@@ -851,6 +948,8 @@ DDI
 
 \end_deeper
 \begin_layout Itemize
+
+\lang english
 Pure double counting from foreign source (
 \shape italic
 FDC
@@ -860,6 +959,8 @@ FDC
 
 \begin_deeper
 \begin_layout Itemize
+
+\lang english
 Due to direct importer exports production (
 \shape italic
 FDF
@@ -868,6 +969,8 @@ FDF
 \end_layout
 
 \begin_layout Itemize
+
+\lang english
 Due to other countries' exports production (
 \shape italic
 FDI
@@ -878,6 +981,8 @@ FDI
 \end_deeper
 \end_deeper
 \begin_layout Standard
+
+\lang english
 For the analysis, we use 
 \begin_inset Formula $dva\_fin$
 \end_inset
@@ -923,6 +1028,8 @@ For the analysis, we use
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 The advantage of such a detailed decomposition is that these new indicators
  can inform us on how countries integrate into GVCs while the basic Leontief
  decomposition mainly informs us on the intensity of integration.
@@ -939,6 +1046,8 @@ tion results to facilitate the understanding.
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Finally, it is necessary to point out that the high resolution of the WWZ
  decomposition does not mean that the Leontief decomposition does not contain
  valuable information at all.
@@ -951,10 +1060,14 @@ Finally, it is necessary to point out that the high resolution of the WWZ
 \end_layout
 
 \begin_layout Subsection
+
+\lang english
 OECD ICIOs
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:icios"
@@ -971,6 +1084,8 @@ name "sub:icios"
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 Countries and industries are listed in Appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -987,6 +1102,8 @@ reference "sec:appendix"
 \begin_inset script superscript
 
 \begin_layout Plain Layout
+
+\lang english
 ,
 \end_layout
 
@@ -997,6 +1114,8 @@ reference "sec:appendix"
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 Note that in the analysis 2009 and 2010 are excluded due to the global financial
  crisis.
 \end_layout
@@ -1023,6 +1142,8 @@ Note that in the analysis 2009 and 2010 are excluded due to the global financial
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 See 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1039,10 +1160,14 @@ key "rokoetal12"
 \end_layout
 
 \begin_layout Section
+
+\lang english
 What we know: Old facts with new data
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:basics"
@@ -1053,6 +1178,8 @@ name "sec:basics"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 In this section we use the extensive OECD ICIO dataset to reasses some stylised
  facts on GVC integration that are typically based on smaller samples.
  We start by examining the development of our most basic measure of GVC
@@ -1073,6 +1200,8 @@ key "ribajalo13"
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 Note that at the aggregate level forward (
 \begin_inset Formula $e2r$
 \end_inset
@@ -1117,6 +1246,8 @@ key "rojoguno12b"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Another way to examine the expansion of GVCs from 1995 to 2011 is to look
  at their length instead of their trade volume.
  WWZ propose to use the amount of double counted trade, 
@@ -1149,12 +1280,16 @@ reference "fig:pdct"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset Box Frameless
 position "c"
 hor_pos "l"
@@ -1174,6 +1309,8 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
  
 \begin_inset Graphics
 	filename misc/i2epercentage.png
@@ -1185,6 +1322,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 The development of GVC integration over time
 \end_layout
 
@@ -1226,6 +1365,8 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
  
 \begin_inset Graphics
 	filename misc/pdcII.png
@@ -1237,6 +1378,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 The development of double counted trade over time
 \end_layout
 
@@ -1263,6 +1406,8 @@ name "fig:pdct"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Turning from the development over time to sectoral differences in GVC integratio
 n, Figure 
 \begin_inset CommandInset ref
@@ -1296,6 +1441,8 @@ cs (CEQ and ELQ).
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 The bottom 6 industries in terms of 
 \begin_inset Formula $i2e$
 \end_inset
@@ -1307,6 +1454,8 @@ The bottom 6 industries in terms of
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -1315,6 +1464,8 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang english
 \begin_inset Box Frameless
 position "c"
 hor_pos "l"
@@ -1334,6 +1485,8 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
  
 \begin_inset Graphics
 	filename misc/industries_i2e_top6.png
@@ -1370,6 +1523,8 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
  
 \begin_inset Graphics
 	filename misc/industries_i2e_bottom6.png
@@ -1386,6 +1541,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 Sectoral 
 \begin_inset Formula $i2e$
 \end_inset
@@ -1411,6 +1568,8 @@ name "fig:i2es"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Naturally then, things are reversed when we look at the corresponding forward
  linkage GVC measure, 
 \begin_inset Formula $e2r$
@@ -1438,6 +1597,8 @@ reference "fig:e2rs"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 The high 
 \begin_inset Formula $e2r$
 \end_inset
@@ -1460,6 +1621,8 @@ key "ribaetal15"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 It is also indicative of a growing internationalisation of services.
  More and more, services are being offshored and sourced from abroad.
  In that respect, it is also interesting to note that despite the low absolute
@@ -1480,6 +1643,8 @@ It is also indicative of a growing internationalisation of services.
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -1488,6 +1653,8 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang english
 \begin_inset Box Frameless
 position "c"
 hor_pos "l"
@@ -1507,6 +1674,8 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
  
 \begin_inset Graphics
 	filename misc/industries_e2r_top6.png
@@ -1543,6 +1712,8 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset Graphics
 	filename misc/industries_e2r_bottom6.png
 	width 100text%
@@ -1558,6 +1729,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 Sectoral 
 \begin_inset Formula $e2r$
 \end_inset
@@ -1583,6 +1756,8 @@ name "fig:e2rs"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Finally, when we turn to differences in GVC integration by country we can
  confirm the findings by 
 \begin_inset CommandInset citation
@@ -1621,6 +1796,8 @@ reference "fig:i2ek"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Driven by the sectoral statistics, we then find again that for 
 \begin_inset Formula $e2r$
 \end_inset
@@ -1636,6 +1813,8 @@ Driven by the sectoral statistics, we then find again that for
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 The full set of results for 
 \begin_inset Formula $i2e$
 \end_inset
@@ -1662,6 +1841,8 @@ reference "sec:appendix"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -1670,6 +1851,8 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang english
 \begin_inset Box Frameless
 position "c"
 hor_pos "l"
@@ -1689,6 +1872,8 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
  
 \begin_inset ERT
 status collapsed
@@ -1738,6 +1923,8 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
  
 \begin_inset ERT
 status collapsed
@@ -1767,6 +1954,8 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 Countries' 
 \begin_inset Formula $i2e$
 \end_inset
@@ -1792,6 +1981,8 @@ name "fig:i2ek"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -1800,6 +1991,8 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang english
 \begin_inset Box Frameless
 position "c"
 hor_pos "l"
@@ -1819,6 +2012,8 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
  
 \begin_inset ERT
 status collapsed
@@ -1868,6 +2063,8 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
  
 \begin_inset ERT
 status collapsed
@@ -1897,6 +2094,8 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 Countries' 
 \begin_inset Formula $e2r$
 \end_inset
@@ -1922,10 +2121,14 @@ name "fig:e2r_k"
 \end_layout
 
 \begin_layout Section
+
+\lang english
 The role of developing economies: New trends and patterns in GVCs
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:news"
@@ -1936,6 +2139,8 @@ name "sec:news"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 The central advantage of our approach is that we have new indicators for
  a new set of countries.
  This means that other than confirming previous findings with a more representat
@@ -1951,10 +2156,14 @@ ive sample, we can also provide several new insights.
 \end_layout
 
 \begin_layout Subsection
+
+\lang english
 General trends in the GVC participation of developing economies
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Regarding the integration of low- and middle-income countries, 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1986,6 +2195,8 @@ reference "tab:gvc"
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 Note that in this section indicators are based only on manufacturing and
  services sectors to avoid spurious results stemming from primary sectors
  that are for technological reasons less integrated into GVCs.
@@ -2001,6 +2212,8 @@ Note that in this section indicators are based only on manufacturing and
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float table
 placement H
 wide false
@@ -2011,9 +2224,12 @@ status open
 \align center
 
 \size small
+\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 GVC integration by income
 \end_layout
 
@@ -2033,6 +2249,7 @@ name "tab:gvc"
 \align center
 
 \size small
+\lang english
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="5">
 <features booktabs="true" tabularvalignment="middle">
@@ -2048,6 +2265,7 @@ name "tab:gvc"
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Country group
 \end_layout
 
@@ -2060,6 +2278,7 @@ Country group
 
 \shape italic
 \size small
+\lang english
 i2e
 \end_layout
 
@@ -2081,6 +2300,7 @@ i2e
 
 \shape italic
 \size small
+\lang english
 e2r
 \end_layout
 
@@ -2112,6 +2332,7 @@ e2r
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -2123,6 +2344,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -2137,6 +2359,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -2148,6 +2371,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -2164,6 +2388,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Low/Lower middle 
 \end_layout
 
@@ -2175,6 +2400,7 @@ Low/Lower middle
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.46% 
 \end_layout
 
@@ -2186,6 +2412,7 @@ Low/Lower middle
 \begin_layout Plain Layout
 
 \size small
+\lang english
 48.22% 
 \end_layout
 
@@ -2197,6 +2424,7 @@ Low/Lower middle
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20.35% 
 \end_layout
 
@@ -2208,6 +2436,7 @@ Low/Lower middle
 \begin_layout Plain Layout
 
 \size small
+\lang english
 38.58% 
 \end_layout
 
@@ -2221,6 +2450,7 @@ Low/Lower middle
 \begin_layout Plain Layout
 
 \size small
+\lang english
 High 
 \end_layout
 
@@ -2232,6 +2462,7 @@ High
 \begin_layout Plain Layout
 
 \size small
+\lang english
 22.64% 
 \end_layout
 
@@ -2243,6 +2474,7 @@ High
 \begin_layout Plain Layout
 
 \size small
+\lang english
 41.84% 
 \end_layout
 
@@ -2254,6 +2486,7 @@ High
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.85% 
 \end_layout
 
@@ -2265,6 +2498,7 @@ High
 \begin_layout Plain Layout
 
 \size small
+\lang english
 29.50% 
 \end_layout
 
@@ -2279,6 +2513,8 @@ High
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status open
 
@@ -2318,6 +2554,8 @@ end{tablenotes}
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Looking at the development over time, it is striking that the rise of GVC
  integration is increasingly driven by developing countries.
  The growth of both 
@@ -2354,6 +2592,8 @@ reference "tab:gvc"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Moreover, low- and lower middle-income countries do not only sell and source
  more from GVCs but they are also increasingly on the other side of the
  transaction.
@@ -2380,6 +2620,8 @@ reference "fig:llmpartner"
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 However, we will see that GVC integration differs significantly among developing
  countries.
 \end_layout
@@ -2390,6 +2632,8 @@ However, we will see that GVC integration differs significantly among developing
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -2398,9 +2642,13 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 Share of value added sourced from (i2e) or sold to (e2r) low- and lower-middle
  income economies for export production.
 \end_layout
@@ -2419,6 +2667,8 @@ name "fig:llmpartner"
 
 \begin_layout Plain Layout
 \align center
+
+\lang english
 \begin_inset Graphics
 	filename misc/e2r-i2e.png
 	width 50text%
@@ -2434,6 +2684,8 @@ name "fig:llmpartner"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 In a next step we zoom in and analyse the GVC participation of developing
  economies more closely with the help of the WWZ decomposition.
  As described in section 
@@ -2485,6 +2737,8 @@ reference "tab:wwz"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float table
 placement H
 wide false
@@ -2495,9 +2749,12 @@ status open
 \align center
 
 \size small
+\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 WWZ decomposition results by income
 \end_layout
 
@@ -2510,6 +2767,7 @@ WWZ decomposition results by income
 \align center
 
 \size small
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:wwz"
@@ -2523,6 +2781,7 @@ name "tab:wwz"
 \align center
 
 \size small
+\lang english
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="6">
 <features booktabs="true" tabularvalignment="middle">
@@ -2539,6 +2798,7 @@ name "tab:wwz"
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Country group 
 \end_layout
 
@@ -2551,6 +2811,7 @@ Country group
 
 \shape italic
 \size small
+\lang english
 fva_fin
 \end_layout
 
@@ -2563,6 +2824,7 @@ fva_fin
 
 \shape italic
 \size small
+\lang english
 fva_inter
 \end_layout
 
@@ -2575,6 +2837,7 @@ fva_inter
 
 \shape italic
 \size small
+\lang english
 dva_fin
 \end_layout
 
@@ -2587,6 +2850,7 @@ dva_fin
 
 \shape italic
 \size small
+\lang english
 dva_inter
 \end_layout
 
@@ -2599,6 +2863,7 @@ dva_inter
 
 \shape italic
 \size small
+\lang english
 rdv
 \end_layout
 
@@ -2612,6 +2877,7 @@ rdv
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Low/Lower middle 
 \end_layout
 
@@ -2623,6 +2889,7 @@ Low/Lower middle
 \begin_layout Plain Layout
 
 \size small
+\lang english
 42.07% 
 \end_layout
 
@@ -2634,6 +2901,7 @@ Low/Lower middle
 \begin_layout Plain Layout
 
 \size small
+\lang english
 57.93% 
 \end_layout
 
@@ -2645,6 +2913,7 @@ Low/Lower middle
 \begin_layout Plain Layout
 
 \size small
+\lang english
 44.09% 
 \end_layout
 
@@ -2656,6 +2925,7 @@ Low/Lower middle
 \begin_layout Plain Layout
 
 \size small
+\lang english
 54.73% 
 \end_layout
 
@@ -2667,6 +2937,7 @@ Low/Lower middle
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1.18% 
 \end_layout
 
@@ -2680,6 +2951,7 @@ Low/Lower middle
 \begin_layout Plain Layout
 
 \size small
+\lang english
 High 
 \end_layout
 
@@ -2691,6 +2963,7 @@ High
 \begin_layout Plain Layout
 
 \size small
+\lang english
 39.38% 
 \end_layout
 
@@ -2702,6 +2975,7 @@ High
 \begin_layout Plain Layout
 
 \size small
+\lang english
 60.62% 
 \end_layout
 
@@ -2713,6 +2987,7 @@ High
 \begin_layout Plain Layout
 
 \size small
+\lang english
 40.73% 
 \end_layout
 
@@ -2724,6 +2999,7 @@ High
 \begin_layout Plain Layout
 
 \size small
+\lang english
 56.85% 
 \end_layout
 
@@ -2735,6 +3011,7 @@ High
 \begin_layout Plain Layout
 
 \size small
+\lang english
 2.42% 
 \end_layout
 
@@ -2749,6 +3026,8 @@ High
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status open
 
@@ -2788,6 +3067,8 @@ end{tablenotes}
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 However, a shift from foreign content in final goods to intermediate goods
  and double counted trade value would be indicative of moving up the value
  chain.
@@ -2814,6 +3095,8 @@ reference "fig:llmwwz"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 A similar exercise can be done for the domestic value added embodied in
  exports.
  The exported domestic value added of high-income countries tends to be
@@ -2832,6 +3115,8 @@ A similar exercise can be done for the domestic value added embodied in
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float figure
 wide false
 sideways false
@@ -2839,9 +3124,13 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 Development of developing economies' WWZ decomposition indicators over time.
 \end_layout
 
@@ -2859,6 +3148,8 @@ name "fig:llmwwz"
 
 \begin_layout Plain Layout
 \align center
+
+\lang english
 \begin_inset Graphics
 	filename misc/fva-dva-fin-inter.png
 
@@ -2873,16 +3164,22 @@ name "fig:llmwwz"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Thus, overall we get a clear picture that while developing economies are
  still positioned relatively more downstream in the value chain, they have
  succeeded to move up over the past two decades.
 \end_layout
 
 \begin_layout Subsection
+
+\lang english
 Revealing new trends in the participation of developing economies
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 The trends described in the previous section inform us on the average performanc
 e of developing countries but they might hide considerable heterogeneity
  among these countries.
@@ -2899,10 +3196,13 @@ e of developing countries but they might hide considerable heterogeneity
 
 \shape italic
 \emph on
+\lang english
 South East Asia
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 The SEA economies for which data is newly available are Cambodia, Hong Kong,
  Malaysia, Philippines, Singapore, Thailand, and Vietnam.
  Since Singapore and Hong Kong are special cases due to their per capita
@@ -2911,6 +3211,8 @@ The SEA economies for which data is newly available are Cambodia, Hong Kong,
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 The two basic indicators of these countries, 
 \begin_inset Formula $i2e$
 \end_inset
@@ -2940,6 +3242,8 @@ reference "tab:seagvc"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 The WWZ decomposition provides us with the necessary tools.
  We can see in Table 
 \begin_inset CommandInset ref
@@ -2974,6 +3278,8 @@ reference "tab:seawwz"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 When we look at the change over time from 1995 to 2011, we see that Cambodia
  has actually moved into assembly with an increase of 
 \begin_inset Formula $fva\_fin$
@@ -3000,6 +3306,8 @@ l growth path.
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float table
 placement H
 wide false
@@ -3010,9 +3318,12 @@ status open
 \align center
 
 \size small
+\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 GVC integration of SEA countries
 \end_layout
 
@@ -3025,6 +3336,7 @@ GVC integration of SEA countries
 \align center
 
 \size small
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:seagvc"
@@ -3038,6 +3350,7 @@ name "tab:seagvc"
 \align center
 
 \size small
+\lang english
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="5">
 <features booktabs="true" tabularvalignment="middle">
@@ -3053,6 +3366,7 @@ name "tab:seagvc"
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Country 
 \end_layout
 
@@ -3064,6 +3378,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $i2e$
 \end_inset
 
@@ -3087,6 +3402,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $e2r$
 \end_inset
 
@@ -3121,6 +3437,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -3132,6 +3449,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -3146,6 +3464,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -3157,6 +3476,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -3173,6 +3493,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Cambodia 
 \end_layout
 
@@ -3184,6 +3505,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 39.4% 
 \end_layout
 
@@ -3195,6 +3517,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 90.7% 
 \end_layout
 
@@ -3206,6 +3529,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 8.4% 
 \end_layout
 
@@ -3217,6 +3541,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -11.9% 
 \end_layout
 
@@ -3230,6 +3555,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Malaysia 
 \end_layout
 
@@ -3241,6 +3567,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 44.3% 
 \end_layout
 
@@ -3252,6 +3579,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 37.1% 
 \end_layout
 
@@ -3263,6 +3591,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.9% 
 \end_layout
 
@@ -3274,6 +3603,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 10.2% 
 \end_layout
 
@@ -3287,6 +3617,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Philippines 
 \end_layout
 
@@ -3298,6 +3629,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 29.6% 
 \end_layout
 
@@ -3309,6 +3641,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -20.7% 
 \end_layout
 
@@ -3320,6 +3653,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 22.6% 
 \end_layout
 
@@ -3331,6 +3665,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 105.0% 
 \end_layout
 
@@ -3344,6 +3679,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Thailand 
 \end_layout
 
@@ -3355,6 +3691,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 36.9% 
 \end_layout
 
@@ -3366,6 +3703,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 64.3% 
 \end_layout
 
@@ -3377,6 +3715,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.1% 
 \end_layout
 
@@ -3388,6 +3727,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20.2% 
 \end_layout
 
@@ -3401,6 +3741,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Vietnam 
 \end_layout
 
@@ -3412,6 +3753,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 38.3% 
 \end_layout
 
@@ -3423,6 +3765,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 66.1% 
 \end_layout
 
@@ -3434,6 +3777,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 10.6% 
 \end_layout
 
@@ -3445,6 +3789,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 5.3% 
 \end_layout
 
@@ -3459,6 +3804,8 @@ Vietnam
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status open
 
@@ -3497,6 +3844,8 @@ end{tablenotes}
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float table
 placement H
 wide false
@@ -3507,9 +3856,12 @@ status open
 \align center
 
 \size small
+\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 WWZ decomposition results for SEA countries
 \end_layout
 
@@ -3522,6 +3874,7 @@ WWZ decomposition results for SEA countries
 \align center
 
 \size small
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:seawwz"
@@ -3535,6 +3888,7 @@ name "tab:seawwz"
 \align center
 
 \size small
+\lang english
 \begin_inset space \hspace*{}
 \length -3cm
 \end_inset
@@ -3561,6 +3915,7 @@ name "tab:seawwz"
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Country
 \end_layout
 
@@ -3572,6 +3927,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $fva\_fin$
 \end_inset
 
@@ -3595,6 +3951,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $fva\_inter$
 \end_inset
 
@@ -3618,6 +3975,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $dva\_fin$
 \end_inset
 
@@ -3641,6 +3999,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $dva\_inter$
 \end_inset
 
@@ -3664,6 +4023,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $rdv$
 \end_inset
 
@@ -3698,6 +4058,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -3709,6 +4070,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -3723,6 +4085,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -3734,6 +4097,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -3748,6 +4112,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -3759,6 +4124,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -3773,6 +4139,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -3784,6 +4151,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -3798,6 +4166,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -3809,6 +4178,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -3825,6 +4195,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Cambodia 
 \end_layout
 
@@ -3836,6 +4207,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 68.1% 
 \end_layout
 
@@ -3847,6 +4219,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 35.2% 
 \end_layout
 
@@ -3858,6 +4231,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 31.9% 
 \end_layout
 
@@ -3869,6 +4243,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -35.7% 
 \end_layout
 
@@ -3880,6 +4255,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 64.5% 
 \end_layout
 
@@ -3891,6 +4267,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 26.8% 
 \end_layout
 
@@ -3902,6 +4279,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 35.5% 
 \end_layout
 
@@ -3913,6 +4291,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -27.5% 
 \end_layout
 
@@ -3924,6 +4303,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 0.0% 
 \end_layout
 
@@ -3935,6 +4315,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -29.7% 
 \end_layout
 
@@ -3948,6 +4329,7 @@ Cambodia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Malaysia 
 \end_layout
 
@@ -3959,6 +4341,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 39.3% 
 \end_layout
 
@@ -3970,6 +4353,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -9.0% 
 \end_layout
 
@@ -3981,6 +4365,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 60.7% 
 \end_layout
 
@@ -3992,6 +4377,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 6.3% 
 \end_layout
 
@@ -4003,6 +4389,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 40.8% 
 \end_layout
 
@@ -4014,6 +4401,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -4.5% 
 \end_layout
 
@@ -4025,6 +4413,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 58.9% 
 \end_layout
 
@@ -4036,6 +4425,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 3.4% 
 \end_layout
 
@@ -4047,6 +4437,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 0.4% 
 \end_layout
 
@@ -4058,6 +4449,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -21.5% 
 \end_layout
 
@@ -4071,6 +4463,7 @@ Malaysia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Philippines 
 \end_layout
 
@@ -4082,6 +4475,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 35.5% 
 \end_layout
 
@@ -4093,6 +4487,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -21.7% 
 \end_layout
 
@@ -4104,6 +4499,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 64.5% 
 \end_layout
 
@@ -4115,6 +4511,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 16.0% 
 \end_layout
 
@@ -4126,6 +4523,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 38.9% 
 \end_layout
 
@@ -4137,6 +4535,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -19.1% 
 \end_layout
 
@@ -4148,6 +4547,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 60.9% 
 \end_layout
 
@@ -4159,6 +4559,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 16.0% 
 \end_layout
 
@@ -4170,6 +4571,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 0.2% 
 \end_layout
 
@@ -4181,6 +4583,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 18.2% 
 \end_layout
 
@@ -4194,6 +4597,7 @@ Philippines
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Thailand 
 \end_layout
 
@@ -4205,6 +4609,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 41.4% 
 \end_layout
 
@@ -4216,6 +4621,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -12.9% 
 \end_layout
 
@@ -4227,6 +4633,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 58.6% 
 \end_layout
 
@@ -4238,6 +4645,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11.3% 
 \end_layout
 
@@ -4249,6 +4657,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 47.4% 
 \end_layout
 
@@ -4260,6 +4669,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -14.6% 
 \end_layout
 
@@ -4271,6 +4681,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 52.3% 
 \end_layout
 
@@ -4282,6 +4693,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 17.7% 
 \end_layout
 
@@ -4293,6 +4705,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 0.3% 
 \end_layout
 
@@ -4304,6 +4717,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20.0% 
 \end_layout
 
@@ -4317,6 +4731,7 @@ Thailand
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Vietnam 
 \end_layout
 
@@ -4328,6 +4743,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 47.1% 
 \end_layout
 
@@ -4339,6 +4755,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -22.6% 
 \end_layout
 
@@ -4350,6 +4767,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 52.9% 
 \end_layout
 
@@ -4361,6 +4779,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 30.0% 
 \end_layout
 
@@ -4372,6 +4791,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 55.0% 
 \end_layout
 
@@ -4383,6 +4803,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -9.0% 
 \end_layout
 
@@ -4394,6 +4815,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 44.8% 
 \end_layout
 
@@ -4405,6 +4827,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 12.7% 
 \end_layout
 
@@ -4416,6 +4839,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 0.1% 
 \end_layout
 
@@ -4427,6 +4851,7 @@ Vietnam
 \begin_layout Plain Layout
 
 \size small
+\lang english
 103.4% 
 \end_layout
 
@@ -4441,6 +4866,8 @@ Vietnam
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status open
 
@@ -4487,10 +4914,13 @@ end{tablenotes}
 
 \shape italic
 \emph on
+\lang english
 Central and South America
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 The newly available CSA economies comprise Argentina, Chile, Colombia, and
  Costa Rica compared to previously only Mexico and Brazil.
  What stands out from looking at the standard GVC indicators presented in
@@ -4516,6 +4946,8 @@ reference "tab:csagvc"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Focusing therefore on Costa Rica and Chile, we observe in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4544,6 +4976,8 @@ reference "tab:csawwz"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Costa Rica on the other hand possesses the typical GVC integration structure
  of lower middle-income economies with high 
 \begin_inset Formula $fva\_fin$
@@ -4578,6 +5012,8 @@ Costa Rica on the other hand possesses the typical GVC integration structure
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float table
 placement H
 wide false
@@ -4588,9 +5024,12 @@ status open
 \align center
 
 \size small
+\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 GVC integration of CSA countries
 \end_layout
 
@@ -4603,6 +5042,7 @@ GVC integration of CSA countries
 \align center
 
 \size small
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:csagvc"
@@ -4616,6 +5056,7 @@ name "tab:csagvc"
 \align center
 
 \size small
+\lang english
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="5">
 <features booktabs="true" tabularvalignment="middle">
@@ -4631,6 +5072,7 @@ name "tab:csagvc"
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Country 
 \end_layout
 
@@ -4642,6 +5084,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $i2e$
 \end_inset
 
@@ -4665,6 +5108,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $e2r$
 \end_inset
 
@@ -4699,6 +5143,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -4710,6 +5155,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -4724,6 +5170,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -4735,6 +5182,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -4751,6 +5199,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Argentina 
 \end_layout
 
@@ -4762,6 +5211,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.4% 
 \end_layout
 
@@ -4773,6 +5223,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 154.9% 
 \end_layout
 
@@ -4784,6 +5235,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.4% 
 \end_layout
 
@@ -4795,6 +5247,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.4% 
 \end_layout
 
@@ -4808,6 +5261,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Chile 
 \end_layout
 
@@ -4819,6 +5273,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20.0% 
 \end_layout
 
@@ -4830,6 +5285,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 44.8% 
 \end_layout
 
@@ -4841,6 +5297,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 26.4% 
 \end_layout
 
@@ -4852,6 +5309,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 35.4% 
 \end_layout
 
@@ -4865,6 +5323,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Colombia 
 \end_layout
 
@@ -4876,6 +5335,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.2% 
 \end_layout
 
@@ -4887,6 +5347,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 15.2% 
 \end_layout
 
@@ -4898,6 +5359,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 17.0% 
 \end_layout
 
@@ -4909,6 +5371,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 45.5% 
 \end_layout
 
@@ -4922,6 +5385,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Costa Rica 
 \end_layout
 
@@ -4933,6 +5397,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 29.0% 
 \end_layout
 
@@ -4944,6 +5409,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.1% 
 \end_layout
 
@@ -4955,6 +5421,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 16.0% 
 \end_layout
 
@@ -4966,6 +5433,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 60.8% 
 \end_layout
 
@@ -4980,6 +5448,8 @@ Costa Rica
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status open
 
@@ -5018,6 +5488,8 @@ end{tablenotes}
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float table
 placement H
 wide false
@@ -5028,9 +5500,12 @@ status open
 \align center
 
 \size small
+\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 WWZ decomposition results for CSA countries
 \end_layout
 
@@ -5043,6 +5518,7 @@ WWZ decomposition results for CSA countries
 \align center
 
 \size small
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:csawwz"
@@ -5056,6 +5532,7 @@ name "tab:csawwz"
 \align center
 
 \size small
+\lang english
 \begin_inset space \hspace*{}
 \length -3cm
 \end_inset
@@ -5082,6 +5559,7 @@ name "tab:csawwz"
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Country
 \end_layout
 
@@ -5093,6 +5571,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $fva\_fin$
 \end_inset
 
@@ -5116,6 +5595,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $fva\_inter$
 \end_inset
 
@@ -5139,6 +5619,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $dva\_fin$
 \end_inset
 
@@ -5162,6 +5643,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $dva\_inter$
 \end_inset
 
@@ -5185,6 +5667,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $rdv$
 \end_inset
 
@@ -5219,6 +5702,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -5230,6 +5714,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -5244,6 +5729,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -5255,6 +5741,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -5269,6 +5756,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -5280,6 +5768,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -5294,6 +5783,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -5305,6 +5795,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -5319,6 +5810,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -5330,6 +5822,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -5346,6 +5839,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Argentina 
 \end_layout
 
@@ -5357,6 +5851,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 51.15% 
 \end_layout
 
@@ -5368,6 +5863,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -6.33% 
 \end_layout
 
@@ -5379,6 +5875,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 48.85% 
 \end_layout
 
@@ -5390,6 +5887,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 7.95% 
 \end_layout
 
@@ -5401,6 +5899,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 51.92% 
 \end_layout
 
@@ -5412,6 +5911,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -5.71% 
 \end_layout
 
@@ -5423,6 +5923,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 47.90% 
 \end_layout
 
@@ -5434,6 +5935,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 7.01% 
 \end_layout
 
@@ -5445,6 +5947,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 0.18% 
 \end_layout
 
@@ -5456,6 +5959,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 49.61% 
 \end_layout
 
@@ -5469,6 +5973,7 @@ Argentina
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Chile 
 \end_layout
 
@@ -5480,6 +5985,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 22.23% 
 \end_layout
 
@@ -5491,6 +5997,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -22.29% 
 \end_layout
 
@@ -5502,6 +6009,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 77.77% 
 \end_layout
 
@@ -5513,6 +6021,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 8.54% 
 \end_layout
 
@@ -5524,6 +6033,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 24.61% 
 \end_layout
 
@@ -5535,6 +6045,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -23.44% 
 \end_layout
 
@@ -5546,6 +6057,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 75.25% 
 \end_layout
 
@@ -5557,6 +6069,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 10.03% 
 \end_layout
 
@@ -5568,6 +6081,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 0.14% 
 \end_layout
 
@@ -5579,6 +6093,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 81.25% 
 \end_layout
 
@@ -5592,6 +6107,7 @@ Chile
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Colombia 
 \end_layout
 
@@ -5603,6 +6119,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 39.41% 
 \end_layout
 
@@ -5614,6 +6131,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -19.09% 
 \end_layout
 
@@ -5625,6 +6143,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 60.59% 
 \end_layout
 
@@ -5636,6 +6155,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 15.30% 
 \end_layout
 
@@ -5647,6 +6167,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 39.32% 
 \end_layout
 
@@ -5658,6 +6179,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -33.76% 
 \end_layout
 
@@ -5669,6 +6191,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 60.55% 
 \end_layout
 
@@ -5680,6 +6203,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 32.06% 
 \end_layout
 
@@ -5691,6 +6215,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 0.12% 
 \end_layout
 
@@ -5702,6 +6227,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 25.56% 
 \end_layout
 
@@ -5715,6 +6241,7 @@ Colombia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Costa Rica 
 \end_layout
 
@@ -5726,6 +6253,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 45.99% 
 \end_layout
 
@@ -5737,6 +6265,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -11.17% 
 \end_layout
 
@@ -5748,6 +6277,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 54.01% 
 \end_layout
 
@@ -5759,6 +6289,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11.29% 
 \end_layout
 
@@ -5770,6 +6301,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 50.97% 
 \end_layout
 
@@ -5781,6 +6313,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -17.88% 
 \end_layout
 
@@ -5792,6 +6325,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 49.01% 
 \end_layout
 
@@ -5803,6 +6337,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 24.97% 
 \end_layout
 
@@ -5814,6 +6349,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 0.02% 
 \end_layout
 
@@ -5825,6 +6361,7 @@ Costa Rica
 \begin_layout Plain Layout
 
 \size small
+\lang english
 43.05% 
 \end_layout
 
@@ -5839,6 +6376,8 @@ Costa Rica
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status open
 
@@ -5885,10 +6424,13 @@ end{tablenotes}
 
 \shape italic
 \emph on
+\lang english
 Africa
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 To conclude, we turn to Africa.
  GVC data on Africa is scarce and typically it is assumed that integration
  levels are low.
@@ -5902,6 +6444,8 @@ To conclude, we turn to Africa.
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 In line with this, Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5926,6 +6470,8 @@ reference "tab:afrwwz"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 South Africa is a different case since it is located far from most production
  networks and focuses primarily on raw materials.
  As a result, the country's integration levels are fairly low and more similar
@@ -5935,6 +6481,8 @@ South Africa is a different case since it is located far from most production
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float table
 placement H
 wide false
@@ -5945,9 +6493,12 @@ status open
 \align center
 
 \size small
+\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 GVC integration of AFR countries
 \end_layout
 
@@ -5960,6 +6511,7 @@ GVC integration of AFR countries
 \align center
 
 \size small
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:afrgvc"
@@ -5973,6 +6525,7 @@ name "tab:afrgvc"
 \align center
 
 \size small
+\lang english
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="5">
 <features booktabs="true" tabularvalignment="middle">
@@ -5988,6 +6541,7 @@ name "tab:afrgvc"
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Country 
 \end_layout
 
@@ -5999,6 +6553,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $i2e$
 \end_inset
 
@@ -6022,6 +6577,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $e2r$
 \end_inset
 
@@ -6056,6 +6612,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -6067,6 +6624,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -6081,6 +6639,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -6092,6 +6651,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -6108,6 +6668,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 South Africa 
 \end_layout
 
@@ -6119,6 +6680,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.3% 
 \end_layout
 
@@ -6130,6 +6692,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 61.4% 
 \end_layout
 
@@ -6141,6 +6704,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.9% 
 \end_layout
 
@@ -6152,6 +6716,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 16.4% 
 \end_layout
 
@@ -6165,6 +6730,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Tunisia 
 \end_layout
 
@@ -6176,6 +6742,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 32.1% 
 \end_layout
 
@@ -6187,6 +6754,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 35.6% 
 \end_layout
 
@@ -6198,6 +6766,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.2% 
 \end_layout
 
@@ -6209,6 +6778,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 33.1% 
 \end_layout
 
@@ -6223,6 +6793,8 @@ Tunisia
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status open
 
@@ -6261,6 +6833,8 @@ end{tablenotes}
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float table
 placement H
 wide false
@@ -6271,9 +6845,12 @@ status open
 \align center
 
 \size small
+\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 WWZ decomposition results for AFR countries
 \end_layout
 
@@ -6286,6 +6863,7 @@ WWZ decomposition results for AFR countries
 \align center
 
 \size small
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:afrwwz"
@@ -6299,6 +6877,7 @@ name "tab:afrwwz"
 \align center
 
 \size small
+\lang english
 \begin_inset space \hspace*{}
 \length -3cm
 \end_inset
@@ -6325,6 +6904,7 @@ name "tab:afrwwz"
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Country
 \end_layout
 
@@ -6336,6 +6916,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $fva\_fin$
 \end_inset
 
@@ -6359,6 +6940,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $fva\_inter$
 \end_inset
 
@@ -6382,6 +6964,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $dva\_fin$
 \end_inset
 
@@ -6405,6 +6988,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $dva\_inter$
 \end_inset
 
@@ -6428,6 +7012,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $rdv$
 \end_inset
 
@@ -6462,6 +7047,7 @@ Country
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -6473,6 +7059,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -6487,6 +7074,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -6498,6 +7086,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -6512,6 +7101,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -6523,6 +7113,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -6537,6 +7128,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -6548,6 +7140,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -6562,6 +7155,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Average
 \end_layout
 
@@ -6573,6 +7167,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -6589,6 +7184,7 @@ Average
 \begin_layout Plain Layout
 
 \size small
+\lang english
 South Africa 
 \end_layout
 
@@ -6600,6 +7196,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 48.76% 
 \end_layout
 
@@ -6611,6 +7208,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -11.76% 
 \end_layout
 
@@ -6622,6 +7220,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 51.24% 
 \end_layout
 
@@ -6633,6 +7232,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.56% 
 \end_layout
 
@@ -6644,6 +7244,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 54.43% 
 \end_layout
 
@@ -6655,6 +7256,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -14.60% 
 \end_layout
 
@@ -6666,6 +7268,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 45.49% 
 \end_layout
 
@@ -6677,6 +7280,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.41% 
 \end_layout
 
@@ -6688,6 +7292,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 0.08% 
 \end_layout
 
@@ -6699,6 +7304,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 7.07% 
 \end_layout
 
@@ -6712,6 +7318,7 @@ South Africa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 Tunisia 
 \end_layout
 
@@ -6723,6 +7330,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 45.09% 
 \end_layout
 
@@ -6734,6 +7342,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -14.97% 
 \end_layout
 
@@ -6745,6 +7354,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 54.91% 
 \end_layout
 
@@ -6756,6 +7366,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 15.19% 
 \end_layout
 
@@ -6767,6 +7378,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 56.62% 
 \end_layout
 
@@ -6778,6 +7390,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -4.47% 
 \end_layout
 
@@ -6789,6 +7402,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 43.10% 
 \end_layout
 
@@ -6800,6 +7414,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 5.56% 
 \end_layout
 
@@ -6811,6 +7426,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 0.28% 
 \end_layout
 
@@ -6822,6 +7438,7 @@ Tunisia
 \begin_layout Plain Layout
 
 \size small
+\lang english
 147.59% 
 \end_layout
 
@@ -6836,6 +7453,8 @@ Tunisia
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status open
 
@@ -6879,10 +7498,14 @@ end{tablenotes}
 \end_layout
 
 \begin_layout Section
+
+\lang english
 Conclusion
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:conclusion"
@@ -6900,6 +7523,8 @@ name "sec:conclusion"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 More precisely, we apply the Wang-Wei-Zhu decomposition based on 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -6926,6 +7551,8 @@ key "rokoetal14"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 We find that many ideas based on previous anecdotal evidence can be confirmed
  by the data.
  In particular, there is a central difference in the structure of high-income
@@ -6940,6 +7567,8 @@ We find that many ideas based on previous anecdotal evidence can be confirmed
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Developing economies, on the other hand, tend to be positioned more downstream
  which can be deduced from the concentration of their GVC participation
  in final goods exports and the fact that their forward linkages and returning
@@ -6954,6 +7583,8 @@ Developing economies, on the other hand, tend to be positioned more downstream
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Finally, we use the new data to look at selected low- and middle income
  economies in three different regions, namely South-East Asia, Latin America
  and the Caribbean, and Africa.
@@ -6966,6 +7597,8 @@ Finally, we use the new data to look at selected low- and middle income
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 Overall, we show that low- and middle-income countries have become an integral
  part of GVCs and are increasingly the driver of their expansion.
  In addition, they increasingly succeed in moving into higher value added
@@ -6978,6 +7611,8 @@ d, it is clear that they offer significant potential for industrialisation
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Newpage clearpage
 \end_inset
 
@@ -6985,6 +7620,8 @@ d, it is clear that they offer significant potential for industrialisation
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset ERT
 status open
 
@@ -7002,6 +7639,8 @@ printbibliography
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "GVC-LMICs"
@@ -7018,6 +7657,8 @@ options "chicago"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Newpage clearpage
 \end_inset
 
@@ -7026,10 +7667,14 @@ options "chicago"
 
 \begin_layout Section
 \start_of_appendix
+
+\lang english
 Appendix
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:appendix"
@@ -7041,6 +7686,8 @@ name "sec:appendix"
 
 \begin_layout Standard
 \align center
+
+\lang english
 \begin_inset Float table
 placement h
 wide false
@@ -7051,6 +7698,7 @@ status collapsed
 \align center
 
 \size small
+\lang english
 \begin_inset space \hspace*{}
 \length -3cm
 \end_inset
@@ -7074,6 +7722,7 @@ status collapsed
 
 \shape italic
 \size small
+\lang english
 country
 \end_layout
 
@@ -7086,6 +7735,7 @@ country
 
 \shape italic
 \size small
+\lang english
 Average (i2e values)
 \end_layout
 
@@ -7098,6 +7748,7 @@ Average (i2e values)
 
 \shape italic
 \size small
+\lang english
 Average (e2r values)
 \end_layout
 
@@ -7110,6 +7761,7 @@ Average (e2r values)
 
 \shape italic
 \size small
+\lang english
 Average (i2e)
 \end_layout
 
@@ -7122,6 +7774,7 @@ Average (i2e)
 
 \shape italic
 \size small
+\lang english
 Average (e2r)
 \end_layout
 
@@ -7134,6 +7787,7 @@ Average (e2r)
 
 \shape italic
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -7149,6 +7803,7 @@ Average (e2r)
 
 \shape italic
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -7165,6 +7820,7 @@ Average (e2r)
 \begin_layout Plain Layout
 
 \size small
+\lang english
 arg 
 \end_layout
 
@@ -7176,6 +7832,7 @@ arg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 52,790 
 \end_layout
 
@@ -7187,6 +7844,7 @@ arg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 66,036 
 \end_layout
 
@@ -7198,6 +7856,7 @@ arg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 12.51% 
 \end_layout
 
@@ -7209,6 +7868,7 @@ arg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 15.65% 
 \end_layout
 
@@ -7220,6 +7880,7 @@ arg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 145.93% 
 \end_layout
 
@@ -7231,6 +7892,7 @@ arg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 30.04% 
 \end_layout
 
@@ -7244,6 +7906,7 @@ arg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 aus 
 \end_layout
 
@@ -7255,6 +7918,7 @@ aus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 178,117 
 \end_layout
 
@@ -7266,6 +7930,7 @@ aus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 343,084 
 \end_layout
 
@@ -7277,6 +7942,7 @@ aus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.35% 
 \end_layout
 
@@ -7288,6 +7954,7 @@ aus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 25.71% 
 \end_layout
 
@@ -7299,6 +7966,7 @@ aus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 18.21% 
 \end_layout
 
@@ -7310,6 +7978,7 @@ aus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 59.23% 
 \end_layout
 
@@ -7323,6 +7992,7 @@ aus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 aut 
 \end_layout
 
@@ -7334,6 +8004,7 @@ aut
 \begin_layout Plain Layout
 
 \size small
+\lang english
 250,022 
 \end_layout
 
@@ -7345,6 +8016,7 @@ aut
 \begin_layout Plain Layout
 
 \size small
+\lang english
 214,630 
 \end_layout
 
@@ -7356,6 +8028,7 @@ aut
 \begin_layout Plain Layout
 
 \size small
+\lang english
 25.87% 
 \end_layout
 
@@ -7367,6 +8040,7 @@ aut
 \begin_layout Plain Layout
 
 \size small
+\lang english
 22.21% 
 \end_layout
 
@@ -7378,6 +8052,7 @@ aut
 \begin_layout Plain Layout
 
 \size small
+\lang english
 29.59% 
 \end_layout
 
@@ -7389,6 +8064,7 @@ aut
 \begin_layout Plain Layout
 
 \size small
+\lang english
 39.90% 
 \end_layout
 
@@ -7402,6 +8078,7 @@ aut
 \begin_layout Plain Layout
 
 \size small
+\lang english
 bel 
 \end_layout
 
@@ -7413,6 +8090,7 @@ bel
 \begin_layout Plain Layout
 
 \size small
+\lang english
 437,578 
 \end_layout
 
@@ -7424,6 +8102,7 @@ bel
 \begin_layout Plain Layout
 
 \size small
+\lang english
 285,355 
 \end_layout
 
@@ -7435,6 +8114,7 @@ bel
 \begin_layout Plain Layout
 
 \size small
+\lang english
 32.53% 
 \end_layout
 
@@ -7446,6 +8126,7 @@ bel
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.22% 
 \end_layout
 
@@ -7457,6 +8138,7 @@ bel
 \begin_layout Plain Layout
 
 \size small
+\lang english
 10.66% 
 \end_layout
 
@@ -7468,6 +8150,7 @@ bel
 \begin_layout Plain Layout
 
 \size small
+\lang english
 30.78% 
 \end_layout
 
@@ -7481,6 +8164,7 @@ bel
 \begin_layout Plain Layout
 
 \size small
+\lang english
 bgr 
 \end_layout
 
@@ -7492,6 +8176,7 @@ bgr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 51,393 
 \end_layout
 
@@ -7503,6 +8188,7 @@ bgr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19,864 
 \end_layout
 
@@ -7514,6 +8200,7 @@ bgr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 38.01% 
 \end_layout
 
@@ -7525,6 +8212,7 @@ bgr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 14.69% 
 \end_layout
 
@@ -7536,6 +8224,7 @@ bgr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 32.70% 
 \end_layout
 
@@ -7547,6 +8236,7 @@ bgr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 12.35% 
 \end_layout
 
@@ -7560,6 +8250,7 @@ bgr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 bra 
 \end_layout
 
@@ -7571,6 +8262,7 @@ bra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 129,301 
 \end_layout
 
@@ -7582,6 +8274,7 @@ bra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 245,839 
 \end_layout
 
@@ -7593,6 +8286,7 @@ bra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 10.95% 
 \end_layout
 
@@ -7604,6 +8298,7 @@ bra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20.83% 
 \end_layout
 
@@ -7615,6 +8310,7 @@ bra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 37.97% 
 \end_layout
 
@@ -7626,6 +8322,7 @@ bra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 57.77% 
 \end_layout
 
@@ -7639,6 +8336,7 @@ bra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 brn 
 \end_layout
 
@@ -7650,6 +8348,7 @@ brn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 2,412 
 \end_layout
 
@@ -7661,6 +8360,7 @@ brn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20,438 
 \end_layout
 
@@ -7672,6 +8372,7 @@ brn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 4.51% 
 \end_layout
 
@@ -7683,6 +8384,7 @@ brn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 38.23% 
 \end_layout
 
@@ -7694,6 +8396,7 @@ brn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -41.34% 
 \end_layout
 
@@ -7705,6 +8408,7 @@ brn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 103.27% 
 \end_layout
 
@@ -7718,6 +8422,7 @@ brn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 can 
 \end_layout
 
@@ -7729,6 +8434,7 @@ can
 \begin_layout Plain Layout
 
 \size small
+\lang english
 647,662 
 \end_layout
 
@@ -7740,6 +8446,7 @@ can
 \begin_layout Plain Layout
 
 \size small
+\lang english
 407,957 
 \end_layout
 
@@ -7751,6 +8458,7 @@ can
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.54% 
 \end_layout
 
@@ -7762,6 +8470,7 @@ can
 \begin_layout Plain Layout
 
 \size small
+\lang english
 14.83% 
 \end_layout
 
@@ -7773,6 +8482,7 @@ can
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -3.54% 
 \end_layout
 
@@ -7784,6 +8494,7 @@ can
 \begin_layout Plain Layout
 
 \size small
+\lang english
 70.21% 
 \end_layout
 
@@ -7797,6 +8508,7 @@ can
 \begin_layout Plain Layout
 
 \size small
+\lang english
 che 
 \end_layout
 
@@ -7808,6 +8520,7 @@ che
 \begin_layout Plain Layout
 
 \size small
+\lang english
 334,258 
 \end_layout
 
@@ -7819,6 +8532,7 @@ che
 \begin_layout Plain Layout
 
 \size small
+\lang english
 343,657 
 \end_layout
 
@@ -7830,6 +8544,7 @@ che
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.84% 
 \end_layout
 
@@ -7841,6 +8556,7 @@ che
 \begin_layout Plain Layout
 
 \size small
+\lang english
 22.45% 
 \end_layout
 
@@ -7852,6 +8568,7 @@ che
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.45% 
 \end_layout
 
@@ -7863,6 +8580,7 @@ che
 \begin_layout Plain Layout
 
 \size small
+\lang english
 37.02% 
 \end_layout
 
@@ -7876,6 +8594,7 @@ che
 \begin_layout Plain Layout
 
 \size small
+\lang english
 chl 
 \end_layout
 
@@ -7887,6 +8606,7 @@ chl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 77,961 
 \end_layout
 
@@ -7898,6 +8618,7 @@ chl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 103,023 
 \end_layout
 
@@ -7909,6 +8630,7 @@ chl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.70% 
 \end_layout
 
@@ -7920,6 +8642,7 @@ chl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 26.03% 
 \end_layout
 
@@ -7931,6 +8654,7 @@ chl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 41.95% 
 \end_layout
 
@@ -7942,6 +8666,7 @@ chl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 42.06% 
 \end_layout
 
@@ -7955,6 +8680,7 @@ chl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 chn 
 \end_layout
 
@@ -7966,6 +8692,7 @@ chn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,831,434 
 \end_layout
 
@@ -7977,6 +8704,7 @@ chn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,293,766 
 \end_layout
 
@@ -7988,6 +8716,7 @@ chn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 24.07% 
 \end_layout
 
@@ -7999,6 +8728,7 @@ chn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 17.00% 
 \end_layout
 
@@ -8010,6 +8740,7 @@ chn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 62.57% 
 \end_layout
 
@@ -8021,6 +8752,7 @@ chn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 37.17% 
 \end_layout
 
@@ -8034,6 +8766,7 @@ chn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 col 
 \end_layout
 
@@ -8045,6 +8778,7 @@ col
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21,746 
 \end_layout
 
@@ -8056,6 +8790,7 @@ col
 \begin_layout Plain Layout
 
 \size small
+\lang english
 57,971 
 \end_layout
 
@@ -8067,6 +8802,7 @@ col
 \begin_layout Plain Layout
 
 \size small
+\lang english
 9.12% 
 \end_layout
 
@@ -8078,6 +8814,7 @@ col
 \begin_layout Plain Layout
 
 \size small
+\lang english
 24.31% 
 \end_layout
 
@@ -8089,6 +8826,7 @@ col
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -9.63% 
 \end_layout
 
@@ -8100,6 +8838,7 @@ col
 \begin_layout Plain Layout
 
 \size small
+\lang english
 93.42% 
 \end_layout
 
@@ -8113,6 +8852,7 @@ col
 \begin_layout Plain Layout
 
 \size small
+\lang english
 cri 
 \end_layout
 
@@ -8124,6 +8864,7 @@ cri
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21,400 
 \end_layout
 
@@ -8135,6 +8876,7 @@ cri
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11,671 
 \end_layout
 
@@ -8146,6 +8888,7 @@ cri
 \begin_layout Plain Layout
 
 \size small
+\lang english
 28.07% 
 \end_layout
 
@@ -8157,6 +8900,7 @@ cri
 \begin_layout Plain Layout
 
 \size small
+\lang english
 15.31% 
 \end_layout
 
@@ -8168,6 +8912,7 @@ cri
 \begin_layout Plain Layout
 
 \size small
+\lang english
 25.42% 
 \end_layout
 
@@ -8179,6 +8924,7 @@ cri
 \begin_layout Plain Layout
 
 \size small
+\lang english
 48.66% 
 \end_layout
 
@@ -8192,6 +8938,7 @@ cri
 \begin_layout Plain Layout
 
 \size small
+\lang english
 cyp 
 \end_layout
 
@@ -8203,6 +8950,7 @@ cyp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 12,327 
 \end_layout
 
@@ -8214,6 +8962,7 @@ cyp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 8,448 
 \end_layout
 
@@ -8225,6 +8974,7 @@ cyp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 22.01% 
 \end_layout
 
@@ -8236,6 +8986,7 @@ cyp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 15.09% 
 \end_layout
 
@@ -8247,6 +8998,7 @@ cyp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 0.27% 
 \end_layout
 
@@ -8258,6 +9010,7 @@ cyp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 53.75% 
 \end_layout
 
@@ -8271,6 +9024,7 @@ cyp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 cze 
 \end_layout
 
@@ -8282,6 +9036,7 @@ cze
 \begin_layout Plain Layout
 
 \size small
+\lang english
 290,027 
 \end_layout
 
@@ -8293,6 +9048,7 @@ cze
 \begin_layout Plain Layout
 
 \size small
+\lang english
 129,166 
 \end_layout
 
@@ -8304,6 +9060,7 @@ cze
 \begin_layout Plain Layout
 
 \size small
+\lang english
 41.96% 
 \end_layout
 
@@ -8315,6 +9072,7 @@ cze
 \begin_layout Plain Layout
 
 \size small
+\lang english
 18.69% 
 \end_layout
 
@@ -8326,6 +9084,7 @@ cze
 \begin_layout Plain Layout
 
 \size small
+\lang english
 48.79% 
 \end_layout
 
@@ -8337,6 +9096,7 @@ cze
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11.22% 
 \end_layout
 
@@ -8350,6 +9110,7 @@ cze
 \begin_layout Plain Layout
 
 \size small
+\lang english
 deu 
 \end_layout
 
@@ -8361,6 +9122,7 @@ deu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,640,838 
 \end_layout
 
@@ -8372,6 +9134,7 @@ deu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,628,409 
 \end_layout
 
@@ -8383,6 +9146,7 @@ deu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 22.51% 
 \end_layout
 
@@ -8394,6 +9158,7 @@ deu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 22.34% 
 \end_layout
 
@@ -8405,6 +9170,7 @@ deu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 71.81% 
 \end_layout
 
@@ -8416,6 +9182,7 @@ deu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.06% 
 \end_layout
 
@@ -8429,6 +9196,7 @@ deu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 dnk 
 \end_layout
 
@@ -8440,6 +9208,7 @@ dnk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 224,697 
 \end_layout
 
@@ -8451,6 +9220,7 @@ dnk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 165,653 
 \end_layout
 
@@ -8462,6 +9232,7 @@ dnk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 29.42% 
 \end_layout
 
@@ -8473,6 +9244,7 @@ dnk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.69% 
 \end_layout
 
@@ -8484,6 +9256,7 @@ dnk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 38.07% 
 \end_layout
 
@@ -8495,6 +9268,7 @@ dnk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 43.47% 
 \end_layout
 
@@ -8508,6 +9282,7 @@ dnk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 esp 
 \end_layout
 
@@ -8519,6 +9294,7 @@ esp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 546,406 
 \end_layout
 
@@ -8530,6 +9306,7 @@ esp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 383,881 
 \end_layout
 
@@ -8541,6 +9318,7 @@ esp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 25.13% 
 \end_layout
 
@@ -8552,6 +9330,7 @@ esp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 17.66% 
 \end_layout
 
@@ -8563,6 +9342,7 @@ esp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 39.96% 
 \end_layout
 
@@ -8574,6 +9354,7 @@ esp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 35.86% 
 \end_layout
 
@@ -8587,6 +9368,7 @@ esp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 est 
 \end_layout
 
@@ -8598,6 +9380,7 @@ est
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21,777 
 \end_layout
 
@@ -8609,6 +9392,7 @@ est
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11,992 
 \end_layout
 
@@ -8620,6 +9404,7 @@ est
 \begin_layout Plain Layout
 
 \size small
+\lang english
 34.90% 
 \end_layout
 
@@ -8631,6 +9416,7 @@ est
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.22% 
 \end_layout
 
@@ -8642,6 +9428,7 @@ est
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -3.58% 
 \end_layout
 
@@ -8653,6 +9440,7 @@ est
 \begin_layout Plain Layout
 
 \size small
+\lang english
 44.23% 
 \end_layout
 
@@ -8666,6 +9454,7 @@ est
 \begin_layout Plain Layout
 
 \size small
+\lang english
 fin 
 \end_layout
 
@@ -8677,6 +9466,7 @@ fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 182,478 
 \end_layout
 
@@ -8688,6 +9478,7 @@ fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 125,397 
 \end_layout
 
@@ -8699,6 +9490,7 @@ fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 31.43% 
 \end_layout
 
@@ -8710,6 +9502,7 @@ fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.60% 
 \end_layout
 
@@ -8721,6 +9514,7 @@ fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 44.07% 
 \end_layout
 
@@ -8732,6 +9526,7 @@ fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 6.99% 
 \end_layout
 
@@ -8745,6 +9540,7 @@ fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 fra 
 \end_layout
 
@@ -8756,6 +9552,7 @@ fra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 888,006 
 \end_layout
 
@@ -8767,6 +9564,7 @@ fra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 773,925 
 \end_layout
 
@@ -8778,6 +9576,7 @@ fra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.01% 
 \end_layout
 
@@ -8789,6 +9588,7 @@ fra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20.05% 
 \end_layout
 
@@ -8800,6 +9600,7 @@ fra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 44.76% 
 \end_layout
 
@@ -8811,6 +9612,7 @@ fra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.68% 
 \end_layout
 
@@ -8824,6 +9626,7 @@ fra
 \begin_layout Plain Layout
 
 \size small
+\lang english
 gbr 
 \end_layout
 
@@ -8835,6 +9638,7 @@ gbr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 766,576 
 \end_layout
 
@@ -8846,6 +9650,7 @@ gbr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 909,659 
 \end_layout
 
@@ -8857,6 +9662,7 @@ gbr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.52% 
 \end_layout
 
@@ -8868,6 +9674,7 @@ gbr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.17% 
 \end_layout
 
@@ -8879,6 +9686,7 @@ gbr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 25.71% 
 \end_layout
 
@@ -8890,6 +9698,7 @@ gbr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 27.55% 
 \end_layout
 
@@ -8903,6 +9712,7 @@ gbr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 grc 
 \end_layout
 
@@ -8914,6 +9724,7 @@ grc
 \begin_layout Plain Layout
 
 \size small
+\lang english
 81,945 
 \end_layout
 
@@ -8925,6 +9736,7 @@ grc
 \begin_layout Plain Layout
 
 \size small
+\lang english
 60,159 
 \end_layout
 
@@ -8936,6 +9748,7 @@ grc
 \begin_layout Plain Layout
 
 \size small
+\lang english
 22.43% 
 \end_layout
 
@@ -8947,6 +9760,7 @@ grc
 \begin_layout Plain Layout
 
 \size small
+\lang english
 16.47% 
 \end_layout
 
@@ -8958,6 +9772,7 @@ grc
 \begin_layout Plain Layout
 
 \size small
+\lang english
 52.51% 
 \end_layout
 
@@ -8969,6 +9784,7 @@ grc
 \begin_layout Plain Layout
 
 \size small
+\lang english
 51.65% 
 \end_layout
 
@@ -8982,6 +9798,7 @@ grc
 \begin_layout Plain Layout
 
 \size small
+\lang english
 hkg 
 \end_layout
 
@@ -8993,6 +9810,7 @@ hkg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 115,876 
 \end_layout
 
@@ -9004,6 +9822,7 @@ hkg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 121,589 
 \end_layout
 
@@ -9015,6 +9834,7 @@ hkg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 18.98% 
 \end_layout
 
@@ -9026,6 +9846,7 @@ hkg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.92% 
 \end_layout
 
@@ -9037,6 +9858,7 @@ hkg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -7.57% 
 \end_layout
 
@@ -9048,6 +9870,7 @@ hkg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 53.77% 
 \end_layout
 
@@ -9061,6 +9884,7 @@ hkg
 \begin_layout Plain Layout
 
 \size small
+\lang english
 hrv 
 \end_layout
 
@@ -9072,6 +9896,7 @@ hrv
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20,725 
 \end_layout
 
@@ -9083,6 +9908,7 @@ hrv
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13,277 
 \end_layout
 
@@ -9094,6 +9920,7 @@ hrv
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20.09% 
 \end_layout
 
@@ -9105,6 +9932,7 @@ hrv
 \begin_layout Plain Layout
 
 \size small
+\lang english
 12.87% 
 \end_layout
 
@@ -9116,6 +9944,7 @@ hrv
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -3.24% 
 \end_layout
 
@@ -9127,6 +9956,7 @@ hrv
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -4.93% 
 \end_layout
 
@@ -9140,6 +9970,7 @@ hrv
 \begin_layout Plain Layout
 
 \size small
+\lang english
 hun 
 \end_layout
 
@@ -9151,6 +9982,7 @@ hun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 236,208 
 \end_layout
 
@@ -9162,6 +9994,7 @@ hun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 78,585 
 \end_layout
 
@@ -9173,6 +10006,7 @@ hun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 46.20% 
 \end_layout
 
@@ -9184,6 +10018,7 @@ hun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 15.37% 
 \end_layout
 
@@ -9195,6 +10030,7 @@ hun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 59.55% 
 \end_layout
 
@@ -9206,6 +10042,7 @@ hun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.83% 
 \end_layout
 
@@ -9219,6 +10056,7 @@ hun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 idn 
 \end_layout
 
@@ -9230,6 +10068,7 @@ idn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 116,161 
 \end_layout
 
@@ -9241,6 +10080,7 @@ idn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 238,302 
 \end_layout
 
@@ -9252,6 +10092,7 @@ idn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 12.97% 
 \end_layout
 
@@ -9263,6 +10104,7 @@ idn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 26.61% 
 \end_layout
 
@@ -9274,6 +10116,7 @@ idn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -4.24% 
 \end_layout
 
@@ -9285,6 +10128,7 @@ idn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 96.09% 
 \end_layout
 
@@ -9298,6 +10142,7 @@ idn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 ind 
 \end_layout
 
@@ -9309,6 +10154,7 @@ ind
 \begin_layout Plain Layout
 
 \size small
+\lang english
 356,692 
 \end_layout
 
@@ -9320,6 +10166,7 @@ ind
 \begin_layout Plain Layout
 
 \size small
+\lang english
 298,471 
 \end_layout
 
@@ -9331,6 +10178,7 @@ ind
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.34% 
 \end_layout
 
@@ -9342,6 +10190,7 @@ ind
 \begin_layout Plain Layout
 
 \size small
+\lang english
 17.86% 
 \end_layout
 
@@ -9353,6 +10202,7 @@ ind
 \begin_layout Plain Layout
 
 \size small
+\lang english
 178.40% 
 \end_layout
 
@@ -9364,6 +10214,7 @@ ind
 \begin_layout Plain Layout
 
 \size small
+\lang english
 42.28% 
 \end_layout
 
@@ -9377,6 +10228,7 @@ ind
 \begin_layout Plain Layout
 
 \size small
+\lang english
 irl 
 \end_layout
 
@@ -9388,6 +10240,7 @@ irl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 472,729 
 \end_layout
 
@@ -9399,6 +10252,7 @@ irl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 162,263 
 \end_layout
 
@@ -9410,6 +10264,7 @@ irl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 41.96% 
 \end_layout
 
@@ -9421,6 +10276,7 @@ irl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 14.40% 
 \end_layout
 
@@ -9432,6 +10288,7 @@ irl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11.87% 
 \end_layout
 
@@ -9443,6 +10300,7 @@ irl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.69% 
 \end_layout
 
@@ -9456,6 +10314,7 @@ irl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 isl 
 \end_layout
 
@@ -9467,6 +10326,7 @@ isl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11,301 
 \end_layout
 
@@ -9478,6 +10338,7 @@ isl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 8,977 
 \end_layout
 
@@ -9489,6 +10350,7 @@ isl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 29.32% 
 \end_layout
 
@@ -9500,6 +10362,7 @@ isl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.29% 
 \end_layout
 
@@ -9511,6 +10374,7 @@ isl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 84.40% 
 \end_layout
 
@@ -9522,6 +10386,7 @@ isl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 71.61% 
 \end_layout
 
@@ -9541,6 +10406,8 @@ isl
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float table
 placement H
 wide false
@@ -9551,6 +10418,7 @@ status collapsed
 \align center
 
 \size small
+\lang english
 \begin_inset space \hspace*{}
 \length -3cm
 \end_inset
@@ -9574,6 +10442,7 @@ status collapsed
 
 \shape italic
 \size small
+\lang english
 country
 \end_layout
 
@@ -9586,6 +10455,7 @@ country
 
 \shape italic
 \size small
+\lang english
 Average (i2e values)
 \end_layout
 
@@ -9598,6 +10468,7 @@ Average (i2e values)
 
 \shape italic
 \size small
+\lang english
 Average (e2r values)
 \end_layout
 
@@ -9610,6 +10481,7 @@ Average (e2r values)
 
 \shape italic
 \size small
+\lang english
 Average (i2e)
 \end_layout
 
@@ -9622,6 +10494,7 @@ Average (i2e)
 
 \shape italic
 \size small
+\lang english
 Average (e2r)
 \end_layout
 
@@ -9634,6 +10507,7 @@ Average (e2r)
 
 \shape italic
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -9649,6 +10523,7 @@ Average (e2r)
 
 \shape italic
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -9665,6 +10540,7 @@ Average (e2r)
 \begin_layout Plain Layout
 
 \size small
+\lang english
 isr 
 \end_layout
 
@@ -9676,6 +10552,7 @@ isr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 105,427 
 \end_layout
 
@@ -9687,6 +10564,7 @@ isr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 75,275 
 \end_layout
 
@@ -9698,6 +10576,7 @@ isr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.86% 
 \end_layout
 
@@ -9709,6 +10588,7 @@ isr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 17.04% 
 \end_layout
 
@@ -9720,6 +10600,7 @@ isr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11.05% 
 \end_layout
 
@@ -9731,6 +10612,7 @@ isr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 53.19% 
 \end_layout
 
@@ -9744,6 +10626,7 @@ isr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 ita 
 \end_layout
 
@@ -9755,6 +10638,7 @@ ita
 \begin_layout Plain Layout
 
 \size small
+\lang english
 778,367 
 \end_layout
 
@@ -9766,6 +10650,7 @@ ita
 \begin_layout Plain Layout
 
 \size small
+\lang english
 641,040 
 \end_layout
 
@@ -9777,6 +10662,7 @@ ita
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.21% 
 \end_layout
 
@@ -9788,6 +10674,7 @@ ita
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.12% 
 \end_layout
 
@@ -9799,6 +10686,7 @@ ita
 \begin_layout Plain Layout
 
 \size small
+\lang english
 53.48% 
 \end_layout
 
@@ -9810,6 +10698,7 @@ ita
 \begin_layout Plain Layout
 
 \size small
+\lang english
 35.00% 
 \end_layout
 
@@ -9823,6 +10712,7 @@ ita
 \begin_layout Plain Layout
 
 \size small
+\lang english
 jpn 
 \end_layout
 
@@ -9834,6 +10724,7 @@ jpn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 582,907 
 \end_layout
 
@@ -9845,6 +10736,7 @@ jpn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,388,524 
 \end_layout
 
@@ -9856,6 +10748,7 @@ jpn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11.95% 
 \end_layout
 
@@ -9867,6 +10760,7 @@ jpn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 28.47% 
 \end_layout
 
@@ -9878,6 +10772,7 @@ jpn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 164.46% 
 \end_layout
 
@@ -9889,6 +10784,7 @@ jpn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 32.58% 
 \end_layout
 
@@ -9902,6 +10798,7 @@ jpn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 khm 
 \end_layout
 
@@ -9913,6 +10810,7 @@ khm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11,889 
 \end_layout
 
@@ -9924,6 +10822,7 @@ khm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 3,224 
 \end_layout
 
@@ -9935,6 +10834,7 @@ khm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 37.65% 
 \end_layout
 
@@ -9946,6 +10846,7 @@ khm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 10.21% 
 \end_layout
 
@@ -9957,6 +10858,7 @@ khm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 186.29% 
 \end_layout
 
@@ -9968,6 +10870,7 @@ khm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -36.76% 
 \end_layout
 
@@ -9981,6 +10884,7 @@ khm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 kor 
 \end_layout
 
@@ -9992,6 +10896,7 @@ kor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,034,054 
 \end_layout
 
@@ -10003,6 +10908,7 @@ kor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 521,202 
 \end_layout
 
@@ -10014,6 +10920,7 @@ kor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 37.70% 
 \end_layout
 
@@ -10025,6 +10932,7 @@ kor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.00% 
 \end_layout
 
@@ -10036,6 +10944,7 @@ kor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 88.43% 
 \end_layout
 
@@ -10047,6 +10956,7 @@ kor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 18.61% 
 \end_layout
 
@@ -10060,6 +10970,7 @@ kor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 ltu 
 \end_layout
 
@@ -10071,6 +10982,7 @@ ltu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 16,707 
 \end_layout
 
@@ -10082,6 +10994,7 @@ ltu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 15,497 
 \end_layout
 
@@ -10093,6 +11006,7 @@ ltu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 22.83% 
 \end_layout
 
@@ -10104,6 +11018,7 @@ ltu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.17% 
 \end_layout
 
@@ -10115,6 +11030,7 @@ ltu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -4.03% 
 \end_layout
 
@@ -10126,6 +11042,7 @@ ltu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 42.99% 
 \end_layout
 
@@ -10139,6 +11056,7 @@ ltu
 \begin_layout Plain Layout
 
 \size small
+\lang english
 lux 
 \end_layout
 
@@ -10150,6 +11068,7 @@ lux
 \begin_layout Plain Layout
 
 \size small
+\lang english
 237,935 
 \end_layout
 
@@ -10161,6 +11080,7 @@ lux
 \begin_layout Plain Layout
 
 \size small
+\lang english
 51,509 
 \end_layout
 
@@ -10172,6 +11092,7 @@ lux
 \begin_layout Plain Layout
 
 \size small
+\lang english
 53.11% 
 \end_layout
 
@@ -10183,6 +11104,7 @@ lux
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11.50% 
 \end_layout
 
@@ -10194,6 +11116,7 @@ lux
 \begin_layout Plain Layout
 
 \size small
+\lang english
 40.29% 
 \end_layout
 
@@ -10205,6 +11128,7 @@ lux
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -15.58% 
 \end_layout
 
@@ -10218,6 +11142,7 @@ lux
 \begin_layout Plain Layout
 
 \size small
+\lang english
 lva 
 \end_layout
 
@@ -10229,6 +11154,7 @@ lva
 \begin_layout Plain Layout
 
 \size small
+\lang english
 14,530 
 \end_layout
 
@@ -10240,6 +11166,7 @@ lva
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13,063 
 \end_layout
 
@@ -10251,6 +11178,7 @@ lva
 \begin_layout Plain Layout
 
 \size small
+\lang english
 25.95% 
 \end_layout
 
@@ -10262,6 +11190,7 @@ lva
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.33% 
 \end_layout
 
@@ -10273,6 +11202,7 @@ lva
 \begin_layout Plain Layout
 
 \size small
+\lang english
 25.01% 
 \end_layout
 
@@ -10284,6 +11214,7 @@ lva
 \begin_layout Plain Layout
 
 \size small
+\lang english
 34.38% 
 \end_layout
 
@@ -10297,6 +11228,7 @@ lva
 \begin_layout Plain Layout
 
 \size small
+\lang english
 mex 
 \end_layout
 
@@ -10308,6 +11240,7 @@ mex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 479,806 
 \end_layout
 
@@ -10319,6 +11252,7 @@ mex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 214,457 
 \end_layout
 
@@ -10330,6 +11264,7 @@ mex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 28.82% 
 \end_layout
 
@@ -10341,6 +11276,7 @@ mex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 12.88% 
 \end_layout
 
@@ -10352,6 +11288,7 @@ mex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20.84% 
 \end_layout
 
@@ -10363,6 +11300,7 @@ mex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 31.28% 
 \end_layout
 
@@ -10376,6 +11314,7 @@ mex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 mlt 
 \end_layout
 
@@ -10387,6 +11326,7 @@ mlt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 14,762 
 \end_layout
 
@@ -10398,6 +11338,7 @@ mlt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 4,931 
 \end_layout
 
@@ -10409,6 +11350,7 @@ mlt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 43.26% 
 \end_layout
 
@@ -10420,6 +11362,7 @@ mlt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 14.45% 
 \end_layout
 
@@ -10431,6 +11374,7 @@ mlt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -27.41% 
 \end_layout
 
@@ -10442,6 +11386,7 @@ mlt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 108.31% 
 \end_layout
 
@@ -10455,6 +11400,7 @@ mlt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 mys 
 \end_layout
 
@@ -10466,6 +11412,7 @@ mys
 \begin_layout Plain Layout
 
 \size small
+\lang english
 517,084 
 \end_layout
 
@@ -10477,6 +11424,7 @@ mys
 \begin_layout Plain Layout
 
 \size small
+\lang english
 215,738 
 \end_layout
 
@@ -10488,6 +11436,7 @@ mys
 \begin_layout Plain Layout
 
 \size small
+\lang english
 41.45% 
 \end_layout
 
@@ -10499,6 +11448,7 @@ mys
 \begin_layout Plain Layout
 
 \size small
+\lang english
 17.29% 
 \end_layout
 
@@ -10510,6 +11460,7 @@ mys
 \begin_layout Plain Layout
 
 \size small
+\lang english
 33.36% 
 \end_layout
 
@@ -10521,6 +11472,7 @@ mys
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.93% 
 \end_layout
 
@@ -10534,6 +11486,7 @@ mys
 \begin_layout Plain Layout
 
 \size small
+\lang english
 nld 
 \end_layout
 
@@ -10545,6 +11498,7 @@ nld
 \begin_layout Plain Layout
 
 \size small
+\lang english
 306,010 
 \end_layout
 
@@ -10556,6 +11510,7 @@ nld
 \begin_layout Plain Layout
 
 \size small
+\lang english
 390,300 
 \end_layout
 
@@ -10567,6 +11522,7 @@ nld
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.50% 
 \end_layout
 
@@ -10578,6 +11534,7 @@ nld
 \begin_layout Plain Layout
 
 \size small
+\lang english
 24.87% 
 \end_layout
 
@@ -10589,6 +11546,7 @@ nld
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -14.29% 
 \end_layout
 
@@ -10600,6 +11558,7 @@ nld
 \begin_layout Plain Layout
 
 \size small
+\lang english
 51.12% 
 \end_layout
 
@@ -10613,6 +11572,7 @@ nld
 \begin_layout Plain Layout
 
 \size small
+\lang english
 nor 
 \end_layout
 
@@ -10624,6 +11584,7 @@ nor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 163,813 
 \end_layout
 
@@ -10635,6 +11596,7 @@ nor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 351,592 
 \end_layout
 
@@ -10646,6 +11608,7 @@ nor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 16.78% 
 \end_layout
 
@@ -10657,6 +11620,7 @@ nor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 36.01% 
 \end_layout
 
@@ -10668,6 +11632,7 @@ nor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -13.46% 
 \end_layout
 
@@ -10679,6 +11644,7 @@ nor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 57.48% 
 \end_layout
 
@@ -10692,6 +11658,7 @@ nor
 \begin_layout Plain Layout
 
 \size small
+\lang english
 nzl 
 \end_layout
 
@@ -10703,6 +11670,7 @@ nzl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 39,712 
 \end_layout
 
@@ -10714,6 +11682,7 @@ nzl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 33,912 
 \end_layout
 
@@ -10725,6 +11694,7 @@ nzl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 17.08% 
 \end_layout
 
@@ -10736,6 +11706,7 @@ nzl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 14.59% 
 \end_layout
 
@@ -10747,6 +11718,7 @@ nzl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -0.73% 
 \end_layout
 
@@ -10758,6 +11730,7 @@ nzl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 48.61% 
 \end_layout
 
@@ -10771,6 +11744,7 @@ nzl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 phl 
 \end_layout
 
@@ -10782,6 +11756,7 @@ phl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 103,838 
 \end_layout
 
@@ -10793,6 +11768,7 @@ phl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 82,783 
 \end_layout
 
@@ -10804,6 +11780,7 @@ phl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 29.04% 
 \end_layout
 
@@ -10815,6 +11792,7 @@ phl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.15% 
 \end_layout
 
@@ -10826,6 +11804,7 @@ phl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -20.59% 
 \end_layout
 
@@ -10837,6 +11816,7 @@ phl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 101.26% 
 \end_layout
 
@@ -10850,6 +11830,7 @@ phl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 pol 
 \end_layout
 
@@ -10861,6 +11842,7 @@ pol
 \begin_layout Plain Layout
 
 \size small
+\lang english
 273,027 
 \end_layout
 
@@ -10872,6 +11854,7 @@ pol
 \begin_layout Plain Layout
 
 \size small
+\lang english
 198,877 
 \end_layout
 
@@ -10883,6 +11866,7 @@ pol
 \begin_layout Plain Layout
 
 \size small
+\lang english
 29.34% 
 \end_layout
 
@@ -10894,6 +11878,7 @@ pol
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.37% 
 \end_layout
 
@@ -10905,6 +11890,7 @@ pol
 \begin_layout Plain Layout
 
 \size small
+\lang english
 99.99% 
 \end_layout
 
@@ -10916,6 +11902,7 @@ pol
 \begin_layout Plain Layout
 
 \size small
+\lang english
 15.65% 
 \end_layout
 
@@ -10929,6 +11916,7 @@ pol
 \begin_layout Plain Layout
 
 \size small
+\lang english
 prt 
 \end_layout
 
@@ -10940,6 +11928,7 @@ prt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 125,283 
 \end_layout
 
@@ -10951,6 +11940,7 @@ prt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 64,391 
 \end_layout
 
@@ -10962,6 +11952,7 @@ prt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 30.77% 
 \end_layout
 
@@ -10973,6 +11964,7 @@ prt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 15.81% 
 \end_layout
 
@@ -10984,6 +11976,7 @@ prt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 18.69% 
 \end_layout
 
@@ -10995,6 +11988,7 @@ prt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 37.51% 
 \end_layout
 
@@ -11008,6 +12002,7 @@ prt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 rou 
 \end_layout
 
@@ -11019,6 +12014,7 @@ rou
 \begin_layout Plain Layout
 
 \size small
+\lang english
 59,385 
 \end_layout
 
@@ -11030,6 +12026,7 @@ rou
 \begin_layout Plain Layout
 
 \size small
+\lang english
 54,956 
 \end_layout
 
@@ -11041,6 +12038,7 @@ rou
 \begin_layout Plain Layout
 
 \size small
+\lang english
 24.23% 
 \end_layout
 
@@ -11052,6 +12050,7 @@ rou
 \begin_layout Plain Layout
 
 \size small
+\lang english
 22.42% 
 \end_layout
 
@@ -11063,6 +12062,7 @@ rou
 \begin_layout Plain Layout
 
 \size small
+\lang english
 14.95% 
 \end_layout
 
@@ -11074,6 +12074,7 @@ rou
 \begin_layout Plain Layout
 
 \size small
+\lang english
 45.54% 
 \end_layout
 
@@ -11087,6 +12088,7 @@ rou
 \begin_layout Plain Layout
 
 \size small
+\lang english
 rus 
 \end_layout
 
@@ -11098,6 +12100,7 @@ rus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 317,701 
 \end_layout
 
@@ -11109,6 +12112,7 @@ rus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 837,747 
 \end_layout
 
@@ -11120,6 +12124,7 @@ rus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.51% 
 \end_layout
 
@@ -11131,6 +12136,7 @@ rus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 35.62% 
 \end_layout
 
@@ -11142,6 +12148,7 @@ rus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 3.61% 
 \end_layout
 
@@ -11153,6 +12160,7 @@ rus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 56.47% 
 \end_layout
 
@@ -11166,6 +12174,7 @@ rus
 \begin_layout Plain Layout
 
 \size small
+\lang english
 sau 
 \end_layout
 
@@ -11177,6 +12186,7 @@ sau
 \begin_layout Plain Layout
 
 \size small
+\lang english
 57,392 
 \end_layout
 
@@ -11188,6 +12198,7 @@ sau
 \begin_layout Plain Layout
 
 \size small
+\lang english
 547,987 
 \end_layout
 
@@ -11199,6 +12210,7 @@ sau
 \begin_layout Plain Layout
 
 \size small
+\lang english
 3.95% 
 \end_layout
 
@@ -11210,6 +12222,7 @@ sau
 \begin_layout Plain Layout
 
 \size small
+\lang english
 37.73% 
 \end_layout
 
@@ -11221,6 +12234,7 @@ sau
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -15.39% 
 \end_layout
 
@@ -11232,6 +12246,7 @@ sau
 \begin_layout Plain Layout
 
 \size small
+\lang english
 56.02% 
 \end_layout
 
@@ -11245,6 +12260,7 @@ sau
 \begin_layout Plain Layout
 
 \size small
+\lang english
 sgp 
 \end_layout
 
@@ -11256,6 +12272,7 @@ sgp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 548,286 
 \end_layout
 
@@ -11267,6 +12284,7 @@ sgp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 219,149 
 \end_layout
 
@@ -11278,6 +12296,7 @@ sgp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 46.08% 
 \end_layout
 
@@ -11289,6 +12308,7 @@ sgp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 18.42% 
 \end_layout
 
@@ -11300,6 +12320,7 @@ sgp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 12.95% 
 \end_layout
 
@@ -11311,6 +12332,7 @@ sgp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 61.94% 
 \end_layout
 
@@ -11324,6 +12346,7 @@ sgp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 svk 
 \end_layout
 
@@ -11335,6 +12358,7 @@ svk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 140,548 
 \end_layout
 
@@ -11346,6 +12370,7 @@ svk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 61,023 
 \end_layout
 
@@ -11357,6 +12382,7 @@ svk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 44.95% 
 \end_layout
 
@@ -11368,6 +12394,7 @@ svk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.52% 
 \end_layout
 
@@ -11379,6 +12406,7 @@ svk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 47.60% 
 \end_layout
 
@@ -11390,6 +12418,7 @@ svk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 7.80% 
 \end_layout
 
@@ -11403,6 +12432,7 @@ svk
 \begin_layout Plain Layout
 
 \size small
+\lang english
 svn 
 \end_layout
 
@@ -11414,6 +12444,7 @@ svn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 51,465 
 \end_layout
 
@@ -11425,6 +12456,7 @@ svn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 29,065 
 \end_layout
 
@@ -11436,6 +12468,7 @@ svn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 34.78% 
 \end_layout
 
@@ -11447,6 +12480,7 @@ svn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.64% 
 \end_layout
 
@@ -11458,6 +12492,7 @@ svn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11.26% 
 \end_layout
 
@@ -11469,6 +12504,7 @@ svn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 58.26% 
 \end_layout
 
@@ -11482,6 +12518,7 @@ svn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 swe 
 \end_layout
 
@@ -11493,6 +12530,7 @@ swe
 \begin_layout Plain Layout
 
 \size small
+\lang english
 355,353 
 \end_layout
 
@@ -11504,6 +12542,7 @@ swe
 \begin_layout Plain Layout
 
 \size small
+\lang english
 262,980 
 \end_layout
 
@@ -11515,6 +12554,7 @@ swe
 \begin_layout Plain Layout
 
 \size small
+\lang english
 29.09% 
 \end_layout
 
@@ -11526,6 +12566,7 @@ swe
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.52% 
 \end_layout
 
@@ -11537,6 +12578,7 @@ swe
 \begin_layout Plain Layout
 
 \size small
+\lang english
 8.68% 
 \end_layout
 
@@ -11548,6 +12590,7 @@ swe
 \begin_layout Plain Layout
 
 \size small
+\lang english
 29.44% 
 \end_layout
 
@@ -11561,6 +12604,7 @@ swe
 \begin_layout Plain Layout
 
 \size small
+\lang english
 tha 
 \end_layout
 
@@ -11572,6 +12616,7 @@ tha
 \begin_layout Plain Layout
 
 \size small
+\lang english
 391,773 
 \end_layout
 
@@ -11583,6 +12628,7 @@ tha
 \begin_layout Plain Layout
 
 \size small
+\lang english
 156,527 
 \end_layout
 
@@ -11594,6 +12640,7 @@ tha
 \begin_layout Plain Layout
 
 \size small
+\lang english
 36.05% 
 \end_layout
 
@@ -11605,6 +12652,7 @@ tha
 \begin_layout Plain Layout
 
 \size small
+\lang english
 14.40% 
 \end_layout
 
@@ -11616,6 +12664,7 @@ tha
 \begin_layout Plain Layout
 
 \size small
+\lang english
 61.19% 
 \end_layout
 
@@ -11627,6 +12676,7 @@ tha
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.84% 
 \end_layout
 
@@ -11640,6 +12690,7 @@ tha
 \begin_layout Plain Layout
 
 \size small
+\lang english
 tun 
 \end_layout
 
@@ -11651,6 +12702,7 @@ tun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 35,124 
 \end_layout
 
@@ -11662,6 +12714,7 @@ tun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 18,724 
 \end_layout
 
@@ -11673,6 +12726,7 @@ tun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 30.17% 
 \end_layout
 
@@ -11684,6 +12738,7 @@ tun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 16.08% 
 \end_layout
 
@@ -11695,6 +12750,7 @@ tun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 30.65% 
 \end_layout
 
@@ -11706,6 +12762,7 @@ tun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 48.33% 
 \end_layout
 
@@ -11719,6 +12776,7 @@ tun
 \begin_layout Plain Layout
 
 \size small
+\lang english
 tur 
 \end_layout
 
@@ -11730,6 +12788,7 @@ tur
 \begin_layout Plain Layout
 
 \size small
+\lang english
 180,927 
 \end_layout
 
@@ -11741,6 +12800,7 @@ tur
 \begin_layout Plain Layout
 
 \size small
+\lang english
 113,136 
 \end_layout
 
@@ -11752,6 +12812,7 @@ tur
 \begin_layout Plain Layout
 
 \size small
+\lang english
 22.30% 
 \end_layout
 
@@ -11763,6 +12824,7 @@ tur
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.95% 
 \end_layout
 
@@ -11774,6 +12836,7 @@ tur
 \begin_layout Plain Layout
 
 \size small
+\lang english
 195.25% 
 \end_layout
 
@@ -11785,6 +12848,7 @@ tur
 \begin_layout Plain Layout
 
 \size small
+\lang english
 12.71% 
 \end_layout
 
@@ -11798,6 +12862,7 @@ tur
 \begin_layout Plain Layout
 
 \size small
+\lang english
 twn 
 \end_layout
 
@@ -11809,6 +12874,7 @@ twn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 649,797 
 \end_layout
 
@@ -11820,6 +12886,7 @@ twn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 353,241 
 \end_layout
 
@@ -11831,6 +12898,7 @@ twn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 39.52% 
 \end_layout
 
@@ -11842,6 +12910,7 @@ twn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.48% 
 \end_layout
 
@@ -11853,6 +12922,7 @@ twn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 41.83% 
 \end_layout
 
@@ -11864,6 +12934,7 @@ twn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 60.53% 
 \end_layout
 
@@ -11877,6 +12948,7 @@ twn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 usa 
 \end_layout
 
@@ -11888,6 +12960,7 @@ usa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,318,846 
 \end_layout
 
@@ -11899,6 +12972,7 @@ usa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 2,248,028 
 \end_layout
 
@@ -11910,6 +12984,7 @@ usa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.52% 
 \end_layout
 
@@ -11921,6 +12996,7 @@ usa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.04% 
 \end_layout
 
@@ -11932,6 +13008,7 @@ usa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 30.75% 
 \end_layout
 
@@ -11943,6 +13020,7 @@ usa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 26.87% 
 \end_layout
 
@@ -11956,6 +13034,7 @@ usa
 \begin_layout Plain Layout
 
 \size small
+\lang english
 vnm 
 \end_layout
 
@@ -11967,6 +13046,7 @@ vnm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 119,821 
 \end_layout
 
@@ -11978,6 +13058,7 @@ vnm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 57,005 
 \end_layout
 
@@ -11989,6 +13070,7 @@ vnm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 33.76% 
 \end_layout
 
@@ -12000,6 +13082,7 @@ vnm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 16.06% 
 \end_layout
 
@@ -12011,6 +13094,7 @@ vnm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 72.69% 
 \end_layout
 
@@ -12022,6 +13106,7 @@ vnm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.95% 
 \end_layout
 
@@ -12035,6 +13120,7 @@ vnm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 zaf 
 \end_layout
 
@@ -12046,6 +13132,7 @@ zaf
 \begin_layout Plain Layout
 
 \size small
+\lang english
 102,394 
 \end_layout
 
@@ -12057,6 +13144,7 @@ zaf
 \begin_layout Plain Layout
 
 \size small
+\lang english
 122,842 
 \end_layout
 
@@ -12068,6 +13156,7 @@ zaf
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.31% 
 \end_layout
 
@@ -12079,6 +13168,7 @@ zaf
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.16% 
 \end_layout
 
@@ -12090,6 +13180,7 @@ zaf
 \begin_layout Plain Layout
 
 \size small
+\lang english
 47.60% 
 \end_layout
 
@@ -12101,6 +13192,7 @@ zaf
 \begin_layout Plain Layout
 
 \size small
+\lang english
 24.98% 
 \end_layout
 
@@ -12115,6 +13207,8 @@ zaf
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 GVC indicators by country
 \end_layout
 
@@ -12136,6 +13230,8 @@ name "tab:gvc_k"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float table
 placement h
 wide false
@@ -12146,6 +13242,7 @@ status collapsed
 \align center
 
 \size small
+\lang english
 \begin_inset space \hspace*{}
 \length -3cm
 \end_inset
@@ -12169,6 +13266,7 @@ status collapsed
 
 \shape italic
 \size small
+\lang english
 sector
 \end_layout
 
@@ -12181,6 +13279,7 @@ sector
 
 \shape italic
 \size small
+\lang english
 Average (i2e values)
 \end_layout
 
@@ -12193,6 +13292,7 @@ Average (i2e values)
 
 \shape italic
 \size small
+\lang english
 Average (e2r values)
 \end_layout
 
@@ -12205,6 +13305,7 @@ Average (e2r values)
 
 \shape italic
 \size small
+\lang english
 Average (i2e)
 \end_layout
 
@@ -12217,6 +13318,7 @@ Average (i2e)
 
 \shape italic
 \size small
+\lang english
 Average (e2r)
 \end_layout
 
@@ -12229,6 +13331,7 @@ Average (e2r)
 
 \shape italic
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -12244,6 +13347,7 @@ Average (e2r)
 
 \shape italic
 \size small
+\lang english
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -12260,6 +13364,7 @@ Average (e2r)
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c01t05agr 
 \end_layout
 
@@ -12271,6 +13376,7 @@ c01t05agr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 227,969 
 \end_layout
 
@@ -12282,6 +13388,7 @@ c01t05agr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 364,681 
 \end_layout
 
@@ -12293,6 +13400,7 @@ c01t05agr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.00% 
 \end_layout
 
@@ -12304,6 +13412,7 @@ c01t05agr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20.79% 
 \end_layout
 
@@ -12315,6 +13424,7 @@ c01t05agr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 36.13% 
 \end_layout
 
@@ -12326,6 +13436,7 @@ c01t05agr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 27.51% 
 \end_layout
 
@@ -12339,6 +13450,7 @@ c01t05agr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c10t14min 
 \end_layout
 
@@ -12350,6 +13462,7 @@ c10t14min
 \begin_layout Plain Layout
 
 \size small
+\lang english
 435,816 
 \end_layout
 
@@ -12361,6 +13474,7 @@ c10t14min
 \begin_layout Plain Layout
 
 \size small
+\lang english
 3,324,446 
 \end_layout
 
@@ -12372,6 +13486,7 @@ c10t14min
 \begin_layout Plain Layout
 
 \size small
+\lang english
 5.82% 
 \end_layout
 
@@ -12383,6 +13498,7 @@ c10t14min
 \begin_layout Plain Layout
 
 \size small
+\lang english
 44.38% 
 \end_layout
 
@@ -12394,6 +13510,7 @@ c10t14min
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -4.51% 
 \end_layout
 
@@ -12405,6 +13522,7 @@ c10t14min
 \begin_layout Plain Layout
 
 \size small
+\lang english
 55.66% 
 \end_layout
 
@@ -12418,6 +13536,7 @@ c10t14min
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c15t16fod 
 \end_layout
 
@@ -12429,6 +13548,7 @@ c15t16fod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 675,902 
 \end_layout
 
@@ -12440,6 +13560,7 @@ c15t16fod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 146,824 
 \end_layout
 
@@ -12451,6 +13572,7 @@ c15t16fod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.58% 
 \end_layout
 
@@ -12462,6 +13584,7 @@ c15t16fod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 4.25% 
 \end_layout
 
@@ -12473,6 +13596,7 @@ c15t16fod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.04% 
 \end_layout
 
@@ -12484,6 +13608,7 @@ c15t16fod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 32.73% 
 \end_layout
 
@@ -12497,6 +13622,7 @@ c15t16fod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c17t19tex 
 \end_layout
 
@@ -12508,6 +13634,7 @@ c17t19tex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 679,185 
 \end_layout
 
@@ -12519,6 +13646,7 @@ c17t19tex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 174,555 
 \end_layout
 
@@ -12530,6 +13658,7 @@ c17t19tex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.30% 
 \end_layout
 
@@ -12541,6 +13670,7 @@ c17t19tex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 5.99% 
 \end_layout
 
@@ -12552,6 +13682,7 @@ c17t19tex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 9.49% 
 \end_layout
 
@@ -12563,6 +13694,7 @@ c17t19tex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 2.72% 
 \end_layout
 
@@ -12576,6 +13708,7 @@ c17t19tex
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c20wod 
 \end_layout
 
@@ -12587,6 +13720,7 @@ c20wod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 105,771 
 \end_layout
 
@@ -12598,6 +13732,7 @@ c20wod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 80,461 
 \end_layout
 
@@ -12609,6 +13744,7 @@ c20wod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20.56% 
 \end_layout
 
@@ -12620,6 +13756,7 @@ c20wod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 15.64% 
 \end_layout
 
@@ -12631,6 +13768,7 @@ c20wod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 30.59% 
 \end_layout
 
@@ -12642,6 +13780,7 @@ c20wod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 63.12% 
 \end_layout
 
@@ -12655,6 +13794,7 @@ c20wod
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c21t22pap 
 \end_layout
 
@@ -12666,6 +13806,7 @@ c21t22pap
 \begin_layout Plain Layout
 
 \size small
+\lang english
 302,255 
 \end_layout
 
@@ -12677,6 +13818,7 @@ c21t22pap
 \begin_layout Plain Layout
 
 \size small
+\lang english
 344,112 
 \end_layout
 
@@ -12688,6 +13830,7 @@ c21t22pap
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.23% 
 \end_layout
 
@@ -12699,6 +13842,7 @@ c21t22pap
 \begin_layout Plain Layout
 
 \size small
+\lang english
 21.89% 
 \end_layout
 
@@ -12710,6 +13854,7 @@ c21t22pap
 \begin_layout Plain Layout
 
 \size small
+\lang english
 27.63% 
 \end_layout
 
@@ -12721,6 +13866,7 @@ c21t22pap
 \begin_layout Plain Layout
 
 \size small
+\lang english
 7.10% 
 \end_layout
 
@@ -12734,6 +13880,7 @@ c21t22pap
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c23pet 
 \end_layout
 
@@ -12745,6 +13892,7 @@ c23pet
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,285,522 
 \end_layout
 
@@ -12756,6 +13904,7 @@ c23pet
 \begin_layout Plain Layout
 
 \size small
+\lang english
 356,703 
 \end_layout
 
@@ -12767,6 +13916,7 @@ c23pet
 \begin_layout Plain Layout
 
 \size small
+\lang english
 39.53% 
 \end_layout
 
@@ -12778,6 +13928,7 @@ c23pet
 \begin_layout Plain Layout
 
 \size small
+\lang english
 10.97% 
 \end_layout
 
@@ -12789,6 +13940,7 @@ c23pet
 \begin_layout Plain Layout
 
 \size small
+\lang english
 65.81% 
 \end_layout
 
@@ -12800,6 +13952,7 @@ c23pet
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -8.04% 
 \end_layout
 
@@ -12813,6 +13966,7 @@ c23pet
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c24chm 
 \end_layout
 
@@ -12824,6 +13978,7 @@ c24chm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,762,631 
 \end_layout
 
@@ -12835,6 +13990,7 @@ c24chm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 925,255 
 \end_layout
 
@@ -12846,6 +14002,7 @@ c24chm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 28.18% 
 \end_layout
 
@@ -12857,6 +14014,7 @@ c24chm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 14.79% 
 \end_layout
 
@@ -12868,6 +14026,7 @@ c24chm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 52.19% 
 \end_layout
 
@@ -12879,6 +14038,7 @@ c24chm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -2.18% 
 \end_layout
 
@@ -12892,6 +14052,7 @@ c24chm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c25rbp 
 \end_layout
 
@@ -12903,6 +14064,7 @@ c25rbp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 446,528 
 \end_layout
 
@@ -12914,6 +14076,7 @@ c25rbp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 309,253 
 \end_layout
 
@@ -12925,6 +14088,7 @@ c25rbp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 27.89% 
 \end_layout
 
@@ -12936,6 +14100,7 @@ c25rbp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 19.32% 
 \end_layout
 
@@ -12947,6 +14112,7 @@ c25rbp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 38.26% 
 \end_layout
 
@@ -12958,6 +14124,7 @@ c25rbp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 3.06% 
 \end_layout
 
@@ -12971,6 +14138,7 @@ c25rbp
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c26nmm 
 \end_layout
 
@@ -12982,6 +14150,7 @@ c26nmm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 161,574 
 \end_layout
 
@@ -12993,6 +14162,7 @@ c26nmm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 126,800 
 \end_layout
 
@@ -13004,6 +14174,7 @@ c26nmm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 22.09% 
 \end_layout
 
@@ -13015,6 +14186,7 @@ c26nmm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 17.34% 
 \end_layout
 
@@ -13026,6 +14198,7 @@ c26nmm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 41.44% 
 \end_layout
 
@@ -13037,6 +14210,7 @@ c26nmm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 17.72% 
 \end_layout
 
@@ -13050,6 +14224,7 @@ c26nmm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c27met 
 \end_layout
 
@@ -13061,6 +14236,7 @@ c27met
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,340,507 
 \end_layout
 
@@ -13072,6 +14248,7 @@ c27met
 \begin_layout Plain Layout
 
 \size small
+\lang english
 868,120 
 \end_layout
 
@@ -13083,6 +14260,7 @@ c27met
 \begin_layout Plain Layout
 
 \size small
+\lang english
 31.03% 
 \end_layout
 
@@ -13094,6 +14272,7 @@ c27met
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20.10% 
 \end_layout
 
@@ -13105,6 +14284,7 @@ c27met
 \begin_layout Plain Layout
 
 \size small
+\lang english
 36.53% 
 \end_layout
 
@@ -13116,6 +14296,7 @@ c27met
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -11.26% 
 \end_layout
 
@@ -13129,6 +14310,7 @@ c27met
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c28fbm 
 \end_layout
 
@@ -13140,6 +14322,7 @@ c28fbm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 481,732 
 \end_layout
 
@@ -13151,6 +14334,7 @@ c28fbm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 441,396 
 \end_layout
 
@@ -13162,6 +14346,7 @@ c28fbm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 27.53% 
 \end_layout
 
@@ -13173,6 +14358,7 @@ c28fbm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 25.23% 
 \end_layout
 
@@ -13184,6 +14370,7 @@ c28fbm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 38.11% 
 \end_layout
 
@@ -13195,6 +14382,7 @@ c28fbm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 6.86% 
 \end_layout
 
@@ -13208,6 +14396,7 @@ c28fbm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c29meq 
 \end_layout
 
@@ -13219,6 +14408,7 @@ c29meq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,398,864 
 \end_layout
 
@@ -13230,6 +14420,7 @@ c29meq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 570,006 
 \end_layout
 
@@ -13241,6 +14432,7 @@ c29meq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 26.50% 
 \end_layout
 
@@ -13252,6 +14444,7 @@ c29meq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 10.80% 
 \end_layout
 
@@ -13263,6 +14456,7 @@ c29meq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 39.73% 
 \end_layout
 
@@ -13274,6 +14468,7 @@ c29meq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 30.96% 
 \end_layout
 
@@ -13287,6 +14482,7 @@ c29meq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c303233ceq 
 \end_layout
 
@@ -13298,6 +14494,7 @@ c303233ceq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 3,162,705 
 \end_layout
 
@@ -13309,6 +14506,7 @@ c303233ceq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,062,750 
 \end_layout
 
@@ -13320,6 +14518,7 @@ c303233ceq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 38.63% 
 \end_layout
 
@@ -13331,6 +14530,7 @@ c303233ceq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 12.98% 
 \end_layout
 
@@ -13342,6 +14542,7 @@ c303233ceq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 45.28% 
 \end_layout
 
@@ -13353,6 +14554,7 @@ c303233ceq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 18.74% 
 \end_layout
 
@@ -13366,6 +14568,7 @@ c303233ceq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c31elq 
 \end_layout
 
@@ -13377,6 +14580,7 @@ c31elq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 713,928 
 \end_layout
 
@@ -13388,6 +14592,7 @@ c31elq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 301,827 
 \end_layout
 
@@ -13399,6 +14604,7 @@ c31elq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 30.71% 
 \end_layout
 
@@ -13410,6 +14616,7 @@ c31elq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 12.98% 
 \end_layout
 
@@ -13421,6 +14628,7 @@ c31elq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 37.32% 
 \end_layout
 
@@ -13432,6 +14640,7 @@ c31elq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -3.42% 
 \end_layout
 
@@ -13445,6 +14654,7 @@ c31elq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c34mtr 
 \end_layout
 
@@ -13456,6 +14666,7 @@ c34mtr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,827,519 
 \end_layout
 
@@ -13467,6 +14678,7 @@ c34mtr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 340,198 
 \end_layout
 
@@ -13478,6 +14690,7 @@ c34mtr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 34.53% 
 \end_layout
 
@@ -13489,6 +14702,7 @@ c34mtr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 6.43% 
 \end_layout
 
@@ -13500,6 +14714,7 @@ c34mtr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 33.39% 
 \end_layout
 
@@ -13511,6 +14726,7 @@ c34mtr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 7.25% 
 \end_layout
 
@@ -13524,6 +14740,7 @@ c34mtr
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c35trq 
 \end_layout
 
@@ -13535,6 +14752,7 @@ c35trq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 745,063 
 \end_layout
 
@@ -13546,6 +14764,7 @@ c35trq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 203,834 
 \end_layout
 
@@ -13557,6 +14776,7 @@ c35trq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 30.54% 
 \end_layout
 
@@ -13568,6 +14788,7 @@ c35trq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 8.35% 
 \end_layout
 
@@ -13579,6 +14800,7 @@ c35trq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 40.89% 
 \end_layout
 
@@ -13590,6 +14812,7 @@ c35trq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 10.73% 
 \end_layout
 
@@ -13603,6 +14826,7 @@ c35trq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c36t37otm 
 \end_layout
 
@@ -13614,6 +14838,7 @@ c36t37otm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 429,561 
 \end_layout
 
@@ -13625,6 +14850,7 @@ c36t37otm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 156,828 
 \end_layout
 
@@ -13636,6 +14862,7 @@ c36t37otm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 23.49% 
 \end_layout
 
@@ -13647,6 +14874,7 @@ c36t37otm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 8.58% 
 \end_layout
 
@@ -13658,6 +14886,7 @@ c36t37otm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 14.69% 
 \end_layout
 
@@ -13669,6 +14898,7 @@ c36t37otm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 66.57% 
 \end_layout
 
@@ -13682,6 +14912,7 @@ c36t37otm
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c50t52wrt 
 \end_layout
 
@@ -13693,6 +14924,7 @@ c50t52wrt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 923,756 
 \end_layout
 
@@ -13704,6 +14936,7 @@ c50t52wrt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 3,002,076 
 \end_layout
 
@@ -13715,6 +14948,7 @@ c50t52wrt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 9.15% 
 \end_layout
 
@@ -13726,6 +14960,7 @@ c50t52wrt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 29.75% 
 \end_layout
 
@@ -13737,6 +14972,7 @@ c50t52wrt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 35.67% 
 \end_layout
 
@@ -13748,6 +14984,7 @@ c50t52wrt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 33.76% 
 \end_layout
 
@@ -13761,6 +14998,7 @@ c50t52wrt
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c60t63trn 
 \end_layout
 
@@ -13772,6 +15010,7 @@ c60t63trn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,293,729 
 \end_layout
 
@@ -13783,6 +15022,7 @@ c60t63trn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,507,876 
 \end_layout
 
@@ -13794,6 +15034,7 @@ c60t63trn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 17.88% 
 \end_layout
 
@@ -13805,6 +15046,7 @@ c60t63trn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 20.84% 
 \end_layout
 
@@ -13816,6 +15058,7 @@ c60t63trn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 60.51% 
 \end_layout
 
@@ -13827,6 +15070,7 @@ c60t63trn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 33.82% 
 \end_layout
 
@@ -13840,6 +15084,7 @@ c60t63trn
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c64ptl 
 \end_layout
 
@@ -13851,6 +15096,7 @@ c64ptl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 81,529 
 \end_layout
 
@@ -13862,6 +15108,7 @@ c64ptl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 322,823 
 \end_layout
 
@@ -13873,6 +15120,7 @@ c64ptl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 12.39% 
 \end_layout
 
@@ -13884,6 +15132,7 @@ c64ptl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 49.07% 
 \end_layout
 
@@ -13895,6 +15144,7 @@ c64ptl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 85.71% 
 \end_layout
 
@@ -13906,6 +15156,7 @@ c64ptl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -7.06% 
 \end_layout
 
@@ -13919,6 +15170,7 @@ c64ptl
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c65t67fin 
 \end_layout
 
@@ -13930,6 +15182,7 @@ c65t67fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 371,026 
 \end_layout
 
@@ -13941,6 +15194,7 @@ c65t67fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 992,980 
 \end_layout
 
@@ -13952,6 +15206,7 @@ c65t67fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.51% 
 \end_layout
 
@@ -13963,6 +15218,7 @@ c65t67fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 36.17% 
 \end_layout
 
@@ -13974,6 +15230,7 @@ c65t67fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 85.73% 
 \end_layout
 
@@ -13985,6 +15242,7 @@ c65t67fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -8.65% 
 \end_layout
 
@@ -13998,6 +15256,7 @@ c65t67fin
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c71rmq 
 \end_layout
 
@@ -14009,6 +15268,7 @@ c71rmq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 67,266 
 \end_layout
 
@@ -14020,6 +15280,7 @@ c71rmq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 215,714 
 \end_layout
 
@@ -14031,6 +15292,7 @@ c71rmq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11.59% 
 \end_layout
 
@@ -14042,6 +15304,7 @@ c71rmq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 37.18% 
 \end_layout
 
@@ -14053,6 +15316,7 @@ c71rmq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 89.87% 
 \end_layout
 
@@ -14064,6 +15328,7 @@ c71rmq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 13.54% 
 \end_layout
 
@@ -14077,6 +15342,7 @@ c71rmq
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c72its 
 \end_layout
 
@@ -14088,6 +15354,7 @@ c72its
 \begin_layout Plain Layout
 
 \size small
+\lang english
 144,310 
 \end_layout
 
@@ -14099,6 +15366,7 @@ c72its
 \begin_layout Plain Layout
 
 \size small
+\lang english
 286,414 
 \end_layout
 
@@ -14110,6 +15378,7 @@ c72its
 \begin_layout Plain Layout
 
 \size small
+\lang english
 16.55% 
 \end_layout
 
@@ -14121,6 +15390,7 @@ c72its
 \begin_layout Plain Layout
 
 \size small
+\lang english
 32.86% 
 \end_layout
 
@@ -14132,6 +15402,7 @@ c72its
 \begin_layout Plain Layout
 
 \size small
+\lang english
 73.87% 
 \end_layout
 
@@ -14143,6 +15414,7 @@ c72its
 \begin_layout Plain Layout
 
 \size small
+\lang english
 -1.85% 
 \end_layout
 
@@ -14156,6 +15428,7 @@ c72its
 \begin_layout Plain Layout
 
 \size small
+\lang english
 c73t74bzs 
 \end_layout
 
@@ -14167,6 +15440,7 @@ c73t74bzs
 \begin_layout Plain Layout
 
 \size small
+\lang english
 386,997 
 \end_layout
 
@@ -14178,6 +15452,7 @@ c73t74bzs
 \begin_layout Plain Layout
 
 \size small
+\lang english
 1,922,031 
 \end_layout
 
@@ -14189,6 +15464,7 @@ c73t74bzs
 \begin_layout Plain Layout
 
 \size small
+\lang english
 11.27% 
 \end_layout
 
@@ -14200,6 +15476,7 @@ c73t74bzs
 \begin_layout Plain Layout
 
 \size small
+\lang english
 55.99% 
 \end_layout
 
@@ -14211,6 +15488,7 @@ c73t74bzs
 \begin_layout Plain Layout
 
 \size small
+\lang english
 44.41% 
 \end_layout
 
@@ -14222,6 +15500,7 @@ c73t74bzs
 \begin_layout Plain Layout
 
 \size small
+\lang english
 17.81% 
 \end_layout
 
@@ -14236,6 +15515,8 @@ c73t74bzs
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\lang english
 GVC indicators by sector
 \end_layout
 

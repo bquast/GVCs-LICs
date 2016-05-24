@@ -6,29 +6,23 @@
 \origin unavailable
 \textclass article
 \begin_preamble
+\usepackage{appendix}
+\usepackage{threeparttable}
 \usepackage[style=philosophy-modern,natbib=true,backend=biber]{biblatex}
 \addbibresource{/Users/quast/OECD-TiVA-LMIC-GVCs/GVC-LMICs.bib}
-
-
-
-\usepackage{threeparttable}
-\usepackage{longtable}
-\usepackage{changepage}
-\usepackage{verbatim}
-\usepackage{epigraph}
-\usepackage{lscape}
-\usepackage{pbox}
-\usepackage{array}
 \end_preamble
-\use_default_options false
+\use_default_options true
+\begin_modules
+knitr
+\end_modules
 \maintain_unincluded_children false
 \begin_local_layout
 Provides natbib 1
 \end_local_layout
 \language english
-\language_package none
+\language_package default
 \inputencoding auto
-\fontencoding default
+\fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -40,34 +34,45 @@ Provides natbib 1
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \graphics default
-\default_output_format default
+\default_output_format pdf5
 \output_sync 0
 \bibtex_command biber
 \index_command default
-\paperfontsize 11
-\spacing onehalf
-\use_hyperref false
-\papersize a4paper
+\float_placement bh
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_author "Bastiaan Quast"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 0
-\use_package cancel 0
+\use_package amssymb 1
+\use_package cancel 1
 \use_package esint 1
-\use_package mathdots 0
-\use_package mathtools 2
-\use_package mhchem 0
-\use_package stackrel 0
-\use_package stmaryrd 0
-\use_package undertilde 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine natbib
 \cite_engine_type authoryear
-\biblio_style plainnat
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 0
+\use_refstyle 1
 \index Index
 \shortcut idx
 \color #008000
@@ -1426,7 +1431,7 @@ reference "fig:e2rs"
 
 \end_inset
 
- shows that this indicator is dominated by the same upstream industries
+ demonstrates that this indicator is dominated by the same upstream industries
  that are at the bottom of the 
 \begin_inset Formula $i2e$
 \end_inset
@@ -1583,7 +1588,7 @@ name "fig:e2rs"
 \end_layout
 
 \begin_layout Standard
-Finally, when we turn to differences in GVC integration by country we can
+Finally, when we turn to differences in GVC integration by country, we can
  confirm the findings by 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1591,8 +1596,7 @@ key "ribajalo13"
 
 \end_inset
 
-.
- Figure 
+, Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:i2ek"
@@ -1633,7 +1637,7 @@ Driven by the sectoral statistics, we then find again that for
  as Cambodia, Mexico, or Turkey in contrast have very weak linkages and
  have not been able to strengthen them significantly between 1995 and 2011.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 The full set of results for 
@@ -1996,8 +2000,8 @@ Note that in this section indicators are based only on manufacturing and
  High-income economies have slightly stronger forward linkages but lower
  backward linkages which implies that their exports contain more domestic
  value added.
- Developing economies could thus try to upgrade their GVC integration by
- increasing domestic content in exports.
+ Developing economies thus have to chance to try to upgrade their GVC integratio
+n, by increasing domestic content in exports.
 \end_layout
 
 \begin_layout Standard
@@ -2380,8 +2384,8 @@ reference "fig:llmpartner"
 status collapsed
 
 \begin_layout Plain Layout
-However, we will see that GVC integration differs significantly among developing
- countries.
+We will see that GVC integration nevertheless differs significantly among
+ developing countries.
 \end_layout
 
 \end_inset
@@ -2434,8 +2438,8 @@ name "fig:llmpartner"
 \end_layout
 
 \begin_layout Standard
-In a next step we zoom in and analyse the GVC participation of developing
- economies more closely with the help of the WWZ decomposition.
+We now zoom in and analyse the GVC participation of developing economies
+ more closely with the help of the WWZ decomposition.
  As described in section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2444,7 +2448,7 @@ reference "sub:wwz"
 \end_inset
 
 , WWZ show how the structure and changes in the structure of domestic and
- foreign content in exports inform us on a country's movement along the
+ foreign content in exports inform us about a country's movement along the
  value chain.
  In particular, 
 \begin_inset Formula $i2e$
@@ -2466,7 +2470,7 @@ reference "sub:wwz"
  Table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:wwz"
+reference "tab:tabelwwz"
 
 \end_inset
 
@@ -2480,8 +2484,8 @@ reference "tab:wwz"
 \end_inset
 
  (42%) than high-income economies (39%).
- This is in line with a specialisation of developing economies in downstream
- assembly tasks.
+ This is in line with a trend of specialisation of developing economies
+ in downstream assembly tasks.
 \end_layout
 
 \begin_layout Standard
@@ -2512,7 +2516,7 @@ WWZ decomposition results by income
 \size small
 \begin_inset CommandInset label
 LatexCommand label
-name "tab:wwz"
+name "tab:tabelwwz"
 
 \end_inset
 
@@ -2791,7 +2795,7 @@ end{tablenotes}
 However, a shift from foreign content in final goods to intermediate goods
  and double counted trade value would be indicative of moving up the value
  chain.
- For low- and lower middle-income countries, we indeed find as shown by
+ For low- and lower middle-income countries, we indeed find - as shown by
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2799,7 +2803,7 @@ reference "fig:llmwwz"
 
 \end_inset
 
- that the share of 
+ - that the share of 
 \begin_inset Formula $fva\_fin$
 \end_inset
 
@@ -2808,9 +2812,9 @@ reference "fig:llmwwz"
 \end_inset
 
  has fallen by about 4%.
- This gain accrues to the double counting part which goes up by 6%.
+ This gain accrues to the double counting part, which rises by 6%.
  This means that production has become more fragmented and that developing
- economies increasingly occupy more upstream stages.
+ economies increasingly occupy more upstream stages of the value chain.
 \end_layout
 
 \begin_layout Standard
@@ -2819,7 +2823,7 @@ A similar exercise can be done for the domestic value added embodied in
  The exported domestic value added of high-income countries tends to be
  dominated by intermediate goods (57%) while low- and lower middle-income
  countries only achieve a value of 55%.
- We obtain the same information when we look at the share of domestic value
+ We come to the same conclusion when we look at the share of domestic value
  added that eventually returns home.
  Here, the value for high-income countries (2.42%) is more than twice as
  high than its low- and lower-middle income counterpart (1.18%), which indicates
@@ -2885,14 +2889,13 @@ Revealing new trends in the participation of developing economies
 \begin_layout Standard
 The trends described in the previous section inform us on the average performanc
 e of developing countries but they might hide considerable heterogeneity
- among these countries.
- Therefore, we will merge a subset of the newly available countries into
- the three regions Central and South America (CSA), South East Asia (SEA),
- and Africa (AFR) and analyse the development of their GVC participation
- country by country.
+ among these countries, we therefore merge a subset of the newly available
+ countries into the three regions Central and South America (CSA), South
+ East Asia (SEA), and Africa (AFR) and analyse the development of their
+ GVC participation country by country.
  CSA covers Argentina, Chile, Colombia, and Costa Rica; SEA covers Cambodia,
- Malaysia, Philippines, Thailand, and Vietnam; while AFR covers South Africa
- and Tunisia.
+ Malaysia, The Philippines, Thailand, and Vietnam; while AFR covers South
+ Africa and Tunisia.
 \end_layout
 
 \begin_layout Paragraph
@@ -2906,7 +2909,7 @@ South East Asia
 The SEA economies for which data is newly available are Cambodia, Hong Kong,
  Malaysia, Philippines, Singapore, Thailand, and Vietnam.
  Since Singapore and Hong Kong are special cases due to their per capita
- income and size, we focus on Cambodia, Malaysia, Philippines, Thailand,
+ income and size, we focus on Cambodia, Malaysia, The Philippines, Thailand,
  and Vietnam.
 \end_layout
 
@@ -2935,8 +2938,8 @@ reference "tab:seagvc"
 
  values suggesting a strong specialisation in low value added tasks located
  downstream in the chain.
- To obtain more detailed information on how these countries engage in GVCs
- we need however more disaggregated indicators.
+ However, in order to obtain more detailed information on how these countries
+ engage in GVCs we need more disaggregated indicators.
 \end_layout
 
 \begin_layout Standard
@@ -2970,7 +2973,7 @@ reference "tab:seawwz"
  values.
  Comparing these results to the analysis by WWZ, we find that the latter
  set of countries have a similar GVC integration structure to Indonesia
- but still are behind more advanced nations such as Korea and Taiwan.
+ but still lag behind more advanced nations such as Korea and Taiwan.
 \end_layout
 
 \begin_layout Standard
@@ -2980,8 +2983,8 @@ When we look at the change over time from 1995 to 2011, we see that Cambodia
 \end_inset
 
  of 35.2%.
- This is in stark contrast to the remaining SEA countries which all achieved
- to move up the value chain.
+ This stands in stark contrast to the remaining SEA countries which all
+ managed to move up the value chain.
  In particular, Vietnam is on a good path with the highest decline of 
 \begin_inset Formula $fva\_fin$
 \end_inset
@@ -2990,13 +2993,9 @@ When we look at the change over time from 1995 to 2011, we see that Cambodia
  in GVCs.
  For Cambodia, on the other hand, this means that GVCs offer a major untapped
  potential for future growth.
- If the country manages to introduce more GVC-friendly policies it can leverage
- its location close to the GVC hubs China and Japan to continue on its successfu
-l growth path.
-\begin_inset Newline newline
-\end_inset
-
-
+ If it is able to introduce more GVC-friendly policies, it can leverage
+ its location close to the GVC hubs China and Japan to put it on a successful
+ growth path.
 \end_layout
 
 \begin_layout Standard
@@ -4491,8 +4490,8 @@ Central and South America
 \end_layout
 
 \begin_layout Standard
-The newly available CSA economies comprise Argentina, Chile, Colombia, and
- Costa Rica compared to previously only Mexico and Brazil.
+The newly available CSA economies are Argentina, Chile, Colombia, and Costa
+ Rica, in addition to the previously available Mexico and Brazil.
  What stands out from looking at the standard GVC indicators presented in
  Table 
 \begin_inset CommandInset ref
@@ -4516,7 +4515,7 @@ reference "tab:csagvc"
 \end_layout
 
 \begin_layout Standard
-Focusing therefore on Costa Rica and Chile, we observe in Table 
+When focussing on Costa Rica and Chile, we observe in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:csawwz"
@@ -4525,8 +4524,8 @@ reference "tab:csawwz"
 
  that Chile's GVC integration structure starts to resembles the structure
  of high income countries.
- The major part of the country's integration is through intermediates as
- shown by the high 
+ The largest part of the country's integration is through intermediates
+ as shown by the high 
 \begin_inset Formula $fva\_inter$
 \end_inset
 
@@ -4544,8 +4543,8 @@ reference "tab:csawwz"
 \end_layout
 
 \begin_layout Standard
-Costa Rica on the other hand possesses the typical GVC integration structure
- of lower middle-income economies with high 
+Costa Rica possesses the typical GVC integration structure of lower middle-incom
+e economies with high 
 \begin_inset Formula $fva\_fin$
 \end_inset
 
@@ -5892,8 +5891,8 @@ Africa
 To conclude, we turn to Africa.
  GVC data on Africa is scarce and typically it is assumed that integration
  levels are low.
- However, the newly available OECD data comprises with Tunisia and South
- Africa two interesting and unique cases.
+ However, the newly available OECD data includes Tunisia and South Africa,
+ two interesting and unique cases.
  Tunisia and South Africa offer relatively stable political environments
  and a relatively high degree of industrialisation which makes them two
  optimal case studies.
@@ -6916,13 +6915,13 @@ key "rokoetal14"
 
  to a new set of Inter-Country Input-Output tables built by the OECD.
  The advantage is twofold.
- Firstly, the WWZ decomposition allows to analyse the structure of regions'
+ Firstly, the WWZ decomposition allows us to analyse the structure of regions'
  GVC integration in addition to the intensity measures provided by previous
  decompositions leading to deeper insights into GVC integration patterns.
- Secondly, the new OECD ICIOs cover a much larger fraction of developing
- economies than previous ICIOs.
- This allows us to get a better understanding of how these countries integrate
- into GVCs.
+ Secondly, the new OECD ICIOs cover a more developing economies than previous
+ ICIOs.
+ This allows us to develop a more accurate understanding of how these countries
+ integrate with GVCs.
 \end_layout
 
 \begin_layout Standard
@@ -6931,26 +6930,26 @@ We find that many ideas based on previous anecdotal evidence can be confirmed
  In particular, there is a central difference in the structure of high-income
  economies' integration into GVCs compared to developing economies when
  it comes to the position in GVCs.
- If we abstract from primary sectors, high-income economies are typically
- positioned more upstream in the value chain which can be seen from the
- concentration of their value added in intermediate goods exports.
+ If we set aside primary sectors, high-income economies are typically positioned
+ more upstream in the value chain which can be seen from the concentration
+ of their value added in intermediate goods exports.
  In addition, they also serve as market of final demand which can be seen
  from their relatively high share of exported domestic value added returning
  home eventually for final consumption.
 \end_layout
 
 \begin_layout Standard
-Developing economies, on the other hand, tend to be positioned more downstream
- which can be deduced from the concentration of their GVC participation
- in final goods exports and the fact that their forward linkages and returning
- domestic value added tend to be low.
+Developing economies, on the other hand, tend to be positioned more downstream,
+ this can be deduced from the concentration of their GVC participation in
+ final goods exports and the fact that their forward linkages and returning
+ domestic value added tend to be relatively low.
  These two stylised facts suggest that high-income economies use GVCs to
  outsource low value added downstream production stages and eventually reimport
  the final goods.
- However, when looking at the development over time it emerges strongly
- that many developing economies have succeeded in moving up the value chain
- and that the general trend points to a more even distribution of value
- added across the different countries.
+ However, when looking at the development over time, it appears that many
+ developing economies have succeeded in moving up the value chain and that
+ the general trend points to a more even distribution of value added across
+ the different countries.
 \end_layout
 
 \begin_layout Standard
@@ -6967,14 +6966,14 @@ Finally, we use the new data to look at selected low- and middle income
 
 \begin_layout Standard
 Overall, we show that low- and middle-income countries have become an integral
- part of GVCs and are increasingly the driver of their expansion.
+ part of GVCs and are increasingly becoming the driver of their expansion.
  In addition, they increasingly succeed in moving into higher value added
  stages of the production networks.
- While the exact implications of integration into GVCs are still being researche
-d, it is clear that they offer significant potential for industrialisation
- and growth and therefore countries like the Philippines, Costa Rica, or
- Tunisia are in a good position and can serve as examples for comparable
- countries.
+ While the exact implications of integration into GVCs are still the subject
+ of much research, it is clear that they offer significant potential for
+ industrialisation and growth and that countries like The Philippines, Costa
+ Rica, or Tunisia are therefore in good positions to benefit from this and
+ can serve as examples for comparable countries.
 \end_layout
 
 \begin_layout Standard
