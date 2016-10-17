@@ -222,7 +222,7 @@ gvc_indicators %>%
   ggvis(~year, ~i2e ) %>%
   layer_lines()
 
-# i2e with divided
+#### in paper
 # i2e with divided
 gvc_indicators %>%
   group_by(year) %>%
