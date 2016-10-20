@@ -9,7 +9,7 @@
 \usepackage{appendix}
 \usepackage{threeparttable}
 \usepackage[style=philosophy-modern,natbib=true,backend=biber]{biblatex}
-\addbibresource{/Users/quast/OECD-TiVA-LMIC-GVCs/GVC-LMICs.bib}
+\addbibresource{~/GVCs-LICs/GVC-LMICs.bib}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -36,13 +36,15 @@ Provides natbib 1
 \graphics default
 \default_output_format pdf5
 \output_sync 0
-\bibtex_command biber
+\bibtex_command default
 \index_command default
 \float_placement bh
 \paperfontsize default
 \spacing single
 \use_hyperref true
-\pdf_author "Bastiaan Quast"
+\pdf_title "Global Value Chains in Low Income Countries"
+\pdf_author "Victor Kummritz and Bastiaan Quast"
+\pdf_keywords "GVC, LIC, LMIC, Global Value Chain"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
@@ -7044,7 +7046,7 @@ name "sec:appendix"
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -9544,7 +9546,29 @@ isl
 placement H
 wide false
 sideways false
-status collapsed
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\size small
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GVC indicators by country
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:gvc_k"
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -9571,7 +9595,6 @@ status collapsed
 
 \begin_layout Plain Layout
 
-\shape italic
 \size small
 country
 \end_layout
@@ -9583,7 +9606,6 @@ country
 
 \begin_layout Plain Layout
 
-\shape italic
 \size small
 Average (i2e values)
 \end_layout
@@ -9595,7 +9617,6 @@ Average (i2e values)
 
 \begin_layout Plain Layout
 
-\shape italic
 \size small
 Average (e2r values)
 \end_layout
@@ -9607,7 +9628,6 @@ Average (e2r values)
 
 \begin_layout Plain Layout
 
-\shape italic
 \size small
 Average (i2e)
 \end_layout
@@ -9619,7 +9639,6 @@ Average (i2e)
 
 \begin_layout Plain Layout
 
-\shape italic
 \size small
 Average (e2r)
 \end_layout
@@ -9631,7 +9650,6 @@ Average (e2r)
 
 \begin_layout Plain Layout
 
-\shape italic
 \size small
 \begin_inset Formula $\Delta$
 \end_inset
@@ -9646,7 +9664,6 @@ Average (e2r)
 
 \begin_layout Plain Layout
 
-\shape italic
 \size small
 \begin_inset Formula $\Delta$
 \end_inset
@@ -12111,22 +12128,6 @@ zaf
 \end_inset
 
 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-GVC indicators by country
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:gvc_k"
-
-\end_inset
-
- 
 \end_layout
 
 \end_inset
