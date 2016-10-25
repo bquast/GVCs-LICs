@@ -389,6 +389,11 @@ library(dplyr)
 
 \begin_layout Plain Layout
 
+library(reshape2)
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1272,6 +1277,10 @@ reference "fig:pdct"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -1297,7 +1306,6 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
- 
 \begin_inset Graphics
 	filename misc/i2epercentage.png
 	width 100text%
@@ -1314,13 +1322,6 @@ The development of GVC integration over time
 \end_inset
 
 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:i2et"
-
-\end_inset
-
- 
 \end_layout
 
 \end_inset
@@ -1349,7 +1350,6 @@ backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
- 
 \begin_inset Graphics
 	filename misc/pdcII.png
 	width 100text%
@@ -1366,13 +1366,11 @@ The development of double counted trade over time
 \end_inset
 
 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:pdct"
+\end_layout
 
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
@@ -1387,6 +1385,7 @@ name "fig:pdct"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement bh
 wide false
 sideways false
 status open
@@ -1399,8 +1398,132 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Pure Double Counted - GVC Length
+i2e - GVC integration
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:i2et"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+i2e, echo=FALSE, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gvc_indicators %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  group_by(year) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  summarise(total = sum(i2e) ) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  mutate(share = c(17.3, 20.5, 22.1, 23.2, 21.0, 22.4, 23.2)) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  melt(id.vars = 'year') %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(aes(x=year, y=value)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  facet_grid(variable ~ ., scale='free') %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_area(aes(fill=variable)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  scale_fill_brewer(palette='Set1') 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement bh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Double counted trade - GVC Length
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pdct"
 
 \end_inset
 

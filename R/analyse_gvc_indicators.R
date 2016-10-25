@@ -236,6 +236,15 @@ gvc_indicators %>%
            properties = axis_props(labels = list(fill = 'red')) ) %>%
   layer_lines( prop('y', ~divided, scale='ydiv'), stroke:='red' )
 
+gvc_indicators %>%
+  group_by(year) %>%
+  summarise(total = sum(i2e) ) %>%
+  mutate(share = c(17.3, 20.5, 22.1, 23.2, 21.0, 22.4, 23.2)) %>%
+  melt(id.vars = 'year') %>%
+  ggplot(aes(x=year, y=value)) %+%
+  facet_grid(variable ~ ., scale='free') %+%
+  geom_area(aes(fill=variable)) %+%
+  scale_fill_brewer(palette='Set1')
 
 # i2e class == L
 gvc_indicators %>%
