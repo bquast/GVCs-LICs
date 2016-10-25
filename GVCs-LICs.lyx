@@ -1433,7 +1433,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 i2e, echo=FALSE, cache=TRUE
 \end_layout
 
@@ -1546,7 +1545,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 pdc, echo=FALSE, cache=TRUE
 \end_layout
 
@@ -1647,6 +1645,111 @@ status open
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sectoral 
+\begin_inset Formula $i2e$
+\end_inset
+
+ shares - Top and bottom 6.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:i2es"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+i2e_shares, echo=FALSE, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+sector_desc %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  group_by(sector) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  summarise(i2e=fvax_s/exp) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  filter(i2e > 0.30 | i2e < 0.13) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  arrange(i2e) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  data.frame(range=c(rep('bottom 6', times=6), rep('top 6', times =6)) )
+ %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(aes(x=sector, y=i2e, fill=range)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  facet_grid(.
+ ~ range, scale='free') %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_bar(stat='identity') %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  scale_fill_brewer(palette='Set1') 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Box Frameless
 position "c"
 hor_pos "l"
@@ -1715,26 +1818,11 @@ status collapsed
 \end_inset
 
 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Sectoral 
-\begin_inset Formula $i2e$
-\end_inset
-
- shares - Top and bottom 6.
 \end_layout
 
 \end_inset
 
 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:i2es"
-
-\end_inset
-
- 
 \end_layout
 
 \end_inset
@@ -1821,6 +1909,110 @@ status open
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sectoral 
+\begin_inset Formula $e2r$
+\end_inset
+
+ shares - Top and bottom 6.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:e2rs"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+e2r, echo=FALSE, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+sector_desc %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  group_by(sector) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  summarise(e2r=dvar_s/exp) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  filter(e2r > 0.30 | e2r < 0.108) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  arrange(e2r) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  data.frame(range=c(rep('bottom 6', times=6), rep('top 6', times =6)) )
+ %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(aes(x=sector, y=e2r, fill=range)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  facet_grid(.
+ ~ range, scale='free') %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_bar(stat='identity') %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  scale_fill_brewer(palette='Set1') 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Box Frameless
 position "c"
 hor_pos "l"
@@ -1888,26 +2080,11 @@ status collapsed
 \end_inset
 
 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Sectoral 
-\begin_inset Formula $e2r$
-\end_inset
-
- shares - Top and bottom 6.
 \end_layout
 
 \end_inset
 
 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:e2rs"
-
-\end_inset
-
- 
 \end_layout
 
 \end_inset
@@ -1998,6 +2175,116 @@ reference "sec:appendix"
 placement H
 wide false
 sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Countries' 
+\begin_inset Formula $i2e$
+\end_inset
+
+ shares - Top and bottom 6.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:i2ek"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+i2e_country, echo=FALSE, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+country_desc %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  group_by(country) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  summarise(i2e=fva_sha) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  filter(i2e > 0.419 | i2e < 0.128) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  filter(country != 'irl') %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  arrange(i2e) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  data.frame(range=c(rep('bottom 6', times=6), rep('top 6', times =6)) )
+ %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(aes(x=country, y=i2e, fill=range)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  facet_grid(.
+ ~ range, scale='free') %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_bar(stat='identity') %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  scale_fill_brewer(palette='Set1') 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
@@ -2096,26 +2383,11 @@ centering
 \end_inset
 
 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Countries' 
-\begin_inset Formula $i2e$
-\end_inset
-
- shares - Top and bottom 6.
 \end_layout
 
 \end_inset
 
 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:i2ek"
-
-\end_inset
-
- 
 \end_layout
 
 \end_inset
@@ -2128,6 +2400,110 @@ name "fig:i2ek"
 placement H
 wide false
 sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Countries' 
+\begin_inset Formula $e2r$
+\end_inset
+
+ shares - Top and bottom 6.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:e2r_k"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+e2r_country, echo=FALSE, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+country_desc %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  group_by(country) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  summarise(e2r=dva_sha) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  filter(e2r > 0.265 | e2r < 0.14404) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  arrange(e2r) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  data.frame(range=c(rep('bottom 6', times=6), rep('top 6', times =6)) )
+ %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(aes(x=country, y=e2r, fill=range)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  facet_grid(.
+ ~ range, scale='free') %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_bar(stat='identity') %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  scale_fill_brewer(palette='Set1') 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
@@ -2226,26 +2602,11 @@ centering
 \end_inset
 
 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Countries' 
-\begin_inset Formula $e2r$
-\end_inset
-
- shares - Top and bottom 6.
 \end_layout
 
 \end_inset
 
 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:e2r_k"
-
-\end_inset
-
- 
 \end_layout
 
 \end_inset

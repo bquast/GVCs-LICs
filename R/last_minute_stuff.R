@@ -4,13 +4,19 @@
 
 library(readxl)
 library(ggvis)
+library(ggplot2)
 library(dplyr)
+
 
 # load data
 country_desc <- read_excel(path = 'data/country_stats.xlsx')
-sector_desc  <- read_excel(path = 'data/sector_desc.xlsx')
+sector_desc  <- read_excel(path = 'data/desc_stats.xlsx', sheet=2)
 wwz          <- read_excel(path = 'data/graphs.xlsx')
 pdc          <- read_excel(path = 'data/graphs2.xlsx')
+
+
+# compute exports
+sector_desc$exp <- sector_desc$dvar_s / sector_desc$dva_sha
 
 # i2e plot top 6
 sector_desc %>%
@@ -42,6 +48,20 @@ sector_desc %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
 
+## above in ggplot2
+sector_desc %>%
+  group_by(sector) %>%
+  summarise(i2e=fvax_s/exp) %>%
+  filter(i2e > 0.30 | i2e < 0.13) %>%
+  arrange(i2e) %>%
+  data.frame(range=c(rep('bottom 6', times=6), rep('top 6', times =6)) ) %>%
+  ggplot(aes(x=sector, y=i2e, fill=range)) %+%
+  facet_grid(. ~ range, scale='free') %+%
+  geom_bar(stat='identity') %+%
+  scale_fill_brewer(palette='Set1')
+
+
+
 # e2r plot top 6
 sector_desc %>%
   group_by(sector) %>%
@@ -72,6 +92,17 @@ sector_desc %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
 
+## above in ggplot2
+sector_desc %>%
+  group_by(sector) %>%
+  summarise(e2r=dvar_s/exp) %>%
+  filter(e2r > 0.30 | e2r < 0.108) %>%
+  arrange(e2r) %>%
+  data.frame(range=c(rep('bottom 6', times=6), rep('top 6', times =6)) ) %>%
+  ggplot(aes(x=sector, y=e2r, fill=range)) %+%
+  facet_grid(. ~ range, scale='free') %+%
+  geom_bar(stat='identity') %+%
+  scale_fill_brewer(palette='Set1')
 
 # i2e plot top 6
 country_desc %>%
@@ -105,6 +136,20 @@ country_desc %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
 
+## above in ggplot2
+country_desc %>%
+  group_by(country) %>%
+  summarise(i2e=fva_sha) %>%
+  filter(i2e > 0.419 | i2e < 0.128) %>%
+  filter(country != 'irl') %>%
+  arrange(i2e) %>%
+  data.frame(range=c(rep('bottom 6', times=6), rep('top 6', times =6)) ) %>%
+  ggplot(aes(x=country, y=i2e, fill=range)) %+%
+  facet_grid(. ~ range, scale='free') %+%
+  geom_bar(stat='identity') %+%
+  scale_fill_brewer(palette='Set1')
+
+
 # e2r plot top 6
 country_desc %>%
   group_by(country) %>%
@@ -134,6 +179,19 @@ country_desc %>%
   ggvis(x=~country, y=~e2r) %>%
   layer_bars() %>%
   scale_numeric("y", domain = c(0, 0.5), nice = FALSE)
+
+## above in ggplot2
+country_desc %>%
+  group_by(country) %>%
+  summarise(e2r=dva_sha) %>%
+  filter(e2r > 0.265 | e2r < 0.14404) %>%
+  arrange(e2r) %>%
+  data.frame(range=c(rep('bottom 6', times=6), rep('top 6', times =6)) ) %>%
+  ggplot(aes(x=country, y=e2r, fill=range)) %+%
+  facet_grid(. ~ range, scale='free') %+%
+  geom_bar(stat='identity') %+%
+  scale_fill_brewer(palette='Set1')
+
 
 wwz1 <- wwz[2:8,1:3]
 names(wwz1) <- c('year', 'e2rL-LM', 'i2eL-LM')
