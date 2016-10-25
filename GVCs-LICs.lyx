@@ -1148,25 +1148,25 @@ reference "fig:i2et"
 
 \end_inset
 
-, the value of 
+, the nomial value of 
 \begin_inset Formula $i2e$
 \end_inset
 
- has grown by approximately 350% and by 35% as a share of total exports
- from around 17% to over 23%.
- Thus, countries rely for their export production increasingly on inputs
- produced abroad.
- The numbers are in line with similar findings by 
+ has grown by approximately 350% and as a share of total exports, it has
+ grown by 35%, from around 17% to over 23% of total exports.
+ Thus, countries increasingly rely on inputs produced abroad for their export
+ production.
+ The numbers are in line with findings by 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "rojoguno12b"
 
 \end_inset
 
- but their sample ends in 2009.
- It is then interesting to see that after the slump during the financial
- crises in 2009, GVCs have quickly recovered and already have started to
- exceed their pre-crisis levels in 2011.
+, however their sample ends in 2009.
+ It is worth noting that after the slump during the financial crises in
+ 2009, GVCs have quickly recovered and already exceeded their pre-crisis
+ levels by 2011.
 \end_layout
 
 \begin_layout Standard
@@ -1176,9 +1176,8 @@ Another way to examine the expansion of GVCs from 1995 to 2011 is to look
 \begin_inset Formula $pdc$
 \end_inset
 
-, as a proxy for GVC length since its value goes up the more back-and-forth
- trade occurs, which is equivalent to an increase in the number of production
- stages.
+, as a proxy for GVC length, since its value goes up with back-and-forth
+ trade, which is equivalent to an increase in the number of production stages.
  They show that its value has increased for 40 selected countries.
  In Figure 
 \begin_inset CommandInset ref
@@ -1341,8 +1340,8 @@ key "rojoguno12a"
 cs (CEQ and ELQ).
  In particular, the transport equipment and electronics industry are strongly
  engaged in GVCs having highly international production networks.
- For instance, Apple's iPhone contains inputs from 9 to 10 countries while
- the Boeing 787 production spans more than 5 countries.
+ For instance, Apple's iPhone contains inputs from nine to ten countries
+ while the Boeing 787 production spans more than five countries.
  The sectors can be characterised as being close to final demand and producing
  complex differentiated goods.
  These characteristics can thus explain differences in GVC integration.
@@ -1464,14 +1463,15 @@ name "fig:i2es"
 \end_layout
 
 \begin_layout Standard
-Naturally then, things are reversed when we look at the corresponding forward
- linkage GVC measure, 
+Conversely, when we look at the corresponding forward linkage GVC measure,
+ 
 \begin_inset Formula $e2r$
 \end_inset
 
-.
- It captures the amount of domestic value added in foreign exports and thus
- quantifies how important domestic industries are for foreign export production.
+, we see the opposite occur.
+ This indicator captures the amount of domestic value added in foreign exports
+ and thus quantifies how important domestic industries are for foreign export
+ production.
  Here, Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2046,8 +2046,17 @@ Note that in this section indicators are based only on manufacturing and
 \end_inset
 
  High-income economies have slightly stronger forward linkages but lower
- backward linkages which implies that their exports contain more domestic
- value added.
+ backward linkages which implies 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+or suggests?
+\end_layout
+
+\end_inset
+
+ that their exports contain more domestic value added.
  Developing economies thus have to chance to try to upgrade their GVC integratio
 n, by increasing domestic content in exports.
 \end_layout
@@ -2380,7 +2389,7 @@ Looking at the development over time, it is striking that the rise of GVC
 \begin_inset Formula $e2r$
 \end_inset
 
- has been much more pronounced in these economies as can be seen in Table
+ has been much more pronounced in L(M)IC economies, as can be seen in Table
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2664,7 +2673,7 @@ rdv
 \begin_layout Plain Layout
 
 \size small
-Low/Lower middle 
+Low/Lower Middle 
 \end_layout
 
 \end_inset
@@ -2913,6 +2922,7 @@ name "fig:llmwwz"
 \align center
 \begin_inset Graphics
 	filename misc/fva-dva-fin-inter.png
+	scale 35
 
 \end_inset
 
@@ -3587,6 +3597,8 @@ name "tab:seawwz"
 \end_inset
 
  
+\size footnotesize
+
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="11">
 <features booktabs="true" tabularvalignment="middle">
@@ -3607,7 +3619,7 @@ name "tab:seawwz"
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Country
 \end_layout
 
@@ -3618,7 +3630,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $fva\_fin$
 \end_inset
 
@@ -3641,7 +3653,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $fva\_inter$
 \end_inset
 
@@ -3664,7 +3676,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $dva\_fin$
 \end_inset
 
@@ -3687,7 +3699,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $dva\_inter$
 \end_inset
 
@@ -3710,7 +3722,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $rdv$
 \end_inset
 
@@ -3744,7 +3756,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -3755,7 +3767,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -3769,7 +3781,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -3780,7 +3792,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -3794,7 +3806,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -3805,7 +3817,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -3819,7 +3831,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -3830,7 +3842,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -3844,7 +3856,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -3855,7 +3867,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -3871,7 +3883,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Cambodia 
 \end_layout
 
@@ -3882,7 +3894,7 @@ Cambodia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 68.1% 
 \end_layout
 
@@ -3893,7 +3905,7 @@ Cambodia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 35.2% 
 \end_layout
 
@@ -3904,7 +3916,7 @@ Cambodia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 31.9% 
 \end_layout
 
@@ -3915,7 +3927,7 @@ Cambodia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -35.7% 
 \end_layout
 
@@ -3926,7 +3938,7 @@ Cambodia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 64.5% 
 \end_layout
 
@@ -3937,7 +3949,7 @@ Cambodia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 26.8% 
 \end_layout
 
@@ -3948,7 +3960,7 @@ Cambodia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 35.5% 
 \end_layout
 
@@ -3959,7 +3971,7 @@ Cambodia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -27.5% 
 \end_layout
 
@@ -3970,7 +3982,7 @@ Cambodia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 0.0% 
 \end_layout
 
@@ -3981,7 +3993,7 @@ Cambodia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -29.7% 
 \end_layout
 
@@ -3994,7 +4006,7 @@ Cambodia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Malaysia 
 \end_layout
 
@@ -4005,7 +4017,7 @@ Malaysia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 39.3% 
 \end_layout
 
@@ -4016,7 +4028,7 @@ Malaysia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -9.0% 
 \end_layout
 
@@ -4027,7 +4039,7 @@ Malaysia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 60.7% 
 \end_layout
 
@@ -4038,7 +4050,7 @@ Malaysia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 6.3% 
 \end_layout
 
@@ -4049,7 +4061,7 @@ Malaysia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 40.8% 
 \end_layout
 
@@ -4060,7 +4072,7 @@ Malaysia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -4.5% 
 \end_layout
 
@@ -4071,7 +4083,7 @@ Malaysia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 58.9% 
 \end_layout
 
@@ -4082,7 +4094,7 @@ Malaysia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 3.4% 
 \end_layout
 
@@ -4093,7 +4105,7 @@ Malaysia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 0.4% 
 \end_layout
 
@@ -4104,7 +4116,7 @@ Malaysia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -21.5% 
 \end_layout
 
@@ -4117,7 +4129,7 @@ Malaysia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Philippines 
 \end_layout
 
@@ -4128,7 +4140,7 @@ Philippines
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 35.5% 
 \end_layout
 
@@ -4139,7 +4151,7 @@ Philippines
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -21.7% 
 \end_layout
 
@@ -4150,7 +4162,7 @@ Philippines
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 64.5% 
 \end_layout
 
@@ -4161,7 +4173,7 @@ Philippines
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 16.0% 
 \end_layout
 
@@ -4172,7 +4184,7 @@ Philippines
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 38.9% 
 \end_layout
 
@@ -4183,7 +4195,7 @@ Philippines
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -19.1% 
 \end_layout
 
@@ -4194,7 +4206,7 @@ Philippines
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 60.9% 
 \end_layout
 
@@ -4205,7 +4217,7 @@ Philippines
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 16.0% 
 \end_layout
 
@@ -4216,7 +4228,7 @@ Philippines
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 0.2% 
 \end_layout
 
@@ -4227,7 +4239,7 @@ Philippines
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 18.2% 
 \end_layout
 
@@ -4240,7 +4252,7 @@ Philippines
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Thailand 
 \end_layout
 
@@ -4251,7 +4263,7 @@ Thailand
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 41.4% 
 \end_layout
 
@@ -4262,7 +4274,7 @@ Thailand
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -12.9% 
 \end_layout
 
@@ -4273,7 +4285,7 @@ Thailand
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 58.6% 
 \end_layout
 
@@ -4284,7 +4296,7 @@ Thailand
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 11.3% 
 \end_layout
 
@@ -4295,7 +4307,7 @@ Thailand
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 47.4% 
 \end_layout
 
@@ -4306,7 +4318,7 @@ Thailand
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -14.6% 
 \end_layout
 
@@ -4317,7 +4329,7 @@ Thailand
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 52.3% 
 \end_layout
 
@@ -4328,7 +4340,7 @@ Thailand
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 17.7% 
 \end_layout
 
@@ -4339,7 +4351,7 @@ Thailand
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 0.3% 
 \end_layout
 
@@ -4350,7 +4362,7 @@ Thailand
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 20.0% 
 \end_layout
 
@@ -4363,7 +4375,7 @@ Thailand
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Vietnam 
 \end_layout
 
@@ -4374,7 +4386,7 @@ Vietnam
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 47.1% 
 \end_layout
 
@@ -4385,7 +4397,7 @@ Vietnam
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -22.6% 
 \end_layout
 
@@ -4396,7 +4408,7 @@ Vietnam
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 52.9% 
 \end_layout
 
@@ -4407,7 +4419,7 @@ Vietnam
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 30.0% 
 \end_layout
 
@@ -4418,7 +4430,7 @@ Vietnam
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 55.0% 
 \end_layout
 
@@ -4429,7 +4441,7 @@ Vietnam
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -9.0% 
 \end_layout
 
@@ -4440,7 +4452,7 @@ Vietnam
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 44.8% 
 \end_layout
 
@@ -4451,7 +4463,7 @@ Vietnam
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 12.7% 
 \end_layout
 
@@ -4462,7 +4474,7 @@ Vietnam
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 0.1% 
 \end_layout
 
@@ -4473,7 +4485,7 @@ Vietnam
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 103.4% 
 \end_layout
 
@@ -5108,6 +5120,8 @@ name "tab:csawwz"
 \end_inset
 
  
+\size footnotesize
+
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="11">
 <features booktabs="true" tabularvalignment="middle">
@@ -5128,7 +5142,7 @@ name "tab:csawwz"
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Country
 \end_layout
 
@@ -5139,7 +5153,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $fva\_fin$
 \end_inset
 
@@ -5162,7 +5176,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $fva\_inter$
 \end_inset
 
@@ -5185,7 +5199,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $dva\_fin$
 \end_inset
 
@@ -5208,7 +5222,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $dva\_inter$
 \end_inset
 
@@ -5231,7 +5245,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $rdv$
 \end_inset
 
@@ -5265,7 +5279,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -5276,7 +5290,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -5290,7 +5304,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -5301,7 +5315,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -5315,7 +5329,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -5326,7 +5340,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -5340,7 +5354,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -5351,7 +5365,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -5365,7 +5379,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -5376,7 +5390,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -5392,7 +5406,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Argentina 
 \end_layout
 
@@ -5403,7 +5417,7 @@ Argentina
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 51.15% 
 \end_layout
 
@@ -5414,7 +5428,7 @@ Argentina
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -6.33% 
 \end_layout
 
@@ -5425,7 +5439,7 @@ Argentina
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 48.85% 
 \end_layout
 
@@ -5436,7 +5450,7 @@ Argentina
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 7.95% 
 \end_layout
 
@@ -5447,7 +5461,7 @@ Argentina
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 51.92% 
 \end_layout
 
@@ -5458,7 +5472,7 @@ Argentina
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -5.71% 
 \end_layout
 
@@ -5469,7 +5483,7 @@ Argentina
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 47.90% 
 \end_layout
 
@@ -5480,7 +5494,7 @@ Argentina
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 7.01% 
 \end_layout
 
@@ -5491,7 +5505,7 @@ Argentina
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 0.18% 
 \end_layout
 
@@ -5502,7 +5516,7 @@ Argentina
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 49.61% 
 \end_layout
 
@@ -5515,7 +5529,7 @@ Argentina
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Chile 
 \end_layout
 
@@ -5526,7 +5540,7 @@ Chile
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 22.23% 
 \end_layout
 
@@ -5537,7 +5551,7 @@ Chile
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -22.29% 
 \end_layout
 
@@ -5548,7 +5562,7 @@ Chile
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 77.77% 
 \end_layout
 
@@ -5559,7 +5573,7 @@ Chile
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 8.54% 
 \end_layout
 
@@ -5570,7 +5584,7 @@ Chile
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 24.61% 
 \end_layout
 
@@ -5581,7 +5595,7 @@ Chile
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -23.44% 
 \end_layout
 
@@ -5592,7 +5606,7 @@ Chile
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 75.25% 
 \end_layout
 
@@ -5603,7 +5617,7 @@ Chile
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 10.03% 
 \end_layout
 
@@ -5614,7 +5628,7 @@ Chile
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 0.14% 
 \end_layout
 
@@ -5625,7 +5639,7 @@ Chile
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 81.25% 
 \end_layout
 
@@ -5638,7 +5652,7 @@ Chile
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Colombia 
 \end_layout
 
@@ -5649,7 +5663,7 @@ Colombia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 39.41% 
 \end_layout
 
@@ -5660,7 +5674,7 @@ Colombia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -19.09% 
 \end_layout
 
@@ -5671,7 +5685,7 @@ Colombia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 60.59% 
 \end_layout
 
@@ -5682,7 +5696,7 @@ Colombia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 15.30% 
 \end_layout
 
@@ -5693,7 +5707,7 @@ Colombia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 39.32% 
 \end_layout
 
@@ -5704,7 +5718,7 @@ Colombia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -33.76% 
 \end_layout
 
@@ -5715,7 +5729,7 @@ Colombia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 60.55% 
 \end_layout
 
@@ -5726,7 +5740,7 @@ Colombia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 32.06% 
 \end_layout
 
@@ -5737,7 +5751,7 @@ Colombia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 0.12% 
 \end_layout
 
@@ -5748,7 +5762,7 @@ Colombia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 25.56% 
 \end_layout
 
@@ -5761,7 +5775,7 @@ Colombia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Costa Rica 
 \end_layout
 
@@ -5772,7 +5786,7 @@ Costa Rica
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 45.99% 
 \end_layout
 
@@ -5783,7 +5797,7 @@ Costa Rica
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -11.17% 
 \end_layout
 
@@ -5794,7 +5808,7 @@ Costa Rica
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 54.01% 
 \end_layout
 
@@ -5805,7 +5819,7 @@ Costa Rica
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 11.29% 
 \end_layout
 
@@ -5816,7 +5830,7 @@ Costa Rica
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 50.97% 
 \end_layout
 
@@ -5827,7 +5841,7 @@ Costa Rica
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -17.88% 
 \end_layout
 
@@ -5838,7 +5852,7 @@ Costa Rica
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 49.01% 
 \end_layout
 
@@ -5849,7 +5863,7 @@ Costa Rica
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 24.97% 
 \end_layout
 
@@ -5860,7 +5874,7 @@ Costa Rica
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 0.02% 
 \end_layout
 
@@ -5871,7 +5885,7 @@ Costa Rica
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 43.05% 
 \end_layout
 
