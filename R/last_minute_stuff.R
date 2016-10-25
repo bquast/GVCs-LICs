@@ -151,12 +151,15 @@ wwz2$dva_fin   <- as.numeric(wwz2$dva_fin)
 wwz2$dva_inter <- as.numeric(wwz2$dva_inter)
 wwz2$rdv       <- as.numeric(wwz2$rdv)
 
+### in paper!! redo in ggplot2
 wwz1 %>%
   ggvis(x=~year, y=~`e2rL-LM`, stroke='e2r') %>%
   layer_lines() %>%
   layer_lines(x=~year, y=~`i2eL-LM`, stroke='i2e') %>%
   add_axis('y', title = 'e2r / i2e')
 
+
+### in paper! redo in ggplot2
 wwz2 %>%
   ggvis(x=~year, y=~fva_fin, stroke='fva_fin') %>%
   layer_lines() %>%
@@ -170,7 +173,7 @@ wwz2 %>%
   layer_lines( prop('y', ~rdv, scale='ydiv'), stroke='rdv' )
 
 
-
+### in paper!!! redo in ggplot2
 pdc %>%
   ggvis(x=~year) %>%
   layer_lines(y=~pdc_t) %>%
