@@ -122,8 +122,16 @@ key "riba12"
 
 \end_inset
 
- phrases it, internationally fragmented production allows developing countries
- to join existing supply chains instead of building them.
+ phrases it: 
+\begin_inset Quotes eld
+\end_inset
+
+internationally fragmented production allows developing countries to join
+ existing supply chains instead of building them
+\begin_inset Quotes erd
+\end_inset
+
+.
  This brings about many potential advantages for these countries.
  Connecting with firms from advanced nations allows developing nations,
  for instance, to benefit from their sophisticated technologies and know-how.
@@ -207,24 +215,23 @@ key "zhwaetal13"
  to examine production sharing comprehensively.
  They split goods into different categories and calculate metrics of how
  often these goods cross borders.
- This enables them to derive measures of GVC length but also allows to investiga
-te how individual countries are integrated into GVCs.
+ This enables us to derive measures of GVC length but also allows us to
+ investigate how individual countries are integrated into GVCs.
  For instance, they show that a considerable part of US value added exports
  eventually returns home in the form of final goods which is indicative
  of the US being specialised in upstream production stages.
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 See 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-key "joamsoca15"
+LatexCommand citet
+key "amador2014global"
 
 \end_inset
 
- (forthcoming) for a comprehensive review of the literature on GVCs and
- outsourcing.
+ for a comprehensive review of the literature on GVCs and outsourcing.
 \end_layout
 
 \end_inset
@@ -234,7 +241,7 @@ key "joamsoca15"
 
 \begin_layout Standard
 However, these contributions typically have one of two shortcomings.
- Firstly, most evidence is based on data from high-income countries.
+ Firstly, most evidence is based on data on high-income countries.
  The reason is that reliable time-series of both national and international
  input-output tables have only been available for this particular subset
  of countries.
@@ -277,7 +284,7 @@ Our analysis confirms the expansion of GVCs in recent years and presents
  and end points of GVCs in that they provide upstream inputs and then serve
  eventually again as demand markets for the final products.
  Low- and middle-income countries, on the other hand, are more specialised
- in downstream activities such as assembly and export typically less domestic
+ in downstream activities such as assembly and typically export less domestic
  value added.
  However, we observe that developing economies have begun to move upstream
  along the value chain and out of pure assembly occupying a wider set stages.
@@ -376,6 +383,16 @@ key "baquviku15"
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:data"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+first sentence is a bit odd
+\end_layout
 
 \end_inset
 
@@ -528,6 +545,28 @@ i2e_{ik}=\frac{\sum_{l}{\sum_{j}vae_{jlik}}}{exports_{ik}},
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $l\neq k$
+\end_inset
+
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+BQ: I added this, correct no?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Secondly, a forward linkage indicator - 
 \emph on
 e2r
@@ -541,7 +580,7 @@ e2r
 \end_inset
 
 where 
-\begin_inset Formula $l\ \neq k$
+\begin_inset Formula $l\neq k$
 \end_inset
 
 .
@@ -605,14 +644,14 @@ Since the derivation itself is not the focus of this paper, here we only
  home, foreign value added, and purely double counted terms: 
 \begin_inset Formula 
 \begin{align}
-\begin{split}E^{kl}= & \left(V^{k}B^{kk}\right)^{T}*F^{kl}+\left(V^{k}L^{kk}\right)^{T}*\left(A^{kl}B^{ll}F^{ll}\right)\\
-+ & \left(V^{k}L^{kk}\right)^{T}*(A^{kl}\sum_{t\neq k,l}^{G}B^{lt}F^{tt})+\left(V^{k}L^{kk}\right)^{T}*(A^{kl}B^{ll}\sum_{t\neq k,l}^{G}F^{lt})\\
-+ & \left(V^{k}L^{kk}\right)^{T}*(A^{kl}\sum_{t\neq k}^{G}\sum_{l,u\neq k,t}^{G}B^{lt}F^{tu})+\left(V^{k}L^{kk}\right)^{T}*\left(A^{kl}B^{ll}F^{lk}\right)\\
-+ & \left(V^{k}L^{kk}\right)^{T}*(A^{kl}\sum_{t\neq k,l}^{G}B^{lt}F^{tk})+\left(V^{k}L^{kk}\right)^{T}*\left(A^{kl}B^{lk}F^{kk}\right)\\
-+ & \left(V^{k}L^{kk}\right)^{T}*(A^{kl}\sum_{t\neq k}^{G}B^{lk}F^{kt})+\left(V^{k}B^{kk}-V^{k}L^{kk}\right)^{T}*\left(A^{kl}X^{l}\right)\\
-+ & \left(V^{l}B^{lk}\right)^{T}*F^{kl}+\left(V^{l}B^{lk}\right)^{T}*\left(A^{kl}L^{ll}F^{ll}\right)+\left(V^{l}B^{lk}\right)^{T}\\
-* & \left(A^{kl}L^{ll}E^{l*}\right)+(\sum_{t\neq k,l}^{G}V^{t}B^{tk})^{T}*F^{kl}+(\sum_{t\neq k,l}^{G}V^{t}B^{tk})^{T}\\
-* & \left(A^{kl}L^{ll}F^{ll}\right)+(\sum_{t\neq k,l}^{G}V^{t}B^{tk})^{T}*\left(A^{kl}L^{ll}E^{l*}\right),
+\begin{split}E^{kl}= & \left(V^{k}B^{kk}\right)^{T}F^{kl}+\left(V^{k}L^{kk}\right)^{T}\left(A^{kl}B^{ll}F^{ll}\right)\\
++ & \left(V^{k}L^{kk}\right)^{T}(A^{kl}\sum_{t\neq k,l}^{G}B^{lt}F^{tt})+\left(V^{k}L^{kk}\right)^{T}(A^{kl}B^{ll}\sum_{t\neq k,l}^{G}F^{lt})\\
++ & \left(V^{k}L^{kk}\right)^{T}(A^{kl}\sum_{t\neq k}^{G}\sum_{l,u\neq k,t}^{G}B^{lt}F^{tu})+\left(V^{k}L^{kk}\right)^{T}\left(A^{kl}B^{ll}F^{lk}\right)\\
++ & \left(V^{k}L^{kk}\right)^{T}(A^{kl}\sum_{t\neq k,l}^{G}B^{lt}F^{tk})+\left(V^{k}L^{kk}\right)^{T}\left(A^{kl}B^{lk}F^{kk}\right)\\
++ & \left(V^{k}L^{kk}\right)^{T}(A^{kl}\sum_{t\neq k}^{G}B^{lk}F^{kt})+\left(V^{k}B^{kk}-V^{k}L^{kk}\right)^{T}\left(A^{kl}X^{l}\right)\\
++ & \left(V^{l}B^{lk}\right)^{T}F^{kl}+\left(V^{l}B^{lk}\right)^{T}\left(A^{kl}L^{ll}F^{ll}\right)+\left(V^{l}B^{lk}\right)^{T}\\
+ & \left(A^{kl}L^{ll}E^{l*}\right)+(\sum_{t\neq k,l}^{G}V^{t}B^{tk})^{T}F^{kl}+(\sum_{t\neq k,l}^{G}V^{t}B^{tk})^{T}\\
+ & \left(A^{kl}L^{ll}F^{ll}\right)+(\sum_{t\neq k,l}^{G}V^{t}B^{tk})^{T}\left(A^{kl}L^{ll}E^{l*}\right),
 \end{split}
 \label{eq:wwz}
 \end{align}
@@ -930,8 +969,8 @@ For the analysis, we use
 \end_layout
 
 \begin_layout Standard
-The advantage of such a detailed decomposition is that these new indicators
- can inform us on how countries integrate into GVCs while the basic Leontief
+The advantage of this detailed decomposition is that these new indicators
+ can inform us on how countries integrate into GVCs, while the basic Leontief
  decomposition mainly informs us on the intensity of integration.
  High amounts of foreign value added in final goods exports are, for instance,
  suggestive of a specialisation in downstream tasks that add little value
