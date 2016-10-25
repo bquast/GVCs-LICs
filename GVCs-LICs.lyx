@@ -406,6 +406,11 @@ library(reshape2)
 load('data/last_minute.RData')
 \end_layout
 
+\begin_layout Plain Layout
+
+load('data/gvc_indicators_merged.RData')
+\end_layout
+
 \end_inset
 
 
@@ -1439,7 +1444,7 @@ i2e, echo=FALSE, cache=TRUE
 
 \begin_layout Plain Layout
 
-gvc_indicators %>%
+gvc_indicators %>% 
 \end_layout
 
 \begin_layout Plain Layout
@@ -1498,7 +1503,7 @@ gvc_indicators %>%
 
 \begin_layout Standard
 \begin_inset Float figure
-placement bh
+placement !bh
 wide false
 sideways false
 status open
