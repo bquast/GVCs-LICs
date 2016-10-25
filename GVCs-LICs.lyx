@@ -347,7 +347,7 @@ New data and new indicators
 
 New data and new indicators
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 The following section draws heavily from 
@@ -1007,8 +1007,15 @@ name "sub:icios"
 
 \end_inset
 
- We use the new OECD ICIOs as the main data source for the GVC indicators
- and the industry position indicators.
+ We use the new OECD ICIOs 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lea2014oecd"
+
+\end_inset
+
+ as the main data source for the GVC indicators and the industry position
+ indicators.
  The OECD ICIOs constitute the most recent and most advanced release of
  Inter-Country Input-Output tables.
  The new version of the database provides ICIOs covering 61 countries and
@@ -1064,7 +1071,7 @@ Note that in the analysis 2009 and 2010 are excluded due to the global financial
  In addition, the OECD has used elaborate techniques to deal with China's
  processing trade.
  Due to China's outstanding role in GVCs and processing trade, this implies
- a significant improvement for the reliability of the database.
+ a significant improvement to the reliability of the database.
 \begin_inset Foot
 status collapsed
 
