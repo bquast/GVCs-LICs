@@ -365,11 +365,6 @@ opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-', fig
 
 \begin_layout Plain Layout
 
-load(file = '../data/googletrends.RData')
-\end_layout
-
-\begin_layout Plain Layout
-
 library(ggplot2)
 \end_layout
 
@@ -2537,7 +2532,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 plot_e2r_i2e, message=FALSE, echo=FALSE
 \end_layout
 
@@ -2559,6 +2553,11 @@ wwz1 %>%
 \begin_layout Plain Layout
 
   ggplot(aes(year)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  scale_colour_brewer(palette='Set1') %+%
 \end_layout
 
 \begin_layout Plain Layout
@@ -2991,6 +2990,7 @@ A similar exercise can be done for the domestic value added embodied in
 
 \begin_layout Standard
 \begin_inset Float figure
+placement bh
 wide false
 sideways false
 status open
@@ -3017,13 +3017,51 @@ name "fig:llmwwz"
 
 \begin_layout Plain Layout
 \align center
-\begin_inset Graphics
-	filename misc/fva-dva-fin-inter.png
-	scale 35
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+wwz_rdv, echo=FALSE
+\end_layout
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+wwz5 %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(mapping = aes(x = year, y = value)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  facet_grid(panel ~ ., scale='free') %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_line(data = wwz3, aes(colour=indicator)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_line(data = wwz4, aes(colour=indicator))
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

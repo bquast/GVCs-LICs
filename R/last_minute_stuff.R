@@ -181,6 +181,18 @@ wwz2 %>%
   layer_lines( prop('y', ~rdv, scale='ydiv'), stroke='rdv' )
 
 
+## replacement ggplot2 version using facet
+wwz3 <- melt(wwz2[,-6], id.vars = 'year', variable.name = 'indicator')
+wwz3$panel <- 'WWZ'
+wwz4 <- data.frame(year = wwz2$year, indicator='rdv', value = wwz2$rdv, panel = 'RDV')
+wwz5 <- rbind(wwz3, wwz4)
+wwz5 %>%
+  ggplot(mapping = aes(x = year, y = value)) %+%
+  scale_colour_brewer(palette='Set1')  %+%
+  facet_grid(panel ~ ., scale='free') %+%
+  geom_line(data = wwz3, aes(colour=indicator)) %+%
+  geom_line(data = wwz4, aes(colour=indicator))
+
 ### in paper!!! redo in ggplot2
 pdc %>%
   ggvis(x=~year) %>%
