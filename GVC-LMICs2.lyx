@@ -6299,7 +6299,7 @@ name "tab:afrwwz"
 \begin_layout Plain Layout
 \align center
 
-\size small
+\size footnotesize
 \begin_inset space \hspace*{}
 \length -3cm
 \end_inset
@@ -6325,7 +6325,7 @@ name "tab:afrwwz"
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Country
 \end_layout
 
@@ -6336,7 +6336,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $fva\_fin$
 \end_inset
 
@@ -6359,7 +6359,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $fva\_inter$
 \end_inset
 
@@ -6382,7 +6382,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $dva\_fin$
 \end_inset
 
@@ -6405,7 +6405,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $dva\_inter$
 \end_inset
 
@@ -6428,7 +6428,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $rdv$
 \end_inset
 
@@ -6462,7 +6462,7 @@ Country
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -6473,7 +6473,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -6487,7 +6487,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -6498,7 +6498,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -6512,7 +6512,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -6523,7 +6523,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -6537,7 +6537,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -6548,7 +6548,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -6562,7 +6562,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Average
 \end_layout
 
@@ -6573,7 +6573,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -6589,7 +6589,7 @@ Average
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 South Africa 
 \end_layout
 
@@ -6600,7 +6600,7 @@ South Africa
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 48.76% 
 \end_layout
 
@@ -6611,7 +6611,7 @@ South Africa
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -11.76% 
 \end_layout
 
@@ -6622,7 +6622,7 @@ South Africa
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 51.24% 
 \end_layout
 
@@ -6633,7 +6633,7 @@ South Africa
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 13.56% 
 \end_layout
 
@@ -6644,7 +6644,7 @@ South Africa
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 54.43% 
 \end_layout
 
@@ -6655,7 +6655,7 @@ South Africa
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -14.60% 
 \end_layout
 
@@ -6666,7 +6666,7 @@ South Africa
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 45.49% 
 \end_layout
 
@@ -6677,7 +6677,7 @@ South Africa
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 21.41% 
 \end_layout
 
@@ -6688,7 +6688,7 @@ South Africa
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 0.08% 
 \end_layout
 
@@ -6699,7 +6699,7 @@ South Africa
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 7.07% 
 \end_layout
 
@@ -6712,7 +6712,7 @@ South Africa
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Tunisia 
 \end_layout
 
@@ -6723,7 +6723,7 @@ Tunisia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 45.09% 
 \end_layout
 
@@ -6734,7 +6734,7 @@ Tunisia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -14.97% 
 \end_layout
 
@@ -6745,7 +6745,7 @@ Tunisia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 54.91% 
 \end_layout
 
@@ -6756,7 +6756,7 @@ Tunisia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 15.19% 
 \end_layout
 
@@ -6767,7 +6767,7 @@ Tunisia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 56.62% 
 \end_layout
 
@@ -6778,7 +6778,7 @@ Tunisia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 -4.47% 
 \end_layout
 
@@ -6789,7 +6789,7 @@ Tunisia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 43.10% 
 \end_layout
 
@@ -6800,7 +6800,7 @@ Tunisia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 5.56% 
 \end_layout
 
@@ -6811,7 +6811,7 @@ Tunisia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 0.28% 
 \end_layout
 
@@ -6822,7 +6822,7 @@ Tunisia
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 147.59% 
 \end_layout
 
@@ -7046,7 +7046,19 @@ name "sec:appendix"
 placement h
 wide false
 sideways false
-status open
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ADD title
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -9542,11 +9554,12 @@ isl
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float table
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12136,11 +12149,34 @@ zaf
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float table
 placement h
 wide false
 sideways false
 status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\size small
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GVC indicators by sector
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:gvc_s"
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -14233,22 +14269,6 @@ c73t74bzs
 \end_inset
 
 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-GVC indicators by sector
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:gvc_s"
-
-\end_inset
-
- 
 \end_layout
 
 \end_inset
