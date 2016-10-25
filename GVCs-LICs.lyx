@@ -335,6 +335,54 @@ reference "sec:conclusion"
  concludes.
 \end_layout
 
+\begin_layout Standard
+
+\lang british
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+load_plot_data, echo=FALSE, warning=FALSE, message=FALSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-', fig.width=
+9, fig.height=5)
+\end_layout
+
+\begin_layout Plain Layout
+
+load(file = '../data/googletrends.RData')
+\end_layout
+
+\begin_layout Plain Layout
+
+library(ggplot2)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(dplyr)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 \begin_inset Argument 1
 status collapsed
@@ -2480,13 +2528,62 @@ name "fig:llmpartner"
 
 \begin_layout Plain Layout
 \align center
-\begin_inset Graphics
-	filename misc/e2r-i2e.png
-	width 50text%
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+plot_e2r_i2e, message=FALSE, echo=FALSE
+\end_layout
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+load('data/last_minute.RData')
+\end_layout
+
+\begin_layout Plain Layout
+
+wwz1 %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(aes(year)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_line(aes(y = `e2rL-LM`, colour='e2r') ) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_line(aes(y = `i2eL-LM`, colour='i2e')) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  labs(y = 'e2r / i2e') %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  scale_colour_brewer(palette='Set1') 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

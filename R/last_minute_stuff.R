@@ -158,6 +158,14 @@ wwz1 %>%
   layer_lines(x=~year, y=~`i2eL-LM`, stroke='i2e') %>%
   add_axis('y', title = 'e2r / i2e')
 
+library(ggplot2)
+wwz1 %>%
+  ggplot(aes(year)) %+%
+  geom_line(aes(y = `e2rL-LM`, colour='e2r') ) %+%
+  geom_line(aes(y = `i2eL-LM`, colour='i2e')) %+%
+  labs(y = 'e2r / i2e') %+%
+  scale_colour_brewer(palette='Set1')
+
 
 ### in paper! redo in ggplot2
 wwz2 %>%
@@ -182,3 +190,7 @@ pdc %>%
            title= 'pdc_exp', grid=F, title_offset = 50,
            properties = axis_props(labels = list(fill = 'red')) ) %>%
   layer_lines( prop('y', ~pdc_exp, scale='ydiv'), stroke:='red' )
+
+
+# save everything
+save.image(file = 'data/last_minute.RData')
