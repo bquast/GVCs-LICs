@@ -359,8 +359,22 @@ load_plot_data, echo=FALSE, warning=FALSE, message=FALSE
 
 \begin_layout Plain Layout
 
+# set knitr options
+\end_layout
+
+\begin_layout Plain Layout
+
 opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-', fig.width=
 9, fig.height=5)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# load R packages
 \end_layout
 
 \begin_layout Plain Layout
@@ -371,6 +385,20 @@ library(ggplot2)
 \begin_layout Plain Layout
 
 library(dplyr)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# load R data files
+\end_layout
+
+\begin_layout Plain Layout
+
+load('data/last_minute.RData')
 \end_layout
 
 \end_inset
@@ -1349,6 +1377,87 @@ name "fig:pdct"
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pure Double Counted - GVC Length
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+pdc, echo=FALSE, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+pdc2 %>% 
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(aes(x=year, y=value)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  facet_grid(PDC ~ ., scale='free') %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_area(aes(fill=PDC)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  scale_fill_brewer(palette='Set1')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2532,17 +2641,12 @@ status open
 status open
 
 \begin_layout Plain Layout
-plot_e2r_i2e, message=FALSE, echo=FALSE
+plot_e2r_i2e, message=FALSE, echo=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-
-load('data/last_minute.RData')
 \end_layout
 
 \begin_layout Plain Layout
@@ -3026,7 +3130,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-wwz_rdv, echo=FALSE
+wwz_rdv, echo=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
@@ -3056,7 +3160,12 @@ wwz5 %>%
 
 \begin_layout Plain Layout
 
-  geom_line(data = wwz4, aes(colour=indicator))
+  geom_line(data = wwz4, aes(colour=indicator)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  scale_fill_brewer(palette='Set1')
 \end_layout
 
 \end_inset

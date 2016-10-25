@@ -204,5 +204,13 @@ pdc %>%
   layer_lines( prop('y', ~pdc_exp, scale='ydiv'), stroke:='red' )
 
 
+## pdc in ggplot2
+pdc2 <- melt(pdc, id.vars = 'year', variable.name = 'PDC')
+pdc2 %>%
+  ggplot(aes(x=year, y=value)) %+%
+  scale_fill_brewer(palette='Set1')  %+%
+  facet_grid(PDC ~ ., scale='free') %+%
+  geom_area(aes(fill=PDC))
+
 # save everything
 save.image(file = 'data/last_minute.RData')
