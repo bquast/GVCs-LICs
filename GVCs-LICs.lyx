@@ -303,7 +303,7 @@ reference "sec:data"
  briefly reviews the decomposition proposed by 
 \begin_inset CommandInset citation
 LatexCommand citet
-after "WWZ henceforth"
+after "henceforth WWZ"
 key "zhwaetal13"
 
 \end_inset
@@ -364,8 +364,8 @@ load_plot_data, echo=FALSE, warning=FALSE, message=FALSE
 
 \begin_layout Plain Layout
 
-opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-', fig.width=
-9, fig.height=5)
+opts_chunk$set(fig.path='misc/latex-', cache.path='data/cache/latex-', fig.width=9,
+ fig.height=5)
 \end_layout
 
 \begin_layout Plain Layout
@@ -409,6 +409,20 @@ load('data/last_minute.RData')
 \begin_layout Plain Layout
 
 load('data/gvc_indicators_merged.RData')
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# package specific settings
+\end_layout
+
+\begin_layout Plain Layout
+
+options(scipen=10000)
 \end_layout
 
 \end_inset
@@ -1677,7 +1691,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 i2e_shares, echo=FALSE, cache=TRUE
 \end_layout
 
@@ -2211,7 +2224,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 i2e_country, echo=FALSE, cache=TRUE
 \end_layout
 
