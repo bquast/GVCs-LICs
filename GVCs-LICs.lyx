@@ -1102,14 +1102,14 @@ name "sub:icios"
 
 \end_inset
 
- We use the new OECD ICIOs 
+ We use the new 
 \begin_inset CommandInset citation
-LatexCommand citep
-key "lea2014oecd"
+LatexCommand citet
+key "oecd2012trade"
 
 \end_inset
 
- as the main data source for the GVC indicators and the industry position
+ ICIOs as the main data source for the GVC indicators and the industry position
  indicators.
  The OECD ICIOs constitute the most recent and most advanced release of
  Inter-Country Input-Output tables.
