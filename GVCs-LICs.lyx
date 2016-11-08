@@ -14,6 +14,7 @@
 \use_default_options true
 \begin_modules
 knitr
+logicalmkup
 \end_modules
 \maintain_unincluded_children false
 \begin_local_layout
@@ -105,17 +106,26 @@ Victor Kummritz and Bastiaan Quast
 \end_layout
 
 \begin_layout Abstract
-Global Value Chains provide an effective method for developing countries
+Global Value Chains can provide an effective means of developing countries
  to industrialise.
- Using new methods and data for GVC analysis we find an increase in the
- share of inputs produced abroad in exports, signalling a deepening in GVC
- integration, over the period 1995-2011.
+ Using new methods and data for GVC analysis we confirm the increase in
+ the foreign value added content of exports, signalling a deepening in GVC
+ integration over the period 1995-2011.
  Furthermore we find that the length of GVCs has also increased over this
- period.
- Both of these trends quickly recovered from the 2008 financial crisis.
- Crucially, developing countries are increasing their production of intermediate
- goods, moving more upstream in the GVC, simultaneously, the amount of domestic
- value added that is eventually reimported has tripled.
+ period as suggested by an increase of double counted trade.
+ We provide new evidence that both of these indicators quickly recovered
+ from the 2008 financial crisis.
+ Crucially, these trends in GVCs are increasingly driven by developing countries
+ that have successfully increased their share in GVC trade.
+ In addition, they are shifting their participation from the production
+ of final to intermediate goods, moving more upstream in the GVC.
+\end_layout
+
+\begin_layout Abstract
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -7858,7 +7868,7 @@ name "sec:appendix"
 \begin_layout Standard
 \align center
 \begin_inset Float table
-placement h
+placement H
 wide false
 sideways false
 status collapsed
@@ -12966,7 +12976,7 @@ zaf
 \begin_layout Standard
 \align center
 \begin_inset Float table
-placement h
+placement H
 wide false
 sideways false
 status collapsed
@@ -15085,6 +15095,495 @@ c73t74bzs
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+R package: gvc
+\end_layout
+
+\begin_layout Standard
+All code for developed for the analysis is made public in the open-source
+ R package 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+gvc
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+target "https://cran.r-project.org/package=gvc"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, which is briefly described in this appendix.
+ The package is available on CRAN and therefore be installed directly from
+ the R console using:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+install, eval=FALSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+install.packages('gvc')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the package takes inputs of the form produced by the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+decompr
+\end_layout
+
+\end_inset
+
+ package
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Quast and Kummritz (2015)
+\end_layout
+
+\end_inset
+
+, the decompr package as well as the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+diagonals
+\end_layout
+
+\end_inset
+
+ package, which allows for the manipulations of diagonals when higher-order
+ tensors are represented in matrices, are both installed automatically.
+\end_layout
+
+\begin_layout Standard
+Subsequently, the package can be loaded (so that the functions become available)
+ using:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+library, message=FALSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+library(gvc)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The functions included with the package are now available.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+list-functions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ls('package:gvc')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These function are:
+\end_layout
+
+\begin_layout Itemize
+dfddva
+\end_layout
+
+\begin_layout Itemize
+dfdfva
+\end_layout
+
+\begin_layout Itemize
+downstream
+\end_layout
+
+\begin_layout Itemize
+e2r
+\end_layout
+
+\begin_layout Itemize
+ffddva
+\end_layout
+
+\begin_layout Itemize
+i2e
+\end_layout
+
+\begin_layout Itemize
+nrca
+\end_layout
+
+\begin_layout Itemize
+upstream
+\end_layout
+
+\begin_layout Standard
+A typical workflow begins with using the Leontief decomposition in the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+decompr
+\end_layout
+
+\end_inset
+
+ package
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+target "https://cran.r-project.org/package=decompr"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+decompr, message=FALSE, eval=FALSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+library(decompr)                  # load the decompr package
+\end_layout
+
+\begin_layout Plain Layout
+
+data(leather)                     # load the example dataset
+\end_layout
+
+\begin_layout Plain Layout
+
+l <- decomp(inter,                # save as an object 'l'
+\end_layout
+
+\begin_layout Plain Layout
+
+            final,
+\end_layout
+
+\begin_layout Plain Layout
+
+            countries,
+\end_layout
+
+\begin_layout Plain Layout
+
+            industries,
+\end_layout
+
+\begin_layout Plain Layout
+
+            out,
+\end_layout
+
+\begin_layout Plain Layout
+
+            method = "leontief",  # apply Leontief decomposition
+\end_layout
+
+\begin_layout Plain Layout
+
+            post = "exports"    ) # post multiply with exports
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can now analyse the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+l
+\end_layout
+
+\end_inset
+
+ object with the functions included in the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+gvc
+\end_layout
+
+\end_inset
+
+ package, such as importing to export, using the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+i2e()
+\end_layout
+
+\end_inset
+
+ function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+i-to-e, eval=FALSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+i2e(l)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The documentation for each function is available using the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+help()
+\end_layout
+
+\end_inset
+
+ function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+help, eval=FALSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+help('i2e') # alternatively:
+\end_layout
+
+\begin_layout Plain Layout
+
+?i2e
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The package also includes a vignette with long form documentation that opens
+ in the browser.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+vignette, eval=FALSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+vignette('gvc')                    # alternatively:
+\end_layout
+
+\begin_layout Plain Layout
+
+browseVignettes(package = 'gvc')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The news and documentation for the package is provided on the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+decompr
+\end_layout
+
+\end_inset
+
+ website:
+\end_layout
+
+\begin_layout Quote
+\begin_inset CommandInset href
+LatexCommand href
+target "http://qua.st/decompr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The package is developed on GitHub, where issues can also be reported:
+\end_layout
+
+\begin_layout Quote
+\begin_inset CommandInset href
+LatexCommand href
+target "https://github.com/bquast/gvc"
 
 \end_inset
 
