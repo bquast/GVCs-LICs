@@ -15148,7 +15148,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 install, eval=FALSE
 \end_layout
 
@@ -15217,7 +15216,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 library, message=FALSE
 \end_layout
 
@@ -15344,8 +15342,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-
-decompr, message=FALSE, eval=FALSE
+decompr, message=FALSE
 \end_layout
 
 \end_inset
@@ -15447,8 +15444,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-
-i-to-e, eval=FALSE
+i-to-e
 \end_layout
 
 \end_inset
@@ -15490,7 +15486,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 help, eval=FALSE
 \end_layout
 
