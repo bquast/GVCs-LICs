@@ -142,16 +142,7 @@ key "riba12"
 
 \end_inset
 
- phrases it: 
-\begin_inset Quotes eld
-\end_inset
-
-internationally fragmented production allows developing countries to join
- existing supply chains instead of building them
-\begin_inset Quotes erd
-\end_inset
-
-.
+ phrases it internationally fragmented production allows developing countries to join existing supply chains instead of building them.
  This brings about many potential advantages for these countries.
  Connecting with firms from advanced nations allows developing nations,
  for instance, to benefit from their sophisticated technologies and know-how.
@@ -233,13 +224,12 @@ key "zhwaetal13"
 
  who show that it is necessary to go beyond deriving origins of value added
  to examine production sharing comprehensively.
- They split goods into different categories and calculate metrics of how
- often these goods cross borders.
- This enables us to derive measures of GVC length but also allows us to
+ They split goods into different categories based on they type of goods trade and its ultimate destination.
+ This enables them to derive measures of GVC length but also allows them to
  investigate how individual countries are integrated into GVCs.
  For instance, they show that a considerable part of US value added exports
  eventually returns home in the form of final goods which is indicative
- of the US being specialised in upstream production stages.
+ of the US offshoring low value-added intermediate stages like assembly.
 \begin_inset Foot
 status open
 
@@ -823,7 +813,7 @@ DVA_FIN
 \begin_layout Itemize
 Domestic value added in intermediate exports (
 \shape italic
-DVA_INT
+DVA_INTR
 \shape default
 , T2-5) 
 \end_layout
@@ -1060,7 +1050,7 @@ For the analysis, we use
 \end_inset
 
  combining 
-\begin_inset Formula $dva\_int$
+\begin_inset Formula $dva\_intr$
 \end_inset
 
  and 
@@ -1080,7 +1070,7 @@ For the analysis, we use
 \end_inset
 
 .
- This collapses the indicator to a intuitive and manageable amount.
+ This collapses the 16 indicators to an intuitive and manageable amount.
 \end_layout
 
 \begin_layout Standard
