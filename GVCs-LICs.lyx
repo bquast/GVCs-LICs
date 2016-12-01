@@ -1416,6 +1416,37 @@ gvc_indicators %>%
 \end_layout
 
 \begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tablenotes}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+item measured as a share of total exports and in million USD
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tablenotes}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1508,6 +1539,33 @@ pdc2 %>%
 \end_layout
 
 \begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tablenotes}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+item measured as a share of total exports and in million USD
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tablenotes}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2145,114 +2203,6 @@ country_desc %>%
 \begin_layout Plain Layout
 
   scale_fill_brewer(palette='Set1') 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Box Frameless
-position "c"
-hor_pos "l"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "45text%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status collapsed
-
-\begin_layout Plain Layout
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename misc/countries_e2r_top_6.png
-	width 100text%
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\begin_inset space \hfill{}
-\end_inset
-
-
-\begin_inset Box Frameless
-position "c"
-hor_pos "l"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "45text%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status collapsed
-
-\begin_layout Plain Layout
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename misc/countries_e2r_bottom_6.png
-	width 100text%
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
