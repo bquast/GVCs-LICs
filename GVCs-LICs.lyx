@@ -106,19 +106,24 @@ Victor Kummritz and Bastiaan Quast
 \end_layout
 
 \begin_layout Abstract
-Global Value Chains can provide an effective means of developing countries
+Global Value Chains (GVCs) can provide new means for developing economies
  to industrialise.
- Using new methods and data for GVC analysis we confirm the increase in
- the foreign value added content of exports, signalling a deepening in GVC
- integration over the period 1995-2011.
- Furthermore we find that the length of GVCs has also increased over this
- period as suggested by an increase of double counted trade.
- We provide new evidence that both of these indicators quickly recovered
- from the 2008 financial crisis.
- Crucially, these trends in GVCs are increasingly driven by developing countries
- that have successfully increased their share in GVC trade.
- In addition, they are shifting their participation from the production
- of final to intermediate goods, moving more upstream in the GVC.
+ To fully seize these opportunities, it is necessary to comprehensively
+ measure both the intensity and type of countries' GVC integration patterns
+ to better understand the relationship between GVCs and development.
+ In this paper, we apply the new R package decompr to recent OECD input-output
+ data with extended country coverage to analyse the integration patterns
+ of developing economies in a more detailed way.
+ We provide evidence that trends in GVCs are increasingly driven by developing
+ countries.
+ In addition, we show that while per capita GDP does not predict the intensity
+ of GVC integration well, it determines the type of integration.
+ High-income countries mainly export intermediates into GVCs and serve as
+ markets of final demand.
+ In contrast, developing economies join GVCs mostly in the assembly stage.
+ However, there is evidence that developing countries have begun to shift
+ their participation from the production of final to intermediate goods,
+ moving upstream in GVCs and out of assembly.
 \end_layout
 
 \begin_layout Abstract
@@ -142,7 +147,8 @@ key "riba12"
 
 \end_inset
 
- phrases it internationally fragmented production allows developing countries to join existing supply chains instead of building them.
+ phrases it internationally fragmented production allows developing countries
+ to join existing supply chains instead of building them.
  This brings about many potential advantages for these countries.
  Connecting with firms from advanced nations allows developing nations,
  for instance, to benefit from their sophisticated technologies and know-how.
@@ -176,7 +182,7 @@ Empirically, the considerable expansion of GVCs has been documented in several
  recent studies.
  For instance, 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citet*
 key "dahuetal98, dahuetal01"
 
 \end_inset
@@ -224,9 +230,10 @@ key "zhwaetal13"
 
  who show that it is necessary to go beyond deriving origins of value added
  to examine production sharing comprehensively.
- They split goods into different categories based on they type of goods trade and its ultimate destination.
- This enables them to derive measures of GVC length but also allows them to
- investigate how individual countries are integrated into GVCs.
+ They split goods into different categories based on they type of goods
+ trade and its ultimate destination.
+ This enables them to derive measures of GVC length but also allows them
+ to investigate how individual countries are integrated into GVCs.
  For instance, they show that a considerable part of US value added exports
  eventually returns home in the form of final goods which is indicative
  of the US offshoring low value-added intermediate stages like assembly.
@@ -1414,7 +1421,7 @@ The development of double counted trade over time
 
 \begin_layout Standard
 \begin_inset Float figure
-placement bh
+placement h
 wide false
 sideways false
 status open
@@ -1526,7 +1533,7 @@ gvc_indicators %>%
 
 \begin_layout Standard
 \begin_inset Float figure
-placement !bh
+placement !h
 wide false
 sideways false
 status open
@@ -1662,7 +1669,7 @@ The bottom 6 industries in terms of
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
+placement !h
 wide false
 sideways false
 status open
