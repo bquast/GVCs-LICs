@@ -14849,7 +14849,7 @@ dfddva()
 
 \end_inset
 
-:
+: Domestic Final Demand Domestic Value Added
 \end_layout
 
 \begin_layout Itemize
@@ -14862,7 +14862,7 @@ dfdfva()
 
 \end_inset
 
-:
+: Domestic Final Demand Foreign Value Added
 \end_layout
 
 \begin_layout Itemize
@@ -14875,7 +14875,7 @@ downstream()
 
 \end_inset
 
-:
+: Downstreamness
 \end_layout
 
 \begin_layout Itemize
@@ -14888,7 +14888,7 @@ e2r()
 
 \end_inset
 
-:
+: Exporting to Re-export
 \end_layout
 
 \begin_layout Itemize
@@ -14901,7 +14901,7 @@ ffddva()
 
 \end_inset
 
-:
+: Foreign Final Demand Domestic Value Added
 \end_layout
 
 \begin_layout Itemize
@@ -14914,7 +14914,7 @@ i2e()
 
 \end_inset
 
-:
+: Importing to Export
 \end_layout
 
 \begin_layout Itemize
@@ -14927,7 +14927,7 @@ nrca()
 
 \end_inset
 
-:
+: new revealed comparative advantage
 \end_layout
 
 \begin_layout Itemize
@@ -14940,7 +14940,7 @@ upstream()
 
 \end_inset
 
-:
+: Upstreamness
 \end_layout
 
 \begin_layout Standard
