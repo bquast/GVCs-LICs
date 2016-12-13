@@ -1431,7 +1431,7 @@ begin{tablenotes}
 
   
 \backslash
-item measured as a share of total exports and in million USD
+item measured as a share of total exports and with FVAX as the denominator
 \end_layout
 
 \begin_layout Plain Layout
@@ -1530,7 +1530,7 @@ pdc2 %>%
 
 \begin_layout Plain Layout
 
-  scale_fill_brewer(palette='Set1')
+  scale_fill_brewer(palette='Set1') 
 \end_layout
 
 \end_inset
@@ -1554,7 +1554,7 @@ begin{tablenotes}
 
   
 \backslash
-item measured as a share of total exports and in million USD
+item measured in levels and as a share of total exports
 \end_layout
 
 \begin_layout Plain Layout
